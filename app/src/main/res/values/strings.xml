@@ -1,3 +1,9 @@
 <resources>
     <string name="app_name">Time Management</string>
+
+    <string name="action_option">Menu</string>
+    <string name="action_today">Today</string>
+    <string name="action_week">Week</string>
+    <string name="action_month">Month</string>
+
 </resources>

@@ -136,12 +136,20 @@
         "source": "C:\\Users\\icyfillup\\.android\\build-cache\\a9542e16e4c7960e8234395111df2bf10b16cf06\\output\\res\\layout\\abc_action_bar_view_list_nav_layout.xml"
     },
     {
+        "merged": "W:\\Android_stuff\\TimeManagement\\app\\build\\intermediates\\res\\merged\\debug\\layout\\activity_graph.xml",
+        "source": "W:\\Android_stuff\\TimeManagement\\app\\src\\main\\res\\layout\\activity_graph.xml"
+    },
+    {
         "merged": "W:\\Android_stuff\\TimeManagement\\app\\build\\intermediates\\res\\merged\\debug\\layout\\abc_action_bar_up_container.xml",
         "source": "C:\\Users\\icyfillup\\.android\\build-cache\\a9542e16e4c7960e8234395111df2bf10b16cf06\\output\\res\\layout\\abc_action_bar_up_container.xml"
     },
     {
         "merged": "W:\\Android_stuff\\TimeManagement\\app\\build\\intermediates\\res\\merged\\debug\\layout\\select_dialog_singlechoice_material.xml",
         "source": "C:\\Users\\icyfillup\\.android\\build-cache\\a9542e16e4c7960e8234395111df2bf10b16cf06\\output\\res\\layout\\select_dialog_singlechoice_material.xml"
+    },
+    {
+        "merged": "W:\\Android_stuff\\TimeManagement\\app\\build\\intermediates\\res\\merged\\debug\\layout\\graph_tool_bar.xml",
+        "source": "W:\\Android_stuff\\TimeManagement\\app\\src\\main\\res\\layout\\graph_tool_bar.xml"
     },
     {
         "merged": "W:\\Android_stuff\\TimeManagement\\app\\build\\intermediates\\res\\merged\\debug\\layout\\abc_action_bar_title_item.xml",

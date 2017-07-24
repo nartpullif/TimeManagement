@@ -1,6 +1,6 @@
 -- Merging decision tree log ---
 manifest
-ADDED from W:\Android_stuff\TimeManagement\app\src\main\AndroidManifest.xml:2:1-21:12
+ADDED from W:\Android_stuff\TimeManagement\app\src\main\AndroidManifest.xml:2:1-24:12
 	package
 		ADDED from W:\Android_stuff\TimeManagement\app\src\main\AndroidManifest.xml:3:5-49
 		INJECTED from W:\Android_stuff\TimeManagement\app\src\main\AndroidManifest.xml
@@ -14,7 +14,7 @@ ADDED from W:\Android_stuff\TimeManagement\app\src\main\AndroidManifest.xml:2:1-
 		INJECTED from W:\Android_stuff\TimeManagement\app\src\main\AndroidManifest.xml
 		INJECTED from W:\Android_stuff\TimeManagement\app\src\main\AndroidManifest.xml
 application
-ADDED from W:\Android_stuff\TimeManagement\app\src\main\AndroidManifest.xml:5:5-19:19
+ADDED from W:\Android_stuff\TimeManagement\app\src\main\AndroidManifest.xml:5:5-22:19
 MERGED from [com.android.support:appcompat-v7:25.3.1] C:\Users\icyfillup\.android\build-cache\a9542e16e4c7960e8234395111df2bf10b16cf06\output\AndroidManifest.xml:29:5-20
 MERGED from [com.android.support:support-v4:25.3.1] C:\Users\icyfillup\.android\build-cache\ad3b125ab784a591da86627c771c15234f20d409\output\AndroidManifest.xml:29:5-20
 MERGED from [com.android.support:support-fragment:25.3.1] C:\Users\icyfillup\.android\build-cache\787b6f657bd7dfa99fe28d12ff4714977b5d0014\output\AndroidManifest.xml:29:5-20
@@ -38,19 +38,23 @@ MERGED from [com.android.support.constraint:constraint-layout:1.0.2] C:\Users\ic
 	android:theme
 		ADDED from W:\Android_stuff\TimeManagement\app\src\main\AndroidManifest.xml:11:9-40
 activity#com.example.android.timemanagement.MainActivity
-ADDED from W:\Android_stuff\TimeManagement\app\src\main\AndroidManifest.xml:12:9-18:20
+ADDED from W:\Android_stuff\TimeManagement\app\src\main\AndroidManifest.xml:12:9-14:20
 	android:name
 		ADDED from W:\Android_stuff\TimeManagement\app\src\main\AndroidManifest.xml:12:19-47
+activity#com.example.android.timemanagement.GraphActivity
+ADDED from W:\Android_stuff\TimeManagement\app\src\main\AndroidManifest.xml:15:9-21:20
+	android:name
+		ADDED from W:\Android_stuff\TimeManagement\app\src\main\AndroidManifest.xml:15:19-48
 intent-filter#android.intent.action.MAIN+android.intent.category.LAUNCHER
-ADDED from W:\Android_stuff\TimeManagement\app\src\main\AndroidManifest.xml:13:13-17:29
+ADDED from W:\Android_stuff\TimeManagement\app\src\main\AndroidManifest.xml:16:13-20:29
 action#android.intent.action.MAIN
-ADDED from W:\Android_stuff\TimeManagement\app\src\main\AndroidManifest.xml:14:17-69
+ADDED from W:\Android_stuff\TimeManagement\app\src\main\AndroidManifest.xml:17:17-69
 	android:name
-		ADDED from W:\Android_stuff\TimeManagement\app\src\main\AndroidManifest.xml:14:25-66
+		ADDED from W:\Android_stuff\TimeManagement\app\src\main\AndroidManifest.xml:17:25-66
 category#android.intent.category.LAUNCHER
-ADDED from W:\Android_stuff\TimeManagement\app\src\main\AndroidManifest.xml:16:17-77
+ADDED from W:\Android_stuff\TimeManagement\app\src\main\AndroidManifest.xml:19:17-77
 	android:name
-		ADDED from W:\Android_stuff\TimeManagement\app\src\main\AndroidManifest.xml:16:27-74
+		ADDED from W:\Android_stuff\TimeManagement\app\src\main\AndroidManifest.xml:19:27-74
 uses-sdk
 INJECTED from W:\Android_stuff\TimeManagement\app\src\main\AndroidManifest.xml reason: use-sdk injection requested
 MERGED from [com.android.support:appcompat-v7:25.3.1] C:\Users\icyfillup\.android\build-cache\a9542e16e4c7960e8234395111df2bf10b16cf06\output\AndroidManifest.xml:21:5-23:78
