@@ -1,0 +1,10 @@
+[
+    {
+        "merged": "W:\\Android_stuff\\TimeManagement\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-xhdpi\\ic_launcher_round.png",
+        "source": "W:\\Android_stuff\\TimeManagement\\app\\src\\main\\res\\mipmap-xhdpi\\ic_launcher_round.png"
+    },
+    {
+        "merged": "W:\\Android_stuff\\TimeManagement\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-xhdpi\\ic_launcher.png",
+        "source": "W:\\Android_stuff\\TimeManagement\\app\\src\\main\\res\\mipmap-xhdpi\\ic_launcher.png"
+    }
+]
