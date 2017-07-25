@@ -21,6 +21,10 @@ public class Contract {
         public static final String COLUMN_NAME_END_MINUTE = "endMinute";
         public static final String COLUMN_NAME_END_MID_DAY = "endMidDay";
         public static final String COLUMN_NAME_TASK_TOTAL_MINUTES = "taskTotalMinutes";
+
+        //for join column
+        public static final String COLUMN_NAME_SUBJECT_TITLE = "subjectTitle";
+        public static final String COLUMN_NAME_PROJECT_TITLE = "projectTitle";
     }
 
     public static class TABLE_SUBJECT implements BaseColumns{

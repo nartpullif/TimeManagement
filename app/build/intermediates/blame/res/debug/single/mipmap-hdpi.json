@@ -1,0 +1,10 @@
+[
+    {
+        "merged": "C:\\_CS-5540\\TimeManagement\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-hdpi\\ic_launcher.png",
+        "source": "C:\\_CS-5540\\TimeManagement\\app\\src\\main\\res\\mipmap-hdpi\\ic_launcher.png"
+    },
+    {
+        "merged": "C:\\_CS-5540\\TimeManagement\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-hdpi\\ic_launcher_round.png",
+        "source": "C:\\_CS-5540\\TimeManagement\\app\\src\\main\\res\\mipmap-hdpi\\ic_launcher_round.png"
+    }
+]
