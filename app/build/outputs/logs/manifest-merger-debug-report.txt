@@ -1,0 +1,121 @@
+-- Merging decision tree log ---
+manifest
+ADDED from W:\Android_stuff\TimeManagement\app\src\main\AndroidManifest.xml:2:1-44:12
+	package
+		ADDED from W:\Android_stuff\TimeManagement\app\src\main\AndroidManifest.xml:3:5-49
+		INJECTED from W:\Android_stuff\TimeManagement\app\src\main\AndroidManifest.xml
+		INJECTED from W:\Android_stuff\TimeManagement\app\src\main\AndroidManifest.xml
+	android:versionName
+		INJECTED from W:\Android_stuff\TimeManagement\app\src\main\AndroidManifest.xml
+		INJECTED from W:\Android_stuff\TimeManagement\app\src\main\AndroidManifest.xml
+	xmlns:android
+		ADDED from W:\Android_stuff\TimeManagement\app\src\main\AndroidManifest.xml:2:11-69
+	android:versionCode
+		INJECTED from W:\Android_stuff\TimeManagement\app\src\main\AndroidManifest.xml
+		INJECTED from W:\Android_stuff\TimeManagement\app\src\main\AndroidManifest.xml
+application
+ADDED from W:\Android_stuff\TimeManagement\app\src\main\AndroidManifest.xml:5:5-42:19
+MERGED from [com.android.support.constraint:constraint-layout:1.0.2] C:\Users\icyfillup\.android\build-cache\9b7e1fbd1021cd8bf21bb4dce65375cf90168b78\output\AndroidManifest.xml:9:5-20
+MERGED from [com.android.support:design:25.3.1] C:\Users\icyfillup\.android\build-cache\6fdd12f9bbb3e8b00b301d903b366bc3f354acf4\output\AndroidManifest.xml:29:5-20
+MERGED from [com.android.support:appcompat-v7:25.3.1] C:\Users\icyfillup\.android\build-cache\a9542e16e4c7960e8234395111df2bf10b16cf06\output\AndroidManifest.xml:29:5-20
+MERGED from [com.android.support:animated-vector-drawable:25.3.1] C:\Users\icyfillup\.android\build-cache\320fbcf4f665d0781f34d0c02ca26509535a8186\output\AndroidManifest.xml:26:5-20
+MERGED from [com.android.support:support-vector-drawable:25.3.1] C:\Users\icyfillup\.android\build-cache\e08c647316735ed0ee1beefe32ed0d953d86e96d\output\AndroidManifest.xml:26:5-20
+MERGED from [com.android.support:transition:25.3.1] C:\Users\icyfillup\.android\build-cache\b02dd99852c8fb10b6c39f6f6e1e5bf4bf9b49a3\output\AndroidManifest.xml:26:5-20
+MERGED from [com.android.support:support-v4:25.3.1] C:\Users\icyfillup\.android\build-cache\ad3b125ab784a591da86627c771c15234f20d409\output\AndroidManifest.xml:29:5-20
+MERGED from [com.android.support:support-fragment:25.3.1] C:\Users\icyfillup\.android\build-cache\787b6f657bd7dfa99fe28d12ff4714977b5d0014\output\AndroidManifest.xml:29:5-20
+MERGED from [com.android.support:support-media-compat:25.3.1] C:\Users\icyfillup\.android\build-cache\6c24125ffafd92a726bc8221f06bb773d438e770\output\AndroidManifest.xml:29:5-20
+MERGED from [com.android.support:support-core-ui:25.3.1] C:\Users\icyfillup\.android\build-cache\878f90f1a5a6ffd191c68c85c56eba79d6139f04\output\AndroidManifest.xml:29:5-20
+MERGED from [com.android.support:support-core-utils:25.3.1] C:\Users\icyfillup\.android\build-cache\2cd31a0506d455e1cd72f829b2c9003178fcca31\output\AndroidManifest.xml:29:5-20
+MERGED from [com.android.support:support-compat:25.3.1] C:\Users\icyfillup\.android\build-cache\407d7c578a264dfb6834d663c9688967457a63bf\output\AndroidManifest.xml:29:5-20
+	android:label
+		ADDED from W:\Android_stuff\TimeManagement\app\src\main\AndroidManifest.xml:8:9-41
+	android:supportsRtl
+		ADDED from W:\Android_stuff\TimeManagement\app\src\main\AndroidManifest.xml:10:9-35
+	android:roundIcon
+		ADDED from W:\Android_stuff\TimeManagement\app\src\main\AndroidManifest.xml:9:9-54
+	android:allowBackup
+		ADDED from W:\Android_stuff\TimeManagement\app\src\main\AndroidManifest.xml:6:9-35
+	android:icon
+		ADDED from W:\Android_stuff\TimeManagement\app\src\main\AndroidManifest.xml:7:9-43
+	android:theme
+		ADDED from W:\Android_stuff\TimeManagement\app\src\main\AndroidManifest.xml:11:9-40
+activity#com.example.android.timemanagement.GraphActivity
+ADDED from W:\Android_stuff\TimeManagement\app\src\main\AndroidManifest.xml:13:9-19:20
+	android:name
+		ADDED from W:\Android_stuff\TimeManagement\app\src\main\AndroidManifest.xml:13:19-48
+intent-filter#android.intent.action.MAIN+android.intent.category.LAUNCHER
+ADDED from W:\Android_stuff\TimeManagement\app\src\main\AndroidManifest.xml:14:13-18:29
+action#android.intent.action.MAIN
+ADDED from W:\Android_stuff\TimeManagement\app\src\main\AndroidManifest.xml:15:17-69
+	android:name
+		ADDED from W:\Android_stuff\TimeManagement\app\src\main\AndroidManifest.xml:15:25-66
+category#android.intent.category.LAUNCHER
+ADDED from W:\Android_stuff\TimeManagement\app\src\main\AndroidManifest.xml:17:17-77
+	android:name
+		ADDED from W:\Android_stuff\TimeManagement\app\src\main\AndroidManifest.xml:17:27-74
+activity#com.example.android.timemanagement.activities.MainActivity
+ADDED from W:\Android_stuff\TimeManagement\app\src\main\AndroidManifest.xml:21:9-23:20
+	android:name
+		ADDED from W:\Android_stuff\TimeManagement\app\src\main\AndroidManifest.xml:21:19-58
+activity#com.example.android.timemanagement.activities.AddTaskActivity
+ADDED from W:\Android_stuff\TimeManagement\app\src\main\AndroidManifest.xml:25:9-32:20
+	android:label
+		ADDED from W:\Android_stuff\TimeManagement\app\src\main\AndroidManifest.xml:27:13-51
+	android:parentActivityName
+		ADDED from W:\Android_stuff\TimeManagement\app\src\main\AndroidManifest.xml:28:13-66
+	android:name
+		ADDED from W:\Android_stuff\TimeManagement\app\src\main\AndroidManifest.xml:26:13-55
+meta-data#android.support.PARENT_ACTIVITY
+ADDED from W:\Android_stuff\TimeManagement\app\src\main\AndroidManifest.xml:29:13-31:60
+	android:value
+		ADDED from W:\Android_stuff\TimeManagement\app\src\main\AndroidManifest.xml:31:17-57
+	android:name
+		ADDED from W:\Android_stuff\TimeManagement\app\src\main\AndroidManifest.xml:30:17-63
+activity#com.example.android.timemanagement.activities.UpdateTaskActivity
+ADDED from W:\Android_stuff\TimeManagement\app\src\main\AndroidManifest.xml:34:9-41:20
+	android:label
+		ADDED from W:\Android_stuff\TimeManagement\app\src\main\AndroidManifest.xml:36:13-54
+	android:parentActivityName
+		ADDED from W:\Android_stuff\TimeManagement\app\src\main\AndroidManifest.xml:37:13-66
+	android:name
+		ADDED from W:\Android_stuff\TimeManagement\app\src\main\AndroidManifest.xml:35:13-58
+uses-sdk
+INJECTED from W:\Android_stuff\TimeManagement\app\src\main\AndroidManifest.xml reason: use-sdk injection requested
+MERGED from [com.android.support.constraint:constraint-layout:1.0.2] C:\Users\icyfillup\.android\build-cache\9b7e1fbd1021cd8bf21bb4dce65375cf90168b78\output\AndroidManifest.xml:5:5-7:41
+MERGED from [com.android.support:design:25.3.1] C:\Users\icyfillup\.android\build-cache\6fdd12f9bbb3e8b00b301d903b366bc3f354acf4\output\AndroidManifest.xml:21:5-23:62
+MERGED from [com.android.support:appcompat-v7:25.3.1] C:\Users\icyfillup\.android\build-cache\a9542e16e4c7960e8234395111df2bf10b16cf06\output\AndroidManifest.xml:21:5-23:78
+MERGED from [com.android.support:animated-vector-drawable:25.3.1] C:\Users\icyfillup\.android\build-cache\320fbcf4f665d0781f34d0c02ca26509535a8186\output\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:support-vector-drawable:25.3.1] C:\Users\icyfillup\.android\build-cache\e08c647316735ed0ee1beefe32ed0d953d86e96d\output\AndroidManifest.xml:20:5-43
+MERGED from [com.android.support:recyclerview-v7:25.3.1] C:\Users\icyfillup\.android\build-cache\9d9eea19056ce53447d09209e294f50d2c66d924\output\AndroidManifest.xml:20:5-43
+MERGED from [com.android.support:transition:25.3.1] C:\Users\icyfillup\.android\build-cache\b02dd99852c8fb10b6c39f6f6e1e5bf4bf9b49a3\output\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:support-v4:25.3.1] C:\Users\icyfillup\.android\build-cache\ad3b125ab784a591da86627c771c15234f20d409\output\AndroidManifest.xml:21:5-23:54
+MERGED from [com.android.support:support-fragment:25.3.1] C:\Users\icyfillup\.android\build-cache\787b6f657bd7dfa99fe28d12ff4714977b5d0014\output\AndroidManifest.xml:21:5-23:60
+MERGED from [com.android.support:support-media-compat:25.3.1] C:\Users\icyfillup\.android\build-cache\6c24125ffafd92a726bc8221f06bb773d438e770\output\AndroidManifest.xml:21:5-23:63
+MERGED from [com.android.support:support-core-ui:25.3.1] C:\Users\icyfillup\.android\build-cache\878f90f1a5a6ffd191c68c85c56eba79d6139f04\output\AndroidManifest.xml:21:5-23:58
+MERGED from [com.android.support:support-core-utils:25.3.1] C:\Users\icyfillup\.android\build-cache\2cd31a0506d455e1cd72f829b2c9003178fcca31\output\AndroidManifest.xml:21:5-23:61
+MERGED from [com.android.support:support-compat:25.3.1] C:\Users\icyfillup\.android\build-cache\407d7c578a264dfb6834d663c9688967457a63bf\output\AndroidManifest.xml:21:5-23:58
+	tools:overrideLibrary
+		ADDED from [com.android.support:design:25.3.1] C:\Users\icyfillup\.android\build-cache\6fdd12f9bbb3e8b00b301d903b366bc3f354acf4\output\AndroidManifest.xml:23:9-59
+	android:targetSdkVersion
+		INJECTED from W:\Android_stuff\TimeManagement\app\src\main\AndroidManifest.xml
+		INJECTED from W:\Android_stuff\TimeManagement\app\src\main\AndroidManifest.xml
+	android:minSdkVersion
+		INJECTED from W:\Android_stuff\TimeManagement\app\src\main\AndroidManifest.xml
+		INJECTED from W:\Android_stuff\TimeManagement\app\src\main\AndroidManifest.xml
+meta-data#android.support.VERSION
+ADDED from [com.android.support:design:25.3.1] C:\Users\icyfillup\.android\build-cache\6fdd12f9bbb3e8b00b301d903b366bc3f354acf4\output\AndroidManifest.xml:25:5-27:34
+MERGED from [com.android.support:appcompat-v7:25.3.1] C:\Users\icyfillup\.android\build-cache\a9542e16e4c7960e8234395111df2bf10b16cf06\output\AndroidManifest.xml:25:5-27:34
+MERGED from [com.android.support:animated-vector-drawable:25.3.1] C:\Users\icyfillup\.android\build-cache\320fbcf4f665d0781f34d0c02ca26509535a8186\output\AndroidManifest.xml:22:5-24:34
+MERGED from [com.android.support:support-vector-drawable:25.3.1] C:\Users\icyfillup\.android\build-cache\e08c647316735ed0ee1beefe32ed0d953d86e96d\output\AndroidManifest.xml:22:5-24:34
+MERGED from [com.android.support:recyclerview-v7:25.3.1] C:\Users\icyfillup\.android\build-cache\9d9eea19056ce53447d09209e294f50d2c66d924\output\AndroidManifest.xml:22:5-24:34
+MERGED from [com.android.support:transition:25.3.1] C:\Users\icyfillup\.android\build-cache\b02dd99852c8fb10b6c39f6f6e1e5bf4bf9b49a3\output\AndroidManifest.xml:22:5-24:34
+MERGED from [com.android.support:support-v4:25.3.1] C:\Users\icyfillup\.android\build-cache\ad3b125ab784a591da86627c771c15234f20d409\output\AndroidManifest.xml:25:5-27:34
+MERGED from [com.android.support:support-fragment:25.3.1] C:\Users\icyfillup\.android\build-cache\787b6f657bd7dfa99fe28d12ff4714977b5d0014\output\AndroidManifest.xml:25:5-27:34
+MERGED from [com.android.support:support-media-compat:25.3.1] C:\Users\icyfillup\.android\build-cache\6c24125ffafd92a726bc8221f06bb773d438e770\output\AndroidManifest.xml:25:5-27:34
+MERGED from [com.android.support:support-core-ui:25.3.1] C:\Users\icyfillup\.android\build-cache\878f90f1a5a6ffd191c68c85c56eba79d6139f04\output\AndroidManifest.xml:25:5-27:34
+MERGED from [com.android.support:support-core-utils:25.3.1] C:\Users\icyfillup\.android\build-cache\2cd31a0506d455e1cd72f829b2c9003178fcca31\output\AndroidManifest.xml:25:5-27:34
+MERGED from [com.android.support:support-compat:25.3.1] C:\Users\icyfillup\.android\build-cache\407d7c578a264dfb6834d663c9688967457a63bf\output\AndroidManifest.xml:25:5-27:34
+	android:value
+		ADDED from [com.android.support:design:25.3.1] C:\Users\icyfillup\.android\build-cache\6fdd12f9bbb3e8b00b301d903b366bc3f354acf4\output\AndroidManifest.xml:27:9-31
+	android:name
+		ADDED from [com.android.support:design:25.3.1] C:\Users\icyfillup\.android\build-cache\6fdd12f9bbb3e8b00b301d903b366bc3f354acf4\output\AndroidManifest.xml:26:9-47
