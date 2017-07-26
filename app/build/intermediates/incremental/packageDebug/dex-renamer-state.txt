@@ -1,4 +1,4 @@
-#Tue Jul 25 21:19:45 PDT 2017
+#Wed Jul 26 00:58:19 PDT 2017
 base.0=W\:\\Android_stuff\\TimeManagement\\app\\build\\intermediates\\transforms\\dex\\debug\\folders\\1000\\10000\\instant-run_fc45e6f13a13f69aac3952860571fb6639b8c089
 renamed.1=classes2.dex
 renamed.0=classes.dex

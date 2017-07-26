@@ -1,4 +1,4 @@
-#Tue Jul 25 21:17:48 PDT 2017
+#Wed Jul 26 00:58:19 PDT 2017
 base.0=W\:\\Android_stuff\\TimeManagement\\app\\build\\intermediates\\transforms\\dex\\debug\\folders\\1000\\5\\slice_0
 renamed.0=classes.dex
 file.0=W\:\\Android_stuff\\TimeManagement\\app\\build\\intermediates\\transforms\\dex\\debug\\folders\\1000\\5\\slice_0\\classes.dex

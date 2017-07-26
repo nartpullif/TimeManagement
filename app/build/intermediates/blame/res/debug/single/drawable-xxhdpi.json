@@ -1,6 +1,18 @@
 [
     {
+        "merged": "W:\\Android_stuff\\TimeManagement\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xxhdpi\\ic_graph_black.png",
+        "source": "W:\\Android_stuff\\TimeManagement\\app\\src\\main\\res\\drawable-xxhdpi\\ic_graph_black.png"
+    },
+    {
         "merged": "W:\\Android_stuff\\TimeManagement\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xxhdpi\\ic_add_black_48dp.png",
         "source": "W:\\Android_stuff\\TimeManagement\\app\\src\\main\\res\\drawable-xxhdpi\\ic_add_black_48dp.png"
+    },
+    {
+        "merged": "W:\\Android_stuff\\TimeManagement\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xxhdpi\\ic_list_black.png",
+        "source": "W:\\Android_stuff\\TimeManagement\\app\\src\\main\\res\\drawable-xxhdpi\\ic_list_black.png"
+    },
+    {
+        "merged": "W:\\Android_stuff\\TimeManagement\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xxhdpi\\ic_report_black.png",
+        "source": "W:\\Android_stuff\\TimeManagement\\app\\src\\main\\res\\drawable-xxhdpi\\ic_report_black.png"
     }
 ]

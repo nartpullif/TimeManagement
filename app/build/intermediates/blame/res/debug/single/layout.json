@@ -16,12 +16,12 @@
         "source": "C:\\Users\\icyfillup\\.android\\build-cache\\6fdd12f9bbb3e8b00b301d903b366bc3f354acf4\\output\\res\\layout\\design_navigation_item_header.xml"
     },
     {
-        "merged": "W:\\Android_stuff\\TimeManagement\\app\\build\\intermediates\\res\\merged\\debug\\layout\\notification_template_lines_media.xml",
-        "source": "C:\\Users\\icyfillup\\.android\\build-cache\\a9542e16e4c7960e8234395111df2bf10b16cf06\\output\\res\\layout\\notification_template_lines_media.xml"
-    },
-    {
         "merged": "W:\\Android_stuff\\TimeManagement\\app\\build\\intermediates\\res\\merged\\debug\\layout\\abc_action_mode_close_item_material.xml",
         "source": "C:\\Users\\icyfillup\\.android\\build-cache\\a9542e16e4c7960e8234395111df2bf10b16cf06\\output\\res\\layout\\abc_action_mode_close_item_material.xml"
+    },
+    {
+        "merged": "W:\\Android_stuff\\TimeManagement\\app\\build\\intermediates\\res\\merged\\debug\\layout\\notification_template_lines_media.xml",
+        "source": "C:\\Users\\icyfillup\\.android\\build-cache\\a9542e16e4c7960e8234395111df2bf10b16cf06\\output\\res\\layout\\notification_template_lines_media.xml"
     },
     {
         "merged": "W:\\Android_stuff\\TimeManagement\\app\\build\\intermediates\\res\\merged\\debug\\layout\\abc_search_dropdown_item_icons_2line.xml",
@@ -100,10 +100,6 @@
         "source": "C:\\Users\\icyfillup\\.android\\build-cache\\a9542e16e4c7960e8234395111df2bf10b16cf06\\output\\res\\layout\\select_dialog_singlechoice_material.xml"
     },
     {
-        "merged": "W:\\Android_stuff\\TimeManagement\\app\\build\\intermediates\\res\\merged\\debug\\layout\\graph_tool_bar.xml",
-        "source": "W:\\Android_stuff\\TimeManagement\\app\\src\\main\\res\\layout\\graph_tool_bar.xml"
-    },
-    {
         "merged": "W:\\Android_stuff\\TimeManagement\\app\\build\\intermediates\\res\\merged\\debug\\layout\\design_menu_item_action_area.xml",
         "source": "C:\\Users\\icyfillup\\.android\\build-cache\\6fdd12f9bbb3e8b00b301d903b366bc3f354acf4\\output\\res\\layout\\design_menu_item_action_area.xml"
     },
@@ -158,6 +154,10 @@
     {
         "merged": "W:\\Android_stuff\\TimeManagement\\app\\build\\intermediates\\res\\merged\\debug\\layout\\select_dialog_multichoice_material.xml",
         "source": "C:\\Users\\icyfillup\\.android\\build-cache\\a9542e16e4c7960e8234395111df2bf10b16cf06\\output\\res\\layout\\select_dialog_multichoice_material.xml"
+    },
+    {
+        "merged": "W:\\Android_stuff\\TimeManagement\\app\\build\\intermediates\\res\\merged\\debug\\layout\\activity_switch_activities_toolbar.xml",
+        "source": "W:\\Android_stuff\\TimeManagement\\app\\src\\main\\res\\layout\\activity_switch_activities_toolbar.xml"
     },
     {
         "merged": "W:\\Android_stuff\\TimeManagement\\app\\build\\intermediates\\res\\merged\\debug\\layout\\design_navigation_item.xml",

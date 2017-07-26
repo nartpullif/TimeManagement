@@ -1,18 +1,48 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    tools:context="com.example.android.timemanagement.GraphActivity">
+    tools:context="com.example.android.timemanagement.activities.GraphActivity">
+
+    <android.support.v7.widget.Toolbar
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        android:id="@+id/graph_toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/colorPrimary"
+        android:elevation="4dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center"
+            android:paddingRight="20dp">
+
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/action_today"
+                android:onClick="onButtonToday"/>
+
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/action_week"
+                android:onClick="onButtonWeek"/>
+
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/action_month"
+                android:onClick="onButtonMonth" />
+
+        </LinearLayout>
+    </android.support.v7.widget.Toolbar>
 
     <include
-        android:id="@+id/graph_toolbar"
-        layout="@layout/graph_tool_bar" />
-    <TextView
-        android:text="hello world"
-        android:layout_height="wrap_content"
-        android:layout_width="match_parent"
-        android:layout_marginTop="30dp"/>
-
-</LinearLayout>
+        android:id="@+id/action_bar_activity_content"
+        layout="@layout/activity_switch_activities_toolbar" />
+</FrameLayout>
