@@ -44,7 +44,14 @@
         </LinearLayout>
     </android.support.v7.widget.Toolbar>
 
+    <com.github.mikephil.charting.charts.BarChart
+        android:layout_width="match_parent"
+        android:layout_height="400dp"
+        android:id="@+id/bar_chart"
+        android:layout_gravity="center" />
+
     <include
         android:id="@+id/action_bar_activity_content"
         layout="@layout/activity_switch_activities_toolbar" />
+
 </FrameLayout>

@@ -18,6 +18,19 @@ public class DatabaseUtils {
 
     private static final String TAG = "dbUtils";
 
+    public static Cursor getAllTask(SQLiteDatabase db) {
+        Cursor cursor = db.query(
+                Contract.TABLE_TASK.TABLE_NAME,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null
+        );
+        return cursor;
+    }
+
     public static Cursor getAllProject(SQLiteDatabase db) {
         Cursor cursor = db.query(
                 Contract.TABLE_PROJECT.TABLE_NAME,

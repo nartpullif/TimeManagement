@@ -1,15 +1,61 @@
 package com.example.android.timemanagement.activities;
 
+import android.database.Cursor;
+import android.database.sqlite.SQLiteDatabase;
+import android.graphics.Color;
+import android.graphics.Typeface;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.support.v7.widget.Toolbar;
+import android.util.Log;
+import android.view.MotionEvent;
 import android.view.View;
 import android.widget.Toast;
 
+import com.example.android.timemanagement.Formatting.TimeAxisFormatter;
 import com.example.android.timemanagement.R;
+import com.example.android.timemanagement.data.Contract;
+import com.example.android.timemanagement.data.DBHelper;
+import com.example.android.timemanagement.data.DatabaseUtils;
+import com.example.android.timemanagement.models.ActivitySwitcherToolbar;
+import com.example.android.timemanagement.models.StartEndTime;
+import com.github.mikephil.charting.charts.BarChart;
+import com.github.mikephil.charting.charts.BarLineChartBase;
+import com.github.mikephil.charting.charts.Chart;
+import com.github.mikephil.charting.charts.LineChart;
+import com.github.mikephil.charting.components.Legend;
+import com.github.mikephil.charting.components.XAxis;
+import com.github.mikephil.charting.components.YAxis;
+import com.github.mikephil.charting.data.BarData;
+import com.github.mikephil.charting.data.BarDataSet;
+import com.github.mikephil.charting.data.BarEntry;
+import com.github.mikephil.charting.data.Entry;
+import com.github.mikephil.charting.data.LineData;
+import com.github.mikephil.charting.data.LineDataSet;
+import com.github.mikephil.charting.formatter.IndexAxisValueFormatter;
+import com.github.mikephil.charting.formatter.LargeValueFormatter;
+import com.github.mikephil.charting.formatter.PercentFormatter;
+import com.github.mikephil.charting.interfaces.datasets.ILineDataSet;
+import com.github.mikephil.charting.listener.ChartTouchListener;
+import com.github.mikephil.charting.listener.OnChartGestureListener;
+import com.github.mikephil.charting.renderer.XAxisRenderer;
 
-public class GraphActivity extends AppCompatActivity {
-    Toolbar toolbar;
+import java.lang.reflect.Array;
+import java.text.ParseException;
+import java.text.SimpleDateFormat;
+import java.util.ArrayList;
+import java.util.Collections;
+import java.util.Comparator;
+import java.util.Date;
+import java.util.List;
+
+public class GraphActivity extends AppCompatActivity{
+    private Toolbar toolbar;
+    private ActivitySwitcherToolbar activitySwitcherToolbar;
+
+    private BarChart chart;
+    //private LineChart lineChart;
+    private SQLiteDatabase database;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -19,6 +65,50 @@ public class GraphActivity extends AppCompatActivity {
         toolbar = (Toolbar) findViewById(R.id.graph_toolbar);
         setSupportActionBar(toolbar);
         getSupportActionBar().setDisplayShowTitleEnabled(false);
+
+        makeBarChart();
+
+        activitySwitcherToolbar = new ActivitySwitcherToolbar(this.getClass(), this);
+
+        Log.d("GraphActivity: ", "onCreate");
+    }
+
+    @Override
+    protected void onStart() {
+        super.onStart();
+        Log.d("GraphActivity: ", "onStart");
+
+    }
+
+    @Override
+    protected void onResume() {
+        super.onResume();
+        Log.d("GraphActivity: ", "onResume");
+    }
+
+    @Override
+    protected void onPause() {
+        super.onPause();
+        Log.d("GraphActivity: ", "onPause");
+    }
+
+    @Override
+    protected void onStop() {
+        super.onStop();
+        Log.d("GraphActivity: ", "onStop");
+        this.finish();
+    }
+
+    @Override
+    protected void onRestart() {
+        super.onRestart();
+        Log.d("GraphActivity: ", "onRestart");
+    }
+
+    @Override
+    protected void onDestroy() {
+        super.onDestroy();
+        Log.d("GraphActivity: ", "onDestroy");
     }
 
     public void onButtonToday(View view)
@@ -34,5 +124,296 @@ public class GraphActivity extends AppCompatActivity {
     public void onButtonMonth(View view)
     {
         Toast.makeText(this, "Clicked on Month Button", Toast.LENGTH_LONG).show();
+    }
+
+    public void makeBarChart()
+    {
+        float barWidth;
+        float barSpace;
+        float groupSpace;
+
+        barWidth = 0.3f;
+        barSpace = 0f;
+        groupSpace = 0.4f;
+
+        chart = (BarChart) findViewById(R.id.bar_chart);
+        chart.setDescription(null);
+        chart.setPinchZoom(false);
+        chart.setScaleEnabled(true);
+        chart.setDrawBarShadow(false);
+        chart.setDrawGridBackground(false);
+        chart.setDrawBorders(true);
+        chart.enableScroll();
+
+        int groupCount = 6;
+
+        ArrayList xVals = new ArrayList();
+
+        xVals.add("Jan");
+        xVals.add("Feb");
+        xVals.add("Mar");
+        xVals.add("Apr");
+        xVals.add("May");
+        xVals.add("Jun");
+
+        ArrayList yVals1 = new ArrayList();
+        ArrayList yVals2 = new ArrayList();
+
+        yVals1.add(new BarEntry(1, (float) 1));
+        yVals2.add(new BarEntry(1, (float) 2));
+        yVals1.add(new BarEntry(2, (float) 3));
+        yVals2.add(new BarEntry(2, (float) 4));
+        yVals1.add(new BarEntry(3, (float) 5));
+        yVals2.add(new BarEntry(3, (float) 6));
+        yVals1.add(new BarEntry(4, (float) 7));
+        yVals2.add(new BarEntry(4, (float) 8));
+        yVals1.add(new BarEntry(5, (float) 9));
+        yVals2.add(new BarEntry(5, (float) 10));
+        yVals1.add(new BarEntry(6, (float) 11));
+        yVals2.add(new BarEntry(6, (float) 12));
+
+        BarDataSet set1, set2;
+        set1 = new BarDataSet(yVals1, "A");
+        set1.setColor(Color.RED);
+        set1.setValueTextSize(15);
+        set2 = new BarDataSet(yVals2, "B");
+        set2.setColor(Color.BLUE);
+        BarData data = new BarData(set1, set2);
+        data.setValueFormatter(new LargeValueFormatter());
+        chart.setData(data);
+        chart.getBarData().setBarWidth(barWidth);
+        chart.getXAxis().setAxisMinimum(0);
+        chart.getXAxis().setAxisMaximum(0 + chart.getBarData().getGroupWidth(groupSpace, barSpace) * groupCount);
+        chart.groupBars(0, groupSpace, barSpace);
+        chart.getData().setHighlightEnabled(false);
+        chart.invalidate();
+
+        Legend l = chart.getLegend();
+        l.setVerticalAlignment(Legend.LegendVerticalAlignment.TOP);
+        l.setHorizontalAlignment(Legend.LegendHorizontalAlignment.RIGHT);
+        l.setOrientation(Legend.LegendOrientation.HORIZONTAL);
+        l.setDrawInside(true);
+        l.setYOffset(20f);
+        l.setXOffset(0f);
+        l.setYEntrySpace(0f);
+        l.setTextSize(8f);
+
+        //X-axis
+        XAxis xAxis = chart.getXAxis();
+        xAxis.setGranularity(1f);
+        xAxis.setGranularityEnabled(true);
+        xAxis.setCenterAxisLabels(true);
+        xAxis.setDrawGridLines(false);
+        xAxis.setAxisMaximum(4);
+        xAxis.setPosition(XAxis.XAxisPosition.BOTTOM);
+        xAxis.setValueFormatter(new IndexAxisValueFormatter(xVals));
+        xAxis.setTextSize(12);
+//Y-axis
+        chart.getAxisRight().setEnabled(false);
+        YAxis leftAxis = chart.getAxisLeft();
+        leftAxis.setValueFormatter(new LargeValueFormatter());
+        leftAxis.setDrawGridLines(true);
+        leftAxis.setSpaceTop(35f);
+        leftAxis.setAxisMinimum(0f);
+        leftAxis.setTextSize(15);
+    }
+
+
+//    public void makeSinCosGraph() {
+//        lineChart = (LineChart) findViewById(R.id.line_chart);
+//
+//        ArrayList<Entry> yAxesSin = new ArrayList<>();
+//        ArrayList<Entry> yAxesCos = new ArrayList<>();
+//
+//        double x = 0;
+//        int numDataPoints = 1000;
+//        for (int i = 0; i < numDataPoints; i++) {
+//            //NOTE: Math.sin and Math.cos takes in double but to put data into the graph, you have to use float
+//            float sinFunction = Float.parseFloat(String.valueOf(Math.sin(x)));
+//            float cosFunction = Float.parseFloat(String.valueOf(Math.cos(x)));
+//            x = x + 0.1;
+//
+//            yAxesSin.add(new Entry(i, sinFunction));
+//            yAxesCos.add(new Entry(i, cosFunction));
+//        }
+//
+//        ArrayList<ILineDataSet> lineDataSets = new ArrayList<>();
+//
+//        LineDataSet lineDataSet1 = new LineDataSet(yAxesCos, "cos");
+//        lineDataSet1.setDrawCircles(false);
+//        lineDataSet1.setColor(Color.BLUE);
+//
+//        LineDataSet lineDataSet2 = new LineDataSet(yAxesSin, "sin");
+//        lineDataSet2.setDrawCircles(false);
+//        lineDataSet2.setColor(Color.RED);
+//
+//        lineDataSets.add(lineDataSet1);
+//        lineDataSets.add(lineDataSet2);
+//
+//        lineChart.setData(new LineData(lineDataSets));
+//        lineChart.setDoubleTapToZoomEnabled(false);
+//        lineChart.setVisibleXRangeMaximum(65f);
+//    }
+//
+//    public void makeTaskLineGraph()
+//    {
+//        lineChart = (LineChart) findViewById(R.id.line_chart);
+//
+//        float reference_timestamp = 10000.0f;
+//        TimeAxisFormatter formatter = new TimeAxisFormatter(reference_timestamp);
+//        XAxis xAxisTime = lineChart.getXAxis();
+//        xAxisTime.setPosition(XAxis.XAxisPosition.BOTTOM);
+//        //xAxisTime.setTextSize(15.0f);
+//        xAxisTime.setLabelCount(5);
+//        xAxisTime.setValueFormatter(formatter);
+//
+//        float totalHrADay = 0;
+//        ArrayList<Entry> dayPlot = new ArrayList<>();
+//        /*
+//        for(StartEndTime time: startEndTimeUTC)
+//        {
+//            dayPlot.add(new Entry(time.getStartingTime()/reference_timestamp, totalHrADay));
+//            totalHrADay += time.getTotalMinutes() / 60;
+//            dayPlot.add(new Entry(time.getEndingTime()/reference_timestamp, totalHrADay));
+//        }
+//        */
+//        YAxis yAxisMin = lineChart.getAxisLeft();
+//
+//        YAxis yAxisRight = lineChart.getAxisRight();
+//        yAxisRight.setEnabled(false);
+//
+//        ArrayList<ILineDataSet> lineDataSets = new ArrayList<>();
+//
+//        LineDataSet lineDataSet1 = new LineDataSet(dayPlot, "dayPlot");
+//        lineDataSet1.setDrawCircles(false);
+//        lineDataSet1.setColor(Color.BLUE);
+//
+//        lineDataSets.add(lineDataSet1);
+//
+//        lineChart.setData(new LineData(lineDataSets));
+//        //lineChart.setDoubleTapToZoomEnabled(false);
+//        lineChart.setVisibleXRangeMaximum(720.0f);
+//    }
+
+    public void testDatabase(){
+        //lineChart = (LineChart) findViewById(R.id.line_chart);
+        chart = (BarChart) findViewById(R.id.bar_chart);
+
+        dummyTask();
+
+        DBHelper dbHelper = new DBHelper(this);
+        database = dbHelper.getReadableDatabase();
+
+        Cursor cursor = DatabaseUtils.getAllTask(database);
+
+        SimpleDateFormat displayFormat = new SimpleDateFormat("HH:mm");
+        SimpleDateFormat parseFormat = new SimpleDateFormat("hh:mma");
+
+        List<StartEndTime> startEndTimeUTC = new ArrayList<>();
+        cursor.moveToFirst();
+        do
+        {
+            int StartingTimeHr = cursor.getInt(cursor.getColumnIndex(Contract.TABLE_TASK.COLUMN_NAME_START_HOUR));
+            int StartingTimeMin = cursor.getInt(cursor.getColumnIndex(Contract.TABLE_TASK.COLUMN_NAME_START_MINUTE));
+            String StartingMidDay = cursor.getString(cursor.getColumnIndex(Contract.TABLE_TASK.COLUMN_NAME_START_MID_DAY));
+
+            int EndingTimeHr = cursor.getInt(cursor.getColumnIndex(Contract.TABLE_TASK.COLUMN_NAME_END_HOUR));
+            int EndingTimeMin = cursor.getInt(cursor.getColumnIndex(Contract.TABLE_TASK.COLUMN_NAME_END_MINUTE));
+            String EndingMidDay = cursor.getString(cursor.getColumnIndex(Contract.TABLE_TASK.COLUMN_NAME_END_MID_DAY));
+
+            int totalMintues = cursor.getInt(cursor.getColumnIndex(Contract.TABLE_TASK.COLUMN_NAME_TASK_TOTAL_MINUTES));
+
+            Date startTime = null;
+            Date endTime = null;
+            try
+            {
+                startTime = parseFormat.parse(String.valueOf(StartingTimeHr) + ":" + String.valueOf(StartingTimeMin)
+                        + StartingMidDay);
+                endTime = parseFormat.parse(String.valueOf(EndingTimeHr) + ":" + String.valueOf(EndingTimeMin)
+                        + EndingMidDay);
+                startEndTimeUTC.add(new StartEndTime(startTime.getTime(), endTime.getTime(), totalMintues));
+            }
+            catch(ParseException e)
+            {
+                e.printStackTrace();
+            }
+
+        }while(cursor.moveToNext());
+
+        Collections.sort(startEndTimeUTC, new Comparator<StartEndTime>() {
+            @Override
+            public int compare(StartEndTime o1, StartEndTime o2) {
+                if(o1.getStartingTime() == o2.getStartingTime()) {return 0;}
+                else if(o1.getStartingTime() < o2.getStartingTime()) {return -1;}
+                else {return 1;}
+            }
+        });
+
+
+
+        Log.d("testing ", "stuff");
+    }
+
+    public void dummyTask()
+    {
+        DBHelper dbHelper = new DBHelper(this);
+        SQLiteDatabase dbAdd = dbHelper.getWritableDatabase();
+
+        dbAdd.delete(Contract.TABLE_TASK.TABLE_NAME, null, null);
+        dbAdd.delete(Contract.TABLE_SUBJECT.TABLE_NAME, null, null);
+        dbAdd.delete(Contract.TABLE_PROJECT.TABLE_NAME, null, null);
+
+        DatabaseUtils.addTask(dbAdd, "07/30/2017", "eat a salad", "diet",
+                12, 00, "AM", 1, 00, "AM",
+                ((1) * 60) + (00 - 00));
+
+        DatabaseUtils.addTask(dbAdd, "07/30/2017", "eat a salad", "diet",
+                8, 30, "AM", 9, 00, "AM",
+                ((9 - 8) * 60) + (00 - 30));
+
+        DatabaseUtils.addTask(dbAdd, "07/30/2017", "get money from aim for project", "android project",
+                10, 00, "AM", 10, 10, "AM",
+                ((10 - 10) * 60) + (10 - 00));
+
+        DatabaseUtils.addTask(dbAdd, "07/30/2017", "Hello", "meeting",
+                2, 30, "PM", 6, 30, "PM",
+                ((6 - 2) * 60) + (30 - 30));
+
+        DatabaseUtils.addTask(dbAdd, "07/30/2017", "bye", "meeting",
+                6, 30, "PM", 7, 30, "PM",
+                ((7 - 6) * 60) + (30 - 30));
+
+        DatabaseUtils.addTask(dbAdd, "07/30/2017", "commit graph layout", "school",
+                8, 30, "PM", 11, 30, "PM",
+                ((11 - 8) * 60) + (30 - 30));
+
+        DatabaseUtils.addTask(dbAdd, "07/30/2017", "cooking snack", "diet",
+                11, 31, "PM", 11, 59, "PM",
+                ((11 - 11) * 60) + (59 - 31));
+
+        /*DatabaseUtils.addTask(dbAdd, "07/29/2017", "english essay", "school",
+                2, 30, "PM", 6, 30, "PM",
+                ((6 - 2) * 60) + (30 - 30));
+
+        DatabaseUtils.addTask(dbAdd, "07/29/2017", "math hw", "school",
+                6, 30, "PM", 7, 30, "PM",
+                ((7 - 6) * 60) + (30 - 30));
+
+        DatabaseUtils.addTask(dbAdd, "07/29/2017", "reading", "school",
+                7, 30, "PM", 8, 30, "PM",
+                ((8 - 7) * 60) + (30 - 30));
+
+        DatabaseUtils.addTask(dbAdd, "07/28/2017", "added add task button", "android project",
+                7, 30, "PM", 8, 30, "PM",
+                ((8 - 7) * 60) + (30 - 30));
+
+        DatabaseUtils.addTask(dbAdd, "07/28/2017", "finish graph layout", "school",
+                8, 30, "PM", 11, 30, "PM",
+                ((11 - 8) * 60) + (30 - 30));
+
+        DatabaseUtils.addTask(dbAdd, "07/29/2017", "finish updating task", "school",
+                12, 30, "AM", 3, 30, "AM",
+                ((3) * 60) + (30 - 30));
+        */
     }
 }

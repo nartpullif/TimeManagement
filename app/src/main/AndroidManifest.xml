@@ -36,7 +36,8 @@
                 android:value=".activities.MainActivity" />
         </activity>
 
-        <activity android:name=".activities.GraphActivity">
+        <activity
+            android:name=".activities.GraphActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 

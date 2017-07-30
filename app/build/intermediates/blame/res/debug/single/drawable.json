@@ -40,6 +40,10 @@
         "source": "C:\\Users\\icyfillup\\.android\\build-cache\\a9542e16e4c7960e8234395111df2bf10b16cf06\\output\\res\\drawable\\abc_seekbar_thumb_material.xml"
     },
     {
+        "merged": "W:\\Android_stuff\\TimeManagement\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\activities_toolbar_line.xml",
+        "source": "W:\\Android_stuff\\TimeManagement\\app\\src\\main\\res\\drawable\\activities_toolbar_line.xml"
+    },
+    {
         "merged": "W:\\Android_stuff\\TimeManagement\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\abc_edit_text_material.xml",
         "source": "C:\\Users\\icyfillup\\.android\\build-cache\\a9542e16e4c7960e8234395111df2bf10b16cf06\\output\\res\\drawable\\abc_edit_text_material.xml"
     },
@@ -130,6 +134,10 @@
     {
         "merged": "W:\\Android_stuff\\TimeManagement\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\abc_cab_background_internal_bg.xml",
         "source": "C:\\Users\\icyfillup\\.android\\build-cache\\a9542e16e4c7960e8234395111df2bf10b16cf06\\output\\res\\drawable\\abc_cab_background_internal_bg.xml"
+    },
+    {
+        "merged": "W:\\Android_stuff\\TimeManagement\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\activities_toolbar.xml",
+        "source": "W:\\Android_stuff\\TimeManagement\\app\\src\\main\\res\\drawable\\activities_toolbar.xml"
     },
     {
         "merged": "W:\\Android_stuff\\TimeManagement\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\abc_cab_background_top_material.xml",
