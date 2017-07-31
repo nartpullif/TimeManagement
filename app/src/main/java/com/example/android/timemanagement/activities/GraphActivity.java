@@ -26,13 +26,18 @@ import com.github.mikephil.charting.data.BarDataSet;
 import com.github.mikephil.charting.data.BarEntry;
 import com.github.mikephil.charting.formatter.IndexAxisValueFormatter;
 import com.github.mikephil.charting.formatter.LargeValueFormatter;
+
+import java.text.DateFormat;
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
 import java.util.ArrayList;
 import java.util.Collections;
 import java.util.Comparator;
 import java.util.Date;
+import java.util.HashMap;
 import java.util.List;
+import java.util.Map;
+import java.util.Set;
 
 public class GraphActivity extends AppCompatActivity{
     private Toolbar toolbar;
@@ -45,15 +50,10 @@ public class GraphActivity extends AppCompatActivity{
     private Button weekButton;
     private Button monthButton;
 
-
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_graph);
-
-        // init
-        //dummyTask();
 
         // top of the layout
         todayButton =  (Button) findViewById(R.id.today_button);
@@ -67,7 +67,6 @@ public class GraphActivity extends AppCompatActivity{
 
         // middle of the layout
         chart = (BarChart) findViewById(R.id.bar_chart);
-        todaysBarChart();
 
         // bottom of the layout
         toolbar = (Toolbar) findViewById(R.id.graph_toolbar);
@@ -79,39 +78,49 @@ public class GraphActivity extends AppCompatActivity{
     }
 
     @Override
-    protected void onStart() {
+    protected void onStart()
+    {
         super.onStart();
+
+        dummyTask();
+        todaysBarChart();
+
         Log.d("GraphActivity: ", "onStart");
 
     }
 
     @Override
-    protected void onResume() {
+    protected void onResume()
+    {
         super.onResume();
         Log.d("GraphActivity: ", "onResume");
     }
 
     @Override
-    protected void onPause() {
+    protected void onPause()
+    {
         super.onPause();
         Log.d("GraphActivity: ", "onPause");
     }
 
     @Override
-    protected void onStop() {
+    protected void onStop()
+    {
         super.onStop();
         Log.d("GraphActivity: ", "onStop");
         this.finish();
     }
 
     @Override
-    protected void onRestart() {
+    protected void onRestart()
+    {
         super.onRestart();
         Log.d("GraphActivity: ", "onRestart");
     }
 
     @Override
-    protected void onDestroy() {
+    protected void onDestroy()
+    {
         super.onDestroy();
         Log.d("GraphActivity: ", "onDestroy");
     }
@@ -134,7 +143,7 @@ public class GraphActivity extends AppCompatActivity{
         weekButton.setBackgroundResource(R.color.colorAccent);
         monthButton.setBackgroundResource(R.color.colorPrimary);
 
-        //weekButton.setBackgroundResource();
+        weekBarChart();
         Toast.makeText(this, "Clicked on Week Button", Toast.LENGTH_LONG).show();
     }
 
@@ -148,107 +157,12 @@ public class GraphActivity extends AppCompatActivity{
         Toast.makeText(this, "Clicked on Month Button", Toast.LENGTH_LONG).show();
     }
 
-    public void makeBarChart()
-    {
-        float barWidth;
-        float barSpace;
-        float groupSpace;
-
-        barWidth = 0.3f;
-        barSpace = 0f;
-        groupSpace = 0.4f;
-
-        chart = (BarChart) findViewById(R.id.bar_chart);
-        chart.setDescription(null);
-        chart.setPinchZoom(false);
-        chart.setScaleEnabled(true);
-        chart.setDrawBarShadow(false);
-        chart.setDrawGridBackground(false);
-        chart.setDrawBorders(true);
-        chart.enableScroll();
-
-        int groupCount = 6;
-
-        ArrayList xVals = new ArrayList();
-
-        xVals.add("Jan");
-        xVals.add("Feb");
-        xVals.add("Mar");
-        xVals.add("Apr");
-        xVals.add("May");
-        xVals.add("Jun");
-
-        ArrayList yVals1 = new ArrayList();
-        ArrayList yVals2 = new ArrayList();
-
-        yVals1.add(new BarEntry(1, (float) 1));
-        yVals2.add(new BarEntry(1, (float) 2));
-        yVals1.add(new BarEntry(2, (float) 3));
-        yVals2.add(new BarEntry(2, (float) 4));
-        yVals1.add(new BarEntry(3, (float) 5));
-        yVals2.add(new BarEntry(3, (float) 6));
-        yVals1.add(new BarEntry(4, (float) 7));
-        yVals2.add(new BarEntry(4, (float) 8));
-        yVals1.add(new BarEntry(5, (float) 9));
-        yVals2.add(new BarEntry(5, (float) 10));
-        yVals1.add(new BarEntry(6, (float) 11));
-        yVals2.add(new BarEntry(6, (float) 12));
-
-        BarDataSet set1, set2;
-        set1 = new BarDataSet(yVals1, "A");
-        set1.setColor(Color.RED);
-        set1.setValueTextSize(15);
-        set2 = new BarDataSet(yVals2, "B");
-        set2.setColor(Color.BLUE);
-        BarData data = new BarData(set1, set2);
-        data.setValueFormatter(new LargeValueFormatter());
-        chart.setData(data);
-        chart.getBarData().setBarWidth(barWidth);
-        chart.getXAxis().setAxisMinimum(0);
-        chart.getXAxis().setAxisMaximum(0 + chart.getBarData().getGroupWidth(groupSpace, barSpace) * groupCount);
-        chart.groupBars(0, groupSpace, barSpace);
-        chart.getData().setHighlightEnabled(false);
-        chart.invalidate();
-
-        Legend l = chart.getLegend();
-        l.setVerticalAlignment(Legend.LegendVerticalAlignment.TOP);
-        l.setHorizontalAlignment(Legend.LegendHorizontalAlignment.RIGHT);
-        l.setOrientation(Legend.LegendOrientation.HORIZONTAL);
-        l.setDrawInside(true);
-        l.setYOffset(20f);
-        l.setXOffset(0f);
-        l.setYEntrySpace(0f);
-        l.setTextSize(8f);
-
-        //X-axis
-        XAxis xAxis = chart.getXAxis();
-        xAxis.setGranularity(1f);
-        xAxis.setGranularityEnabled(true);
-        xAxis.setCenterAxisLabels(true);
-        xAxis.setDrawGridLines(false);
-        xAxis.setAxisMaximum(4);
-        xAxis.setPosition(XAxis.XAxisPosition.BOTTOM);
-        xAxis.setValueFormatter(new IndexAxisValueFormatter(xVals));
-        xAxis.setTextSize(12);
-//Y-axis
-        chart.getAxisRight().setEnabled(false);
-        YAxis leftAxis = chart.getAxisLeft();
-        leftAxis.setValueFormatter(new LargeValueFormatter());
-        leftAxis.setDrawGridLines(true);
-        leftAxis.setSpaceTop(35f);
-        leftAxis.setAxisMinimum(0f);
-        leftAxis.setTextSize(15);
-    }
-
     public void todaysBarChart()
     {
-        setupBarChart();
-
         DBHelper dbHelper = new DBHelper(this);
         database = dbHelper.getReadableDatabase();
 
         Cursor cursor = DatabaseUtils.getTodaysTask(database);
-        //Cursor cursor = DatabaseUtils.getThisWeeksTask(database);
 
         SimpleDateFormat parseFormat = new SimpleDateFormat("hh:mma");
 
@@ -297,39 +211,6 @@ public class GraphActivity extends AppCompatActivity{
             }
         });
 
-
-        makeBarChart(startEndTimeUTC);
-
-        Log.d("testing ", "stuff");
-    }
-
-    public void setupBarChart()
-    {
-        chart.setDescription(null);
-        chart.setPinchZoom(false);
-        chart.setScaleEnabled(true);
-        chart.setDrawBarShadow(false);
-        chart.setDrawGridBackground(false);
-        chart.setDrawBorders(true);
-        chart.enableScroll();
-    }
-
-    private void makeBarChart(List<StartEndTime> startEndTimeUTC)
-    {
-        float barWidth = 0.7f;
-
-//        chart.setDescription(null);
-//        chart.setPinchZoom(false);
-//        chart.setScaleEnabled(true);
-//        chart.setDrawBarShadow(false);
-//        chart.setDrawGridBackground(false);
-//        chart.setDrawBorders(true);
-//        chart.enableScroll();
-
-        int groupCount = 10;
-
-        SimpleDateFormat parseFormat = new SimpleDateFormat("hh:mma");
-
         ArrayList<BarEntry> yMinVals = new ArrayList();
         ArrayList<String> xTimeVals = new ArrayList();
         for(int i = 0; i < startEndTimeUTC.size(); i++)
@@ -345,8 +226,79 @@ public class GraphActivity extends AppCompatActivity{
             yMinVals.add(new BarEntry(i, time.getTotalMinutes()));
         }
 
+        makeBarChart(xTimeVals, yMinVals);
+
+        Log.d("testing ", "stuff");
+    }
+
+    public void weekBarChart()
+    {
+        DBHelper dbHelper = new DBHelper(this);
+        database = dbHelper.getReadableDatabase();
+
+        Cursor cursor = DatabaseUtils.getThisWeeksTask(database);
+
+        HashMap<String, Integer> weekTask = new HashMap<>();
+
+        cursor.moveToFirst();
+        do
+        {
+            String date = cursor.getString(cursor.getColumnIndex(Contract.TABLE_TASK.COLUMN_NAME_DATE));
+            int totalMintues = cursor.getInt(cursor.getColumnIndex(Contract.TABLE_TASK.COLUMN_NAME_TASK_TOTAL_MINUTES));
+
+            if(weekTask.containsKey(date))
+            {
+                int daysTotalMintues = weekTask.get(date);
+                daysTotalMintues += totalMintues;
+                weekTask.put(date, daysTotalMintues);
+            }
+            else
+            {
+                weekTask.put(date, totalMintues);
+            }
+        }while(cursor.moveToNext());
+
+        List<String> dayKey = new ArrayList(weekTask.keySet());
+        Collections.sort(dayKey, new Comparator<String>() {
+            DateFormat dateFormat = new SimpleDateFormat("MM/dd/yyyy");
+            @Override
+            public int compare(String o1, String o2) {
+                try {
+                    return dateFormat.parse(o1).compareTo(dateFormat.parse(o2));
+                } catch (ParseException e) {
+                    throw new IllegalArgumentException(e);
+                }
+            }
+        });
+
+        ArrayList<BarEntry> yMinVals = new ArrayList();
+        ArrayList<String> xdayVals = new ArrayList();
+        for(int i = 0; i < dayKey.size(); i++)
+        {
+            String date = dayKey.get(i);
+            int dayTotalMinute = weekTask.get(date);
+
+            xdayVals.add(date);
+            yMinVals.add(new BarEntry(i, dayTotalMinute));
+        }
+
+        makeBarChart(xdayVals, yMinVals);
+    }
+
+    private void makeBarChart(ArrayList<String> xTimeVals, ArrayList<BarEntry> yMintueVals)
+    {
+        float barWidth = 0.7f;
+
+        chart.setDescription(null);
+        chart.setPinchZoom(false);
+        chart.setScaleEnabled(true);
+        chart.setDrawBarShadow(false);
+        chart.setDrawGridBackground(false);
+        chart.setDrawBorders(true);
+        chart.enableScroll();
+
         BarDataSet todaysTaskSet;
-        todaysTaskSet = new BarDataSet(yMinVals, "Total Time Spent");
+        todaysTaskSet = new BarDataSet(yMintueVals, "Total Time Spent");
         todaysTaskSet.setColor(Color.BLUE);
         todaysTaskSet.setValueTextSize(15f);
 
@@ -372,12 +324,14 @@ public class GraphActivity extends AppCompatActivity{
         XAxis xAxis = chart.getXAxis();
         xAxis.setGranularity(1f);
         xAxis.setGranularityEnabled(true);
-        xAxis.setCenterAxisLabels(true);
+        xAxis.setCenterAxisLabels(false);
         xAxis.setDrawGridLines(false);
         xAxis.setAxisMaximum(xTimeVals.size());
         xAxis.setPosition(XAxis.XAxisPosition.BOTTOM);
         xAxis.setValueFormatter(new IndexAxisValueFormatter(xTimeVals));
-        xAxis.setTextSize(12);
+        // text size and offset to compensate the text size
+        xAxis.setTextSize(15);
+        chart.setExtraBottomOffset(20);
 
         //Y-axis
         chart.getAxisRight().setEnabled(false);
@@ -399,6 +353,10 @@ public class GraphActivity extends AppCompatActivity{
         dbAdd.delete(Contract.TABLE_TASK.TABLE_NAME, null, null);
         dbAdd.delete(Contract.TABLE_SUBJECT.TABLE_NAME, null, null);
         dbAdd.delete(Contract.TABLE_PROJECT.TABLE_NAME, null, null);
+
+        DatabaseUtils.addTask(dbAdd, "07/29/2017", "reading", "school",
+                7, 30, "PM", 8, 30, "PM",
+                ((8 - 7) * 60) + (30 - 30));
 
         DatabaseUtils.addTask(dbAdd, "07/23/2017", "walk for 30 min", "diet",
                 8, 30, "PM", 9, 00, "PM",
@@ -439,10 +397,6 @@ public class GraphActivity extends AppCompatActivity{
         DatabaseUtils.addTask(dbAdd, "07/29/2017", "math hw", "school",
                 6, 30, "PM", 7, 30, "PM",
                 ((7 - 6) * 60) + (30 - 30));
-
-        DatabaseUtils.addTask(dbAdd, "07/29/2017", "reading", "school",
-                7, 30, "PM", 8, 30, "PM",
-                ((8 - 7) * 60) + (30 - 30));
 
         DatabaseUtils.addTask(dbAdd, "07/28/2017", "added add task button", "android project",
                 7, 30, "PM", 8, 30, "PM",

@@ -98,7 +98,7 @@ public class DatabaseUtils {
                 new String[]{startDate, endDate},
                 null,
                 null,
-                null);
+                Contract.TABLE_TASK.COLUMN_NAME_DATE);
     }
 
     public static Cursor getDailyTask(SQLiteDatabase db, String date) {
