@@ -1,6 +1,7 @@
 package com.example.android.timemanagement.data;
 
 import android.content.ContentValues;
+import android.content.Context;
 import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
 import android.util.Log;
@@ -9,6 +10,7 @@ import com.example.android.timemanagement.data.Contract;
 
 import java.text.DateFormat;
 import java.text.SimpleDateFormat;
+import java.util.ArrayList;
 import java.util.Calendar;
 import java.util.Date;
 import java.util.GregorianCalendar;
@@ -77,6 +79,81 @@ public class DatabaseUtils {
                 null);
     }
 
+    public static ArrayList<Cursor> getThisMonthTask(SQLiteDatabase db)
+    {
+        ArrayList<Cursor> weeksCursor = new ArrayList<>();
+        ///*debug: tracks what is currently in the weeksCursor by date*/ ArrayList<String> weekTracker = new ArrayList<>();
+        DateFormat dbDateFormat = new SimpleDateFormat("MM/dd/yyyy", Locale.getDefault());
+        Calendar c = Calendar.getInstance();
+
+        int dayOfMonth = 1;
+        c.set(c.get(Calendar.YEAR), c.get(Calendar.MONTH), dayOfMonth);
+        //*debug: corner case for this method, April 2017 [two day ahead in the next month]*/c.set(c.get(Calendar.YEAR), Calendar.APRIL, dayOfMonth);
+        int thisMonth = c.get(Calendar.MONTH);
+
+        String startDate;
+        String endDate;
+        startDate = dbDateFormat.format(c.getTime());
+        do {
+            if (c.get(Calendar.DAY_OF_WEEK) == Calendar.SUNDAY)
+            {
+                endDate = dbDateFormat.format(c.getTime());
+
+                {// NOTE[Philip]: this bracket is just for readability for me
+                    Cursor cursor = db.query(
+                            Contract.TABLE_TASK.TABLE_NAME,
+                            null,
+                            Contract.TABLE_TASK.COLUMN_NAME_DATE + " BETWEEN ? AND ?",
+                            new String[]{startDate, endDate},
+                            null,
+                            null,
+                            Contract.TABLE_TASK.COLUMN_NAME_DATE);
+                    weeksCursor.add(cursor);
+                    ///*debug: tracks what is currently in the weeksCursor by date*/ weekTracker.add(startDate + " - " + endDate);
+                }
+
+                c.set(c.get(Calendar.YEAR), c.get(Calendar.MONTH), ++dayOfMonth);
+                dayOfMonth = c.get(Calendar.DAY_OF_MONTH);
+
+                //IMPORTANT[philip]: startDate is only null when this loop detect that the current
+                // month is a new month.
+                if(thisMonth == c.get(Calendar.MONTH))
+                {
+                    startDate = dbDateFormat.format(c.getTime());
+                }
+                else
+                {
+                    startDate = null;
+                }
+
+            }
+            c.set(c.get(Calendar.YEAR), c.get(Calendar.MONTH), ++dayOfMonth);
+            dayOfMonth = c.get(Calendar.DAY_OF_MONTH);
+        }
+        while (thisMonth == c.get(Calendar.MONTH));
+
+        if(startDate != null)
+        {
+            c.set(c.get(Calendar.YEAR), c.get(Calendar.MONTH), --dayOfMonth);
+            while(thisMonth != c.get(Calendar.MONTH))
+            {c.set(c.get(Calendar.YEAR), c.get(Calendar.MONTH), --dayOfMonth);}
+            endDate = dbDateFormat.format(c.getTime());
+
+            Cursor cursor = db.query(
+                    Contract.TABLE_TASK.TABLE_NAME,
+                    null,
+                    Contract.TABLE_TASK.COLUMN_NAME_DATE + " BETWEEN ? AND ?",
+                    new String[]{startDate, endDate},
+                    null,
+                    null,
+                    Contract.TABLE_TASK.COLUMN_NAME_DATE);
+            weeksCursor.add(cursor);
+            ///*debug: tracks what is currently in the weeksCursor by date*/ weekTracker.add(startDate + " - " + endDate);
+        }
+
+        return weeksCursor;
+    }
+
     public static Cursor getThisWeeksTask(SQLiteDatabase db) {
 
         Calendar c = GregorianCalendar.getInstance();
@@ -86,10 +163,9 @@ public class DatabaseUtils {
 
         DateFormat dbDateFormat = new SimpleDateFormat("MM/dd/yyyy", Locale.getDefault());
 
-
-        String startDate = dbDateFormat .format(c.getTime());
+        String startDate = dbDateFormat.format(c.getTime());
         c.add(Calendar.DATE, 6);
-        String endDate = dbDateFormat .format(c.getTime());
+        String endDate = dbDateFormat.format(c.getTime());
 
         return db.query(
                 Contract.TABLE_TASK.TABLE_NAME,
@@ -129,9 +205,9 @@ public class DatabaseUtils {
                 " INNER JOIN " + Contract.TABLE_SUBJECT.TABLE_NAME + subjectAlias + " ON " +
                 taskAlias + "." + Contract.TABLE_TASK.COLUMN_NAME_PROJECT_ID + " = " + subjectAlias + "." + Contract.TABLE_SUBJECT._ID +
                 " INNER JOIN " + Contract.TABLE_PROJECT.TABLE_NAME + projectAlias + " ON " +
-                taskAlias + "." +Contract.TABLE_TASK.COLUMN_NAME_SUBJECT_ID + " = " + projectAlias + "." + Contract.TABLE_PROJECT._ID +
+                taskAlias + "." + Contract.TABLE_TASK.COLUMN_NAME_SUBJECT_ID + " = " + projectAlias + "." + Contract.TABLE_PROJECT._ID +
                 " WHERE " + taskAlias + "." + Contract.TABLE_TASK.COLUMN_NAME_DATE + " = '" + date + "';";
-                //" WHERE 0;";
+        //" WHERE 0;";
 
         Log.d(TAG, "Select table SQL: " + query);
         Cursor cursor = db.rawQuery(query, null);
@@ -154,13 +230,13 @@ public class DatabaseUtils {
             , int totalMinutes) {
 
         //check if subject not exist then insert
-        int subjectId = findData(db,Contract.TABLE_SUBJECT.TABLE_NAME, Contract.TABLE_SUBJECT.COLUMN_NAME_TITLE, subject);
-        if(subjectId < 0){
+        int subjectId = findData(db, Contract.TABLE_SUBJECT.TABLE_NAME, Contract.TABLE_SUBJECT.COLUMN_NAME_TITLE, subject);
+        if (subjectId < 0) {
             subjectId = addSubject(db, subject);
         }
         //check if project not exist then insert
-        int projectId = findData(db,Contract.TABLE_PROJECT.TABLE_NAME, Contract.TABLE_PROJECT.COLUMN_NAME_TITLE, project);
-        if(projectId < 0){
+        int projectId = findData(db, Contract.TABLE_PROJECT.TABLE_NAME, Contract.TABLE_PROJECT.COLUMN_NAME_TITLE, project);
+        if (projectId < 0) {
             projectId = addProject(db, project);
         }
 
@@ -195,21 +271,22 @@ public class DatabaseUtils {
     }
 
     public static int findData(SQLiteDatabase db, String tableName, String dbField, String fieldValue) {
-        String[] columns = { "_id", dbField };
+        String[] columns = {"_id", dbField};
         String selection = dbField + " =?";
-        String[] selectionArgs = { fieldValue };
+        String[] selectionArgs = {fieldValue};
         String limit = "1";
         int id = -1;
 
         Cursor cursor = db.query(tableName, columns, selection, selectionArgs, null, null, null, limit);
         Log.v("Cursor Object", android.database.DatabaseUtils.dumpCursorToString(cursor));
-        if ( cursor.moveToFirst() ) {
+        if (cursor.moveToFirst()) {
             id = cursor.getInt(cursor.getColumnIndex("_id"));
         }
         cursor.close();
         return id;
 
     }
+
     public static boolean removeTask(SQLiteDatabase db, long id) {
         Log.d(TAG, "deleting id: " + id);
         return db.delete(Contract.TABLE_TASK.TABLE_NAME, Contract.TABLE_TASK._ID + "=" + id, null) > 0;
@@ -221,13 +298,13 @@ public class DatabaseUtils {
             , int totalMinutes, long id) {
 
         //check if subject not exist then insert
-        int subjectId = findData(db,Contract.TABLE_SUBJECT.TABLE_NAME, Contract.TABLE_SUBJECT.COLUMN_NAME_TITLE, subject);
-        if(subjectId < 0){
+        int subjectId = findData(db, Contract.TABLE_SUBJECT.TABLE_NAME, Contract.TABLE_SUBJECT.COLUMN_NAME_TITLE, subject);
+        if (subjectId < 0) {
             subjectId = addSubject(db, subject);
         }
         //check if project not exist then insert
-        int projectId = findData(db,Contract.TABLE_PROJECT.TABLE_NAME, Contract.TABLE_PROJECT.COLUMN_NAME_TITLE, project);
-        if(projectId < 0){
+        int projectId = findData(db, Contract.TABLE_PROJECT.TABLE_NAME, Contract.TABLE_PROJECT.COLUMN_NAME_TITLE, project);
+        if (projectId < 0) {
             projectId = addProject(db, project);
         }
 
@@ -245,5 +322,97 @@ public class DatabaseUtils {
         cv.put(Contract.TABLE_TASK.COLUMN_NAME_TASK_TOTAL_MINUTES, totalMinutes);
 
         return db.update(Contract.TABLE_TASK.TABLE_NAME, cv, Contract.TABLE_TASK._ID + "=" + id, null);
+    }
+
+    public static void dummyTask(Context context) {
+        DBHelper dbHelper = new DBHelper(context);
+        SQLiteDatabase dbAdd = dbHelper.getWritableDatabase();
+
+        dbAdd.delete(Contract.TABLE_TASK.TABLE_NAME, null, null);
+        dbAdd.delete(Contract.TABLE_SUBJECT.TABLE_NAME, null, null);
+        dbAdd.delete(Contract.TABLE_PROJECT.TABLE_NAME, null, null);
+
+        DatabaseUtils.addTask(dbAdd, "07/01/2017", "math hw", "school",
+                6, 30, "PM", 7, 30, "PM",
+                ((7 - 6) * 60) + (30 - 30));
+
+        DatabaseUtils.addTask(dbAdd, "07/09/2017", "get money from aim for project", "android project",
+                10, 00, "AM", 10, 10, "AM",
+                ((10 - 10) * 60) + (10 - 00));
+
+        DatabaseUtils.addTask(dbAdd, "07/16/2017", "walk for 30 min", "diet",
+                8, 30, "PM", 9, 00, "PM",
+                ((9 - 8) * 60) + (00 - 30));
+
+        DatabaseUtils.addTask(dbAdd, "07/29/2017", "reading", "school",
+                7, 30, "PM", 8, 30, "PM",
+                ((8 - 7) * 60) + (30 - 30));
+
+        DatabaseUtils.addTask(dbAdd, "07/23/2017", "walk for 30 min", "diet",
+                8, 30, "PM", 9, 00, "PM",
+                ((9 - 8) * 60) + (00 - 30));
+
+        DatabaseUtils.addTask(dbAdd, "07/30/2017", "eat a salad", "diet",
+                12, 00, "AM", 1, 00, "AM",
+                ((1) * 60) + (00 - 00));
+
+        DatabaseUtils.addTask(dbAdd, "07/30/2017", "eat a salad", "diet",
+                8, 30, "AM", 9, 00, "AM",
+                ((9 - 8) * 60) + (00 - 30));
+
+        DatabaseUtils.addTask(dbAdd, "07/30/2017", "get money from aim for project", "android project",
+                10, 00, "AM", 10, 10, "AM",
+                ((10 - 10) * 60) + (10 - 00));
+
+        DatabaseUtils.addTask(dbAdd, "07/30/2017", "Hello", "meeting",
+                2, 30, "PM", 6, 30, "PM",
+                ((6 - 2) * 60) + (30 - 30));
+
+        DatabaseUtils.addTask(dbAdd, "07/30/2017", "bye", "meeting",
+                6, 30, "PM", 7, 30, "PM",
+                ((7 - 6) * 60) + (30 - 30));
+
+        DatabaseUtils.addTask(dbAdd, "07/30/2017", "commit graph layout", "school",
+                8, 30, "PM", 11, 30, "PM",
+                ((11 - 8) * 60) + (30 - 30));
+
+        DatabaseUtils.addTask(dbAdd, "07/30/2017", "cooking snack", "diet",
+                11, 31, "PM", 11, 59, "PM",
+                ((11 - 11) * 60) + (59 - 31));
+
+        DatabaseUtils.addTask(dbAdd, "07/29/2017", "english essay", "school",
+                2, 30, "PM", 6, 30, "PM",
+                ((6 - 2) * 60) + (30 - 30));
+
+        DatabaseUtils.addTask(dbAdd, "07/29/2017", "math hw", "school",
+                6, 30, "PM", 7, 30, "PM",
+                ((7 - 6) * 60) + (30 - 30));
+
+        DatabaseUtils.addTask(dbAdd, "07/28/2017", "added add task button", "android project",
+                7, 30, "PM", 8, 30, "PM",
+                ((8 - 7) * 60) + (30 - 30));
+
+        DatabaseUtils.addTask(dbAdd, "07/28/2017", "finish graph layout", "school",
+                8, 30, "PM", 11, 30, "PM",
+                ((11 - 8) * 60) + (30 - 30));
+
+        DatabaseUtils.addTask(dbAdd, "07/29/2017", "finish updating task", "school",
+                12, 30, "AM", 3, 30, "AM",
+                ((3) * 60) + (30 - 30));
+
+        DatabaseUtils.addTask(dbAdd, "07/31/2017", "finish Month button", "android project",
+                12, 00, "AM", 1, 30, "AM",
+                ((1) * 60) + (30 - 00));
+
+        DatabaseUtils.addTask(dbAdd, "07/31/2017", "finish Month button layout", "android project",
+                1, 30, "AM", 2, 30, "AM",
+                ((2 - 1) * 60) + (30 - 30));
+
+        DatabaseUtils.addTask(dbAdd, "07/31/2017", "finish Week button", "android project",
+                2, 30, "AM", 4, 30, "AM",
+                ((4 - 2) * 60) + (30 - 30));
+
+        dbHelper.close();
+        dbAdd.close();
     }
 }

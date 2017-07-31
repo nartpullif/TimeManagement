@@ -18,6 +18,7 @@ import com.example.android.timemanagement.data.DatabaseUtils;
 import com.example.android.timemanagement.models.ActivitySwitcherToolbar;
 import com.example.android.timemanagement.models.StartEndTime;
 import com.github.mikephil.charting.charts.BarChart;
+import com.github.mikephil.charting.components.Description;
 import com.github.mikephil.charting.components.Legend;
 import com.github.mikephil.charting.components.XAxis;
 import com.github.mikephil.charting.components.YAxis;
@@ -27,6 +28,7 @@ import com.github.mikephil.charting.data.BarEntry;
 import com.github.mikephil.charting.formatter.IndexAxisValueFormatter;
 import com.github.mikephil.charting.formatter.LargeValueFormatter;
 
+import java.lang.reflect.Array;
 import java.text.DateFormat;
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
@@ -82,8 +84,9 @@ public class GraphActivity extends AppCompatActivity{
     {
         super.onStart();
 
-        dummyTask();
+        DatabaseUtils.dummyTask(this);
         todaysBarChart();
+        //monthBarChart();
 
         Log.d("GraphActivity: ", "onStart");
 
@@ -154,6 +157,7 @@ public class GraphActivity extends AppCompatActivity{
         weekButton.setBackgroundResource(R.color.colorPrimary);
         monthButton.setBackgroundResource(R.color.colorAccent);
 
+        monthBarChart();
         Toast.makeText(this, "Clicked on Month Button", Toast.LENGTH_LONG).show();
     }
 
@@ -169,38 +173,40 @@ public class GraphActivity extends AppCompatActivity{
         List<StartEndTime> startEndTimeUTC = new ArrayList<>();
 
         ArrayList<String> dates = new ArrayList<>();
-        cursor.moveToFirst();
-        do
+        if(cursor.moveToFirst())
         {
-            int StartingTimeHr = cursor.getInt(cursor.getColumnIndex(Contract.TABLE_TASK.COLUMN_NAME_START_HOUR));
-            int StartingTimeMin = cursor.getInt(cursor.getColumnIndex(Contract.TABLE_TASK.COLUMN_NAME_START_MINUTE));
-            String StartingMidDay = cursor.getString(cursor.getColumnIndex(Contract.TABLE_TASK.COLUMN_NAME_START_MID_DAY));
-
-            int EndingTimeHr = cursor.getInt(cursor.getColumnIndex(Contract.TABLE_TASK.COLUMN_NAME_END_HOUR));
-            int EndingTimeMin = cursor.getInt(cursor.getColumnIndex(Contract.TABLE_TASK.COLUMN_NAME_END_MINUTE));
-            String EndingMidDay = cursor.getString(cursor.getColumnIndex(Contract.TABLE_TASK.COLUMN_NAME_END_MID_DAY));
-
-            int totalMintues = cursor.getInt(cursor.getColumnIndex(Contract.TABLE_TASK.COLUMN_NAME_TASK_TOTAL_MINUTES));
-
-            String date = cursor.getString(cursor.getColumnIndex(Contract.TABLE_TASK.COLUMN_NAME_DATE));
-            dates.add(date);
-
-            Date startTime = null;
-            Date endTime = null;
-            try
+            do
             {
-                startTime = parseFormat.parse(String.valueOf(StartingTimeHr) + ":" + String.valueOf(StartingTimeMin)
-                        + StartingMidDay);
-                endTime = parseFormat.parse(String.valueOf(EndingTimeHr) + ":" + String.valueOf(EndingTimeMin)
-                        + EndingMidDay);
-                startEndTimeUTC.add(new StartEndTime(startTime.getTime(), endTime.getTime(), totalMintues));
-            }
-            catch(ParseException e)
-            {
-                e.printStackTrace();
-            }
+                int StartingTimeHr = cursor.getInt(cursor.getColumnIndex(Contract.TABLE_TASK.COLUMN_NAME_START_HOUR));
+                int StartingTimeMin = cursor.getInt(cursor.getColumnIndex(Contract.TABLE_TASK.COLUMN_NAME_START_MINUTE));
+                String StartingMidDay = cursor.getString(cursor.getColumnIndex(Contract.TABLE_TASK.COLUMN_NAME_START_MID_DAY));
 
-        }while(cursor.moveToNext());
+                int EndingTimeHr = cursor.getInt(cursor.getColumnIndex(Contract.TABLE_TASK.COLUMN_NAME_END_HOUR));
+                int EndingTimeMin = cursor.getInt(cursor.getColumnIndex(Contract.TABLE_TASK.COLUMN_NAME_END_MINUTE));
+                String EndingMidDay = cursor.getString(cursor.getColumnIndex(Contract.TABLE_TASK.COLUMN_NAME_END_MID_DAY));
+
+                int totalMintues = cursor.getInt(cursor.getColumnIndex(Contract.TABLE_TASK.COLUMN_NAME_TASK_TOTAL_MINUTES));
+
+                String date = cursor.getString(cursor.getColumnIndex(Contract.TABLE_TASK.COLUMN_NAME_DATE));
+                dates.add(date);
+
+                Date startTime = null;
+                Date endTime = null;
+                try
+                {
+                    startTime = parseFormat.parse(String.valueOf(StartingTimeHr) + ":" + String.valueOf(StartingTimeMin)
+                            + StartingMidDay);
+                    endTime = parseFormat.parse(String.valueOf(EndingTimeHr) + ":" + String.valueOf(EndingTimeMin)
+                            + EndingMidDay);
+                    startEndTimeUTC.add(new StartEndTime(startTime.getTime(), endTime.getTime(), totalMintues));
+                }
+                catch(ParseException e)
+                {
+                    e.printStackTrace();
+                }
+
+            }while(cursor.moveToNext());
+        }
 
         Collections.sort(startEndTimeUTC, new Comparator<StartEndTime>() {
             @Override
@@ -226,7 +232,7 @@ public class GraphActivity extends AppCompatActivity{
             yMinVals.add(new BarEntry(i, time.getTotalMinutes()));
         }
 
-        makeBarChart(xTimeVals, yMinVals);
+        makeBarChart(xTimeVals, yMinVals, "Today");
 
         Log.d("testing ", "stuff");
     }
@@ -240,23 +246,25 @@ public class GraphActivity extends AppCompatActivity{
 
         HashMap<String, Integer> weekTask = new HashMap<>();
 
-        cursor.moveToFirst();
-        do
+        if(cursor.moveToFirst())
         {
-            String date = cursor.getString(cursor.getColumnIndex(Contract.TABLE_TASK.COLUMN_NAME_DATE));
-            int totalMintues = cursor.getInt(cursor.getColumnIndex(Contract.TABLE_TASK.COLUMN_NAME_TASK_TOTAL_MINUTES));
+            do
+            {
+                String date = cursor.getString(cursor.getColumnIndex(Contract.TABLE_TASK.COLUMN_NAME_DATE));
+                int totalMintues = cursor.getInt(cursor.getColumnIndex(Contract.TABLE_TASK.COLUMN_NAME_TASK_TOTAL_MINUTES));
 
-            if(weekTask.containsKey(date))
-            {
-                int daysTotalMintues = weekTask.get(date);
-                daysTotalMintues += totalMintues;
-                weekTask.put(date, daysTotalMintues);
-            }
-            else
-            {
-                weekTask.put(date, totalMintues);
-            }
-        }while(cursor.moveToNext());
+                if(weekTask.containsKey(date))
+                {
+                    int daysTotalMintues = weekTask.get(date);
+                    daysTotalMintues += totalMintues;
+                    weekTask.put(date, daysTotalMintues);
+                }
+                else
+                {
+                    weekTask.put(date, totalMintues);
+                }
+            }while(cursor.moveToNext());
+        }
 
         List<String> dayKey = new ArrayList(weekTask.keySet());
         Collections.sort(dayKey, new Comparator<String>() {
@@ -282,14 +290,52 @@ public class GraphActivity extends AppCompatActivity{
             yMinVals.add(new BarEntry(i, dayTotalMinute));
         }
 
-        makeBarChart(xdayVals, yMinVals);
+        makeBarChart(xdayVals, yMinVals, "Week");
     }
 
-    private void makeBarChart(ArrayList<String> xTimeVals, ArrayList<BarEntry> yMintueVals)
+    public void monthBarChart()
+    {
+        DBHelper dbHelper = new DBHelper(this);
+        database = dbHelper.getReadableDatabase();
+
+        ArrayList<Cursor> thisMonthWeekCursor = DatabaseUtils.getThisMonthTask(database);
+        //ArrayList<String> dates = new ArrayList<>();
+
+        ArrayList<BarEntry> yMinVals = new ArrayList();
+        ArrayList<String> xWeekVals = new ArrayList();
+        for(int i = 0; i < thisMonthWeekCursor.size(); i++)
+        {
+            Cursor cursor = thisMonthWeekCursor.get(i);
+
+            int totalMintues = 0;
+            if(cursor.moveToFirst())
+            {
+                do
+                {
+                    //String date = cursor.getString(cursor.getColumnIndex(Contract.TABLE_TASK.COLUMN_NAME_DATE));
+                    totalMintues += cursor.getInt(cursor.getColumnIndex(Contract.TABLE_TASK.COLUMN_NAME_TASK_TOTAL_MINUTES));
+
+                    //dates.add(date);
+                }while(cursor.moveToNext());
+            }
+
+            xWeekVals.add("Week " + String.valueOf(i + 1));
+            yMinVals.add(new BarEntry(i, totalMintues));
+        }
+        makeBarChart(xWeekVals, yMinVals, "Month");
+        Log.d("test: ", "stuff");
+    }
+
+    private void makeBarChart(ArrayList<String> xTimeVals, ArrayList<BarEntry> yMintueVals, String name)
     {
         float barWidth = 0.7f;
 
-        chart.setDescription(null);
+        Description hello = new Description();
+        hello.setText(name);
+        hello.setTextSize(20);
+        hello.setXOffset(170);
+        hello.setYOffset(349);
+        chart.setDescription(hello);
         chart.setPinchZoom(false);
         chart.setScaleEnabled(true);
         chart.setDrawBarShadow(false);
@@ -303,7 +349,7 @@ public class GraphActivity extends AppCompatActivity{
         todaysTaskSet.setValueTextSize(15f);
 
         BarData data = new BarData(todaysTaskSet);
-        data.setValueFormatter(new LargeValueFormatter());
+        data.setValueFormatter(new LargeValueFormatter(" min"));
 
         chart.setData(data);
         chart.getBarData().setBarWidth(barWidth);
@@ -343,74 +389,5 @@ public class GraphActivity extends AppCompatActivity{
         leftAxis.setTextSize(15);
 
         Log.d("testing ", "stuff");
-    }
-
-    public void dummyTask()
-    {
-        DBHelper dbHelper = new DBHelper(this);
-        SQLiteDatabase dbAdd = dbHelper.getWritableDatabase();
-
-        dbAdd.delete(Contract.TABLE_TASK.TABLE_NAME, null, null);
-        dbAdd.delete(Contract.TABLE_SUBJECT.TABLE_NAME, null, null);
-        dbAdd.delete(Contract.TABLE_PROJECT.TABLE_NAME, null, null);
-
-        DatabaseUtils.addTask(dbAdd, "07/29/2017", "reading", "school",
-                7, 30, "PM", 8, 30, "PM",
-                ((8 - 7) * 60) + (30 - 30));
-
-        DatabaseUtils.addTask(dbAdd, "07/23/2017", "walk for 30 min", "diet",
-                8, 30, "PM", 9, 00, "PM",
-                ((9 - 8) * 60) + (00 - 30));
-
-        DatabaseUtils.addTask(dbAdd, "07/30/2017", "eat a salad", "diet",
-                12, 00, "AM", 1, 00, "AM",
-                ((1) * 60) + (00 - 00));
-
-        DatabaseUtils.addTask(dbAdd, "07/30/2017", "eat a salad", "diet",
-                8, 30, "AM", 9, 00, "AM",
-                ((9 - 8) * 60) + (00 - 30));
-
-        DatabaseUtils.addTask(dbAdd, "07/30/2017", "get money from aim for project", "android project",
-                10, 00, "AM", 10, 10, "AM",
-                ((10 - 10) * 60) + (10 - 00));
-
-        DatabaseUtils.addTask(dbAdd, "07/30/2017", "Hello", "meeting",
-                2, 30, "PM", 6, 30, "PM",
-                ((6 - 2) * 60) + (30 - 30));
-
-        DatabaseUtils.addTask(dbAdd, "07/30/2017", "bye", "meeting",
-                6, 30, "PM", 7, 30, "PM",
-                ((7 - 6) * 60) + (30 - 30));
-
-        DatabaseUtils.addTask(dbAdd, "07/30/2017", "commit graph layout", "school",
-                8, 30, "PM", 11, 30, "PM",
-                ((11 - 8) * 60) + (30 - 30));
-
-        DatabaseUtils.addTask(dbAdd, "07/30/2017", "cooking snack", "diet",
-                11, 31, "PM", 11, 59, "PM",
-                ((11 - 11) * 60) + (59 - 31));
-
-        DatabaseUtils.addTask(dbAdd, "07/29/2017", "english essay", "school",
-                2, 30, "PM", 6, 30, "PM",
-                ((6 - 2) * 60) + (30 - 30));
-
-        DatabaseUtils.addTask(dbAdd, "07/29/2017", "math hw", "school",
-                6, 30, "PM", 7, 30, "PM",
-                ((7 - 6) * 60) + (30 - 30));
-
-        DatabaseUtils.addTask(dbAdd, "07/28/2017", "added add task button", "android project",
-                7, 30, "PM", 8, 30, "PM",
-                ((8 - 7) * 60) + (30 - 30));
-
-        DatabaseUtils.addTask(dbAdd, "07/28/2017", "finish graph layout", "school",
-                8, 30, "PM", 11, 30, "PM",
-                ((11 - 8) * 60) + (30 - 30));
-
-        DatabaseUtils.addTask(dbAdd, "07/29/2017", "finish updating task", "school",
-                12, 30, "AM", 3, 30, "AM",
-                ((3) * 60) + (30 - 30));
-
-        dbHelper.close();
-        dbAdd.close();
     }
 }
