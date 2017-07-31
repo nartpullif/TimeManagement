@@ -3,16 +3,14 @@ package com.example.android.timemanagement.activities;
 import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
 import android.graphics.Color;
-import android.graphics.Typeface;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.support.v7.widget.Toolbar;
 import android.util.Log;
-import android.view.MotionEvent;
 import android.view.View;
+import android.widget.Button;
 import android.widget.Toast;
 
-import com.example.android.timemanagement.Formatting.TimeAxisFormatter;
 import com.example.android.timemanagement.R;
 import com.example.android.timemanagement.data.Contract;
 import com.example.android.timemanagement.data.DBHelper;
@@ -20,27 +18,14 @@ import com.example.android.timemanagement.data.DatabaseUtils;
 import com.example.android.timemanagement.models.ActivitySwitcherToolbar;
 import com.example.android.timemanagement.models.StartEndTime;
 import com.github.mikephil.charting.charts.BarChart;
-import com.github.mikephil.charting.charts.BarLineChartBase;
-import com.github.mikephil.charting.charts.Chart;
-import com.github.mikephil.charting.charts.LineChart;
 import com.github.mikephil.charting.components.Legend;
 import com.github.mikephil.charting.components.XAxis;
 import com.github.mikephil.charting.components.YAxis;
 import com.github.mikephil.charting.data.BarData;
 import com.github.mikephil.charting.data.BarDataSet;
 import com.github.mikephil.charting.data.BarEntry;
-import com.github.mikephil.charting.data.Entry;
-import com.github.mikephil.charting.data.LineData;
-import com.github.mikephil.charting.data.LineDataSet;
 import com.github.mikephil.charting.formatter.IndexAxisValueFormatter;
 import com.github.mikephil.charting.formatter.LargeValueFormatter;
-import com.github.mikephil.charting.formatter.PercentFormatter;
-import com.github.mikephil.charting.interfaces.datasets.ILineDataSet;
-import com.github.mikephil.charting.listener.ChartTouchListener;
-import com.github.mikephil.charting.listener.OnChartGestureListener;
-import com.github.mikephil.charting.renderer.XAxisRenderer;
-
-import java.lang.reflect.Array;
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
 import java.util.ArrayList;
@@ -53,22 +38,42 @@ public class GraphActivity extends AppCompatActivity{
     private Toolbar toolbar;
     private ActivitySwitcherToolbar activitySwitcherToolbar;
 
-    private BarChart chart;
-    //private LineChart lineChart;
     private SQLiteDatabase database;
+    private BarChart chart;
+
+    private Button todayButton;
+    private Button weekButton;
+    private Button monthButton;
+
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_graph);
 
+        // init
+        //dummyTask();
+
+        // top of the layout
+        todayButton =  (Button) findViewById(R.id.today_button);
+        todayButton.setBackgroundResource(R.color.colorAccent);
+
+        weekButton =  (Button) findViewById(R.id.week_button);
+        weekButton.setBackgroundResource(R.color.colorPrimary);
+
+        monthButton =  (Button) findViewById(R.id.month_button);
+        monthButton.setBackgroundResource(R.color.colorPrimary);
+
+        // middle of the layout
+        chart = (BarChart) findViewById(R.id.bar_chart);
+        todaysBarChart();
+
+        // bottom of the layout
         toolbar = (Toolbar) findViewById(R.id.graph_toolbar);
+        activitySwitcherToolbar = new ActivitySwitcherToolbar(this.getClass(), this);
         setSupportActionBar(toolbar);
         getSupportActionBar().setDisplayShowTitleEnabled(false);
-
-        makeBarChart();
-
-        activitySwitcherToolbar = new ActivitySwitcherToolbar(this.getClass(), this);
 
         Log.d("GraphActivity: ", "onCreate");
     }
@@ -113,16 +118,33 @@ public class GraphActivity extends AppCompatActivity{
 
     public void onButtonToday(View view)
     {
+        chart.clear();
+        todayButton.setBackgroundResource(R.color.colorAccent);
+        weekButton.setBackgroundResource(R.color.colorPrimary);
+        monthButton.setBackgroundResource(R.color.colorPrimary);
+
+        todaysBarChart();
         Toast.makeText(this, "Clicked on Today Button", Toast.LENGTH_LONG).show();
     }
 
     public void onButtonWeek(View view)
     {
+        chart.clear();
+        todayButton.setBackgroundResource(R.color.colorPrimary);
+        weekButton.setBackgroundResource(R.color.colorAccent);
+        monthButton.setBackgroundResource(R.color.colorPrimary);
+
+        //weekButton.setBackgroundResource();
         Toast.makeText(this, "Clicked on Week Button", Toast.LENGTH_LONG).show();
     }
 
     public void onButtonMonth(View view)
     {
+        chart.clear();
+        todayButton.setBackgroundResource(R.color.colorPrimary);
+        weekButton.setBackgroundResource(R.color.colorPrimary);
+        monthButton.setBackgroundResource(R.color.colorAccent);
+
         Toast.makeText(this, "Clicked on Month Button", Toast.LENGTH_LONG).show();
     }
 
@@ -218,98 +240,21 @@ public class GraphActivity extends AppCompatActivity{
         leftAxis.setTextSize(15);
     }
 
-
-//    public void makeSinCosGraph() {
-//        lineChart = (LineChart) findViewById(R.id.line_chart);
-//
-//        ArrayList<Entry> yAxesSin = new ArrayList<>();
-//        ArrayList<Entry> yAxesCos = new ArrayList<>();
-//
-//        double x = 0;
-//        int numDataPoints = 1000;
-//        for (int i = 0; i < numDataPoints; i++) {
-//            //NOTE: Math.sin and Math.cos takes in double but to put data into the graph, you have to use float
-//            float sinFunction = Float.parseFloat(String.valueOf(Math.sin(x)));
-//            float cosFunction = Float.parseFloat(String.valueOf(Math.cos(x)));
-//            x = x + 0.1;
-//
-//            yAxesSin.add(new Entry(i, sinFunction));
-//            yAxesCos.add(new Entry(i, cosFunction));
-//        }
-//
-//        ArrayList<ILineDataSet> lineDataSets = new ArrayList<>();
-//
-//        LineDataSet lineDataSet1 = new LineDataSet(yAxesCos, "cos");
-//        lineDataSet1.setDrawCircles(false);
-//        lineDataSet1.setColor(Color.BLUE);
-//
-//        LineDataSet lineDataSet2 = new LineDataSet(yAxesSin, "sin");
-//        lineDataSet2.setDrawCircles(false);
-//        lineDataSet2.setColor(Color.RED);
-//
-//        lineDataSets.add(lineDataSet1);
-//        lineDataSets.add(lineDataSet2);
-//
-//        lineChart.setData(new LineData(lineDataSets));
-//        lineChart.setDoubleTapToZoomEnabled(false);
-//        lineChart.setVisibleXRangeMaximum(65f);
-//    }
-//
-//    public void makeTaskLineGraph()
-//    {
-//        lineChart = (LineChart) findViewById(R.id.line_chart);
-//
-//        float reference_timestamp = 10000.0f;
-//        TimeAxisFormatter formatter = new TimeAxisFormatter(reference_timestamp);
-//        XAxis xAxisTime = lineChart.getXAxis();
-//        xAxisTime.setPosition(XAxis.XAxisPosition.BOTTOM);
-//        //xAxisTime.setTextSize(15.0f);
-//        xAxisTime.setLabelCount(5);
-//        xAxisTime.setValueFormatter(formatter);
-//
-//        float totalHrADay = 0;
-//        ArrayList<Entry> dayPlot = new ArrayList<>();
-//        /*
-//        for(StartEndTime time: startEndTimeUTC)
-//        {
-//            dayPlot.add(new Entry(time.getStartingTime()/reference_timestamp, totalHrADay));
-//            totalHrADay += time.getTotalMinutes() / 60;
-//            dayPlot.add(new Entry(time.getEndingTime()/reference_timestamp, totalHrADay));
-//        }
-//        */
-//        YAxis yAxisMin = lineChart.getAxisLeft();
-//
-//        YAxis yAxisRight = lineChart.getAxisRight();
-//        yAxisRight.setEnabled(false);
-//
-//        ArrayList<ILineDataSet> lineDataSets = new ArrayList<>();
-//
-//        LineDataSet lineDataSet1 = new LineDataSet(dayPlot, "dayPlot");
-//        lineDataSet1.setDrawCircles(false);
-//        lineDataSet1.setColor(Color.BLUE);
-//
-//        lineDataSets.add(lineDataSet1);
-//
-//        lineChart.setData(new LineData(lineDataSets));
-//        //lineChart.setDoubleTapToZoomEnabled(false);
-//        lineChart.setVisibleXRangeMaximum(720.0f);
-//    }
-
-    public void testDatabase(){
-        //lineChart = (LineChart) findViewById(R.id.line_chart);
-        chart = (BarChart) findViewById(R.id.bar_chart);
-
-        dummyTask();
+    public void todaysBarChart()
+    {
+        setupBarChart();
 
         DBHelper dbHelper = new DBHelper(this);
         database = dbHelper.getReadableDatabase();
 
-        Cursor cursor = DatabaseUtils.getAllTask(database);
+        Cursor cursor = DatabaseUtils.getTodaysTask(database);
+        //Cursor cursor = DatabaseUtils.getThisWeeksTask(database);
 
-        SimpleDateFormat displayFormat = new SimpleDateFormat("HH:mm");
         SimpleDateFormat parseFormat = new SimpleDateFormat("hh:mma");
 
         List<StartEndTime> startEndTimeUTC = new ArrayList<>();
+
+        ArrayList<String> dates = new ArrayList<>();
         cursor.moveToFirst();
         do
         {
@@ -322,6 +267,9 @@ public class GraphActivity extends AppCompatActivity{
             String EndingMidDay = cursor.getString(cursor.getColumnIndex(Contract.TABLE_TASK.COLUMN_NAME_END_MID_DAY));
 
             int totalMintues = cursor.getInt(cursor.getColumnIndex(Contract.TABLE_TASK.COLUMN_NAME_TASK_TOTAL_MINUTES));
+
+            String date = cursor.getString(cursor.getColumnIndex(Contract.TABLE_TASK.COLUMN_NAME_DATE));
+            dates.add(date);
 
             Date startTime = null;
             Date endTime = null;
@@ -350,6 +298,95 @@ public class GraphActivity extends AppCompatActivity{
         });
 
 
+        makeBarChart(startEndTimeUTC);
+
+        Log.d("testing ", "stuff");
+    }
+
+    public void setupBarChart()
+    {
+        chart.setDescription(null);
+        chart.setPinchZoom(false);
+        chart.setScaleEnabled(true);
+        chart.setDrawBarShadow(false);
+        chart.setDrawGridBackground(false);
+        chart.setDrawBorders(true);
+        chart.enableScroll();
+    }
+
+    private void makeBarChart(List<StartEndTime> startEndTimeUTC)
+    {
+        float barWidth = 0.7f;
+
+//        chart.setDescription(null);
+//        chart.setPinchZoom(false);
+//        chart.setScaleEnabled(true);
+//        chart.setDrawBarShadow(false);
+//        chart.setDrawGridBackground(false);
+//        chart.setDrawBorders(true);
+//        chart.enableScroll();
+
+        int groupCount = 10;
+
+        SimpleDateFormat parseFormat = new SimpleDateFormat("hh:mma");
+
+        ArrayList<BarEntry> yMinVals = new ArrayList();
+        ArrayList<String> xTimeVals = new ArrayList();
+        for(int i = 0; i < startEndTimeUTC.size(); i++)
+        {
+            StartEndTime time = startEndTimeUTC.get(i);
+
+            Date startTime = new Date(time.getStartingTime());
+            Date endTime = new Date(time.getEndingTime());
+
+            String taskDuration = parseFormat.format(startTime) + " - " + parseFormat.format(endTime);
+            xTimeVals.add(taskDuration);
+
+            yMinVals.add(new BarEntry(i, time.getTotalMinutes()));
+        }
+
+        BarDataSet todaysTaskSet;
+        todaysTaskSet = new BarDataSet(yMinVals, "Total Time Spent");
+        todaysTaskSet.setColor(Color.BLUE);
+        todaysTaskSet.setValueTextSize(15f);
+
+        BarData data = new BarData(todaysTaskSet);
+        data.setValueFormatter(new LargeValueFormatter());
+
+        chart.setData(data);
+        chart.getBarData().setBarWidth(barWidth);
+        chart.getData().setHighlightEnabled(false);
+        chart.invalidate();
+
+        Legend l = chart.getLegend();
+        l.setVerticalAlignment(Legend.LegendVerticalAlignment.TOP);
+        l.setHorizontalAlignment(Legend.LegendHorizontalAlignment.RIGHT);
+        l.setOrientation(Legend.LegendOrientation.HORIZONTAL);
+        l.setDrawInside(true);
+        l.setYOffset(20f);
+        l.setXOffset(5f);
+        l.setYEntrySpace(0f);
+        l.setTextSize(15f);
+
+        //X-axis
+        XAxis xAxis = chart.getXAxis();
+        xAxis.setGranularity(1f);
+        xAxis.setGranularityEnabled(true);
+        xAxis.setCenterAxisLabels(true);
+        xAxis.setDrawGridLines(false);
+        xAxis.setAxisMaximum(xTimeVals.size());
+        xAxis.setPosition(XAxis.XAxisPosition.BOTTOM);
+        xAxis.setValueFormatter(new IndexAxisValueFormatter(xTimeVals));
+        xAxis.setTextSize(12);
+
+        //Y-axis
+        chart.getAxisRight().setEnabled(false);
+        YAxis leftAxis = chart.getAxisLeft();
+        leftAxis.setValueFormatter(new LargeValueFormatter(" min"));
+        leftAxis.setDrawGridLines(true);
+        leftAxis.setSpaceTop(35f);
+        leftAxis.setAxisMinimum(0f);
+        leftAxis.setTextSize(15);
 
         Log.d("testing ", "stuff");
     }
@@ -362,6 +399,10 @@ public class GraphActivity extends AppCompatActivity{
         dbAdd.delete(Contract.TABLE_TASK.TABLE_NAME, null, null);
         dbAdd.delete(Contract.TABLE_SUBJECT.TABLE_NAME, null, null);
         dbAdd.delete(Contract.TABLE_PROJECT.TABLE_NAME, null, null);
+
+        DatabaseUtils.addTask(dbAdd, "07/23/2017", "walk for 30 min", "diet",
+                8, 30, "PM", 9, 00, "PM",
+                ((9 - 8) * 60) + (00 - 30));
 
         DatabaseUtils.addTask(dbAdd, "07/30/2017", "eat a salad", "diet",
                 12, 00, "AM", 1, 00, "AM",
@@ -391,7 +432,7 @@ public class GraphActivity extends AppCompatActivity{
                 11, 31, "PM", 11, 59, "PM",
                 ((11 - 11) * 60) + (59 - 31));
 
-        /*DatabaseUtils.addTask(dbAdd, "07/29/2017", "english essay", "school",
+        DatabaseUtils.addTask(dbAdd, "07/29/2017", "english essay", "school",
                 2, 30, "PM", 6, 30, "PM",
                 ((6 - 2) * 60) + (30 - 30));
 
@@ -414,6 +455,8 @@ public class GraphActivity extends AppCompatActivity{
         DatabaseUtils.addTask(dbAdd, "07/29/2017", "finish updating task", "school",
                 12, 30, "AM", 3, 30, "AM",
                 ((3) * 60) + (30 - 30));
-        */
+
+        dbHelper.close();
+        dbAdd.close();
     }
 }

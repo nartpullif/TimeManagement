@@ -7,6 +7,13 @@ import android.util.Log;
 
 import com.example.android.timemanagement.data.Contract;
 
+import java.text.DateFormat;
+import java.text.SimpleDateFormat;
+import java.util.Calendar;
+import java.util.Date;
+import java.util.GregorianCalendar;
+import java.util.Locale;
+
 import static com.example.android.timemanagement.data.Contract.TABLE_PROJECT.TABLE_NAME;
 import static com.example.android.timemanagement.data.Contract.TABLE_PROJECT.TABLE_NAME;
 
@@ -57,6 +64,42 @@ public class DatabaseUtils {
         return cursor;
     }
 
+    public static Cursor getTodaysTask(SQLiteDatabase db) {
+        SimpleDateFormat dbDateFormat = new SimpleDateFormat("MM/dd/yyyy");
+
+        return db.query(
+                Contract.TABLE_TASK.TABLE_NAME,
+                null,
+                Contract.TABLE_TASK.COLUMN_NAME_DATE + " = ?",
+                new String[]{dbDateFormat.format(new Date())},
+                null,
+                null,
+                null);
+    }
+
+    public static Cursor getThisWeeksTask(SQLiteDatabase db) {
+
+        Calendar c = GregorianCalendar.getInstance();
+        c.setFirstDayOfWeek(Calendar.MONDAY);
+
+        c.set(Calendar.DAY_OF_WEEK, Calendar.MONDAY);
+
+        DateFormat dbDateFormat = new SimpleDateFormat("MM/dd/yyyy", Locale.getDefault());
+
+
+        String startDate = dbDateFormat .format(c.getTime());
+        c.add(Calendar.DATE, 6);
+        String endDate = dbDateFormat .format(c.getTime());
+
+        return db.query(
+                Contract.TABLE_TASK.TABLE_NAME,
+                null,
+                Contract.TABLE_TASK.COLUMN_NAME_DATE + " BETWEEN ? AND ?",
+                new String[]{startDate, endDate},
+                null,
+                null,
+                null);
+    }
 
     public static Cursor getDailyTask(SQLiteDatabase db, String date) {
         //add some spaces in front of aliases to avoid typo

@@ -23,7 +23,7 @@ public class TimeAxisFormatter implements IAxisValueFormatter {
     public String getFormattedValue(float value, AxisBase axis) {
         long timeUTC = Long.valueOf((long) (value * reference_timestamp));
         Date time = new Date(timeUTC);
-        SimpleDateFormat sdf = new SimpleDateFormat("hh:mm \na");
+        SimpleDateFormat sdf = new SimpleDateFormat("hh:mm a");
         String formattedDate = sdf.format(time);
 
         return formattedDate;
