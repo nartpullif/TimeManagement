@@ -20,4 +20,6 @@
     <!-- string for update task -->
     <string name="updateTask_string">Update Task</string>
 
+    <!--string for target time activity-->
+    <string name="set_button">Set</string>
 </resources>

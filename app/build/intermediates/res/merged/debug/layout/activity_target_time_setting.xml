@@ -1,0 +1,255 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/colorPrimary"
+    tools:context="com.example.android.timemanagement.activities.MainActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="50dp"/>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_gravity="center"
+            android:orientation="horizontal"
+            android:background="#FFFFFF"
+            android:layout_marginBottom="3dp"
+            android:onClick="onClickMonday">
+
+            <TextView
+                android:id="@+id/date_monday"
+                android:layout_height="wrap_content"
+                android:layout_width="wrap_content"
+                android:layout_weight="1"
+                android:layout_gravity="center"
+                android:gravity="left"
+                android:paddingLeft="15dp"
+                android:text="Monday"
+                android:textSize="20sp"/>
+
+            <TextView
+                android:id="@+id/date_monday_time"
+                android:layout_height="wrap_content"
+                android:layout_width="wrap_content"
+                android:layout_weight="1"
+                android:layout_gravity="center"
+                android:gravity="right"
+                android:paddingRight="15dp"
+                android:text="8:30"
+                android:textSize="20sp"/>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_gravity="center"
+            android:orientation="horizontal"
+            android:background="#FFFFFF"
+            android:layout_marginBottom="3dp"
+            android:onClick="onClickTuesday">
+
+            <TextView
+                android:id="@+id/date_tuesday"
+                android:layout_height="wrap_content"
+                android:layout_width="wrap_content"
+                android:layout_weight="1"
+                android:layout_gravity="center"
+                android:gravity="left"
+                android:paddingLeft="15dp"
+                android:text="Tuesday"
+                android:textSize="20sp"/>
+
+            <TextView
+                android:id="@+id/date_tuesday_time"
+                android:layout_height="wrap_content"
+                android:layout_width="wrap_content"
+                android:layout_weight="1"
+                android:layout_gravity="center"
+                android:gravity="right"
+                android:paddingRight="15dp"
+                android:text="0:00"
+                android:textSize="20sp"/>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_gravity="center"
+            android:orientation="horizontal"
+            android:background="#FFFFFF"
+            android:layout_marginBottom="3dp"
+            android:onClick="onClickWednesday">
+
+            <TextView
+                android:id="@+id/date_wednesday"
+                android:layout_height="wrap_content"
+                android:layout_width="wrap_content"
+                android:layout_weight="1"
+                android:layout_gravity="center"
+                android:gravity="left"
+                android:paddingLeft="15dp"
+                android:text="Wednesday"
+                android:textSize="20sp"/>
+
+            <TextView
+                android:id="@+id/date_wednesday_time"
+                android:layout_height="wrap_content"
+                android:layout_width="wrap_content"
+                android:layout_weight="1"
+                android:layout_gravity="center"
+                android:gravity="right"
+                android:paddingRight="15dp"
+                android:text="0:00"
+                android:textSize="20sp"/>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_gravity="center"
+            android:orientation="horizontal"
+            android:background="#FFFFFF"
+            android:layout_marginBottom="3dp"
+            android:onClick="onClickThursday">
+
+            <TextView
+                android:id="@+id/date_thursday"
+                android:layout_height="wrap_content"
+                android:layout_width="wrap_content"
+                android:layout_weight="1"
+                android:layout_gravity="center"
+                android:gravity="left"
+                android:paddingLeft="15dp"
+                android:text="Thursday"
+                android:textSize="20sp"/>
+
+            <TextView
+                android:id="@+id/date_thursday_time"
+                android:layout_height="wrap_content"
+                android:layout_width="wrap_content"
+                android:layout_weight="1"
+                android:layout_gravity="center"
+                android:gravity="right"
+                android:paddingRight="15dp"
+                android:text="0:00"
+                android:textSize="20sp"/>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_gravity="center"
+            android:orientation="horizontal"
+            android:background="#FFFFFF"
+            android:layout_marginBottom="3dp"
+            android:onClick="onClickFriday">
+
+            <TextView
+                android:id="@+id/date_friday"
+                android:layout_height="wrap_content"
+                android:layout_width="wrap_content"
+                android:layout_weight="1"
+                android:layout_gravity="center"
+                android:gravity="left"
+                android:paddingLeft="15dp"
+                android:text="Friday"
+                android:textSize="20sp"/>
+
+            <TextView
+                android:id="@+id/date_friday_time"
+                android:layout_height="wrap_content"
+                android:layout_width="wrap_content"
+                android:layout_weight="1"
+                android:layout_gravity="center"
+                android:gravity="right"
+                android:paddingRight="15dp"
+                android:text="0:00"
+                android:textSize="20sp"/>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_gravity="center"
+            android:orientation="horizontal"
+            android:background="#FFFFFF"
+            android:layout_marginBottom="3dp"
+            android:onClick="onClickSaturday">
+
+            <TextView
+                android:id="@+id/date_saturday"
+                android:layout_height="wrap_content"
+                android:layout_width="wrap_content"
+                android:layout_weight="1"
+                android:layout_gravity="center"
+                android:gravity="left"
+                android:paddingLeft="15dp"
+                android:text="Saturday"
+                android:textSize="20sp"/>
+
+            <TextView
+                android:id="@+id/date_saturday_time"
+                android:layout_height="wrap_content"
+                android:layout_width="wrap_content"
+                android:layout_weight="1"
+                android:layout_gravity="center"
+                android:gravity="right"
+                android:paddingRight="15dp"
+                android:text="0:00"
+                android:textSize="20sp"/>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_gravity="center"
+            android:orientation="horizontal"
+            android:background="#FFFFFF"
+            android:layout_marginBottom="3dp"
+            android:onClick="onClickSunday">
+
+            <TextView
+                android:id="@+id/date_sunday"
+                android:layout_height="wrap_content"
+                android:layout_width="wrap_content"
+                android:layout_weight="1"
+                android:layout_gravity="center"
+                android:gravity="left"
+                android:paddingLeft="15dp"
+                android:text="Sunday"
+                android:textSize="20sp"/>
+
+            <TextView
+                android:id="@+id/date_sunday_time"
+                android:layout_height="wrap_content"
+                android:layout_width="wrap_content"
+                android:layout_weight="1"
+                android:layout_gravity="center"
+                android:gravity="right"
+                android:paddingRight="15dp"
+                android:text="0:00"
+                android:textSize="20sp"/>
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <include
+        android:id="@+id/action_bar_activity_content"
+        layout="@layout/activity_switch_activities_toolbar" />
+</FrameLayout>

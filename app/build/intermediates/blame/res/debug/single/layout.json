@@ -40,8 +40,16 @@
         "source": "C:\\Users\\icyfillup\\.android\\build-cache\\6fdd12f9bbb3e8b00b301d903b366bc3f354acf4\\output\\res\\layout\\design_bottom_sheet_dialog.xml"
     },
     {
+        "merged": "W:\\Android_stuff\\TimeManagement\\app\\build\\intermediates\\res\\merged\\debug\\layout\\activity_target_time_setting.xml",
+        "source": "W:\\Android_stuff\\TimeManagement\\app\\src\\main\\res\\layout\\activity_target_time_setting.xml"
+    },
+    {
         "merged": "W:\\Android_stuff\\TimeManagement\\app\\build\\intermediates\\res\\merged\\debug\\layout\\abc_activity_chooser_view.xml",
         "source": "C:\\Users\\icyfillup\\.android\\build-cache\\a9542e16e4c7960e8234395111df2bf10b16cf06\\output\\res\\layout\\abc_activity_chooser_view.xml"
+    },
+    {
+        "merged": "W:\\Android_stuff\\TimeManagement\\app\\build\\intermediates\\res\\merged\\debug\\layout\\fragment_target_time.xml",
+        "source": "W:\\Android_stuff\\TimeManagement\\app\\src\\main\\res\\layout\\fragment_target_time.xml"
     },
     {
         "merged": "W:\\Android_stuff\\TimeManagement\\app\\build\\intermediates\\res\\merged\\debug\\layout\\abc_list_menu_item_layout.xml",

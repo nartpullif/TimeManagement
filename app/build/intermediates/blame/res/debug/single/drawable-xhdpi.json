@@ -1,5 +1,9 @@
 [
     {
+        "merged": "W:\\Android_stuff\\TimeManagement\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi\\ic_setting.png",
+        "source": "W:\\Android_stuff\\TimeManagement\\app\\src\\main\\res\\drawable-xhdpi\\ic_setting.png"
+    },
+    {
         "merged": "W:\\Android_stuff\\TimeManagement\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi\\ic_add_black_48dp.png",
         "source": "W:\\Android_stuff\\TimeManagement\\app\\src\\main\\res\\drawable-xhdpi\\ic_add_black_48dp.png"
     },

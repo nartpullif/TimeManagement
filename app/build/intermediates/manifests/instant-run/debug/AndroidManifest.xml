@@ -45,6 +45,15 @@
                 android:value=".activities.MainActivity" />
         </activity>
         <activity android:name="com.example.android.timemanagement.activities.GraphActivity" >
+
+            <!-- <intent-filter> -->
+            <!-- <action android:name="android.intent.action.MAIN" /> -->
+
+
+            <!-- <category android:name="android.intent.category.LAUNCHER" /> -->
+            <!-- </intent-filter> -->
+        </activity>
+        <activity android:name="com.example.android.timemanagement.activities.TargetTimeSettingActivity" >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 

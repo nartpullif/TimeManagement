@@ -12,6 +12,10 @@
         "source": "W:\\Android_stuff\\TimeManagement\\app\\src\\main\\res\\drawable-mdpi\\ic_add_black_48dp.png"
     },
     {
+        "merged": "W:\\Android_stuff\\TimeManagement\\app\\build\\intermediates\\res\\merged\\debug\\drawable-mdpi\\ic_setting.png",
+        "source": "W:\\Android_stuff\\TimeManagement\\app\\src\\main\\res\\drawable-mdpi\\ic_setting.png"
+    },
+    {
         "merged": "W:\\Android_stuff\\TimeManagement\\app\\build\\intermediates\\res\\merged\\debug\\drawable-mdpi\\ic_report_black.png",
         "source": "W:\\Android_stuff\\TimeManagement\\app\\src\\main\\res\\drawable-mdpi\\ic_report_black.png"
     }

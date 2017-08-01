@@ -36,4 +36,12 @@
         android:text="Loans"
         android:src="@color/colorAccent"/>
 
+    <ImageView
+        android:layout_height="match_parent"
+        android:layout_width="0dp"
+        android:layout_weight="1"
+        android:id="@+id/setting_option"
+        android:text="Loans"
+        android:src="@color/colorAccent"/>
+
 </LinearLayout>
