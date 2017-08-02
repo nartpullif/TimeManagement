@@ -17,6 +17,7 @@ import com.example.android.timemanagement.data.DBHelper;
 import com.example.android.timemanagement.data.DatabaseUtils;
 import com.example.android.timemanagement.models.ActivitySwitcherToolbar;
 import com.example.android.timemanagement.models.StartEndTime;
+import com.example.android.timemanagement.utilities.PreferenceUtils;
 import com.github.mikephil.charting.charts.BarChart;
 import com.github.mikephil.charting.components.Description;
 import com.github.mikephil.charting.components.Legend;
@@ -53,6 +54,8 @@ public class GraphActivity extends AppCompatActivity{
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_graph);
+
+        PreferenceUtils.initSharePreference(this);
 
         // top of the layout
         todayButton =  (Button) findViewById(R.id.today_button);

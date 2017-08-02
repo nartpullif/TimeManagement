@@ -24,6 +24,7 @@ public class TargetTimeSettingActivity extends AppCompatActivity implements SetH
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_target_time_setting);
+        dayTargetTime = new HashMap<>();
 
         initTextViewTargetTime();
 
@@ -36,36 +37,70 @@ public class TargetTimeSettingActivity extends AppCompatActivity implements SetH
 
         TextView mondayTargetTime = (TextView) findViewById(R.id.date_monday_time);
         mondayTargetTime.setText(PreferenceUtils.getDayTargetTime(this, PreferenceUtils.MONDAY_TARGET_TIME));
+        dayTargetTime.put(R.id.date_monday_time, mondayTargetTime);
 
         TextView tuesdayTargetTime = (TextView) findViewById(R.id.date_tuesday_time);
         tuesdayTargetTime.setText(PreferenceUtils.getDayTargetTime(this, PreferenceUtils.TUESDAY_TARGET_TIME));
+        dayTargetTime.put(R.id.date_tuesday_time, tuesdayTargetTime);
 
         TextView wednesdayTargetTime = (TextView) findViewById(R.id.date_wednesday_time);
         wednesdayTargetTime.setText(PreferenceUtils.getDayTargetTime(this, PreferenceUtils.WEDNESDAY_TARGET_TIME));
+        dayTargetTime.put(R.id.date_wednesday_time, wednesdayTargetTime);
 
         TextView thursdayTargetTime = (TextView) findViewById(R.id.date_thursday_time);
         thursdayTargetTime.setText(PreferenceUtils.getDayTargetTime(this, PreferenceUtils.THURSDAY_TARGET_TIME));
+        dayTargetTime.put(R.id.date_thursday_time, thursdayTargetTime);
 
         TextView fridayTargetTime = (TextView) findViewById(R.id.date_friday_time);
         fridayTargetTime.setText(PreferenceUtils.getDayTargetTime(this, PreferenceUtils.FRIDAY_TARGET_TIME));
+        dayTargetTime.put(R.id.date_friday_time, fridayTargetTime);
 
         TextView saturdayTargetTime = (TextView) findViewById(R.id.date_saturday_time);
         saturdayTargetTime.setText(PreferenceUtils.getDayTargetTime(this, PreferenceUtils.SATURDAY_TARGET_TIME));
+        dayTargetTime.put(R.id.date_saturday_time, saturdayTargetTime);
 
         TextView sundayTargetTime = (TextView) findViewById(R.id.date_sunday_time);
         sundayTargetTime.setText(PreferenceUtils.getDayTargetTime(this, PreferenceUtils.SUNDAY_TARGET_TIME));
+        dayTargetTime.put(R.id.date_sunday_time, sundayTargetTime);
 
     }
 
     @Override
     public void closeSetDialog(int rid, String time) {
-        TextView targetTime = (TextView) findViewById(rid);
-        targetTime.setText(time);
+        dayTargetTime.get(rid).setText(time);
+        if(rid == R.id.date_monday_time)
+        {
+            PreferenceUtils.updateDayTargetTime(this, PreferenceUtils.MONDAY_TARGET_TIME, time);
+        }
+        else if(rid == R.id.date_tuesday_time)
+        {
+            PreferenceUtils.updateDayTargetTime(this, PreferenceUtils.TUESDAY_TARGET_TIME, time);
+        }
+        else if(rid == R.id.date_wednesday_time)
+        {
+            PreferenceUtils.updateDayTargetTime(this, PreferenceUtils.WEDNESDAY_TARGET_TIME, time);
+        }
+        else if(rid == R.id.date_thursday_time)
+        {
+            PreferenceUtils.updateDayTargetTime(this, PreferenceUtils.THURSDAY_TARGET_TIME, time);
+        }
+        else if(rid == R.id.date_friday_time)
+        {
+            PreferenceUtils.updateDayTargetTime(this, PreferenceUtils.FRIDAY_TARGET_TIME, time);
+        }
+        else if(rid == R.id.date_saturday_time)
+        {
+            PreferenceUtils.updateDayTargetTime(this, PreferenceUtils.SATURDAY_TARGET_TIME, time);
+        }
+        else if(rid == R.id.date_sunday_time)
+        {
+            PreferenceUtils.updateDayTargetTime(this, PreferenceUtils.SUNDAY_TARGET_TIME, time);
+        }
     }
 
     public void onFragmentPopUp(int rid)
     {
-        TextView TargetTime = (TextView) findViewById(rid);
+        TextView TargetTime = dayTargetTime.get(rid);
         String[] time = TargetTime.getText().toString().split(":");
 
         int hour = Integer.parseInt(time[0]);
@@ -121,4 +156,3 @@ public class TargetTimeSettingActivity extends AppCompatActivity implements SetH
 //        Toast.makeText(this, "onClickSunday", Toast.LENGTH_LONG).show();
     }
 }
-

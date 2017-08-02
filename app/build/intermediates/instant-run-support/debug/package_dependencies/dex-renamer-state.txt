@@ -1,4 +1,4 @@
-#Tue Aug 01 21:25:00 PDT 2017
+#Tue Aug 01 23:26:35 PDT 2017
 file.2=W\:\\Android_stuff\\TimeManagement\\app\\build\\intermediates\\transforms\\dex\\debug\\folders\\1000\\10\\classes_6e94fc56087fb0133c5c358dcbedcfe265f683d8\\classes.dex
 base.2=W\:\\Android_stuff\\TimeManagement\\app\\build\\intermediates\\transforms\\dex\\debug\\folders\\1000\\10\\classes_6e94fc56087fb0133c5c358dcbedcfe265f683d8
 file.1=W\:\\Android_stuff\\TimeManagement\\app\\build\\intermediates\\transforms\\dex\\debug\\folders\\1000\\10\\classes_fe15dd501c0e40135cf08ec03db1b52c2bfb5431\\classes.dex
