@@ -41,7 +41,6 @@ import java.util.List;
 
 public class GraphActivity extends AppCompatActivity{
     private Toolbar toolbar;
-    private ActivitySwitcherToolbar activitySwitcherToolbar;
 
     private SQLiteDatabase database;
     private BarChart chart;
@@ -72,9 +71,6 @@ public class GraphActivity extends AppCompatActivity{
 
         // bottom of the layout
         toolbar = (Toolbar) findViewById(R.id.graph_toolbar);
-        activitySwitcherToolbar = new ActivitySwitcherToolbar(this.getClass(), this);
-        setSupportActionBar(toolbar);
-        getSupportActionBar().setDisplayShowTitleEnabled(false);
 
         Log.d("GraphActivity: ", "onCreate");
     }
@@ -84,7 +80,7 @@ public class GraphActivity extends AppCompatActivity{
     {
         super.onStart();
 
-        DatabaseUtils.dummyTask(this);
+        //DatabaseUtils.dummyTask(this);
         todaysBarChart();
         //monthBarChart();
 

@@ -17,7 +17,6 @@ import java.util.HashMap;
 
 public class TargetTimeSettingActivity extends AppCompatActivity implements SetHourFragment.OnSetTargetTimeCloseListerner{
 
-    private ActivitySwitcherToolbar activitySwitcherToolbar;
     private HashMap<Integer, TextView> dayTargetTime;
 
     @Override
@@ -27,9 +26,6 @@ public class TargetTimeSettingActivity extends AppCompatActivity implements SetH
         dayTargetTime = new HashMap<>();
 
         initTextViewTargetTime();
-
-        // bottom of the layout
-        activitySwitcherToolbar = new ActivitySwitcherToolbar(this.getClass(), this);
     }
     public void initTextViewTargetTime()
     {

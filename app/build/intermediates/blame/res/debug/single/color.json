@@ -1,90 +1,42 @@
 [
     {
         "merged": "W:\\Android_stuff\\TimeManagement\\app\\build\\intermediates\\res\\merged\\debug\\color\\switch_thumb_material_dark.xml",
-        "source": "C:\\Users\\icyfillup\\.android\\build-cache\\a9542e16e4c7960e8234395111df2bf10b16cf06\\output\\res\\color\\switch_thumb_material_dark.xml"
+        "source": "C:\\Users\\icyfillup\\.android\\build-cache\\a027631cee244203f572e361e51dfe97f71ecc5d\\output\\res\\color\\switch_thumb_material_dark.xml"
     },
     {
         "merged": "W:\\Android_stuff\\TimeManagement\\app\\build\\intermediates\\res\\merged\\debug\\color\\abc_primary_text_material_light.xml",
-        "source": "C:\\Users\\icyfillup\\.android\\build-cache\\a9542e16e4c7960e8234395111df2bf10b16cf06\\output\\res\\color\\abc_primary_text_material_light.xml"
+        "source": "C:\\Users\\icyfillup\\.android\\build-cache\\a027631cee244203f572e361e51dfe97f71ecc5d\\output\\res\\color\\abc_primary_text_material_light.xml"
     },
     {
         "merged": "W:\\Android_stuff\\TimeManagement\\app\\build\\intermediates\\res\\merged\\debug\\color\\abc_primary_text_material_dark.xml",
-        "source": "C:\\Users\\icyfillup\\.android\\build-cache\\a9542e16e4c7960e8234395111df2bf10b16cf06\\output\\res\\color\\abc_primary_text_material_dark.xml"
-    },
-    {
-        "merged": "W:\\Android_stuff\\TimeManagement\\app\\build\\intermediates\\res\\merged\\debug\\color\\abc_hint_foreground_material_light.xml",
-        "source": "C:\\Users\\icyfillup\\.android\\build-cache\\a9542e16e4c7960e8234395111df2bf10b16cf06\\output\\res\\color\\abc_hint_foreground_material_light.xml"
-    },
-    {
-        "merged": "W:\\Android_stuff\\TimeManagement\\app\\build\\intermediates\\res\\merged\\debug\\color\\abc_tint_spinner.xml",
-        "source": "C:\\Users\\icyfillup\\.android\\build-cache\\a9542e16e4c7960e8234395111df2bf10b16cf06\\output\\res\\color\\abc_tint_spinner.xml"
+        "source": "C:\\Users\\icyfillup\\.android\\build-cache\\a027631cee244203f572e361e51dfe97f71ecc5d\\output\\res\\color\\abc_primary_text_material_dark.xml"
     },
     {
         "merged": "W:\\Android_stuff\\TimeManagement\\app\\build\\intermediates\\res\\merged\\debug\\color\\abc_secondary_text_material_light.xml",
-        "source": "C:\\Users\\icyfillup\\.android\\build-cache\\a9542e16e4c7960e8234395111df2bf10b16cf06\\output\\res\\color\\abc_secondary_text_material_light.xml"
-    },
-    {
-        "merged": "W:\\Android_stuff\\TimeManagement\\app\\build\\intermediates\\res\\merged\\debug\\color\\abc_tint_switch_thumb.xml",
-        "source": "C:\\Users\\icyfillup\\.android\\build-cache\\a9542e16e4c7960e8234395111df2bf10b16cf06\\output\\res\\color\\abc_tint_switch_thumb.xml"
-    },
-    {
-        "merged": "W:\\Android_stuff\\TimeManagement\\app\\build\\intermediates\\res\\merged\\debug\\color\\abc_tint_btn_checkable.xml",
-        "source": "C:\\Users\\icyfillup\\.android\\build-cache\\a9542e16e4c7960e8234395111df2bf10b16cf06\\output\\res\\color\\abc_tint_btn_checkable.xml"
+        "source": "C:\\Users\\icyfillup\\.android\\build-cache\\a027631cee244203f572e361e51dfe97f71ecc5d\\output\\res\\color\\abc_secondary_text_material_light.xml"
     },
     {
         "merged": "W:\\Android_stuff\\TimeManagement\\app\\build\\intermediates\\res\\merged\\debug\\color\\abc_primary_text_disable_only_material_light.xml",
-        "source": "C:\\Users\\icyfillup\\.android\\build-cache\\a9542e16e4c7960e8234395111df2bf10b16cf06\\output\\res\\color\\abc_primary_text_disable_only_material_light.xml"
-    },
-    {
-        "merged": "W:\\Android_stuff\\TimeManagement\\app\\build\\intermediates\\res\\merged\\debug\\color\\design_error.xml",
-        "source": "C:\\Users\\icyfillup\\.android\\build-cache\\6fdd12f9bbb3e8b00b301d903b366bc3f354acf4\\output\\res\\color\\design_error.xml"
-    },
-    {
-        "merged": "W:\\Android_stuff\\TimeManagement\\app\\build\\intermediates\\res\\merged\\debug\\color\\abc_tint_edittext.xml",
-        "source": "C:\\Users\\icyfillup\\.android\\build-cache\\a9542e16e4c7960e8234395111df2bf10b16cf06\\output\\res\\color\\abc_tint_edittext.xml"
-    },
-    {
-        "merged": "W:\\Android_stuff\\TimeManagement\\app\\build\\intermediates\\res\\merged\\debug\\color\\abc_tint_switch_track.xml",
-        "source": "C:\\Users\\icyfillup\\.android\\build-cache\\a9542e16e4c7960e8234395111df2bf10b16cf06\\output\\res\\color\\abc_tint_switch_track.xml"
-    },
-    {
-        "merged": "W:\\Android_stuff\\TimeManagement\\app\\build\\intermediates\\res\\merged\\debug\\color\\abc_hint_foreground_material_dark.xml",
-        "source": "C:\\Users\\icyfillup\\.android\\build-cache\\a9542e16e4c7960e8234395111df2bf10b16cf06\\output\\res\\color\\abc_hint_foreground_material_dark.xml"
-    },
-    {
-        "merged": "W:\\Android_stuff\\TimeManagement\\app\\build\\intermediates\\res\\merged\\debug\\color\\design_tint_password_toggle.xml",
-        "source": "C:\\Users\\icyfillup\\.android\\build-cache\\6fdd12f9bbb3e8b00b301d903b366bc3f354acf4\\output\\res\\color\\design_tint_password_toggle.xml"
+        "source": "C:\\Users\\icyfillup\\.android\\build-cache\\a027631cee244203f572e361e51dfe97f71ecc5d\\output\\res\\color\\abc_primary_text_disable_only_material_light.xml"
     },
     {
         "merged": "W:\\Android_stuff\\TimeManagement\\app\\build\\intermediates\\res\\merged\\debug\\color\\switch_thumb_material_light.xml",
-        "source": "C:\\Users\\icyfillup\\.android\\build-cache\\a9542e16e4c7960e8234395111df2bf10b16cf06\\output\\res\\color\\switch_thumb_material_light.xml"
+        "source": "C:\\Users\\icyfillup\\.android\\build-cache\\a027631cee244203f572e361e51dfe97f71ecc5d\\output\\res\\color\\switch_thumb_material_light.xml"
     },
     {
-        "merged": "W:\\Android_stuff\\TimeManagement\\app\\build\\intermediates\\res\\merged\\debug\\color\\abc_btn_colored_borderless_text_material.xml",
-        "source": "C:\\Users\\icyfillup\\.android\\build-cache\\a9542e16e4c7960e8234395111df2bf10b16cf06\\output\\res\\color\\abc_btn_colored_borderless_text_material.xml"
+        "merged": "W:\\Android_stuff\\TimeManagement\\app\\build\\intermediates\\res\\merged\\debug\\color\\radio_colors.xml",
+        "source": "W:\\Android_stuff\\TimeManagement\\app\\src\\main\\res\\color\\radio_colors.xml"
     },
     {
         "merged": "W:\\Android_stuff\\TimeManagement\\app\\build\\intermediates\\res\\merged\\debug\\color\\abc_search_url_text.xml",
-        "source": "C:\\Users\\icyfillup\\.android\\build-cache\\a9542e16e4c7960e8234395111df2bf10b16cf06\\output\\res\\color\\abc_search_url_text.xml"
-    },
-    {
-        "merged": "W:\\Android_stuff\\TimeManagement\\app\\build\\intermediates\\res\\merged\\debug\\color\\abc_tint_default.xml",
-        "source": "C:\\Users\\icyfillup\\.android\\build-cache\\a9542e16e4c7960e8234395111df2bf10b16cf06\\output\\res\\color\\abc_tint_default.xml"
+        "source": "C:\\Users\\icyfillup\\.android\\build-cache\\a027631cee244203f572e361e51dfe97f71ecc5d\\output\\res\\color\\abc_search_url_text.xml"
     },
     {
         "merged": "W:\\Android_stuff\\TimeManagement\\app\\build\\intermediates\\res\\merged\\debug\\color\\abc_secondary_text_material_dark.xml",
-        "source": "C:\\Users\\icyfillup\\.android\\build-cache\\a9542e16e4c7960e8234395111df2bf10b16cf06\\output\\res\\color\\abc_secondary_text_material_dark.xml"
-    },
-    {
-        "merged": "W:\\Android_stuff\\TimeManagement\\app\\build\\intermediates\\res\\merged\\debug\\color\\abc_tint_seek_thumb.xml",
-        "source": "C:\\Users\\icyfillup\\.android\\build-cache\\a9542e16e4c7960e8234395111df2bf10b16cf06\\output\\res\\color\\abc_tint_seek_thumb.xml"
+        "source": "C:\\Users\\icyfillup\\.android\\build-cache\\a027631cee244203f572e361e51dfe97f71ecc5d\\output\\res\\color\\abc_secondary_text_material_dark.xml"
     },
     {
         "merged": "W:\\Android_stuff\\TimeManagement\\app\\build\\intermediates\\res\\merged\\debug\\color\\abc_primary_text_disable_only_material_dark.xml",
-        "source": "C:\\Users\\icyfillup\\.android\\build-cache\\a9542e16e4c7960e8234395111df2bf10b16cf06\\output\\res\\color\\abc_primary_text_disable_only_material_dark.xml"
-    },
-    {
-        "merged": "W:\\Android_stuff\\TimeManagement\\app\\build\\intermediates\\res\\merged\\debug\\color\\abc_btn_colored_text_material.xml",
-        "source": "C:\\Users\\icyfillup\\.android\\build-cache\\a9542e16e4c7960e8234395111df2bf10b16cf06\\output\\res\\color\\abc_btn_colored_text_material.xml"
+        "source": "C:\\Users\\icyfillup\\.android\\build-cache\\a027631cee244203f572e361e51dfe97f71ecc5d\\output\\res\\color\\abc_primary_text_disable_only_material_dark.xml"
     }
 ]

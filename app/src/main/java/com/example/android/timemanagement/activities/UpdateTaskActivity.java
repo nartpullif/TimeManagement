@@ -46,8 +46,6 @@ public class UpdateTaskActivity extends AppCompatActivity {
 
     private final String TAG = "updateTaskActivity";
 
-
-
     @Override
     public void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -91,6 +89,13 @@ public class UpdateTaskActivity extends AppCompatActivity {
                 android.R.layout.simple_dropdown_item_1line, projectList);
         projectAutoText.setAdapter(projectAdapter);
 
+//        extras.putString("EXTRA_SUBJECT", subject);
+//        extras.putString("EXTRA_PROJECT", project);
+//        extras.putString("EXTRA_START_TIME", startTime);
+//        extras.putString("EXTRA_END_TIME", endTime);
+//        extras.putString("EXTRA_DATE", date);
+//        extras.putLong("EXTRA_ID", id);
+
         //set all fields
         Bundle extras = getIntent().getExtras();
         dateSetDate.setDate(extras.getString("EXTRA_DATE"));
@@ -122,8 +127,9 @@ public class UpdateTaskActivity extends AppCompatActivity {
                     endSetTime.clear();
 
                     //if add task success go to main activity
-                    Intent intent = new Intent(context, MainActivity.class);
-                    startActivity(intent);
+//                    Intent intent = new Intent(context, MainActivity.class);
+//                    startActivity(intent);
+                      finish();
                 }else{
                     Toast.makeText(context, "Update task failed", Toast.LENGTH_SHORT).show();
                 }
