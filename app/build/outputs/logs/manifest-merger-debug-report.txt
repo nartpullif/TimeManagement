@@ -15,7 +15,7 @@ ADDED from W:\Android_stuff\TimeManagement\app\src\main\AndroidManifest.xml:2:1-
 		INJECTED from W:\Android_stuff\TimeManagement\app\src\main\AndroidManifest.xml
 application
 ADDED from W:\Android_stuff\TimeManagement\app\src\main\AndroidManifest.xml:5:5-55:19
-MERGED from [com.android.support.constraint:constraint-layout:1.0.2] C:\Users\icyfillup\.android\build-cache\dba7a11eef4fcead98012423858010d52b688cd0\output\AndroidManifest.xml:9:5-20
+MERGED from [com.android.support.constraint:constraint-layout:1.0.2] C:\Users\icyfillup\.android\build-cache\9b7e1fbd1021cd8bf21bb4dce65375cf90168b78\output\AndroidManifest.xml:9:5-20
 MERGED from [com.android.support:design:25.3.1] C:\Users\icyfillup\.android\build-cache\6fdd12f9bbb3e8b00b301d903b366bc3f354acf4\output\AndroidManifest.xml:29:5-20
 MERGED from [com.android.support:appcompat-v7:25.3.1] C:\Users\icyfillup\.android\build-cache\a9542e16e4c7960e8234395111df2bf10b16cf06\output\AndroidManifest.xml:29:5-20
 MERGED from [com.android.support:animated-vector-drawable:25.3.1] C:\Users\icyfillup\.android\build-cache\320fbcf4f665d0781f34d0c02ca26509535a8186\output\AndroidManifest.xml:26:5-20
@@ -85,7 +85,7 @@ ADDED from W:\Android_stuff\TimeManagement\app\src\main\AndroidManifest.xml:52:1
 		ADDED from W:\Android_stuff\TimeManagement\app\src\main\AndroidManifest.xml:52:27-74
 uses-sdk
 INJECTED from W:\Android_stuff\TimeManagement\app\src\main\AndroidManifest.xml reason: use-sdk injection requested
-MERGED from [com.android.support.constraint:constraint-layout:1.0.2] C:\Users\icyfillup\.android\build-cache\dba7a11eef4fcead98012423858010d52b688cd0\output\AndroidManifest.xml:5:5-7:41
+MERGED from [com.android.support.constraint:constraint-layout:1.0.2] C:\Users\icyfillup\.android\build-cache\9b7e1fbd1021cd8bf21bb4dce65375cf90168b78\output\AndroidManifest.xml:5:5-7:41
 MERGED from [com.android.support:design:25.3.1] C:\Users\icyfillup\.android\build-cache\6fdd12f9bbb3e8b00b301d903b366bc3f354acf4\output\AndroidManifest.xml:21:5-23:62
 MERGED from [com.android.support:appcompat-v7:25.3.1] C:\Users\icyfillup\.android\build-cache\a9542e16e4c7960e8234395111df2bf10b16cf06\output\AndroidManifest.xml:21:5-23:78
 MERGED from [com.android.support:animated-vector-drawable:25.3.1] C:\Users\icyfillup\.android\build-cache\320fbcf4f665d0781f34d0c02ca26509535a8186\output\AndroidManifest.xml:20:5-44

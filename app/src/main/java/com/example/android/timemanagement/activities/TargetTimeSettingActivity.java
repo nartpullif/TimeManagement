@@ -11,17 +11,50 @@ import android.widget.Toast;
 import com.example.android.timemanagement.R;
 import com.example.android.timemanagement.fragment.SetHourFragment;
 import com.example.android.timemanagement.models.ActivitySwitcherToolbar;
+import com.example.android.timemanagement.utilities.PreferenceUtils;
+
+import java.util.HashMap;
 
 public class TargetTimeSettingActivity extends AppCompatActivity implements SetHourFragment.OnSetTargetTimeCloseListerner{
+
     private ActivitySwitcherToolbar activitySwitcherToolbar;
+    private HashMap<Integer, TextView> dayTargetTime;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_target_time_setting);
 
+        initTextViewTargetTime();
+
         // bottom of the layout
         activitySwitcherToolbar = new ActivitySwitcherToolbar(this.getClass(), this);
+    }
+    public void initTextViewTargetTime()
+    {
+        PreferenceUtils.initSharePreference(this);
+
+        TextView mondayTargetTime = (TextView) findViewById(R.id.date_monday_time);
+        mondayTargetTime.setText(PreferenceUtils.getDayTargetTime(this, PreferenceUtils.MONDAY_TARGET_TIME));
+
+        TextView tuesdayTargetTime = (TextView) findViewById(R.id.date_tuesday_time);
+        tuesdayTargetTime.setText(PreferenceUtils.getDayTargetTime(this, PreferenceUtils.TUESDAY_TARGET_TIME));
+
+        TextView wednesdayTargetTime = (TextView) findViewById(R.id.date_wednesday_time);
+        wednesdayTargetTime.setText(PreferenceUtils.getDayTargetTime(this, PreferenceUtils.WEDNESDAY_TARGET_TIME));
+
+        TextView thursdayTargetTime = (TextView) findViewById(R.id.date_thursday_time);
+        thursdayTargetTime.setText(PreferenceUtils.getDayTargetTime(this, PreferenceUtils.THURSDAY_TARGET_TIME));
+
+        TextView fridayTargetTime = (TextView) findViewById(R.id.date_friday_time);
+        fridayTargetTime.setText(PreferenceUtils.getDayTargetTime(this, PreferenceUtils.FRIDAY_TARGET_TIME));
+
+        TextView saturdayTargetTime = (TextView) findViewById(R.id.date_saturday_time);
+        saturdayTargetTime.setText(PreferenceUtils.getDayTargetTime(this, PreferenceUtils.SATURDAY_TARGET_TIME));
+
+        TextView sundayTargetTime = (TextView) findViewById(R.id.date_sunday_time);
+        sundayTargetTime.setText(PreferenceUtils.getDayTargetTime(this, PreferenceUtils.SUNDAY_TARGET_TIME));
+
     }
 
     @Override
