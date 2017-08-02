@@ -1,0 +1,34 @@
+[
+    {
+        "merged": "C:\\_CS-5540\\TimeManagement\\app\\build\\intermediates\\res\\merged\\debug\\drawable-v21\\avd_hide_password.xml",
+        "source": "C:\\Users\\Siriporn\\.android\\build-cache\\9957cda1723eaab37492f7027012e5416a83dd1f\\output\\res\\drawable-v21\\avd_hide_password.xml"
+    },
+    {
+        "merged": "C:\\_CS-5540\\TimeManagement\\app\\build\\intermediates\\res\\merged\\debug\\drawable-v21\\abc_btn_colored_material.xml",
+        "source": "C:\\Users\\Siriporn\\.android\\build-cache\\765e36c018057533db3f0ce972b80027262e0f42\\output\\res\\drawable-v21\\abc_btn_colored_material.xml"
+    },
+    {
+        "merged": "C:\\_CS-5540\\TimeManagement\\app\\build\\intermediates\\res\\merged\\debug\\drawable-v21\\notification_action_background.xml",
+        "source": "C:\\Users\\Siriporn\\.android\\build-cache\\765e36c018057533db3f0ce972b80027262e0f42\\output\\res\\drawable-v21\\notification_action_background.xml"
+    },
+    {
+        "merged": "C:\\_CS-5540\\TimeManagement\\app\\build\\intermediates\\res\\merged\\debug\\drawable-v21\\abc_edit_text_material.xml",
+        "source": "C:\\Users\\Siriporn\\.android\\build-cache\\765e36c018057533db3f0ce972b80027262e0f42\\output\\res\\drawable-v21\\abc_edit_text_material.xml"
+    },
+    {
+        "merged": "C:\\_CS-5540\\TimeManagement\\app\\build\\intermediates\\res\\merged\\debug\\drawable-v21\\avd_show_password.xml",
+        "source": "C:\\Users\\Siriporn\\.android\\build-cache\\9957cda1723eaab37492f7027012e5416a83dd1f\\output\\res\\drawable-v21\\avd_show_password.xml"
+    },
+    {
+        "merged": "C:\\_CS-5540\\TimeManagement\\app\\build\\intermediates\\res\\merged\\debug\\drawable-v21\\design_password_eye.xml",
+        "source": "C:\\Users\\Siriporn\\.android\\build-cache\\9957cda1723eaab37492f7027012e5416a83dd1f\\output\\res\\drawable-v21\\design_password_eye.xml"
+    },
+    {
+        "merged": "C:\\_CS-5540\\TimeManagement\\app\\build\\intermediates\\res\\merged\\debug\\drawable-v21\\abc_action_bar_item_background_material.xml",
+        "source": "C:\\Users\\Siriporn\\.android\\build-cache\\765e36c018057533db3f0ce972b80027262e0f42\\output\\res\\drawable-v21\\abc_action_bar_item_background_material.xml"
+    },
+    {
+        "merged": "C:\\_CS-5540\\TimeManagement\\app\\build\\intermediates\\res\\merged\\debug\\drawable-v21\\design_bottom_navigation_item_background.xml",
+        "source": "C:\\Users\\Siriporn\\.android\\build-cache\\9957cda1723eaab37492f7027012e5416a83dd1f\\output\\res\\drawable-v21\\design_bottom_navigation_item_background.xml"
+    }
+]
