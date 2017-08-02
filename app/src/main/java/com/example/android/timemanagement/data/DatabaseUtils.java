@@ -44,6 +44,52 @@ public class DatabaseUtils {
         return cursor;
     }
 
+    public static Cursor getTask(SQLiteDatabase db, String start,String end) {
+        //add some spaces in front of aliases to avoid typo
+        String taskAlias = " " + "T";
+        String subjectAlias = " " + "S";
+        String projectAlias = " " + "P";
+
+        //SELECT T._id, s.title AS subjectTitle, p.title AS projectTitle,
+        //date, startHour, startMinute, startMidDay
+        //endHour, endMinute, endMidDay, taskTotalMinutes
+        //FROM tasks T
+        //INNER JOIN subjects S ON T.subjectId = S._id
+        //INNER JOIN projects P ON T.projectId = P._id
+        //WHERE T.date = ? ;
+        String query = "SELECT " + taskAlias + "." + Contract.TABLE_TASK._ID +
+                ", " + subjectAlias + "." + Contract.TABLE_SUBJECT.COLUMN_NAME_TITLE + " AS " + Contract.TABLE_TASK.COLUMN_NAME_SUBJECT_TITLE +
+                ", " + projectAlias + "." + Contract.TABLE_PROJECT.COLUMN_NAME_TITLE + " AS " + Contract.TABLE_TASK.COLUMN_NAME_PROJECT_TITLE +
+                ", " + Contract.TABLE_TASK.COLUMN_NAME_DATE +
+                ", " + Contract.TABLE_TASK.COLUMN_NAME_START_HOUR +
+                ", " + Contract.TABLE_TASK.COLUMN_NAME_START_MINUTE +
+                ", " + Contract.TABLE_TASK.COLUMN_NAME_START_MID_DAY +
+                ", " + Contract.TABLE_TASK.COLUMN_NAME_END_HOUR +
+                ", " + Contract.TABLE_TASK.COLUMN_NAME_END_MINUTE +
+                ", " + Contract.TABLE_TASK.COLUMN_NAME_END_MID_DAY +
+                ", " + Contract.TABLE_TASK.COLUMN_NAME_TASK_TOTAL_MINUTES +
+                " FROM " + Contract.TABLE_TASK.TABLE_NAME + taskAlias +
+                " INNER JOIN " + Contract.TABLE_SUBJECT.TABLE_NAME + subjectAlias + " ON " +
+                taskAlias + "." + Contract.TABLE_TASK.COLUMN_NAME_PROJECT_ID + " = " + subjectAlias + "." + Contract.TABLE_SUBJECT._ID +
+                " INNER JOIN " + Contract.TABLE_PROJECT.TABLE_NAME + projectAlias + " ON " +
+                taskAlias + "." +Contract.TABLE_TASK.COLUMN_NAME_SUBJECT_ID + " = " + projectAlias + "." + Contract.TABLE_PROJECT._ID +
+                " WHERE " + taskAlias + "." + Contract.TABLE_TASK.COLUMN_NAME_DATE +"  between '" + start + "'and  '" + end + "';";
+        //" WHERE 0;";
+
+        Log.d(TAG, "Select table SQL: " + query);
+        Cursor cursor = db.rawQuery(query, null);
+        Log.v("Cursor Object", android.database.DatabaseUtils.dumpCursorToString(cursor));
+/*
+        try {
+            String[] columnNames = cursor.getColumnNames();
+            for(String name: columnNames)
+                Log.d(TAG, "column "+name);
+        } finally {
+            cursor.close();
+        }
+*/
+        return cursor;
+    }
 
     public static Cursor getDailyTask(SQLiteDatabase db, String date) {
         //add some spaces in front of aliases to avoid typo

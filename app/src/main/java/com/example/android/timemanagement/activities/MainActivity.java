@@ -34,7 +34,7 @@ public class MainActivity extends AppCompatActivity {
     private Button nextDateButton;
     private Button addTaskButton;
     private RecyclerView taskRecyclerView;
-
+    private TextView tv_day_all;
 
     private SimpleDateFormat dateFormat = new SimpleDateFormat("EEEE MMMM dd, yyyy");
     private SimpleDateFormat dbDateFormat = new SimpleDateFormat("MM/dd/yyyy");
@@ -46,6 +46,7 @@ public class MainActivity extends AppCompatActivity {
     private TaskAdapter adapter;
     private Context context;
 
+
     private final String TAG = "mainActivity";
 
 
@@ -53,7 +54,7 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-
+        tv_day_all = (TextView) findViewById(R.id.tv_day_all);
         currentDateTextView = (TextView) findViewById(R.id.tv_currentDate);
         previousDateButton = (Button) findViewById(R.id.btn_previousDate);
         nextDateButton = (Button) findViewById(R.id.btn_nextDate);
@@ -93,6 +94,24 @@ public class MainActivity extends AppCompatActivity {
     }
 
     @Override
+    protected void onResume() {
+        updateShow();
+        super.onResume();
+    }
+
+    public void updateShow(){
+        if(db == null) db = helper.getWritableDatabase();
+        cursor = getDailyTask(db, dbDateFormat.format(currentDate));
+        int durationTimeMinutes = 0;
+        while(cursor.moveToNext()){
+            durationTimeMinutes += cursor.getInt(cursor.getColumnIndex(Contract.TABLE_TASK.COLUMN_NAME_TASK_TOTAL_MINUTES));
+
+        }
+        String durationTime = String.format("%d:%02d", durationTimeMinutes/60, durationTimeMinutes%60);
+        tv_day_all.setText(durationTime);
+    }
+
+    @Override
     protected void onStart() {
         super.onStart();
         helper = new DBHelper(this);
@@ -105,6 +124,7 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onItemClick(int pos, String subject, String project, String startTime, String endTime, String date, long id) {
                 Log.d(TAG, "item click id: " + id);
+                Log.e("xxx","pos = "+pos+",subject="+subject+",project="+project+",startTime="+startTime+",endTime="+endTime+",date="+date+",id="+id);
                 Intent intent = new Intent(MainActivity.this, UpdateTaskActivity.class);
                 Bundle extras = new Bundle();
                 extras.putString("EXTRA_SUBJECT", subject);
@@ -132,11 +152,12 @@ public class MainActivity extends AppCompatActivity {
                 long id = (long) viewHolder.itemView.getTag();
                 Log.d(TAG, "passing id: " + id);
                 if(removeTask(db, id)){
-                    Toast.makeText(context, "Remove task success", Toast.LENGTH_SHORT).show();
+                    Toast.makeText(MainActivity.this, "Remove task success", Toast.LENGTH_SHORT).show();
                 }else{
-                    Toast.makeText(context, "Remove task failed", Toast.LENGTH_SHORT).show();
+                    Toast.makeText(MainActivity.this, "Remove task failed", Toast.LENGTH_SHORT).show();
                 }
                 adapter.swapCursor(getDailyTask(db, dbDateFormat.format(currentDate)));
+                updateShow();
             }
         }).attachToRecyclerView(taskRecyclerView);
     }

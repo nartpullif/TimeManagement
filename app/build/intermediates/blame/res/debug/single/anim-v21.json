@@ -1,10 +1,10 @@
 [
     {
-        "merged": "C:\\_CS-5540\\TimeManagement\\app\\build\\intermediates\\res\\merged\\debug\\anim-v21\\design_bottom_sheet_slide_out.xml",
-        "source": "C:\\Users\\Siriporn\\.android\\build-cache\\9957cda1723eaab37492f7027012e5416a83dd1f\\output\\res\\anim-v21\\design_bottom_sheet_slide_out.xml"
+        "merged": "/Users/cy/Desktop/安卓project/TimeManagement/app/build/intermediates/res/merged/debug/anim-v21/design_bottom_sheet_slide_out.xml",
+        "source": "/Users/cy/.android/build-cache/def28076b7fefbd64bfce17476e809cb047c0ebc/output/res/anim-v21/design_bottom_sheet_slide_out.xml"
     },
     {
-        "merged": "C:\\_CS-5540\\TimeManagement\\app\\build\\intermediates\\res\\merged\\debug\\anim-v21\\design_bottom_sheet_slide_in.xml",
-        "source": "C:\\Users\\Siriporn\\.android\\build-cache\\9957cda1723eaab37492f7027012e5416a83dd1f\\output\\res\\anim-v21\\design_bottom_sheet_slide_in.xml"
+        "merged": "/Users/cy/Desktop/安卓project/TimeManagement/app/build/intermediates/res/merged/debug/anim-v21/design_bottom_sheet_slide_in.xml",
+        "source": "/Users/cy/.android/build-cache/def28076b7fefbd64bfce17476e809cb047c0ebc/output/res/anim-v21/design_bottom_sheet_slide_in.xml"
     }
 ]

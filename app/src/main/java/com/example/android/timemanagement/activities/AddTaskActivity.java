@@ -124,8 +124,9 @@ public class AddTaskActivity extends AppCompatActivity {
                     endSetTime.clear();
 
                     //if add task success go to main activity
-                    Intent intent = new Intent(context, MainActivity.class);
-                    startActivity(intent);
+//                    Intent intent = new Intent(context, MainActivity.class);
+//                    startActivity(intent);
+                    finish();
                 }else{
                     Toast.makeText(context, "Add task failed", Toast.LENGTH_SHORT).show();
                 }
