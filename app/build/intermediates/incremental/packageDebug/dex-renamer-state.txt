@@ -1,7 +1,0 @@
-#Tue Jul 25 12:43:20 PDT 2017
-base.0=C\:\\_CS-5540\\TimeManagement\\app\\build\\intermediates\\transforms\\dex\\debug\\folders\\1000\\10000\\instant-run_415209657ee9bc06c3b7876896ff0566ecb88b88
-renamed.1=classes2.dex
-renamed.0=classes.dex
-file.1=C\:\\_CS-5540\\TimeManagement\\app\\build\\intermediates\\transforms\\dex\\debug\\folders\\1000\\10000\\instant-run-bootstrap_9b251f473a2e6918668a770cdddcea4d366175d0\\classes.dex
-base.1=C\:\\_CS-5540\\TimeManagement\\app\\build\\intermediates\\transforms\\dex\\debug\\folders\\1000\\10000\\instant-run-bootstrap_9b251f473a2e6918668a770cdddcea4d366175d0
-file.0=C\:\\_CS-5540\\TimeManagement\\app\\build\\intermediates\\transforms\\dex\\debug\\folders\\1000\\10000\\instant-run_415209657ee9bc06c3b7876896ff0566ecb88b88\\classes.dex

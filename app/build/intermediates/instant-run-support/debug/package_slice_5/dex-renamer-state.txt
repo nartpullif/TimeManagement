@@ -1,4 +1,0 @@
-#Sat Jul 22 22:44:21 PDT 2017
-base.0=C\:\\_CS-5540\\TimeManagement\\app\\build\\intermediates\\transforms\\dex\\debug\\folders\\1000\\5\\slice_5
-renamed.0=classes.dex
-file.0=C\:\\_CS-5540\\TimeManagement\\app\\build\\intermediates\\transforms\\dex\\debug\\folders\\1000\\5\\slice_5\\classes.dex
