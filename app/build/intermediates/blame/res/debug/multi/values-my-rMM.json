@@ -1,6 +1,6 @@
 [
     {
-        "outputFile": "C:\\_CS-5540\\TimeManagement\\app\\build\\intermediates\\incremental\\mergeDebugResources\\merged.dir\\values-my-rMM\\values-my-rMM.xml",
+        "outputFile": "/Users/cy/Desktop/安卓project/TimeManagement/app/build/intermediates/res/merged/debug/values-my-rMM/values-my-rMM.xml",
         "map": [
             {
                 "to": {
@@ -11,13 +11,13 @@
                     "endOffset": 159
                 },
                 "from": {
-                    "file": "C:\\Users\\Siriporn\\.android\\build-cache\\765e36c018057533db3f0ce972b80027262e0f42\\output\\res\\values-my-rMM\\values-my-rMM.xml",
+                    "file": "/Users/cy/Desktop/安卓project/TimeManagement/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.0.1/res/values-my-rMM/values-my-rMM.xml",
                     "position": {
-                        "startLine": 2,
+                        "startLine": 4,
                         "startColumn": 4,
-                        "startOffset": 55,
+                        "startOffset": 284,
                         "endColumn": 108,
-                        "endOffset": 159
+                        "endOffset": 388
                     }
                 }
             },
@@ -30,13 +30,13 @@
                     "endOffset": 267
                 },
                 "from": {
-                    "file": "C:\\Users\\Siriporn\\.android\\build-cache\\765e36c018057533db3f0ce972b80027262e0f42\\output\\res\\values-my-rMM\\values-my-rMM.xml",
+                    "file": "/Users/cy/Desktop/安卓project/TimeManagement/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.0.1/res/values-my-rMM/values-my-rMM.xml",
                     "position": {
-                        "startLine": 3,
+                        "startLine": 5,
                         "startColumn": 4,
-                        "startOffset": 164,
+                        "startOffset": 393,
                         "endColumn": 107,
-                        "endOffset": 267
+                        "endOffset": 496
                     }
                 }
             },
@@ -49,13 +49,13 @@
                     "endOffset": 392
                 },
                 "from": {
-                    "file": "C:\\Users\\Siriporn\\.android\\build-cache\\765e36c018057533db3f0ce972b80027262e0f42\\output\\res\\values-my-rMM\\values-my-rMM.xml",
+                    "file": "/Users/cy/Desktop/安卓project/TimeManagement/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.0.1/res/values-my-rMM/values-my-rMM.xml",
                     "position": {
-                        "startLine": 4,
+                        "startLine": 6,
                         "startColumn": 4,
-                        "startOffset": 272,
+                        "startOffset": 501,
                         "endColumn": 124,
-                        "endOffset": 392
+                        "endOffset": 621
                     }
                 }
             },
@@ -68,13 +68,13 @@
                     "endOffset": 497
                 },
                 "from": {
-                    "file": "C:\\Users\\Siriporn\\.android\\build-cache\\765e36c018057533db3f0ce972b80027262e0f42\\output\\res\\values-my-rMM\\values-my-rMM.xml",
+                    "file": "/Users/cy/Desktop/安卓project/TimeManagement/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.0.1/res/values-my-rMM/values-my-rMM.xml",
                     "position": {
-                        "startLine": 5,
+                        "startLine": 7,
                         "startColumn": 4,
-                        "startOffset": 397,
+                        "startOffset": 626,
                         "endColumn": 104,
-                        "endOffset": 497
+                        "endOffset": 726
                     }
                 }
             },
@@ -87,13 +87,13 @@
                     "endOffset": 614
                 },
                 "from": {
-                    "file": "C:\\Users\\Siriporn\\.android\\build-cache\\765e36c018057533db3f0ce972b80027262e0f42\\output\\res\\values-my-rMM\\values-my-rMM.xml",
+                    "file": "/Users/cy/Desktop/安卓project/TimeManagement/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.0.1/res/values-my-rMM/values-my-rMM.xml",
                     "position": {
-                        "startLine": 6,
+                        "startLine": 8,
                         "startColumn": 4,
-                        "startOffset": 502,
+                        "startOffset": 731,
                         "endColumn": 116,
-                        "endOffset": 614
+                        "endOffset": 843
                     }
                 }
             },
@@ -106,13 +106,13 @@
                     "endOffset": 707
                 },
                 "from": {
-                    "file": "C:\\Users\\Siriporn\\.android\\build-cache\\765e36c018057533db3f0ce972b80027262e0f42\\output\\res\\values-my-rMM\\values-my-rMM.xml",
+                    "file": "/Users/cy/Desktop/安卓project/TimeManagement/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.0.1/res/values-my-rMM/values-my-rMM.xml",
                     "position": {
-                        "startLine": 7,
+                        "startLine": 9,
                         "startColumn": 4,
-                        "startOffset": 619,
+                        "startOffset": 848,
                         "endColumn": 92,
-                        "endOffset": 707
+                        "endOffset": 936
                     }
                 }
             },
@@ -125,13 +125,13 @@
                     "endOffset": 819
                 },
                 "from": {
-                    "file": "C:\\Users\\Siriporn\\.android\\build-cache\\765e36c018057533db3f0ce972b80027262e0f42\\output\\res\\values-my-rMM\\values-my-rMM.xml",
+                    "file": "/Users/cy/Desktop/安卓project/TimeManagement/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.0.1/res/values-my-rMM/values-my-rMM.xml",
                     "position": {
-                        "startLine": 8,
+                        "startLine": 10,
                         "startColumn": 4,
-                        "startOffset": 712,
+                        "startOffset": 941,
                         "endColumn": 111,
-                        "endOffset": 819
+                        "endOffset": 1048
                     }
                 }
             },
@@ -140,17 +140,17 @@
                     "startLine": 9,
                     "startColumn": 4,
                     "startOffset": 824,
-                    "endColumn": 127,
-                    "endOffset": 947
+                    "endColumn": 135,
+                    "endOffset": 955
                 },
                 "from": {
-                    "file": "C:\\Users\\Siriporn\\.android\\build-cache\\765e36c018057533db3f0ce972b80027262e0f42\\output\\res\\values-my-rMM\\values-my-rMM.xml",
+                    "file": "/Users/cy/Desktop/安卓project/TimeManagement/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.0.1/res/values-my-rMM/values-my-rMM.xml",
                     "position": {
-                        "startLine": 9,
+                        "startLine": 11,
                         "startColumn": 4,
-                        "startOffset": 824,
-                        "endColumn": 127,
-                        "endOffset": 947
+                        "startOffset": 1053,
+                        "endColumn": 135,
+                        "endOffset": 1184
                     }
                 }
             },
@@ -158,18 +158,18 @@
                 "to": {
                     "startLine": 10,
                     "startColumn": 4,
-                    "startOffset": 952,
-                    "endColumn": 77,
-                    "endOffset": 1025
+                    "startOffset": 960,
+                    "endColumn": 85,
+                    "endOffset": 1041
                 },
                 "from": {
-                    "file": "C:\\Users\\Siriporn\\.android\\build-cache\\765e36c018057533db3f0ce972b80027262e0f42\\output\\res\\values-my-rMM\\values-my-rMM.xml",
+                    "file": "/Users/cy/Desktop/安卓project/TimeManagement/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.0.1/res/values-my-rMM/values-my-rMM.xml",
                     "position": {
-                        "startLine": 10,
+                        "startLine": 12,
                         "startColumn": 4,
-                        "startOffset": 952,
-                        "endColumn": 77,
-                        "endOffset": 1025
+                        "startOffset": 1189,
+                        "endColumn": 85,
+                        "endOffset": 1270
                     }
                 }
             },
@@ -177,18 +177,18 @@
                 "to": {
                     "startLine": 11,
                     "startColumn": 4,
-                    "startOffset": 1030,
-                    "endColumn": 78,
-                    "endOffset": 1104
+                    "startOffset": 1046,
+                    "endColumn": 124,
+                    "endOffset": 1166
                 },
                 "from": {
-                    "file": "C:\\Users\\Siriporn\\.android\\build-cache\\765e36c018057533db3f0ce972b80027262e0f42\\output\\res\\values-my-rMM\\values-my-rMM.xml",
+                    "file": "/Users/cy/Desktop/安卓project/TimeManagement/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.0.1/res/values-my-rMM/values-my-rMM.xml",
                     "position": {
-                        "startLine": 11,
+                        "startLine": 13,
                         "startColumn": 4,
-                        "startOffset": 1030,
-                        "endColumn": 78,
-                        "endOffset": 1104
+                        "startOffset": 1275,
+                        "endColumn": 124,
+                        "endOffset": 1395
                     }
                 }
             },
@@ -196,18 +196,18 @@
                 "to": {
                     "startLine": 12,
                     "startColumn": 4,
-                    "startOffset": 1109,
-                    "endColumn": 85,
-                    "endOffset": 1190
+                    "startOffset": 1171,
+                    "endColumn": 111,
+                    "endOffset": 1278
                 },
                 "from": {
-                    "file": "C:\\Users\\Siriporn\\.android\\build-cache\\765e36c018057533db3f0ce972b80027262e0f42\\output\\res\\values-my-rMM\\values-my-rMM.xml",
+                    "file": "/Users/cy/Desktop/安卓project/TimeManagement/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.0.1/res/values-my-rMM/values-my-rMM.xml",
                     "position": {
-                        "startLine": 12,
+                        "startLine": 14,
                         "startColumn": 4,
-                        "startOffset": 1109,
-                        "endColumn": 85,
-                        "endOffset": 1190
+                        "startOffset": 1400,
+                        "endColumn": 111,
+                        "endOffset": 1507
                     }
                 }
             },
@@ -215,18 +215,18 @@
                 "to": {
                     "startLine": 13,
                     "startColumn": 4,
-                    "startOffset": 1195,
-                    "endColumn": 122,
-                    "endOffset": 1313
+                    "startOffset": 1283,
+                    "endColumn": 101,
+                    "endOffset": 1380
                 },
                 "from": {
-                    "file": "C:\\Users\\Siriporn\\.android\\build-cache\\765e36c018057533db3f0ce972b80027262e0f42\\output\\res\\values-my-rMM\\values-my-rMM.xml",
+                    "file": "/Users/cy/Desktop/安卓project/TimeManagement/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.0.1/res/values-my-rMM/values-my-rMM.xml",
                     "position": {
-                        "startLine": 13,
+                        "startLine": 15,
                         "startColumn": 4,
-                        "startOffset": 1195,
-                        "endColumn": 122,
-                        "endOffset": 1313
+                        "startOffset": 1512,
+                        "endColumn": 101,
+                        "endOffset": 1609
                     }
                 }
             },
@@ -234,18 +234,18 @@
                 "to": {
                     "startLine": 14,
                     "startColumn": 4,
-                    "startOffset": 1318,
-                    "endColumn": 111,
-                    "endOffset": 1425
+                    "startOffset": 1385,
+                    "endColumn": 125,
+                    "endOffset": 1506
                 },
                 "from": {
-                    "file": "C:\\Users\\Siriporn\\.android\\build-cache\\765e36c018057533db3f0ce972b80027262e0f42\\output\\res\\values-my-rMM\\values-my-rMM.xml",
+                    "file": "/Users/cy/Desktop/安卓project/TimeManagement/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.0.1/res/values-my-rMM/values-my-rMM.xml",
                     "position": {
-                        "startLine": 14,
+                        "startLine": 16,
                         "startColumn": 4,
-                        "startOffset": 1318,
-                        "endColumn": 111,
-                        "endOffset": 1425
+                        "startOffset": 1614,
+                        "endColumn": 125,
+                        "endOffset": 1735
                     }
                 }
             },
@@ -253,18 +253,18 @@
                 "to": {
                     "startLine": 15,
                     "startColumn": 4,
-                    "startOffset": 1430,
-                    "endColumn": 101,
-                    "endOffset": 1527
+                    "startOffset": 1511,
+                    "endColumn": 110,
+                    "endOffset": 1617
                 },
                 "from": {
-                    "file": "C:\\Users\\Siriporn\\.android\\build-cache\\765e36c018057533db3f0ce972b80027262e0f42\\output\\res\\values-my-rMM\\values-my-rMM.xml",
+                    "file": "/Users/cy/Desktop/安卓project/TimeManagement/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.0.1/res/values-my-rMM/values-my-rMM.xml",
                     "position": {
-                        "startLine": 15,
+                        "startLine": 17,
                         "startColumn": 4,
-                        "startOffset": 1430,
-                        "endColumn": 101,
-                        "endOffset": 1527
+                        "startOffset": 1740,
+                        "endColumn": 110,
+                        "endOffset": 1846
                     }
                 }
             },
@@ -272,18 +272,18 @@
                 "to": {
                     "startLine": 16,
                     "startColumn": 4,
-                    "startOffset": 1532,
-                    "endColumn": 125,
-                    "endOffset": 1653
+                    "startOffset": 1622,
+                    "endColumn": 109,
+                    "endOffset": 1727
                 },
                 "from": {
-                    "file": "C:\\Users\\Siriporn\\.android\\build-cache\\765e36c018057533db3f0ce972b80027262e0f42\\output\\res\\values-my-rMM\\values-my-rMM.xml",
+                    "file": "/Users/cy/Desktop/安卓project/TimeManagement/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.0.1/res/values-my-rMM/values-my-rMM.xml",
                     "position": {
-                        "startLine": 16,
+                        "startLine": 18,
                         "startColumn": 4,
-                        "startOffset": 1532,
-                        "endColumn": 125,
-                        "endOffset": 1653
+                        "startOffset": 1851,
+                        "endColumn": 109,
+                        "endOffset": 1956
                     }
                 }
             },
@@ -291,18 +291,18 @@
                 "to": {
                     "startLine": 17,
                     "startColumn": 4,
-                    "startOffset": 1658,
-                    "endColumn": 110,
-                    "endOffset": 1764
+                    "startOffset": 1732,
+                    "endColumn": 122,
+                    "endOffset": 1850
                 },
                 "from": {
-                    "file": "C:\\Users\\Siriporn\\.android\\build-cache\\765e36c018057533db3f0ce972b80027262e0f42\\output\\res\\values-my-rMM\\values-my-rMM.xml",
+                    "file": "/Users/cy/Desktop/安卓project/TimeManagement/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.0.1/res/values-my-rMM/values-my-rMM.xml",
                     "position": {
-                        "startLine": 17,
+                        "startLine": 19,
                         "startColumn": 4,
-                        "startOffset": 1658,
-                        "endColumn": 110,
-                        "endOffset": 1764
+                        "startOffset": 1961,
+                        "endColumn": 122,
+                        "endOffset": 2079
                     }
                 }
             },
@@ -310,18 +310,18 @@
                 "to": {
                     "startLine": 18,
                     "startColumn": 4,
-                    "startOffset": 1769,
-                    "endColumn": 109,
-                    "endOffset": 1874
+                    "startOffset": 1855,
+                    "endColumn": 99,
+                    "endOffset": 1950
                 },
                 "from": {
-                    "file": "C:\\Users\\Siriporn\\.android\\build-cache\\765e36c018057533db3f0ce972b80027262e0f42\\output\\res\\values-my-rMM\\values-my-rMM.xml",
+                    "file": "/Users/cy/Desktop/安卓project/TimeManagement/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.0.1/res/values-my-rMM/values-my-rMM.xml",
                     "position": {
-                        "startLine": 18,
+                        "startLine": 20,
                         "startColumn": 4,
-                        "startOffset": 1769,
-                        "endColumn": 109,
-                        "endOffset": 1874
+                        "startOffset": 2084,
+                        "endColumn": 99,
+                        "endOffset": 2179
                     }
                 }
             },
@@ -329,75 +329,365 @@
                 "to": {
                     "startLine": 19,
                     "startColumn": 4,
-                    "startOffset": 1879,
-                    "endColumn": 122,
-                    "endOffset": 1997
+                    "startOffset": 1955,
+                    "endColumn": 100,
+                    "endOffset": 2051
                 },
                 "from": {
-                    "file": "C:\\Users\\Siriporn\\.android\\build-cache\\765e36c018057533db3f0ce972b80027262e0f42\\output\\res\\values-my-rMM\\values-my-rMM.xml",
-                    "position": {
-                        "startLine": 19,
-                        "startColumn": 4,
-                        "startOffset": 1879,
-                        "endColumn": 122,
-                        "endOffset": 1997
-                    }
-                }
-            },
-            {
-                "to": {
-                    "startLine": 20,
-                    "startColumn": 4,
-                    "startOffset": 2002,
-                    "endColumn": 99,
-                    "endOffset": 2097
-                },
-                "from": {
-                    "file": "C:\\Users\\Siriporn\\.android\\build-cache\\765e36c018057533db3f0ce972b80027262e0f42\\output\\res\\values-my-rMM\\values-my-rMM.xml",
-                    "position": {
-                        "startLine": 20,
-                        "startColumn": 4,
-                        "startOffset": 2002,
-                        "endColumn": 99,
-                        "endOffset": 2097
-                    }
-                }
-            },
-            {
-                "to": {
-                    "startLine": 21,
-                    "startColumn": 4,
-                    "startOffset": 2102,
-                    "endColumn": 83,
-                    "endOffset": 2181
-                },
-                "from": {
-                    "file": "C:\\Users\\Siriporn\\.android\\build-cache\\765e36c018057533db3f0ce972b80027262e0f42\\output\\res\\values-my-rMM\\values-my-rMM.xml",
+                    "file": "/Users/cy/Desktop/安卓project/TimeManagement/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.0.1/res/values-my-rMM/values-my-rMM.xml",
                     "position": {
                         "startLine": 21,
                         "startColumn": 4,
-                        "startOffset": 2102,
-                        "endColumn": 83,
-                        "endOffset": 2181
+                        "startOffset": 2184,
+                        "endColumn": 100,
+                        "endOffset": 2280
+                    }
+                }
+            }
+        ]
+    },
+    {
+        "outputFile": "/Users/cy/Desktop/安卓project/TimeManagement/app/build/intermediates/incremental/mergeDebugResources/merged.dir/values-my-rMM/values-my-rMM.xml",
+        "map": [
+            {
+                "to": {
+                    "startLine": 2,
+                    "startColumn": 4,
+                    "startOffset": 55,
+                    "endColumn": 108,
+                    "endOffset": 159
+                },
+                "from": {
+                    "file": "/Users/cy/.android/build-cache/af41b2b0712459b328b7dddc68c01fb6ca358862/output/res/values-my-rMM/values-my-rMM.xml",
+                    "position": {
+                        "startLine": 4,
+                        "startColumn": 4,
+                        "startOffset": 284,
+                        "endColumn": 108,
+                        "endOffset": 388
                     }
                 }
             },
             {
                 "to": {
-                    "startLine": 22,
+                    "startLine": 3,
                     "startColumn": 4,
-                    "startOffset": 2186,
-                    "endColumn": 100,
-                    "endOffset": 2282
+                    "startOffset": 164,
+                    "endColumn": 107,
+                    "endOffset": 267
                 },
                 "from": {
-                    "file": "C:\\Users\\Siriporn\\.android\\build-cache\\765e36c018057533db3f0ce972b80027262e0f42\\output\\res\\values-my-rMM\\values-my-rMM.xml",
+                    "file": "/Users/cy/.android/build-cache/af41b2b0712459b328b7dddc68c01fb6ca358862/output/res/values-my-rMM/values-my-rMM.xml",
                     "position": {
-                        "startLine": 22,
+                        "startLine": 5,
                         "startColumn": 4,
-                        "startOffset": 2186,
+                        "startOffset": 393,
+                        "endColumn": 107,
+                        "endOffset": 496
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 4,
+                    "startColumn": 4,
+                    "startOffset": 272,
+                    "endColumn": 124,
+                    "endOffset": 392
+                },
+                "from": {
+                    "file": "/Users/cy/.android/build-cache/af41b2b0712459b328b7dddc68c01fb6ca358862/output/res/values-my-rMM/values-my-rMM.xml",
+                    "position": {
+                        "startLine": 6,
+                        "startColumn": 4,
+                        "startOffset": 501,
+                        "endColumn": 124,
+                        "endOffset": 621
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 5,
+                    "startColumn": 4,
+                    "startOffset": 397,
+                    "endColumn": 104,
+                    "endOffset": 497
+                },
+                "from": {
+                    "file": "/Users/cy/.android/build-cache/af41b2b0712459b328b7dddc68c01fb6ca358862/output/res/values-my-rMM/values-my-rMM.xml",
+                    "position": {
+                        "startLine": 7,
+                        "startColumn": 4,
+                        "startOffset": 626,
+                        "endColumn": 104,
+                        "endOffset": 726
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 6,
+                    "startColumn": 4,
+                    "startOffset": 502,
+                    "endColumn": 116,
+                    "endOffset": 614
+                },
+                "from": {
+                    "file": "/Users/cy/.android/build-cache/af41b2b0712459b328b7dddc68c01fb6ca358862/output/res/values-my-rMM/values-my-rMM.xml",
+                    "position": {
+                        "startLine": 8,
+                        "startColumn": 4,
+                        "startOffset": 731,
+                        "endColumn": 116,
+                        "endOffset": 843
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 7,
+                    "startColumn": 4,
+                    "startOffset": 619,
+                    "endColumn": 92,
+                    "endOffset": 707
+                },
+                "from": {
+                    "file": "/Users/cy/.android/build-cache/af41b2b0712459b328b7dddc68c01fb6ca358862/output/res/values-my-rMM/values-my-rMM.xml",
+                    "position": {
+                        "startLine": 9,
+                        "startColumn": 4,
+                        "startOffset": 848,
+                        "endColumn": 92,
+                        "endOffset": 936
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 8,
+                    "startColumn": 4,
+                    "startOffset": 712,
+                    "endColumn": 111,
+                    "endOffset": 819
+                },
+                "from": {
+                    "file": "/Users/cy/.android/build-cache/af41b2b0712459b328b7dddc68c01fb6ca358862/output/res/values-my-rMM/values-my-rMM.xml",
+                    "position": {
+                        "startLine": 10,
+                        "startColumn": 4,
+                        "startOffset": 941,
+                        "endColumn": 111,
+                        "endOffset": 1048
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 9,
+                    "startColumn": 4,
+                    "startOffset": 824,
+                    "endColumn": 135,
+                    "endOffset": 955
+                },
+                "from": {
+                    "file": "/Users/cy/.android/build-cache/af41b2b0712459b328b7dddc68c01fb6ca358862/output/res/values-my-rMM/values-my-rMM.xml",
+                    "position": {
+                        "startLine": 11,
+                        "startColumn": 4,
+                        "startOffset": 1053,
+                        "endColumn": 135,
+                        "endOffset": 1184
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 10,
+                    "startColumn": 4,
+                    "startOffset": 960,
+                    "endColumn": 85,
+                    "endOffset": 1041
+                },
+                "from": {
+                    "file": "/Users/cy/.android/build-cache/af41b2b0712459b328b7dddc68c01fb6ca358862/output/res/values-my-rMM/values-my-rMM.xml",
+                    "position": {
+                        "startLine": 12,
+                        "startColumn": 4,
+                        "startOffset": 1189,
+                        "endColumn": 85,
+                        "endOffset": 1270
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 11,
+                    "startColumn": 4,
+                    "startOffset": 1046,
+                    "endColumn": 124,
+                    "endOffset": 1166
+                },
+                "from": {
+                    "file": "/Users/cy/.android/build-cache/af41b2b0712459b328b7dddc68c01fb6ca358862/output/res/values-my-rMM/values-my-rMM.xml",
+                    "position": {
+                        "startLine": 13,
+                        "startColumn": 4,
+                        "startOffset": 1275,
+                        "endColumn": 124,
+                        "endOffset": 1395
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 12,
+                    "startColumn": 4,
+                    "startOffset": 1171,
+                    "endColumn": 111,
+                    "endOffset": 1278
+                },
+                "from": {
+                    "file": "/Users/cy/.android/build-cache/af41b2b0712459b328b7dddc68c01fb6ca358862/output/res/values-my-rMM/values-my-rMM.xml",
+                    "position": {
+                        "startLine": 14,
+                        "startColumn": 4,
+                        "startOffset": 1400,
+                        "endColumn": 111,
+                        "endOffset": 1507
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 13,
+                    "startColumn": 4,
+                    "startOffset": 1283,
+                    "endColumn": 101,
+                    "endOffset": 1380
+                },
+                "from": {
+                    "file": "/Users/cy/.android/build-cache/af41b2b0712459b328b7dddc68c01fb6ca358862/output/res/values-my-rMM/values-my-rMM.xml",
+                    "position": {
+                        "startLine": 15,
+                        "startColumn": 4,
+                        "startOffset": 1512,
+                        "endColumn": 101,
+                        "endOffset": 1609
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 14,
+                    "startColumn": 4,
+                    "startOffset": 1385,
+                    "endColumn": 125,
+                    "endOffset": 1506
+                },
+                "from": {
+                    "file": "/Users/cy/.android/build-cache/af41b2b0712459b328b7dddc68c01fb6ca358862/output/res/values-my-rMM/values-my-rMM.xml",
+                    "position": {
+                        "startLine": 16,
+                        "startColumn": 4,
+                        "startOffset": 1614,
+                        "endColumn": 125,
+                        "endOffset": 1735
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 15,
+                    "startColumn": 4,
+                    "startOffset": 1511,
+                    "endColumn": 110,
+                    "endOffset": 1617
+                },
+                "from": {
+                    "file": "/Users/cy/.android/build-cache/af41b2b0712459b328b7dddc68c01fb6ca358862/output/res/values-my-rMM/values-my-rMM.xml",
+                    "position": {
+                        "startLine": 17,
+                        "startColumn": 4,
+                        "startOffset": 1740,
+                        "endColumn": 110,
+                        "endOffset": 1846
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 16,
+                    "startColumn": 4,
+                    "startOffset": 1622,
+                    "endColumn": 109,
+                    "endOffset": 1727
+                },
+                "from": {
+                    "file": "/Users/cy/.android/build-cache/af41b2b0712459b328b7dddc68c01fb6ca358862/output/res/values-my-rMM/values-my-rMM.xml",
+                    "position": {
+                        "startLine": 18,
+                        "startColumn": 4,
+                        "startOffset": 1851,
+                        "endColumn": 109,
+                        "endOffset": 1956
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 17,
+                    "startColumn": 4,
+                    "startOffset": 1732,
+                    "endColumn": 122,
+                    "endOffset": 1850
+                },
+                "from": {
+                    "file": "/Users/cy/.android/build-cache/af41b2b0712459b328b7dddc68c01fb6ca358862/output/res/values-my-rMM/values-my-rMM.xml",
+                    "position": {
+                        "startLine": 19,
+                        "startColumn": 4,
+                        "startOffset": 1961,
+                        "endColumn": 122,
+                        "endOffset": 2079
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 18,
+                    "startColumn": 4,
+                    "startOffset": 1855,
+                    "endColumn": 99,
+                    "endOffset": 1950
+                },
+                "from": {
+                    "file": "/Users/cy/.android/build-cache/af41b2b0712459b328b7dddc68c01fb6ca358862/output/res/values-my-rMM/values-my-rMM.xml",
+                    "position": {
+                        "startLine": 20,
+                        "startColumn": 4,
+                        "startOffset": 2084,
+                        "endColumn": 99,
+                        "endOffset": 2179
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 19,
+                    "startColumn": 4,
+                    "startOffset": 1955,
+                    "endColumn": 100,
+                    "endOffset": 2051
+                },
+                "from": {
+                    "file": "/Users/cy/.android/build-cache/af41b2b0712459b328b7dddc68c01fb6ca358862/output/res/values-my-rMM/values-my-rMM.xml",
+                    "position": {
+                        "startLine": 21,
+                        "startColumn": 4,
+                        "startOffset": 2184,
                         "endColumn": 100,
-                        "endOffset": 2282
+                        "endOffset": 2280
                     }
                 }
             }

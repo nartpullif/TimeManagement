@@ -1,0 +1,10 @@
+[
+    {
+        "merged": "/Users/cy/Desktop/安卓project/TimeManagement/app/build/intermediates/res/merged/debug/mipmap-hdpi-v4/ic_launcher_round.png",
+        "source": "/Users/cy/Desktop/安卓project/TimeManagement/app/src/main/res/mipmap-hdpi/ic_launcher_round.png"
+    },
+    {
+        "merged": "/Users/cy/Desktop/安卓project/TimeManagement/app/build/intermediates/res/merged/debug/mipmap-hdpi-v4/ic_launcher.png",
+        "source": "/Users/cy/Desktop/安卓project/TimeManagement/app/src/main/res/mipmap-hdpi/ic_launcher.png"
+    }
+]

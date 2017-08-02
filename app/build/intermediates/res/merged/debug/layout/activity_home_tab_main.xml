@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<TabHost xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@android:id/tabhost" 
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent">
+
+    <RelativeLayout 
+        android:id="@+id/tab_parent" 
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent">
+
+        <!-- Tab widget -->
+        <FrameLayout 
+            android:id="@+id/tab_frame_layout"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true" 
+            android:clickable="true" 
+            android:background="#B1BBF4">
+            
+            <!-- Tab切换动画 -->
+            <ImageView android:id="@+id/iv_mover"
+                android:layout_width="wrap_content" 
+                android:layout_height="wrap_content"
+                android:scaleType="fitXY" 
+                android:visibility="gone" />
+
+            <!-- Tab labels -->
+            <TabWidget android:id="@android:id/tabs"
+                android:layout_width="fill_parent"
+                android:layout_height="64dp" />
+        </FrameLayout>
+
+        <!-- Tab contents -->
+        <FrameLayout 
+            android:id="@android:id/tabcontent" 
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent" 
+            android:layout_above="@id/tab_frame_layout" />
+
+        <!-- 浮动提醒框 
+        <include android:layout_width="fill_parent"
+            android:layout_height="wrap_content" 
+            layout="@layout/notification_bar"
+            android:layout_above="@id/tab_frame_layout"
+            android:layout_below="@id/top_bar"
+            android:visibility="invisible" />-->
+               
+    </RelativeLayout>
+</TabHost>
