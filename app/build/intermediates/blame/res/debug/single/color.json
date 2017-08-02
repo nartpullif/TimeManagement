@@ -1,42 +1,42 @@
 [
     {
-        "merged": "/Users/cy/Desktop/安卓project/TimeManagement/app/build/intermediates/res/merged/debug/color/abc_primary_text_material_dark.xml",
-        "source": "/Users/cy/.android/build-cache/af41b2b0712459b328b7dddc68c01fb6ca358862/output/res/color/abc_primary_text_material_dark.xml"
+        "merged": "C:\\Users\\Mark\\Desktop\\TimeManagement\\app\\build\\intermediates\\res\\merged\\debug\\color\\abc_primary_text_material_dark.xml",
+        "source": "C:\\Users\\Mark\\.android\\build-cache\\67b6b4dea77d5f1d38753986b48236c449b6f326\\output\\res\\color\\abc_primary_text_material_dark.xml"
     },
     {
-        "merged": "/Users/cy/Desktop/安卓project/TimeManagement/app/build/intermediates/res/merged/debug/color/abc_primary_text_disable_only_material_dark.xml",
-        "source": "/Users/cy/.android/build-cache/af41b2b0712459b328b7dddc68c01fb6ca358862/output/res/color/abc_primary_text_disable_only_material_dark.xml"
+        "merged": "C:\\Users\\Mark\\Desktop\\TimeManagement\\app\\build\\intermediates\\res\\merged\\debug\\color\\abc_primary_text_disable_only_material_dark.xml",
+        "source": "C:\\Users\\Mark\\.android\\build-cache\\67b6b4dea77d5f1d38753986b48236c449b6f326\\output\\res\\color\\abc_primary_text_disable_only_material_dark.xml"
     },
     {
-        "merged": "/Users/cy/Desktop/安卓project/TimeManagement/app/build/intermediates/res/merged/debug/color/radio_colors.xml",
-        "source": "/Users/cy/Desktop/安卓project/TimeManagement/app/src/main/res/color/radio_colors.xml"
+        "merged": "C:\\Users\\Mark\\Desktop\\TimeManagement\\app\\build\\intermediates\\res\\merged\\debug\\color\\switch_thumb_material_light.xml",
+        "source": "C:\\Users\\Mark\\.android\\build-cache\\67b6b4dea77d5f1d38753986b48236c449b6f326\\output\\res\\color\\switch_thumb_material_light.xml"
     },
     {
-        "merged": "/Users/cy/Desktop/安卓project/TimeManagement/app/build/intermediates/res/merged/debug/color/abc_primary_text_disable_only_material_light.xml",
-        "source": "/Users/cy/.android/build-cache/af41b2b0712459b328b7dddc68c01fb6ca358862/output/res/color/abc_primary_text_disable_only_material_light.xml"
+        "merged": "C:\\Users\\Mark\\Desktop\\TimeManagement\\app\\build\\intermediates\\res\\merged\\debug\\color\\abc_search_url_text.xml",
+        "source": "C:\\Users\\Mark\\.android\\build-cache\\67b6b4dea77d5f1d38753986b48236c449b6f326\\output\\res\\color\\abc_search_url_text.xml"
     },
     {
-        "merged": "/Users/cy/Desktop/安卓project/TimeManagement/app/build/intermediates/res/merged/debug/color/switch_thumb_material_dark.xml",
-        "source": "/Users/cy/.android/build-cache/af41b2b0712459b328b7dddc68c01fb6ca358862/output/res/color/switch_thumb_material_dark.xml"
+        "merged": "C:\\Users\\Mark\\Desktop\\TimeManagement\\app\\build\\intermediates\\res\\merged\\debug\\color\\abc_primary_text_material_light.xml",
+        "source": "C:\\Users\\Mark\\.android\\build-cache\\67b6b4dea77d5f1d38753986b48236c449b6f326\\output\\res\\color\\abc_primary_text_material_light.xml"
     },
     {
-        "merged": "/Users/cy/Desktop/安卓project/TimeManagement/app/build/intermediates/res/merged/debug/color/switch_thumb_material_light.xml",
-        "source": "/Users/cy/.android/build-cache/af41b2b0712459b328b7dddc68c01fb6ca358862/output/res/color/switch_thumb_material_light.xml"
+        "merged": "C:\\Users\\Mark\\Desktop\\TimeManagement\\app\\build\\intermediates\\res\\merged\\debug\\color\\radio_colors.xml",
+        "source": "C:\\Users\\Mark\\Desktop\\TimeManagement\\app\\src\\main\\res\\color\\radio_colors.xml"
     },
     {
-        "merged": "/Users/cy/Desktop/安卓project/TimeManagement/app/build/intermediates/res/merged/debug/color/abc_secondary_text_material_dark.xml",
-        "source": "/Users/cy/.android/build-cache/af41b2b0712459b328b7dddc68c01fb6ca358862/output/res/color/abc_secondary_text_material_dark.xml"
+        "merged": "C:\\Users\\Mark\\Desktop\\TimeManagement\\app\\build\\intermediates\\res\\merged\\debug\\color\\abc_secondary_text_material_dark.xml",
+        "source": "C:\\Users\\Mark\\.android\\build-cache\\67b6b4dea77d5f1d38753986b48236c449b6f326\\output\\res\\color\\abc_secondary_text_material_dark.xml"
     },
     {
-        "merged": "/Users/cy/Desktop/安卓project/TimeManagement/app/build/intermediates/res/merged/debug/color/abc_primary_text_material_light.xml",
-        "source": "/Users/cy/.android/build-cache/af41b2b0712459b328b7dddc68c01fb6ca358862/output/res/color/abc_primary_text_material_light.xml"
+        "merged": "C:\\Users\\Mark\\Desktop\\TimeManagement\\app\\build\\intermediates\\res\\merged\\debug\\color\\switch_thumb_material_dark.xml",
+        "source": "C:\\Users\\Mark\\.android\\build-cache\\67b6b4dea77d5f1d38753986b48236c449b6f326\\output\\res\\color\\switch_thumb_material_dark.xml"
     },
     {
-        "merged": "/Users/cy/Desktop/安卓project/TimeManagement/app/build/intermediates/res/merged/debug/color/abc_secondary_text_material_light.xml",
-        "source": "/Users/cy/.android/build-cache/af41b2b0712459b328b7dddc68c01fb6ca358862/output/res/color/abc_secondary_text_material_light.xml"
+        "merged": "C:\\Users\\Mark\\Desktop\\TimeManagement\\app\\build\\intermediates\\res\\merged\\debug\\color\\abc_secondary_text_material_light.xml",
+        "source": "C:\\Users\\Mark\\.android\\build-cache\\67b6b4dea77d5f1d38753986b48236c449b6f326\\output\\res\\color\\abc_secondary_text_material_light.xml"
     },
     {
-        "merged": "/Users/cy/Desktop/安卓project/TimeManagement/app/build/intermediates/res/merged/debug/color/abc_search_url_text.xml",
-        "source": "/Users/cy/.android/build-cache/af41b2b0712459b328b7dddc68c01fb6ca358862/output/res/color/abc_search_url_text.xml"
+        "merged": "C:\\Users\\Mark\\Desktop\\TimeManagement\\app\\build\\intermediates\\res\\merged\\debug\\color\\abc_primary_text_disable_only_material_light.xml",
+        "source": "C:\\Users\\Mark\\.android\\build-cache\\67b6b4dea77d5f1d38753986b48236c449b6f326\\output\\res\\color\\abc_primary_text_disable_only_material_light.xml"
     }
 ]

@@ -1,7 +1,0 @@
-#Tue Aug 01 21:21:10 PDT 2017
-base.0=/Users/cy/Desktop/安卓project/TimeManagement/app/build/intermediates/transforms/dex/debug/folders/1000/10000/instant-run_e2c167695a1eddac2b17d21f0172f8d652251854
-renamed.1=classes.dex
-renamed.0=classes2.dex
-file.1=/Users/cy/Desktop/安卓project/TimeManagement/app/build/intermediates/transforms/dex/debug/folders/1000/10000/instant-run-bootstrap_5db90faae6a3d610b31a13bb1fefc09f94c51ce6/classes.dex
-base.1=/Users/cy/Desktop/安卓project/TimeManagement/app/build/intermediates/transforms/dex/debug/folders/1000/10000/instant-run-bootstrap_5db90faae6a3d610b31a13bb1fefc09f94c51ce6
-file.0=/Users/cy/Desktop/安卓project/TimeManagement/app/build/intermediates/transforms/dex/debug/folders/1000/10000/instant-run_e2c167695a1eddac2b17d21f0172f8d652251854/classes.dex

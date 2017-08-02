@@ -1,4 +1,0 @@
-#Tue Aug 01 21:21:09 PDT 2017
-base.0=/Users/cy/Desktop/安卓project/TimeManagement/app/build/intermediates/transforms/dex/debug/folders/1000/5/slice_7
-renamed.0=classes.dex
-file.0=/Users/cy/Desktop/安卓project/TimeManagement/app/build/intermediates/transforms/dex/debug/folders/1000/5/slice_7/classes.dex
