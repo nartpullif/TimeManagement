@@ -54,6 +54,8 @@ public class GraphActivity extends AppCompatActivity{
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_graph);
 
+        //new ActivitySwitcherToolbar(this.getClass(), this);
+
         PreferenceUtils.initSharePreference(this);
 
         // top of the layout

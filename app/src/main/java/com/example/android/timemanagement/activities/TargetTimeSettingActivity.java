@@ -23,6 +23,8 @@ public class TargetTimeSettingActivity extends AppCompatActivity implements SetH
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_target_time_setting);
+        //new ActivitySwitcherToolbar(this.getClass(), this);
+
         dayTargetTime = new HashMap<>();
 
         initTextViewTargetTime();
