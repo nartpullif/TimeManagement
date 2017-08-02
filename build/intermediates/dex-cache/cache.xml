@@ -3,39 +3,21 @@
 
     <item
         is-multidex="true"
-        jar="C:\_CS-5540\TimeManagement\app\build\intermediates\incremental-classes\debug\instant-run-bootstrap.jar"
+        jar="/Users/cy/Desktop/安卓project/TimeManagement/app/build/intermediates/incremental-runtime-classes/debug/instant-run.jar"
         jumboMode="true"
         optimize="true"
-        revision="25.0.3"
-        sha1="71884c4f1958d2dc2e14f1100f4406297249a0a4">
-        <dex dex="C:\_CS-5540\TimeManagement\app\build\intermediates\transforms\dex\debug\folders\1000\10000\instant-run-bootstrap_9b251f473a2e6918668a770cdddcea4d366175d0\classes.dex" />
+        revision="25.0.0"
+        sha1="caff8e51a24901cfc9cd7e1cf83d84f4cb0c103b">
+        <dex dex="/Users/cy/Desktop/安卓project/TimeManagement/app/build/intermediates/transforms/dex/debug/folders/1000/10000/instant-run_e2c167695a1eddac2b17d21f0172f8d652251854/classes.dex" />
     </item>
     <item
         is-multidex="true"
-        jar="C:\Users\Siriporn\.android\build-cache\9957cda1723eaab37492f7027012e5416a83dd1f\output\jars\classes.jar"
+        jar="/Users/cy/Desktop/安卓project/TimeManagement/app/build/intermediates/incremental-classes/debug/instant-run-bootstrap.jar"
         jumboMode="true"
         optimize="true"
-        revision="25.0.3"
-        sha1="38789e20ace9ab7dbd00554bd2673ab424478d3b">
-        <dex dex="C:\_CS-5540\TimeManagement\app\build\intermediates\transforms\dex\debug\folders\1000\10\classes_8ada8c584c73f2cda84aaf78bfff6acf1fac1c90\classes.dex" />
-    </item>
-    <item
-        is-multidex="true"
-        jar="C:\_CS-5540\TimeManagement\app\build\intermediates\incremental-runtime-classes\debug\instant-run.jar"
-        jumboMode="true"
-        optimize="true"
-        revision="25.0.3"
-        sha1="3be78ebc2706b2e1fe2f12d5726887a92d6c183b">
-        <dex dex="C:\_CS-5540\TimeManagement\app\build\intermediates\transforms\dex\debug\folders\1000\10000\instant-run_415209657ee9bc06c3b7876896ff0566ecb88b88\classes.dex" />
-    </item>
-    <item
-        is-multidex="true"
-        jar="C:\Users\Siriporn\.android\build-cache\141dc01355344dbebab6f61b2fd7025e76f1dd87\output\jars\classes.jar"
-        jumboMode="true"
-        optimize="true"
-        revision="25.0.3"
-        sha1="d4cf6227dd6a2ceff0f7dcf0c324380b7abf2c28">
-        <dex dex="C:\_CS-5540\TimeManagement\app\build\intermediates\transforms\dex\debug\folders\1000\10\classes_7b45bd058af89a172769f1340b676ab4ea34060e\classes.dex" />
+        revision="25.0.0"
+        sha1="0e79a9058ed4cce97951dc9b7f4dfeb20a9f2600">
+        <dex dex="/Users/cy/Desktop/安卓project/TimeManagement/app/build/intermediates/transforms/dex/debug/folders/1000/10000/instant-run-bootstrap_5db90faae6a3d610b31a13bb1fefc09f94c51ce6/classes.dex" />
     </item>
 
 </items>

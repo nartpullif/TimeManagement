@@ -1,10 +1,10 @@
 [
     {
-        "merged": "C:\\_CS-5540\\TimeManagement\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-hdpi\\ic_launcher.png",
-        "source": "C:\\_CS-5540\\TimeManagement\\app\\src\\main\\res\\mipmap-hdpi\\ic_launcher.png"
+        "merged": "/Users/cy/Desktop/安卓project/TimeManagement/app/build/intermediates/res/merged/debug/mipmap-hdpi/ic_launcher_round.png",
+        "source": "/Users/cy/Desktop/安卓project/TimeManagement/app/src/main/res/mipmap-hdpi/ic_launcher_round.png"
     },
     {
-        "merged": "C:\\_CS-5540\\TimeManagement\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-hdpi\\ic_launcher_round.png",
-        "source": "C:\\_CS-5540\\TimeManagement\\app\\src\\main\\res\\mipmap-hdpi\\ic_launcher_round.png"
+        "merged": "/Users/cy/Desktop/安卓project/TimeManagement/app/build/intermediates/res/merged/debug/mipmap-hdpi/ic_launcher.png",
+        "source": "/Users/cy/Desktop/安卓project/TimeManagement/app/src/main/res/mipmap-hdpi/ic_launcher.png"
     }
 ]

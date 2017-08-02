@@ -1,23 +1,23 @@
 [
     {
-        "outputFile": "C:\\_CS-5540\\TimeManagement\\app\\build\\intermediates\\incremental\\mergeDebugResources\\merged.dir\\values-land\\values-land.xml",
+        "outputFile": "/Users/cy/Desktop/安卓project/TimeManagement/app/build/intermediates/res/merged/debug/values-land/values-land.xml",
         "map": [
             {
                 "to": {
                     "startLine": 2,
                     "startColumn": 4,
                     "startOffset": 55,
-                    "endColumn": 69,
-                    "endOffset": 120
+                    "endColumn": 61,
+                    "endOffset": 112
                 },
                 "from": {
-                    "file": "C:\\Users\\Siriporn\\.android\\build-cache\\765e36c018057533db3f0ce972b80027262e0f42\\output\\res\\values-land\\values-land.xml",
+                    "file": "/Users/cy/Desktop/安卓project/TimeManagement/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.0.1/res/values-land/values-land.xml",
                     "position": {
-                        "startLine": 2,
+                        "startLine": 4,
                         "startColumn": 4,
-                        "startOffset": 55,
-                        "endColumn": 69,
-                        "endOffset": 120
+                        "startOffset": 280,
+                        "endColumn": 61,
+                        "endOffset": 337
                     }
                 }
             },
@@ -25,18 +25,18 @@
                 "to": {
                     "startLine": 3,
                     "startColumn": 4,
-                    "startOffset": 125,
-                    "endColumn": 63,
+                    "startOffset": 117,
+                    "endColumn": 71,
                     "endOffset": 184
                 },
                 "from": {
-                    "file": "C:\\Users\\Siriporn\\.android\\build-cache\\765e36c018057533db3f0ce972b80027262e0f42\\output\\res\\values-land\\values-land.xml",
+                    "file": "/Users/cy/Desktop/安卓project/TimeManagement/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.0.1/res/values-land/values-land.xml",
                     "position": {
-                        "startLine": 3,
+                        "startLine": 7,
                         "startColumn": 4,
-                        "startOffset": 125,
-                        "endColumn": 63,
-                        "endOffset": 184
+                        "startOffset": 568,
+                        "endColumn": 71,
+                        "endOffset": 635
                     }
                 }
             },
@@ -45,17 +45,17 @@
                     "startLine": 4,
                     "startColumn": 4,
                     "startOffset": 189,
-                    "endColumn": 70,
-                    "endOffset": 255
+                    "endColumn": 69,
+                    "endOffset": 254
                 },
                 "from": {
-                    "file": "C:\\Users\\Siriporn\\.android\\build-cache\\765e36c018057533db3f0ce972b80027262e0f42\\output\\res\\values-land\\values-land.xml",
+                    "file": "/Users/cy/Desktop/安卓project/TimeManagement/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.0.1/res/values-land/values-land.xml",
                     "position": {
-                        "startLine": 4,
+                        "startLine": 10,
                         "startColumn": 4,
-                        "startOffset": 189,
-                        "endColumn": 70,
-                        "endOffset": 255
+                        "startOffset": 875,
+                        "endColumn": 69,
+                        "endOffset": 940
                     }
                 }
             },
@@ -63,18 +63,18 @@
                 "to": {
                     "startLine": 5,
                     "startColumn": 4,
-                    "startOffset": 260,
-                    "endColumn": 67,
-                    "endOffset": 323
+                    "startOffset": 259,
+                    "endColumn": 63,
+                    "endOffset": 318
                 },
                 "from": {
-                    "file": "C:\\Users\\Siriporn\\.android\\build-cache\\765e36c018057533db3f0ce972b80027262e0f42\\output\\res\\values-land\\values-land.xml",
+                    "file": "/Users/cy/Desktop/安卓project/TimeManagement/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.0.1/res/values-land/values-land.xml",
                     "position": {
-                        "startLine": 5,
+                        "startLine": 13,
                         "startColumn": 4,
-                        "startOffset": 260,
-                        "endColumn": 67,
-                        "endOffset": 323
+                        "startOffset": 1171,
+                        "endColumn": 63,
+                        "endOffset": 1230
                     }
                 }
             },
@@ -82,20 +82,198 @@
                 "to": {
                     "startLine": 6,
                     "startColumn": 4,
-                    "startOffset": 328,
-                    "endLine": 9,
-                    "endColumn": 12,
-                    "endOffset": 505
+                    "startOffset": 323,
+                    "endColumn": 70,
+                    "endOffset": 389
                 },
                 "from": {
-                    "file": "C:\\Users\\Siriporn\\.android\\build-cache\\9957cda1723eaab37492f7027012e5416a83dd1f\\output\\res\\values-land\\values-land.xml",
+                    "file": "/Users/cy/Desktop/安卓project/TimeManagement/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.0.1/res/values-land/values-land.xml",
                     "position": {
-                        "startLine": 2,
+                        "startLine": 16,
                         "startColumn": 4,
-                        "startOffset": 55,
-                        "endLine": 5,
+                        "startOffset": 1470,
+                        "endColumn": 70,
+                        "endOffset": 1536
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 7,
+                    "startColumn": 4,
+                    "startOffset": 394,
+                    "endColumn": 67,
+                    "endOffset": 457
+                },
+                "from": {
+                    "file": "/Users/cy/Desktop/安卓project/TimeManagement/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.0.1/res/values-land/values-land.xml",
+                    "position": {
+                        "startLine": 17,
+                        "startColumn": 4,
+                        "startOffset": 1541,
+                        "endColumn": 67,
+                        "endOffset": 1604
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 8,
+                    "startColumn": 4,
+                    "startOffset": 462,
+                    "endLine": 11,
+                    "endColumn": 12,
+                    "endOffset": 639
+                },
+                "from": {
+                    "file": "/Users/cy/Desktop/安卓project/TimeManagement/app/build/intermediates/exploded-aar/com.android.support/design/23.0.1/res/values-land/values-land.xml",
+                    "position": {
+                        "startLine": 4,
+                        "startColumn": 4,
+                        "startOffset": 275,
+                        "endLine": 7,
                         "endColumn": 12,
-                        "endOffset": 232
+                        "endOffset": 452
+                    }
+                }
+            }
+        ]
+    },
+    {
+        "outputFile": "/Users/cy/Desktop/安卓project/TimeManagement/app/build/intermediates/incremental/mergeDebugResources/merged.dir/values-land/values-land.xml",
+        "map": [
+            {
+                "to": {
+                    "startLine": 2,
+                    "startColumn": 4,
+                    "startOffset": 55,
+                    "endColumn": 61,
+                    "endOffset": 112
+                },
+                "from": {
+                    "file": "/Users/cy/.android/build-cache/af41b2b0712459b328b7dddc68c01fb6ca358862/output/res/values-land/values-land.xml",
+                    "position": {
+                        "startLine": 4,
+                        "startColumn": 4,
+                        "startOffset": 280,
+                        "endColumn": 61,
+                        "endOffset": 337
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 3,
+                    "startColumn": 4,
+                    "startOffset": 117,
+                    "endColumn": 71,
+                    "endOffset": 184
+                },
+                "from": {
+                    "file": "/Users/cy/.android/build-cache/af41b2b0712459b328b7dddc68c01fb6ca358862/output/res/values-land/values-land.xml",
+                    "position": {
+                        "startLine": 7,
+                        "startColumn": 4,
+                        "startOffset": 568,
+                        "endColumn": 71,
+                        "endOffset": 635
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 4,
+                    "startColumn": 4,
+                    "startOffset": 189,
+                    "endColumn": 69,
+                    "endOffset": 254
+                },
+                "from": {
+                    "file": "/Users/cy/.android/build-cache/af41b2b0712459b328b7dddc68c01fb6ca358862/output/res/values-land/values-land.xml",
+                    "position": {
+                        "startLine": 10,
+                        "startColumn": 4,
+                        "startOffset": 875,
+                        "endColumn": 69,
+                        "endOffset": 940
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 5,
+                    "startColumn": 4,
+                    "startOffset": 259,
+                    "endColumn": 63,
+                    "endOffset": 318
+                },
+                "from": {
+                    "file": "/Users/cy/.android/build-cache/af41b2b0712459b328b7dddc68c01fb6ca358862/output/res/values-land/values-land.xml",
+                    "position": {
+                        "startLine": 13,
+                        "startColumn": 4,
+                        "startOffset": 1171,
+                        "endColumn": 63,
+                        "endOffset": 1230
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 6,
+                    "startColumn": 4,
+                    "startOffset": 323,
+                    "endColumn": 70,
+                    "endOffset": 389
+                },
+                "from": {
+                    "file": "/Users/cy/.android/build-cache/af41b2b0712459b328b7dddc68c01fb6ca358862/output/res/values-land/values-land.xml",
+                    "position": {
+                        "startLine": 16,
+                        "startColumn": 4,
+                        "startOffset": 1470,
+                        "endColumn": 70,
+                        "endOffset": 1536
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 7,
+                    "startColumn": 4,
+                    "startOffset": 394,
+                    "endColumn": 67,
+                    "endOffset": 457
+                },
+                "from": {
+                    "file": "/Users/cy/.android/build-cache/af41b2b0712459b328b7dddc68c01fb6ca358862/output/res/values-land/values-land.xml",
+                    "position": {
+                        "startLine": 17,
+                        "startColumn": 4,
+                        "startOffset": 1541,
+                        "endColumn": 67,
+                        "endOffset": 1604
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 8,
+                    "startColumn": 4,
+                    "startOffset": 462,
+                    "endLine": 11,
+                    "endColumn": 12,
+                    "endOffset": 639
+                },
+                "from": {
+                    "file": "/Users/cy/.android/build-cache/77d7758a7f00c9cf8071dee066f968ff2894ea32/output/res/values-land/values-land.xml",
+                    "position": {
+                        "startLine": 4,
+                        "startColumn": 4,
+                        "startOffset": 275,
+                        "endLine": 7,
+                        "endColumn": 12,
+                        "endOffset": 452
                     }
                 }
             }

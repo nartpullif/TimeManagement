@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <RelativeLayout android:id="@+id/ll_title_bar"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:background="#B1BBF4"
+        android:orientation="horizontal"
+        android:layout_centerHorizontal="true">
+
+        <com.example.android.timemanagement.activities.SegmentedRadioGroup
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="5dip"
+            android:layout_centerInParent="true"
+            android:orientation="horizontal"
+            android:id="@+id/segment_text"
+            android:checkedButton="@+id/button_one">
+
+            <RadioButton android:id="@id/button_one"
+                android:minWidth="40dip"
+                android:minHeight="33dip"
+                android:text="Today"
+                android:textAppearance="?android:attr/textAppearanceSmall"
+                android:button="@null"
+                android:gravity="center"
+                android:textColor="@color/radio_colors" />
+            <RadioButton android:id="@+id/button_two"
+                android:minWidth="40dip"
+                android:minHeight="33dip"
+                android:text="Weeks"
+                android:button="@null"
+                android:gravity="center"
+                android:textAppearance="?android:attr/textAppearanceSmall"
+                android:textColor="@color/radio_colors" />
+            <RadioButton android:id="@+id/button_three"
+                android:minWidth="40dip"
+                android:minHeight="33dip"
+                android:text="Months"
+                android:button="@null"
+                android:gravity="center"
+                android:textAppearance="?android:attr/textAppearanceSmall"
+                android:textColor="@color/radio_colors"
+                android:layout_width="match_parent" />
+     </com.example.android.timemanagement.activities.SegmentedRadioGroup>
+
+
+    </RelativeLayout>
+
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/rv_tasks"
+        android:layout_below="@+id/ll_title_bar"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_weight="0.94"
+        android:padding="15dp">
+
+    </android.support.v7.widget.RecyclerView>
+
+</RelativeLayout>
