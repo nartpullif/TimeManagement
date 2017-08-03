@@ -2,6 +2,8 @@ package com.example.android.timemanagement.activities;
 import java.util.HashMap;
 import java.util.Set;
 import com.example.android.timemanagement.R;
+import com.example.android.timemanagement.utilities.PreferenceUtils;
+
 import android.app.Activity;
 import android.app.TabActivity;
 import android.content.BroadcastReceiver;
@@ -42,6 +44,7 @@ public class HomeTabActivity extends TabActivity  {
         super.onCreate(savedInstanceState);
         requestWindowFeature(Window.FEATURE_NO_TITLE);
         setContentView(R.layout.activity_home_tab_main);
+        PreferenceUtils.initSharePreference(this);
         setupView();
     }
 

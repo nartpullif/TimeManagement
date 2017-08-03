@@ -82,7 +82,6 @@ public class GraphActivity extends AppCompatActivity{
     {
         super.onStart();
 
-        //DatabaseUtils.dummyTask(this);
         todaysBarChart();
         //monthBarChart();
 

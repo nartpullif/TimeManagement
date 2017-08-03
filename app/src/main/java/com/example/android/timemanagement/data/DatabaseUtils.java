@@ -459,6 +459,26 @@ public class DatabaseUtils {
                 2, 30, "AM", 4, 30, "AM",
                 ((4 - 2) * 60) + (30 - 30));
 
+        DatabaseUtils.addTask(dbAdd, "08/02/2017", "math hw", "school",
+                6, 30, "PM", 7, 30, "PM",
+                ((7 - 6) * 60) + (30 - 30));
+
+        DatabaseUtils.addTask(dbAdd, "08/02/2017", "get money from aim for project", "android project",
+                10, 00, "AM", 10, 10, "AM",
+                ((10 - 10) * 60) + (10 - 00));
+
+        DatabaseUtils.addTask(dbAdd, "08/02/2017", "walk for 30 min", "diet",
+                8, 30, "PM", 9, 00, "PM",
+                ((9 - 8) * 60) + (00 - 30));
+
+        DatabaseUtils.addTask(dbAdd, "08/02/2017", "reading", "school",
+                7, 30, "PM", 8, 30, "PM",
+                ((8 - 7) * 60) + (30 - 30));
+
+        DatabaseUtils.addTask(dbAdd, "08/01/2017", "walk for 30 min", "diet",
+                8, 30, "PM", 9, 00, "PM",
+                ((9 - 8) * 60) + (00 - 30));
+
         dbHelper.close();
         dbAdd.close();
     }

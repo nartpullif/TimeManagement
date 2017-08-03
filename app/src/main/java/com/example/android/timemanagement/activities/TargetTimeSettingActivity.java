@@ -31,8 +31,6 @@ public class TargetTimeSettingActivity extends AppCompatActivity implements SetH
     }
     public void initTextViewTargetTime()
     {
-        PreferenceUtils.initSharePreference(this);
-
         TextView mondayTargetTime = (TextView) findViewById(R.id.date_monday_time);
         mondayTargetTime.setText(PreferenceUtils.getDayTargetTime(this, PreferenceUtils.MONDAY_TARGET_TIME));
         dayTargetTime.put(R.id.date_monday_time, mondayTargetTime);

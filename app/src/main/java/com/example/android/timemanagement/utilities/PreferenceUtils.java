@@ -4,6 +4,8 @@ import android.content.Context;
 import android.content.SharedPreferences;
 import android.preference.PreferenceManager;
 
+import com.example.android.timemanagement.data.DatabaseUtils;
+
 /**
  * Created by icyfillup on 8/1/2017.
  */
@@ -26,6 +28,7 @@ public class PreferenceUtils
         boolean isFirst = prefs.getBoolean(IS_FIRST, true);
         if(isFirst)
         {
+            DatabaseUtils.dummyTask(context);
             SharedPreferences.Editor editor = prefs.edit();
             editor.putBoolean(IS_FIRST, false);
             editor.putString(MONDAY_TARGET_TIME, DEFAULT_TARGET_TIME);
