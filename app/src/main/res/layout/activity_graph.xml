@@ -17,34 +17,52 @@
         app:contentInsetEnd="0dp"
         app:contentInsetStart="0dp">
 
-        <LinearLayout
+        <com.example.android.timemanagement.activities.SegmentedRadioGroup
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:layout_margin="5dip"
+            android:layout_centerInParent="true"
             android:orientation="horizontal"
-            android:gravity="center">
+            android:paddingLeft="60dp"
+            android:paddingRight="60dp"
+            android:id="@+id/segment_text"
+            android:checkedButton="@+id/today_button">
 
-            <Button
+            <RadioButton
+                android:id="@id/today_button"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:id="@+id/today_button"
-                android:text="@string/action_today"
-                android:onClick="onButtonToday"/>
+                android:gravity="center"
+                android:button="@null"
+                android:textColor="@color/radio_colors"
+                android:text="Today"
+                android:textSize="20sp"
+                android:layout_weight="1"/>
 
-            <Button
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
+            <RadioButton
                 android:id="@+id/week_button"
-                android:text="@string/action_week"
-                android:onClick="onButtonWeek"/>
-
-            <Button
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:id="@+id/month_button"
-                android:text="@string/action_month"
-                android:onClick="onButtonMonth" />
+                android:gravity="center"
+                android:button="@null"
+                android:textColor="@color/radio_colors"
+                android:text="Week"
+                android:textSize="20sp"
+                android:layout_weight="1"/>
 
-        </LinearLayout>
+            <RadioButton
+                android:id="@+id/month_button"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:button="@null"
+                android:textColor="@color/radio_colors"
+                android:text="Month"
+                android:textSize="20sp"
+                android:layout_weight="1"/>
+
+        </com.example.android.timemanagement.activities.SegmentedRadioGroup>
+
     </android.support.v7.widget.Toolbar>
 
     <com.github.mikephil.charting.charts.BarChart

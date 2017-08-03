@@ -9,6 +9,7 @@ import android.support.v7.widget.Toolbar;
 import android.util.Log;
 import android.view.View;
 import android.widget.Button;
+import android.widget.RadioGroup;
 import android.widget.Toast;
 
 import com.example.android.timemanagement.R;
@@ -39,7 +40,7 @@ import java.util.Date;
 import java.util.HashMap;
 import java.util.List;
 
-public class GraphActivity extends AppCompatActivity{
+public class GraphActivity extends AppCompatActivity implements RadioGroup.OnCheckedChangeListener{
     private Toolbar toolbar;
 
     private SQLiteDatabase database;
@@ -49,24 +50,18 @@ public class GraphActivity extends AppCompatActivity{
     private Button weekButton;
     private Button monthButton;
 
+    private SegmentedRadioGroup segmentText;
+
     @Override
-    protected void onCreate(Bundle savedInstanceState) {
+    protected void onCreate(Bundle savedInstanceState){
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_graph);
 
         //new ActivitySwitcherToolbar(this.getClass(), this);
 
-        PreferenceUtils.initSharePreference(this);
-
         // top of the layout
-        todayButton =  (Button) findViewById(R.id.today_button);
-        todayButton.setBackgroundResource(R.color.colorAccent);
-
-        weekButton =  (Button) findViewById(R.id.week_button);
-        weekButton.setBackgroundResource(R.color.colorPrimary);
-
-        monthButton =  (Button) findViewById(R.id.month_button);
-        monthButton.setBackgroundResource(R.color.colorPrimary);
+        segmentText = (SegmentedRadioGroup) findViewById(R.id.segment_text);
+        segmentText.setOnCheckedChangeListener(this);
 
         // middle of the layout
         chart = (BarChart) findViewById(R.id.bar_chart);
@@ -78,15 +73,25 @@ public class GraphActivity extends AppCompatActivity{
     }
 
     @Override
+    public void onCheckedChanged(RadioGroup group, int checkedId) {
+        if (group == segmentText) {
+            if (checkedId == R.id.today_button) {
+                todaysBarChart();
+            } else if (checkedId == R.id.week_button) {
+                weekBarChart();
+            } else if (checkedId == R.id.month_button) {
+                monthBarChart();
+            }
+        }
+    }
+
+    @Override
     protected void onStart()
     {
         super.onStart();
-
         todaysBarChart();
-        //monthBarChart();
 
         Log.d("GraphActivity: ", "onStart");
-
     }
 
     @Override
@@ -128,9 +133,6 @@ public class GraphActivity extends AppCompatActivity{
     public void onButtonToday(View view)
     {
         chart.clear();
-        todayButton.setBackgroundResource(R.color.colorAccent);
-        weekButton.setBackgroundResource(R.color.colorPrimary);
-        monthButton.setBackgroundResource(R.color.colorPrimary);
 
         todaysBarChart();
         Toast.makeText(this, "Clicked on Today Button", Toast.LENGTH_LONG).show();
@@ -139,9 +141,6 @@ public class GraphActivity extends AppCompatActivity{
     public void onButtonWeek(View view)
     {
         chart.clear();
-        todayButton.setBackgroundResource(R.color.colorPrimary);
-        weekButton.setBackgroundResource(R.color.colorAccent);
-        monthButton.setBackgroundResource(R.color.colorPrimary);
 
         weekBarChart();
         Toast.makeText(this, "Clicked on Week Button", Toast.LENGTH_LONG).show();
@@ -150,9 +149,6 @@ public class GraphActivity extends AppCompatActivity{
     public void onButtonMonth(View view)
     {
         chart.clear();
-        todayButton.setBackgroundResource(R.color.colorPrimary);
-        weekButton.setBackgroundResource(R.color.colorPrimary);
-        monthButton.setBackgroundResource(R.color.colorAccent);
 
         monthBarChart();
         Toast.makeText(this, "Clicked on Month Button", Toast.LENGTH_LONG).show();

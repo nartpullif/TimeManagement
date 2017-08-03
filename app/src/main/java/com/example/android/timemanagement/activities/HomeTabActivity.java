@@ -88,7 +88,8 @@ public class HomeTabActivity extends TabActivity  {
         mTabHost.getTabWidget().getChildAt(2).setBackgroundResource(R.drawable.ic_graph_black);
         mTabHost.getTabWidget().getChildAt(3).setBackgroundResource(R.drawable.ic_setting);
 
-        mTabHost.setCurrentTabByTag(TAB_1);
+        //mTabHost.setCurrentTabByTag(TAB_1);
+        mTabHost.setCurrentTabByTag(TAB_3);
         updateTab(mTabHost);
 
         mTabHost.setOnTabChangedListener(new OnTabChangeListener() {
