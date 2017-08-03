@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<resources>
+<resources xmlns:ns1="urn:oasis:names:tc:xliff:document:1.2">
     <attr format="reference" name="constraintSet"/>
     <attr format="reference" name="drawerArrowStyle"/>
     <attr format="dimension" name="height"/>
@@ -194,6 +194,7 @@
     <declare-styleable name="LinearLayoutCompat"><attr name="android:orientation"/><attr name="android:gravity"/><attr name="android:baselineAligned"/><attr name="android:baselineAlignedChildIndex"/><attr name="android:weightSum"/><attr format="boolean" name="measureWithLargestChild"/><attr name="divider"/><attr name="showDividers"><flag name="none" value="0"/><flag name="beginning" value="1"/><flag name="middle" value="2"/><flag name="end" value="4"/></attr><attr format="dimension" name="dividerPadding"/></declare-styleable>
     <declare-styleable name="LinearLayoutCompat_Layout"><attr name="android:layout_width"/><attr name="android:layout_height"/><attr name="android:layout_weight"/><attr name="android:layout_gravity"/></declare-styleable>
     <declare-styleable name="ListPopupWindow"><attr name="android:dropDownVerticalOffset"/><attr name="android:dropDownHorizontalOffset"/></declare-styleable>
+    <declare-styleable name="LoadingImageView"><attr format="enum" name="imageAspectRatioAdjust"><enum name="none" value="0"/><enum name="adjust_width" value="1"/><enum name="adjust_height" value="2"/></attr><attr format="float" name="imageAspectRatio"/><attr format="boolean" name="circleCrop"/></declare-styleable>
     <declare-styleable name="MenuGroup"><attr name="android:id"/><attr name="android:menuCategory"/><attr name="android:orderInCategory"/><attr name="android:checkableBehavior"/><attr name="android:visible"/><attr name="android:enabled"/></declare-styleable>
     <declare-styleable name="MenuItem"><attr name="android:id"/><attr name="android:menuCategory"/><attr name="android:orderInCategory"/><attr name="android:title"/><attr name="android:titleCondensed"/><attr name="android:icon"/><attr name="android:alphabeticShortcut"/><attr name="android:numericShortcut"/><attr name="android:checkable"/><attr name="android:checked"/><attr name="android:visible"/><attr name="android:enabled"/><attr name="android:onClick"/><attr name="showAsAction"><flag name="never" value="0"/><flag name="ifRoom" value="1"/><flag name="always" value="2"/><flag name="withText" value="4"/><flag name="collapseActionView" value="8"/></attr><attr format="reference" name="actionLayout"/><attr format="string" name="actionViewClass"/><attr format="string" name="actionProviderClass"/></declare-styleable>
     <declare-styleable name="MenuView"><attr name="android:itemTextAppearance"/><attr name="android:horizontalDivider"/><attr name="android:verticalDivider"/><attr name="android:headerBackground"/><attr name="android:itemBackground"/><attr name="android:windowAnimationStyle"/><attr name="android:itemIconDisabledAlpha"/><attr format="boolean" name="preserveIconSpacing"/></declare-styleable>
@@ -333,6 +334,7 @@
     <integer name="abc_max_action_buttons">2</integer>
     <integer name="cancel_button_image_alpha">127</integer>
     <integer name="design_snackbar_text_max_lines">2</integer>
+    <integer name="google_play_services_version">9256000</integer>
     <integer name="status_bar_notification_info_maxnum">999</integer>
     <string name="abc_action_bar_home_description">Navigate home</string>
     <string name="abc_action_bar_home_description_format">%1$s, %2$s</string>
@@ -359,9 +361,18 @@
     <string name="add_string">Add</string>
     <string name="app_name">Time Management</string>
     <string name="appbar_scrolling_view_behavior" translatable="false">android.support.design.widget.AppBarLayout$ScrollingViewBehavior</string>
+    <string name="common_google_play_services_unknown_issue"><ns1:g id="app_name">%1$s</ns1:g> is having trouble with Google Play services. If the problem persists, please contact the developer for assistance.</string>
     <string name="date_string">Date</string>
+    <string name="default_web_client_id" translatable="false">849199767616-sfc6rn269ji3di0itpp04m96qe1hkqmf.apps.googleusercontent.com</string>
     <string name="detail_string">Detail</string>
     <string name="end_string">End</string>
+    <string name="firebase_database_url" translatable="false">https://timemanagement-c0f87.firebaseio.com</string>
+    <string name="gcm_defaultSenderId" translatable="false">849199767616</string>
+    <string name="google_api_key" translatable="false">AIzaSyDX35ebxdUUy2JMyrJwmgD-Vzoh5b8zkpM</string>
+    <string name="google_app_id" translatable="false">1:849199767616:android:73ea860b107fa47c</string>
+    <string name="google_crash_reporting_api_key" translatable="false">AIzaSyDX35ebxdUUy2JMyrJwmgD-Vzoh5b8zkpM</string>
+    <string name="google_storage_bucket" translatable="false">timemanagement-c0f87.appspot.com</string>
+    <string name="project_id" translatable="false">timemanagement-c0f87</string>
     <string name="project_string">Project</string>
     <string name="set_button">Set</string>
     <string name="start_string">Start</string>

@@ -1,0 +1,26 @@
+[
+    {
+        "outputFile": "C:\\Users\\Mark\\Desktop\\TimeManagement\\app\\build\\intermediates\\incremental\\mergeDebugResources\\merged.dir\\values-uz\\values-uz.xml",
+        "map": [
+            {
+                "to": {
+                    "startLine": 2,
+                    "startColumn": 4,
+                    "startOffset": 105,
+                    "endColumn": 280,
+                    "endOffset": 381
+                },
+                "from": {
+                    "file": "C:\\Users\\Mark\\.android\\build-cache\\04aef0e5f347a34788cff347d3bdb6e8d802bdbd\\output\\res\\values-uz\\values.xml",
+                    "position": {
+                        "startLine": 4,
+                        "startColumn": 4,
+                        "startOffset": 330,
+                        "endColumn": 280,
+                        "endOffset": 606
+                    }
+                }
+            }
+        ]
+    }
+]

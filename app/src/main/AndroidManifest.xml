@@ -48,13 +48,20 @@
             <!--</intent-filter>-->
         </activity>
 
-        <activity android:name=".activities.TargetTimeSettingActivity">
-            <!--<intent-filter>-->
-                <!--<action android:name="android.intent.action.MAIN" />-->
+        <service android:name=".notification.MyFirebaseInstanceIdService">
+            <intent-filter>
+                <action android:name="com.google.firebase.INSTANCE_ID_EVENT">
 
-                <!--<category android:name="android.intent.category.LAUNCHER" />-->
-            <!--</intent-filter>-->
-        </activity>
+                </action>
+            </intent-filter>
+        </service>
+        <service android:name=".notification.MyFirebaseMessagingService">
+            <intent-filter>
+                <action android:name="com.google.firebase.MESSAGING_EVENT">
+
+                </action>
+            </intent-filter>
+        </service>
     </application>
 
 </manifest>

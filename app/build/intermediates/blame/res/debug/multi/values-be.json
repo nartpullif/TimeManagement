@@ -1,0 +1,26 @@
+[
+    {
+        "outputFile": "C:\\Users\\Mark\\Desktop\\TimeManagement\\app\\build\\intermediates\\incremental\\mergeDebugResources\\merged.dir\\values-be\\values-be.xml",
+        "map": [
+            {
+                "to": {
+                    "startLine": 2,
+                    "startColumn": 4,
+                    "startOffset": 105,
+                    "endColumn": 254,
+                    "endOffset": 355
+                },
+                "from": {
+                    "file": "C:\\Users\\Mark\\.android\\build-cache\\04aef0e5f347a34788cff347d3bdb6e8d802bdbd\\output\\res\\values-be\\values.xml",
+                    "position": {
+                        "startLine": 4,
+                        "startColumn": 4,
+                        "startOffset": 330,
+                        "endColumn": 254,
+                        "endOffset": 580
+                    }
+                }
+            }
+        ]
+    }
+]

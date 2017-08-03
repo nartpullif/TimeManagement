@@ -1,17 +1,17 @@
 [
     {
-        "outputFile": "W:\\Android_stuff\\TimeManagement\\app\\build\\intermediates\\incremental\\mergeDebugResources\\merged.dir\\values-zh-rHK\\values-zh-rHK.xml",
+        "outputFile": "C:\\Users\\Mark\\Desktop\\TimeManagement\\app\\build\\intermediates\\incremental\\mergeDebugResources\\merged.dir\\values-zh-rHK\\values-zh-rHK.xml",
         "map": [
             {
                 "to": {
                     "startLine": 2,
                     "startColumn": 4,
-                    "startOffset": 55,
+                    "startOffset": 105,
                     "endColumn": 94,
-                    "endOffset": 145
+                    "endOffset": 195
                 },
                 "from": {
-                    "file": "C:\\Users\\icyfillup\\.android\\build-cache\\a027631cee244203f572e361e51dfe97f71ecc5d\\output\\res\\values-zh-rHK\\values-zh-rHK.xml",
+                    "file": "C:\\Users\\Mark\\.android\\build-cache\\67b6b4dea77d5f1d38753986b48236c449b6f326\\output\\res\\values-zh-rHK\\values-zh-rHK.xml",
                     "position": {
                         "startLine": 4,
                         "startColumn": 4,
@@ -25,12 +25,12 @@
                 "to": {
                     "startLine": 3,
                     "startColumn": 4,
-                    "startOffset": 150,
+                    "startOffset": 200,
                     "endColumn": 106,
-                    "endOffset": 252
+                    "endOffset": 302
                 },
                 "from": {
-                    "file": "C:\\Users\\icyfillup\\.android\\build-cache\\a027631cee244203f572e361e51dfe97f71ecc5d\\output\\res\\values-zh-rHK\\values-zh-rHK.xml",
+                    "file": "C:\\Users\\Mark\\.android\\build-cache\\67b6b4dea77d5f1d38753986b48236c449b6f326\\output\\res\\values-zh-rHK\\values-zh-rHK.xml",
                     "position": {
                         "startLine": 5,
                         "startColumn": 4,
@@ -44,12 +44,12 @@
                 "to": {
                     "startLine": 4,
                     "startColumn": 4,
-                    "startOffset": 257,
+                    "startOffset": 307,
                     "endColumn": 122,
-                    "endOffset": 375
+                    "endOffset": 425
                 },
                 "from": {
-                    "file": "C:\\Users\\icyfillup\\.android\\build-cache\\a027631cee244203f572e361e51dfe97f71ecc5d\\output\\res\\values-zh-rHK\\values-zh-rHK.xml",
+                    "file": "C:\\Users\\Mark\\.android\\build-cache\\67b6b4dea77d5f1d38753986b48236c449b6f326\\output\\res\\values-zh-rHK\\values-zh-rHK.xml",
                     "position": {
                         "startLine": 6,
                         "startColumn": 4,
@@ -63,12 +63,12 @@
                 "to": {
                     "startLine": 5,
                     "startColumn": 4,
-                    "startOffset": 380,
+                    "startOffset": 430,
                     "endColumn": 92,
-                    "endOffset": 468
+                    "endOffset": 518
                 },
                 "from": {
-                    "file": "C:\\Users\\icyfillup\\.android\\build-cache\\a027631cee244203f572e361e51dfe97f71ecc5d\\output\\res\\values-zh-rHK\\values-zh-rHK.xml",
+                    "file": "C:\\Users\\Mark\\.android\\build-cache\\67b6b4dea77d5f1d38753986b48236c449b6f326\\output\\res\\values-zh-rHK\\values-zh-rHK.xml",
                     "position": {
                         "startLine": 7,
                         "startColumn": 4,
@@ -82,12 +82,12 @@
                 "to": {
                     "startLine": 6,
                     "startColumn": 4,
-                    "startOffset": 473,
+                    "startOffset": 523,
                     "endColumn": 99,
-                    "endOffset": 568
+                    "endOffset": 618
                 },
                 "from": {
-                    "file": "C:\\Users\\icyfillup\\.android\\build-cache\\a027631cee244203f572e361e51dfe97f71ecc5d\\output\\res\\values-zh-rHK\\values-zh-rHK.xml",
+                    "file": "C:\\Users\\Mark\\.android\\build-cache\\67b6b4dea77d5f1d38753986b48236c449b6f326\\output\\res\\values-zh-rHK\\values-zh-rHK.xml",
                     "position": {
                         "startLine": 8,
                         "startColumn": 4,
@@ -101,12 +101,12 @@
                 "to": {
                     "startLine": 7,
                     "startColumn": 4,
-                    "startOffset": 573,
+                    "startOffset": 623,
                     "endColumn": 81,
-                    "endOffset": 650
+                    "endOffset": 700
                 },
                 "from": {
-                    "file": "C:\\Users\\icyfillup\\.android\\build-cache\\a027631cee244203f572e361e51dfe97f71ecc5d\\output\\res\\values-zh-rHK\\values-zh-rHK.xml",
+                    "file": "C:\\Users\\Mark\\.android\\build-cache\\67b6b4dea77d5f1d38753986b48236c449b6f326\\output\\res\\values-zh-rHK\\values-zh-rHK.xml",
                     "position": {
                         "startLine": 9,
                         "startColumn": 4,
@@ -120,12 +120,12 @@
                 "to": {
                     "startLine": 8,
                     "startColumn": 4,
-                    "startOffset": 655,
+                    "startOffset": 705,
                     "endColumn": 96,
-                    "endOffset": 747
+                    "endOffset": 797
                 },
                 "from": {
-                    "file": "C:\\Users\\icyfillup\\.android\\build-cache\\a027631cee244203f572e361e51dfe97f71ecc5d\\output\\res\\values-zh-rHK\\values-zh-rHK.xml",
+                    "file": "C:\\Users\\Mark\\.android\\build-cache\\67b6b4dea77d5f1d38753986b48236c449b6f326\\output\\res\\values-zh-rHK\\values-zh-rHK.xml",
                     "position": {
                         "startLine": 10,
                         "startColumn": 4,
@@ -139,12 +139,12 @@
                 "to": {
                     "startLine": 9,
                     "startColumn": 4,
-                    "startOffset": 752,
+                    "startOffset": 802,
                     "endColumn": 107,
-                    "endOffset": 855
+                    "endOffset": 905
                 },
                 "from": {
-                    "file": "C:\\Users\\icyfillup\\.android\\build-cache\\a027631cee244203f572e361e51dfe97f71ecc5d\\output\\res\\values-zh-rHK\\values-zh-rHK.xml",
+                    "file": "C:\\Users\\Mark\\.android\\build-cache\\67b6b4dea77d5f1d38753986b48236c449b6f326\\output\\res\\values-zh-rHK\\values-zh-rHK.xml",
                     "position": {
                         "startLine": 11,
                         "startColumn": 4,
@@ -158,12 +158,12 @@
                 "to": {
                     "startLine": 10,
                     "startColumn": 4,
-                    "startOffset": 860,
+                    "startOffset": 910,
                     "endColumn": 77,
-                    "endOffset": 933
+                    "endOffset": 983
                 },
                 "from": {
-                    "file": "C:\\Users\\icyfillup\\.android\\build-cache\\a027631cee244203f572e361e51dfe97f71ecc5d\\output\\res\\values-zh-rHK\\values-zh-rHK.xml",
+                    "file": "C:\\Users\\Mark\\.android\\build-cache\\67b6b4dea77d5f1d38753986b48236c449b6f326\\output\\res\\values-zh-rHK\\values-zh-rHK.xml",
                     "position": {
                         "startLine": 12,
                         "startColumn": 4,
@@ -177,12 +177,12 @@
                 "to": {
                     "startLine": 11,
                     "startColumn": 4,
-                    "startOffset": 938,
+                    "startOffset": 988,
                     "endColumn": 95,
-                    "endOffset": 1029
+                    "endOffset": 1079
                 },
                 "from": {
-                    "file": "C:\\Users\\icyfillup\\.android\\build-cache\\a027631cee244203f572e361e51dfe97f71ecc5d\\output\\res\\values-zh-rHK\\values-zh-rHK.xml",
+                    "file": "C:\\Users\\Mark\\.android\\build-cache\\67b6b4dea77d5f1d38753986b48236c449b6f326\\output\\res\\values-zh-rHK\\values-zh-rHK.xml",
                     "position": {
                         "startLine": 13,
                         "startColumn": 4,
@@ -196,12 +196,12 @@
                 "to": {
                     "startLine": 12,
                     "startColumn": 4,
-                    "startOffset": 1034,
+                    "startOffset": 1084,
                     "endColumn": 95,
-                    "endOffset": 1125
+                    "endOffset": 1175
                 },
                 "from": {
-                    "file": "C:\\Users\\icyfillup\\.android\\build-cache\\a027631cee244203f572e361e51dfe97f71ecc5d\\output\\res\\values-zh-rHK\\values-zh-rHK.xml",
+                    "file": "C:\\Users\\Mark\\.android\\build-cache\\67b6b4dea77d5f1d38753986b48236c449b6f326\\output\\res\\values-zh-rHK\\values-zh-rHK.xml",
                     "position": {
                         "startLine": 14,
                         "startColumn": 4,
@@ -215,12 +215,12 @@
                 "to": {
                     "startLine": 13,
                     "startColumn": 4,
-                    "startOffset": 1130,
+                    "startOffset": 1180,
                     "endColumn": 94,
-                    "endOffset": 1220
+                    "endOffset": 1270
                 },
                 "from": {
-                    "file": "C:\\Users\\icyfillup\\.android\\build-cache\\a027631cee244203f572e361e51dfe97f71ecc5d\\output\\res\\values-zh-rHK\\values-zh-rHK.xml",
+                    "file": "C:\\Users\\Mark\\.android\\build-cache\\67b6b4dea77d5f1d38753986b48236c449b6f326\\output\\res\\values-zh-rHK\\values-zh-rHK.xml",
                     "position": {
                         "startLine": 15,
                         "startColumn": 4,
@@ -234,12 +234,12 @@
                 "to": {
                     "startLine": 14,
                     "startColumn": 4,
-                    "startOffset": 1225,
+                    "startOffset": 1275,
                     "endColumn": 96,
-                    "endOffset": 1317
+                    "endOffset": 1367
                 },
                 "from": {
-                    "file": "C:\\Users\\icyfillup\\.android\\build-cache\\a027631cee244203f572e361e51dfe97f71ecc5d\\output\\res\\values-zh-rHK\\values-zh-rHK.xml",
+                    "file": "C:\\Users\\Mark\\.android\\build-cache\\67b6b4dea77d5f1d38753986b48236c449b6f326\\output\\res\\values-zh-rHK\\values-zh-rHK.xml",
                     "position": {
                         "startLine": 16,
                         "startColumn": 4,
@@ -253,12 +253,12 @@
                 "to": {
                     "startLine": 15,
                     "startColumn": 4,
-                    "startOffset": 1322,
+                    "startOffset": 1372,
                     "endColumn": 94,
-                    "endOffset": 1412
+                    "endOffset": 1462
                 },
                 "from": {
-                    "file": "C:\\Users\\icyfillup\\.android\\build-cache\\a027631cee244203f572e361e51dfe97f71ecc5d\\output\\res\\values-zh-rHK\\values-zh-rHK.xml",
+                    "file": "C:\\Users\\Mark\\.android\\build-cache\\67b6b4dea77d5f1d38753986b48236c449b6f326\\output\\res\\values-zh-rHK\\values-zh-rHK.xml",
                     "position": {
                         "startLine": 17,
                         "startColumn": 4,
@@ -272,12 +272,12 @@
                 "to": {
                     "startLine": 16,
                     "startColumn": 4,
-                    "startOffset": 1417,
+                    "startOffset": 1467,
                     "endColumn": 97,
-                    "endOffset": 1510
+                    "endOffset": 1560
                 },
                 "from": {
-                    "file": "C:\\Users\\icyfillup\\.android\\build-cache\\a027631cee244203f572e361e51dfe97f71ecc5d\\output\\res\\values-zh-rHK\\values-zh-rHK.xml",
+                    "file": "C:\\Users\\Mark\\.android\\build-cache\\67b6b4dea77d5f1d38753986b48236c449b6f326\\output\\res\\values-zh-rHK\\values-zh-rHK.xml",
                     "position": {
                         "startLine": 18,
                         "startColumn": 4,
@@ -291,12 +291,12 @@
                 "to": {
                     "startLine": 17,
                     "startColumn": 4,
-                    "startOffset": 1515,
+                    "startOffset": 1565,
                     "endColumn": 112,
-                    "endOffset": 1623
+                    "endOffset": 1673
                 },
                 "from": {
-                    "file": "C:\\Users\\icyfillup\\.android\\build-cache\\a027631cee244203f572e361e51dfe97f71ecc5d\\output\\res\\values-zh-rHK\\values-zh-rHK.xml",
+                    "file": "C:\\Users\\Mark\\.android\\build-cache\\67b6b4dea77d5f1d38753986b48236c449b6f326\\output\\res\\values-zh-rHK\\values-zh-rHK.xml",
                     "position": {
                         "startLine": 19,
                         "startColumn": 4,
@@ -310,12 +310,12 @@
                 "to": {
                     "startLine": 18,
                     "startColumn": 4,
-                    "startOffset": 1628,
+                    "startOffset": 1678,
                     "endColumn": 93,
-                    "endOffset": 1717
+                    "endOffset": 1767
                 },
                 "from": {
-                    "file": "C:\\Users\\icyfillup\\.android\\build-cache\\a027631cee244203f572e361e51dfe97f71ecc5d\\output\\res\\values-zh-rHK\\values-zh-rHK.xml",
+                    "file": "C:\\Users\\Mark\\.android\\build-cache\\67b6b4dea77d5f1d38753986b48236c449b6f326\\output\\res\\values-zh-rHK\\values-zh-rHK.xml",
                     "position": {
                         "startLine": 20,
                         "startColumn": 4,
@@ -329,12 +329,31 @@
                 "to": {
                     "startLine": 19,
                     "startColumn": 4,
-                    "startOffset": 1722,
-                    "endColumn": 101,
-                    "endOffset": 1819
+                    "startOffset": 1772,
+                    "endColumn": 177,
+                    "endOffset": 1945
                 },
                 "from": {
-                    "file": "C:\\Users\\icyfillup\\.android\\build-cache\\a027631cee244203f572e361e51dfe97f71ecc5d\\output\\res\\values-zh-rHK\\values-zh-rHK.xml",
+                    "file": "C:\\Users\\Mark\\.android\\build-cache\\04aef0e5f347a34788cff347d3bdb6e8d802bdbd\\output\\res\\values-zh-rHK\\values.xml",
+                    "position": {
+                        "startLine": 4,
+                        "startColumn": 4,
+                        "startOffset": 334,
+                        "endColumn": 177,
+                        "endOffset": 507
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 20,
+                    "startColumn": 4,
+                    "startOffset": 1950,
+                    "endColumn": 101,
+                    "endOffset": 2047
+                },
+                "from": {
+                    "file": "C:\\Users\\Mark\\.android\\build-cache\\67b6b4dea77d5f1d38753986b48236c449b6f326\\output\\res\\values-zh-rHK\\values-zh-rHK.xml",
                     "position": {
                         "startLine": 21,
                         "startColumn": 4,
