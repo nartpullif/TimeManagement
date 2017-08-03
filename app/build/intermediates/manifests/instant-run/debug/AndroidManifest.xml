@@ -33,10 +33,7 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name="com.example.android.timemanagement.activities.TotalActivity" >
-        </activity>
-        <activity android:name="com.example.android.timemanagement.activities.MainActivity" >
-        </activity>
+        <activity android:name="com.example.android.timemanagement.activities.MainActivity" />
         <activity
             android:name="com.example.android.timemanagement.activities.AddTaskActivity"
             android:label="@string/addTask_string"
@@ -53,15 +50,9 @@
                 android:name="android.support.PARENT_ACTIVITY"
                 android:value=".activities.MainActivity" />
         </activity>
-        <activity android:name="com.example.android.timemanagement.activities.GraphActivity" >
-
-            <!-- <intent-filter> -->
-            <!-- <action android:name="android.intent.action.MAIN" /> -->
-
-
-            <!-- <category android:name="android.intent.category.LAUNCHER" /> -->
-            <!-- </intent-filter> -->
-        </activity>
+        <activity android:name="com.example.android.timemanagement.activities.TotalActivity" />
+        <activity android:name="com.example.android.timemanagement.activities.GraphActivity" />
+        <activity android:name="com.example.android.timemanagement.activities.TargetTimeSettingActivity" />
 
         <service android:name="com.example.android.timemanagement.notification.MyFirebaseInstanceIdService" >
             <intent-filter>

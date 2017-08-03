@@ -3,84 +3,21 @@
 
     <item
         is-multidex="true"
-        jar="C:\Users\Mark\.android\build-cache\a40d7475fb3581a4d63b09a53869580cf96a932e\output\jars\classes.jar"
+        jar="W:\Android_stuff\TimeManagement\app\build\intermediates\incremental-classes\debug\instant-run-bootstrap.jar"
         jumboMode="true"
         optimize="true"
         revision="25.0.0"
-        sha1="d41b5d21cc9dd7d210f0ae82ac509ba7f091d611">
-        <dex dex="C:\Users\Mark\Desktop\TimeManagement\app\build\intermediates\transforms\dex\debug\folders\1000\10\classes_ada8394a79a864b9d5b6d0a251d892c9eac548b2\classes.dex" />
+        sha1="2e25ea85d753a3c8bd43ad786690a8b169db2c82">
+        <dex dex="W:\Android_stuff\TimeManagement\app\build\intermediates\transforms\dex\debug\folders\1000\10000\instant-run-bootstrap_c2562ad5c7f1051ee275ebe12ba3c22f9c7f64fa\classes.dex" />
     </item>
     <item
         is-multidex="true"
-        jar="C:\Users\Mark\.android\build-cache\36af370b3af660eced64e24f9fa3328377612595\output\jars\classes.jar"
-        jumboMode="true"
-        optimize="true"
-        revision="25.0.0"
-        sha1="6a0f2d219f82db499ac03d5a985c4eb3e83fc422">
-        <dex dex="C:\Users\Mark\Desktop\TimeManagement\app\build\intermediates\transforms\dex\debug\folders\1000\10\classes_7e5d5eca699872a7fea4cd51728fd06fcc120a82\classes.dex" />
-    </item>
-    <item
-        is-multidex="true"
-        jar="C:\Users\Mark\.android\build-cache\cf6c938d84333abd1a35c80c767efe72da63c6d4\output\jars\classes.jar"
-        jumboMode="true"
-        optimize="true"
-        revision="25.0.0"
-        sha1="ac78f93fc89c497a65f9d9a352cd405996d2f65a">
-        <dex dex="C:\Users\Mark\Desktop\TimeManagement\app\build\intermediates\transforms\dex\debug\folders\1000\10\classes_51122e6b6f8dc54b593ab9914d304ad274850872\classes.dex" />
-    </item>
-    <item
-        is-multidex="true"
-        jar="C:\Users\Mark\.android\build-cache\21c7c2c82fa64627b68c20abb0bb8a23cca06463\output\jars\classes.jar"
-        jumboMode="true"
-        optimize="true"
-        revision="25.0.0"
-        sha1="819c2c3a4fb135e085445d11131d069cf9c32b2a">
-        <dex dex="C:\Users\Mark\Desktop\TimeManagement\app\build\intermediates\transforms\dex\debug\folders\1000\10\classes_14ff692bfe89b3d460b371a446ecddbbeddfc324\classes.dex" />
-    </item>
-    <item
-        is-multidex="true"
-        jar="C:\Users\Mark\.android\build-cache\04aef0e5f347a34788cff347d3bdb6e8d802bdbd\output\jars\classes.jar"
-        jumboMode="true"
-        optimize="true"
-        revision="25.0.0"
-        sha1="6b896c1067633db41e9c10a3a5d0919c5c4cfc8c">
-        <dex dex="C:\Users\Mark\Desktop\TimeManagement\app\build\intermediates\transforms\dex\debug\folders\1000\10\classes_72c85d15f71d1e6e0498ff2715e8cd5f9fd29eec\classes.dex" />
-    </item>
-    <item
-        is-multidex="true"
-        jar="C:\Users\Mark\.android\build-cache\da75195aac08502fa0f42a3657066fb4363bcb15\output\jars\classes.jar"
-        jumboMode="true"
-        optimize="true"
-        revision="25.0.0"
-        sha1="5337354083e89ed67151859ab0b6b80935c60eaf">
-        <dex dex="C:\Users\Mark\Desktop\TimeManagement\app\build\intermediates\transforms\dex\debug\folders\1000\10\classes_ca3596108d65bd44e371ee1e11361746cea88356\classes.dex" />
-    </item>
-    <item
-        is-multidex="true"
-        jar="C:\Users\Mark\Desktop\TimeManagement\app\build\intermediates\incremental-classes\debug\instant-run-bootstrap.jar"
-        jumboMode="true"
-        optimize="true"
-        revision="25.0.0"
-        sha1="2ce14f7ed0552fbff553b60fa55dba6754b7eb71">
-        <dex dex="C:\Users\Mark\Desktop\TimeManagement\app\build\intermediates\transforms\dex\debug\folders\1000\10000\instant-run-bootstrap_6cb2954173e1a5774961ce219294876bbf15c952\classes.dex" />
-    </item>
-    <item
-        is-multidex="true"
-        jar="C:\Users\Mark\Desktop\TimeManagement\app\build\intermediates\incremental-runtime-classes\debug\instant-run.jar"
+        jar="W:\Android_stuff\TimeManagement\app\build\intermediates\incremental-runtime-classes\debug\instant-run.jar"
         jumboMode="true"
         optimize="true"
         revision="25.0.0"
         sha1="3be78ebc2706b2e1fe2f12d5726887a92d6c183b">
-        <dex dex="C:\Users\Mark\Desktop\TimeManagement\app\build\intermediates\transforms\dex\debug\folders\1000\10000\instant-run_8d005ea536f6a8f7ca20059876b642915f5b8542\classes.dex" />
-    </item>
-    <item
-        is-multidex="true"
-        jar="C:\Users\Mark\.android\build-cache\2e8ba9528797a8e4dcdf4fa3a86eb4860905637c\output\jars\classes.jar"
-        jumboMode="true"
-        optimize="true"
-        revision="25.0.0"
-        sha1="3627eacd7f7cafb5e8ae683992e7b2f9b7dcab1a">
-        <dex dex="C:\Users\Mark\Desktop\TimeManagement\app\build\intermediates\transforms\dex\debug\folders\1000\10\classes_c13f2117eb2c1eec3929ab67e7cf15acb04232d6\classes.dex" />
+        <dex dex="W:\Android_stuff\TimeManagement\app\build\intermediates\transforms\dex\debug\folders\1000\10000\instant-run_fc45e6f13a13f69aac3952860571fb6639b8c089\classes.dex" />
     </item>
 
 </items>
