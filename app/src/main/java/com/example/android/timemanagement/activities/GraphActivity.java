@@ -46,11 +46,7 @@ public class GraphActivity extends AppCompatActivity implements RadioGroup.OnChe
     private SQLiteDatabase database;
     private BarChart chart;
 
-    private Button todayButton;
-    private Button weekButton;
-    private Button monthButton;
-
-    private SegmentedRadioGroup segmentText;
+    private SegmentedRadioGroup DayRadioButton;
 
     @Override
     protected void onCreate(Bundle savedInstanceState){
@@ -60,8 +56,8 @@ public class GraphActivity extends AppCompatActivity implements RadioGroup.OnChe
         //new ActivitySwitcherToolbar(this.getClass(), this);
 
         // top of the layout
-        segmentText = (SegmentedRadioGroup) findViewById(R.id.segment_text);
-        segmentText.setOnCheckedChangeListener(this);
+        DayRadioButton = (SegmentedRadioGroup) findViewById(R.id.day_button);
+        DayRadioButton.setOnCheckedChangeListener(this);
 
         // middle of the layout
         chart = (BarChart) findViewById(R.id.bar_chart);
@@ -74,7 +70,7 @@ public class GraphActivity extends AppCompatActivity implements RadioGroup.OnChe
 
     @Override
     public void onCheckedChanged(RadioGroup group, int checkedId) {
-        if (group == segmentText) {
+        if (group == DayRadioButton) {
             if (checkedId == R.id.today_button) {
                 todaysBarChart();
             } else if (checkedId == R.id.week_button) {
@@ -130,28 +126,14 @@ public class GraphActivity extends AppCompatActivity implements RadioGroup.OnChe
         Log.d("GraphActivity: ", "onDestroy");
     }
 
-    public void onButtonToday(View view)
+    public void onPreviousButton(View view)
     {
-        chart.clear();
-
-        todaysBarChart();
-        Toast.makeText(this, "Clicked on Today Button", Toast.LENGTH_LONG).show();
+        Toast.makeText(this, "Clicked on previous Button", Toast.LENGTH_LONG).show();
     }
 
-    public void onButtonWeek(View view)
+    public void onNextButton(View view)
     {
-        chart.clear();
-
-        weekBarChart();
-        Toast.makeText(this, "Clicked on Week Button", Toast.LENGTH_LONG).show();
-    }
-
-    public void onButtonMonth(View view)
-    {
-        chart.clear();
-
-        monthBarChart();
-        Toast.makeText(this, "Clicked on Month Button", Toast.LENGTH_LONG).show();
+        Toast.makeText(this, "Clicked on next Button", Toast.LENGTH_LONG).show();
     }
 
     public void todaysBarChart()

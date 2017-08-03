@@ -25,7 +25,7 @@
             android:orientation="horizontal"
             android:paddingLeft="60dp"
             android:paddingRight="60dp"
-            android:id="@+id/segment_text"
+            android:id="@+id/day_button"
             android:checkedButton="@+id/today_button">
 
             <RadioButton
@@ -71,8 +71,41 @@
         android:id="@+id/bar_chart"
         android:layout_gravity="center" />
 
-    <include
-        android:id="@+id/action_bar_activity_content"
-        layout="@layout/activity_switch_activities_toolbar" />
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom"
+        android:layout_marginBottom="25dp"
+        android:gravity="top"
+        android:orientation="horizontal"
+        android:weightSum="1">
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="0.1"
+            android:gravity="center"
+            android:text="&lt;"
+            android:textColor="@color/radio_colors"
+            android:textSize="30sp"
+            android:onClick="onPreviousButton"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="0.8"
+            android:visibility="invisible" />
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="0.1"
+            android:gravity="center"
+            android:text="&gt;"
+            android:textColor="@color/radio_colors"
+            android:textSize="30sp"
+            android:onClick="onNextButton"/>
+
+    </LinearLayout>
 
 </FrameLayout>
