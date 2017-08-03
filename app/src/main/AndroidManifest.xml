@@ -17,10 +17,7 @@
              </intent-filter>
         </activity>
 
-        <activity android:name=".activities.TotalActivity">
-        </activity>
-        <activity android:name=".activities.MainActivity">
-        </activity>
+        <activity android:name=".activities.MainActivity" />
 
         <activity
             android:name=".activities.AddTaskActivity"
@@ -40,21 +37,27 @@
                 android:value=".activities.MainActivity" />
         </activity>
 
-        <activity android:name=".activities.GraphActivity">
-            <!--<intent-filter>-->
-                <!--<action android:name="android.intent.action.MAIN" />-->
+        <activity android:name=".activities.TotalActivity" />
 
-                <!--<category android:name="android.intent.category.LAUNCHER" />-->
-            <!--</intent-filter>-->
-        </activity>
+        <activity android:name=".activities.GraphActivity" />
 
-        <activity android:name=".activities.TargetTimeSettingActivity">
-            <!--<intent-filter>-->
-                <!--<action android:name="android.intent.action.MAIN" />-->
+        <activity android:name=".activities.TargetTimeSettingActivity" />
 
-                <!--<category android:name="android.intent.category.LAUNCHER" />-->
-            <!--</intent-filter>-->
-        </activity>
+        <service android:name=".notification.MyFirebaseInstanceIdService">
+            <intent-filter>
+                <action android:name="com.google.firebase.INSTANCE_ID_EVENT">
+
+                </action>
+            </intent-filter>
+        </service>
+
+        <service android:name=".notification.MyFirebaseMessagingService">
+            <intent-filter>
+                <action android:name="com.google.firebase.MESSAGING_EVENT">
+
+                </action>
+            </intent-filter>
+        </service>
     </application>
 
 </manifest>

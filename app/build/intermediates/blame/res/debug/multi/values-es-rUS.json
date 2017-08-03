@@ -6,9 +6,9 @@
                 "to": {
                     "startLine": 2,
                     "startColumn": 4,
-                    "startOffset": 55,
+                    "startOffset": 105,
                     "endColumn": 119,
-                    "endOffset": 170
+                    "endOffset": 220
                 },
                 "from": {
                     "file": "C:\\Users\\icyfillup\\.android\\build-cache\\a027631cee244203f572e361e51dfe97f71ecc5d\\output\\res\\values-es-rUS\\values-es-rUS.xml",
@@ -25,9 +25,9 @@
                 "to": {
                     "startLine": 3,
                     "startColumn": 4,
-                    "startOffset": 175,
+                    "startOffset": 225,
                     "endColumn": 107,
-                    "endOffset": 278
+                    "endOffset": 328
                 },
                 "from": {
                     "file": "C:\\Users\\icyfillup\\.android\\build-cache\\a027631cee244203f572e361e51dfe97f71ecc5d\\output\\res\\values-es-rUS\\values-es-rUS.xml",
@@ -44,9 +44,9 @@
                 "to": {
                     "startLine": 4,
                     "startColumn": 4,
-                    "startOffset": 283,
+                    "startOffset": 333,
                     "endColumn": 122,
-                    "endOffset": 401
+                    "endOffset": 451
                 },
                 "from": {
                     "file": "C:\\Users\\icyfillup\\.android\\build-cache\\a027631cee244203f572e361e51dfe97f71ecc5d\\output\\res\\values-es-rUS\\values-es-rUS.xml",
@@ -63,9 +63,9 @@
                 "to": {
                     "startLine": 5,
                     "startColumn": 4,
-                    "startOffset": 406,
+                    "startOffset": 456,
                     "endColumn": 108,
-                    "endOffset": 510
+                    "endOffset": 560
                 },
                 "from": {
                     "file": "C:\\Users\\icyfillup\\.android\\build-cache\\a027631cee244203f572e361e51dfe97f71ecc5d\\output\\res\\values-es-rUS\\values-es-rUS.xml",
@@ -82,9 +82,9 @@
                 "to": {
                     "startLine": 6,
                     "startColumn": 4,
-                    "startOffset": 515,
+                    "startOffset": 565,
                     "endColumn": 107,
-                    "endOffset": 618
+                    "endOffset": 668
                 },
                 "from": {
                     "file": "C:\\Users\\icyfillup\\.android\\build-cache\\a027631cee244203f572e361e51dfe97f71ecc5d\\output\\res\\values-es-rUS\\values-es-rUS.xml",
@@ -101,9 +101,9 @@
                 "to": {
                     "startLine": 7,
                     "startColumn": 4,
-                    "startOffset": 623,
+                    "startOffset": 673,
                     "endColumn": 84,
-                    "endOffset": 703
+                    "endOffset": 753
                 },
                 "from": {
                     "file": "C:\\Users\\icyfillup\\.android\\build-cache\\a027631cee244203f572e361e51dfe97f71ecc5d\\output\\res\\values-es-rUS\\values-es-rUS.xml",
@@ -120,9 +120,9 @@
                 "to": {
                     "startLine": 8,
                     "startColumn": 4,
-                    "startOffset": 708,
+                    "startOffset": 758,
                     "endColumn": 100,
-                    "endOffset": 804
+                    "endOffset": 854
                 },
                 "from": {
                     "file": "C:\\Users\\icyfillup\\.android\\build-cache\\a027631cee244203f572e361e51dfe97f71ecc5d\\output\\res\\values-es-rUS\\values-es-rUS.xml",
@@ -139,9 +139,9 @@
                 "to": {
                     "startLine": 9,
                     "startColumn": 4,
-                    "startOffset": 809,
+                    "startOffset": 859,
                     "endColumn": 122,
-                    "endOffset": 927
+                    "endOffset": 977
                 },
                 "from": {
                     "file": "C:\\Users\\icyfillup\\.android\\build-cache\\a027631cee244203f572e361e51dfe97f71ecc5d\\output\\res\\values-es-rUS\\values-es-rUS.xml",
@@ -158,9 +158,9 @@
                 "to": {
                     "startLine": 10,
                     "startColumn": 4,
-                    "startOffset": 932,
+                    "startOffset": 982,
                     "endColumn": 81,
-                    "endOffset": 1009
+                    "endOffset": 1059
                 },
                 "from": {
                     "file": "C:\\Users\\icyfillup\\.android\\build-cache\\a027631cee244203f572e361e51dfe97f71ecc5d\\output\\res\\values-es-rUS\\values-es-rUS.xml",
@@ -177,9 +177,9 @@
                 "to": {
                     "startLine": 11,
                     "startColumn": 4,
-                    "startOffset": 1014,
+                    "startOffset": 1064,
                     "endColumn": 111,
-                    "endOffset": 1121
+                    "endOffset": 1171
                 },
                 "from": {
                     "file": "C:\\Users\\icyfillup\\.android\\build-cache\\a027631cee244203f572e361e51dfe97f71ecc5d\\output\\res\\values-es-rUS\\values-es-rUS.xml",
@@ -196,9 +196,9 @@
                 "to": {
                     "startLine": 12,
                     "startColumn": 4,
-                    "startOffset": 1126,
+                    "startOffset": 1176,
                     "endColumn": 111,
-                    "endOffset": 1233
+                    "endOffset": 1283
                 },
                 "from": {
                     "file": "C:\\Users\\icyfillup\\.android\\build-cache\\a027631cee244203f572e361e51dfe97f71ecc5d\\output\\res\\values-es-rUS\\values-es-rUS.xml",
@@ -215,9 +215,9 @@
                 "to": {
                     "startLine": 13,
                     "startColumn": 4,
-                    "startOffset": 1238,
+                    "startOffset": 1288,
                     "endColumn": 100,
-                    "endOffset": 1334
+                    "endOffset": 1384
                 },
                 "from": {
                     "file": "C:\\Users\\icyfillup\\.android\\build-cache\\a027631cee244203f572e361e51dfe97f71ecc5d\\output\\res\\values-es-rUS\\values-es-rUS.xml",
@@ -234,9 +234,9 @@
                 "to": {
                     "startLine": 14,
                     "startColumn": 4,
-                    "startOffset": 1339,
+                    "startOffset": 1389,
                     "endColumn": 107,
-                    "endOffset": 1442
+                    "endOffset": 1492
                 },
                 "from": {
                     "file": "C:\\Users\\icyfillup\\.android\\build-cache\\a027631cee244203f572e361e51dfe97f71ecc5d\\output\\res\\values-es-rUS\\values-es-rUS.xml",
@@ -253,9 +253,9 @@
                 "to": {
                     "startLine": 15,
                     "startColumn": 4,
-                    "startOffset": 1447,
+                    "startOffset": 1497,
                     "endColumn": 106,
-                    "endOffset": 1549
+                    "endOffset": 1599
                 },
                 "from": {
                     "file": "C:\\Users\\icyfillup\\.android\\build-cache\\a027631cee244203f572e361e51dfe97f71ecc5d\\output\\res\\values-es-rUS\\values-es-rUS.xml",
@@ -272,9 +272,9 @@
                 "to": {
                     "startLine": 16,
                     "startColumn": 4,
-                    "startOffset": 1554,
+                    "startOffset": 1604,
                     "endColumn": 106,
-                    "endOffset": 1656
+                    "endOffset": 1706
                 },
                 "from": {
                     "file": "C:\\Users\\icyfillup\\.android\\build-cache\\a027631cee244203f572e361e51dfe97f71ecc5d\\output\\res\\values-es-rUS\\values-es-rUS.xml",
@@ -291,9 +291,9 @@
                 "to": {
                     "startLine": 17,
                     "startColumn": 4,
-                    "startOffset": 1661,
+                    "startOffset": 1711,
                     "endColumn": 121,
-                    "endOffset": 1778
+                    "endOffset": 1828
                 },
                 "from": {
                     "file": "C:\\Users\\icyfillup\\.android\\build-cache\\a027631cee244203f572e361e51dfe97f71ecc5d\\output\\res\\values-es-rUS\\values-es-rUS.xml",
@@ -310,9 +310,9 @@
                 "to": {
                     "startLine": 18,
                     "startColumn": 4,
-                    "startOffset": 1783,
+                    "startOffset": 1833,
                     "endColumn": 99,
-                    "endOffset": 1878
+                    "endOffset": 1928
                 },
                 "from": {
                     "file": "C:\\Users\\icyfillup\\.android\\build-cache\\a027631cee244203f572e361e51dfe97f71ecc5d\\output\\res\\values-es-rUS\\values-es-rUS.xml",
@@ -329,9 +329,28 @@
                 "to": {
                     "startLine": 19,
                     "startColumn": 4,
-                    "startOffset": 1883,
+                    "startOffset": 1933,
+                    "endColumn": 258,
+                    "endOffset": 2187
+                },
+                "from": {
+                    "file": "C:\\Users\\icyfillup\\.android\\build-cache\\3db6bc736bdb59c9e1aebb1de303f269d321b889\\output\\res\\values-es-rUS\\values.xml",
+                    "position": {
+                        "startLine": 4,
+                        "startColumn": 4,
+                        "startOffset": 334,
+                        "endColumn": 258,
+                        "endOffset": 588
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 20,
+                    "startColumn": 4,
+                    "startOffset": 2192,
                     "endColumn": 100,
-                    "endOffset": 1979
+                    "endOffset": 2288
                 },
                 "from": {
                     "file": "C:\\Users\\icyfillup\\.android\\build-cache\\a027631cee244203f572e361e51dfe97f71ecc5d\\output\\res\\values-es-rUS\\values-es-rUS.xml",

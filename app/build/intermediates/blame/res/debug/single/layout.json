@@ -20,12 +20,12 @@
         "source": "C:\\Users\\icyfillup\\.android\\build-cache\\891dce40efe3296fe3d04c57b5a5505246e6ea86\\output\\res\\layout\\design_navigation_item_header.xml"
     },
     {
-        "merged": "W:\\Android_stuff\\TimeManagement\\app\\build\\intermediates\\res\\merged\\debug\\layout\\activity_total.xml",
-        "source": "W:\\Android_stuff\\TimeManagement\\app\\src\\main\\res\\layout\\activity_total.xml"
-    },
-    {
         "merged": "W:\\Android_stuff\\TimeManagement\\app\\build\\intermediates\\res\\merged\\debug\\layout\\abc_action_mode_close_item_material.xml",
         "source": "C:\\Users\\icyfillup\\.android\\build-cache\\a027631cee244203f572e361e51dfe97f71ecc5d\\output\\res\\layout\\abc_action_mode_close_item_material.xml"
+    },
+    {
+        "merged": "W:\\Android_stuff\\TimeManagement\\app\\build\\intermediates\\res\\merged\\debug\\layout\\activity_total.xml",
+        "source": "W:\\Android_stuff\\TimeManagement\\app\\src\\main\\res\\layout\\activity_total.xml"
     },
     {
         "merged": "W:\\Android_stuff\\TimeManagement\\app\\build\\intermediates\\res\\merged\\debug\\layout\\abc_search_dropdown_item_icons_2line.xml",

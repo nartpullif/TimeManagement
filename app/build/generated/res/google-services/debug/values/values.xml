@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="default_web_client_id" translatable="false">849199767616-sfc6rn269ji3di0itpp04m96qe1hkqmf.apps.googleusercontent.com</string>
+    <string name="firebase_database_url" translatable="false">https://timemanagement-c0f87.firebaseio.com</string>
+    <string name="gcm_defaultSenderId" translatable="false">849199767616</string>
+    <string name="google_api_key" translatable="false">AIzaSyDX35ebxdUUy2JMyrJwmgD-Vzoh5b8zkpM</string>
+    <string name="google_app_id" translatable="false">1:849199767616:android:73ea860b107fa47c</string>
+    <string name="google_crash_reporting_api_key" translatable="false">AIzaSyDX35ebxdUUy2JMyrJwmgD-Vzoh5b8zkpM</string>
+    <string name="google_storage_bucket" translatable="false">timemanagement-c0f87.appspot.com</string>
+    <string name="project_id" translatable="false">timemanagement-c0f87</string>
+</resources>
