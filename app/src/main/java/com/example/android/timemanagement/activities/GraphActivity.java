@@ -17,6 +17,7 @@ import com.example.android.timemanagement.R;
 import com.example.android.timemanagement.data.Contract;
 import com.example.android.timemanagement.data.DBHelper;
 import com.example.android.timemanagement.data.DatabaseUtils;
+import com.example.android.timemanagement.formating.TimeFormatter;
 import com.example.android.timemanagement.models.ActivitySwitcherToolbar;
 import com.example.android.timemanagement.models.StartEndTime;
 import com.example.android.timemanagement.utilities.PreferenceUtils;
@@ -35,9 +36,11 @@ import java.text.DateFormat;
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
 import java.util.ArrayList;
+import java.util.Calendar;
 import java.util.Collections;
 import java.util.Comparator;
 import java.util.Date;
+import java.util.GregorianCalendar;
 import java.util.HashMap;
 import java.util.List;
 
@@ -53,6 +56,15 @@ public class GraphActivity extends AppCompatActivity implements RadioGroup.OnChe
     private int moveDayBackTask = 0;
     private int moveWeekBackTask = 0;
     private int moveMonthBackTask = 0;
+
+    public static final int MONDAY= 0;
+    public static final int TUESDAY = 1;
+    public static final int WEDNESDAY = 2;
+    public static final int THURSDAY= 3;
+    public static final int FRIDAY= 4;
+    public static final int SATURDAY= 5;
+    public static final int SUNDAY= 6;
+    public static final int TOTAL_DAY_IN_WEEK = 7;
 
     @Override
     protected void onCreate(Bundle savedInstanceState){
@@ -213,9 +225,8 @@ public class GraphActivity extends AppCompatActivity implements RadioGroup.OnChe
         Cursor cursor = DatabaseUtils.getDaysTask(database, dayOffset);
         localDate.setText(DatabaseUtils.getDay(dayOffset));
 
-        SimpleDateFormat parseFormat = new SimpleDateFormat("hh:mma");
-
         List<StartEndTime> startEndTimeUTC = new ArrayList<>();
+        SimpleDateFormat timeFormat = new SimpleDateFormat("hh:mma");
 
         if(cursor.moveToFirst())
         {
@@ -235,9 +246,9 @@ public class GraphActivity extends AppCompatActivity implements RadioGroup.OnChe
                 Date endTime = null;
                 try
                 {
-                    startTime = parseFormat.parse(String.valueOf(StartingTimeHr) + ":" + String.valueOf(StartingTimeMin)
+                    startTime = timeFormat.parse(String.valueOf(StartingTimeHr) + ":" + String.valueOf(StartingTimeMin)
                             + StartingMidDay);
-                    endTime = parseFormat.parse(String.valueOf(EndingTimeHr) + ":" + String.valueOf(EndingTimeMin)
+                    endTime = timeFormat.parse(String.valueOf(EndingTimeHr) + ":" + String.valueOf(EndingTimeMin)
                             + EndingMidDay);
                     startEndTimeUTC.add(new StartEndTime(startTime.getTime(), endTime.getTime(), totalMintues));
                 }
@@ -258,6 +269,7 @@ public class GraphActivity extends AppCompatActivity implements RadioGroup.OnChe
             }
         });
 
+        SimpleDateFormat time24HrFormat = new SimpleDateFormat("HH:mm");
         ArrayList<BarEntry> yMinVals = new ArrayList();
         ArrayList<String> xTimeVals = new ArrayList();
         for(int i = 0; i < startEndTimeUTC.size(); i++)
@@ -267,7 +279,7 @@ public class GraphActivity extends AppCompatActivity implements RadioGroup.OnChe
             Date startTime = new Date(time.getStartingTime());
             Date endTime = new Date(time.getEndingTime());
 
-            String taskDuration = parseFormat.format(startTime) + " - " + parseFormat.format(endTime);
+            String taskDuration = time24HrFormat.format(startTime) + "-" + time24HrFormat.format(endTime);
             xTimeVals.add(taskDuration);
 
             yMinVals.add(new BarEntry(i, time.getTotalMinutes()));
@@ -310,7 +322,7 @@ public class GraphActivity extends AppCompatActivity implements RadioGroup.OnChe
 
         List<String> dayKey = new ArrayList(weekTask.keySet());
         Collections.sort(dayKey, new Comparator<String>() {
-            DateFormat dateFormat = new SimpleDateFormat("MM/dd/yyyy");
+            SimpleDateFormat dateFormat= new SimpleDateFormat("MM/dd/yyyy");
             @Override
             public int compare(String o1, String o2) {
                 try {
@@ -323,13 +335,63 @@ public class GraphActivity extends AppCompatActivity implements RadioGroup.OnChe
 
         ArrayList<BarEntry> yMinVals = new ArrayList();
         ArrayList<String> xdayVals = new ArrayList();
-        for(int i = 0; i < dayKey.size(); i++)
+        int index = 0;
+        for(int i = 0; i < TOTAL_DAY_IN_WEEK; i++)
         {
-            String date = dayKey.get(i);
-            int dayTotalMinute = weekTask.get(date);
+            int dayTotalMinute = 0;
 
-            xdayVals.add(date);
+            if(index < dayKey.size())
+            {
+                String date = dayKey.get(index);
+                String[] monthDayYear = date.split("/");
+                Calendar c = GregorianCalendar.getInstance();
+                c.set(Integer.parseInt(monthDayYear[2]),
+                        Integer.parseInt(monthDayYear[0]) - 1,
+                        Integer.parseInt(monthDayYear[1]));
+
+                if(c.get(Calendar.DAY_OF_WEEK) == Calendar.MONDAY ||
+                        c.get(Calendar.DAY_OF_WEEK) == Calendar.TUESDAY ||
+                        c.get(Calendar.DAY_OF_WEEK) == Calendar.WEDNESDAY ||
+                        c.get(Calendar.DAY_OF_WEEK) == Calendar.THURSDAY||
+                        c.get(Calendar.DAY_OF_WEEK) == Calendar.FRIDAY ||
+                        c.get(Calendar.DAY_OF_WEEK) == Calendar.SATURDAY ||
+                        c.get(Calendar.DAY_OF_WEEK) == Calendar.SUNDAY)
+                {
+                    dayTotalMinute = weekTask.get(date);
+                    index++;
+                }
+            }
+
             yMinVals.add(new BarEntry(i, dayTotalMinute));
+
+            if(i == MONDAY)
+            {
+                xdayVals.add("M");
+            }
+            else if(i == TUESDAY)
+            {
+                xdayVals.add("T");
+            }
+            else if(i == WEDNESDAY)
+            {
+                xdayVals.add("W");
+            }
+            else if(i == THURSDAY)
+            {
+                xdayVals.add("TH");
+            }
+            else if(i == FRIDAY)
+            {
+                xdayVals.add("F");
+            }
+            else if(i == SATURDAY)
+            {
+                xdayVals.add("SAT");
+            }
+            else if(i == SUNDAY)
+            {
+                xdayVals.add("SUN");
+            }
         }
 
         makeBarChart(xdayVals, yMinVals);
@@ -387,7 +449,7 @@ public class GraphActivity extends AppCompatActivity implements RadioGroup.OnChe
         todaysTaskSet.setValueTextSize(15f);
 
         BarData data = new BarData(todaysTaskSet);
-        data.setValueFormatter(new LargeValueFormatter(" min"));
+        data.setValueFormatter(new TimeFormatter());
 
         chart.setData(data);
         chart.getBarData().setBarWidth(barWidth);
@@ -420,7 +482,7 @@ public class GraphActivity extends AppCompatActivity implements RadioGroup.OnChe
         //Y-axis
         chart.getAxisRight().setEnabled(false);
         YAxis leftAxis = chart.getAxisLeft();
-        leftAxis.setValueFormatter(new LargeValueFormatter(" min"));
+        leftAxis.setValueFormatter(new TimeFormatter());
         leftAxis.setDrawGridLines(true);
         leftAxis.setSpaceTop(35f);
         leftAxis.setAxisMinimum(0f);
