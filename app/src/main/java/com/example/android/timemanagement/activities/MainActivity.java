@@ -15,10 +15,13 @@ import android.widget.Button;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import android.support.v4.app.FragmentManager;
+
 import com.example.android.timemanagement.R;
 import com.example.android.timemanagement.adapters.TaskAdapter;
 import com.example.android.timemanagement.data.Contract;
 import com.example.android.timemanagement.data.DBHelper;
+import com.example.android.timemanagement.fragment.DatePickerFragment;
 
 import java.text.SimpleDateFormat;
 import java.util.Calendar;
@@ -27,7 +30,7 @@ import java.util.Date;
 import static com.example.android.timemanagement.data.DatabaseUtils.getDailyTask;
 import static com.example.android.timemanagement.data.DatabaseUtils.removeTask;
 
-public class MainActivity extends AppCompatActivity {
+public class MainActivity extends AppCompatActivity implements DatePickerFragment.OnDialogCloseListener  {
 
     private TextView currentDateTextView;
     private Button previousDateButton;
@@ -45,6 +48,8 @@ public class MainActivity extends AppCompatActivity {
     private SQLiteDatabase db;
     private TaskAdapter adapter;
     private Context context;
+
+    private FragmentManager fragmentManager;
 
 
     private final String TAG = "mainActivity";
@@ -85,6 +90,15 @@ public class MainActivity extends AppCompatActivity {
             public void onClick(View v) {
                 currentDate = changeDate(currentDate, 1);
                 refreshViewForNewDate(currentDate);
+            }
+        });
+
+        currentDateTextView.setOnClickListener(new View.OnClickListener(){
+
+            @Override
+            public void onClick(View view) {
+                fragmentManager = getSupportFragmentManager();
+                new DatePickerFragment().show( fragmentManager, "datepicker");
             }
         });
 
@@ -179,6 +193,14 @@ public class MainActivity extends AppCompatActivity {
         calendar.setTime(currentDate);
         calendar.add(Calendar.DATE, amount);
         return calendar.getTime();
+    }
+
+    @Override
+    public void closeDialog(int year, int month, int day) {
+        Calendar calendar = Calendar.getInstance();
+        calendar.set(year,month,day);
+        currentDate = calendar.getTime();
+        currentDateTextView.setText(dateFormat.format(currentDate));
     }
 
 }
