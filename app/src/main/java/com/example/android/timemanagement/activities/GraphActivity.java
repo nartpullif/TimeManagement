@@ -10,6 +10,7 @@ import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.RadioGroup;
+import android.widget.TextView;
 import android.widget.Toast;
 
 import com.example.android.timemanagement.R;
@@ -45,7 +46,7 @@ public class GraphActivity extends AppCompatActivity implements RadioGroup.OnChe
 
     private SQLiteDatabase database;
     private BarChart chart;
-
+    private TextView localDate;
     private SegmentedRadioGroup DayRadioButton;
 
     private int currentDayButton;
@@ -64,6 +65,7 @@ public class GraphActivity extends AppCompatActivity implements RadioGroup.OnChe
         DayRadioButton = (SegmentedRadioGroup) findViewById(R.id.day_button);
         DayRadioButton.setOnCheckedChangeListener(this);
         currentDayButton = DayRadioButton.getCheckedRadioButtonId();
+        localDate = (TextView)findViewById(R.id.local_date);
 
         // middle of the layout
         chart = (BarChart) findViewById(R.id.bar_chart);
@@ -209,12 +211,12 @@ public class GraphActivity extends AppCompatActivity implements RadioGroup.OnChe
         database = dbHelper.getReadableDatabase();
 
         Cursor cursor = DatabaseUtils.getDaysTask(database, dayOffset);
+        localDate.setText(DatabaseUtils.getDay(dayOffset));
 
         SimpleDateFormat parseFormat = new SimpleDateFormat("hh:mma");
 
         List<StartEndTime> startEndTimeUTC = new ArrayList<>();
 
-        ArrayList<String> dates = new ArrayList<>();
         if(cursor.moveToFirst())
         {
             do
@@ -228,9 +230,6 @@ public class GraphActivity extends AppCompatActivity implements RadioGroup.OnChe
                 String EndingMidDay = cursor.getString(cursor.getColumnIndex(Contract.TABLE_TASK.COLUMN_NAME_END_MID_DAY));
 
                 int totalMintues = cursor.getInt(cursor.getColumnIndex(Contract.TABLE_TASK.COLUMN_NAME_TASK_TOTAL_MINUTES));
-
-                String date = cursor.getString(cursor.getColumnIndex(Contract.TABLE_TASK.COLUMN_NAME_DATE));
-                dates.add(date);
 
                 Date startTime = null;
                 Date endTime = null;
@@ -274,7 +273,7 @@ public class GraphActivity extends AppCompatActivity implements RadioGroup.OnChe
             yMinVals.add(new BarEntry(i, time.getTotalMinutes()));
         }
 
-        makeBarChart(xTimeVals, yMinVals, "Today");
+        makeBarChart(xTimeVals, yMinVals);
 
         Log.d("testing ", "stuff");
     }
@@ -285,6 +284,7 @@ public class GraphActivity extends AppCompatActivity implements RadioGroup.OnChe
         database = dbHelper.getReadableDatabase();
 
         Cursor cursor = DatabaseUtils.getWeeksTask(database, weekOffset);
+        localDate.setText(DatabaseUtils.getWeek(weekOffset));
 
         HashMap<String, Integer> weekTask = new HashMap<>();
 
@@ -332,7 +332,7 @@ public class GraphActivity extends AppCompatActivity implements RadioGroup.OnChe
             yMinVals.add(new BarEntry(i, dayTotalMinute));
         }
 
-        makeBarChart(xdayVals, yMinVals, "Week");
+        makeBarChart(xdayVals, yMinVals);
     }
 
     public void monthBarChart(int monthOffset)
@@ -341,6 +341,7 @@ public class GraphActivity extends AppCompatActivity implements RadioGroup.OnChe
         database = dbHelper.getReadableDatabase();
 
         ArrayList<Cursor> thisMonthWeekCursor = DatabaseUtils.getMonthTask(database, monthOffset);
+        localDate.setText(DatabaseUtils.getMonth(monthOffset));
         //ArrayList<String> dates = new ArrayList<>();
 
         ArrayList<BarEntry> yMinVals = new ArrayList();
@@ -364,20 +365,15 @@ public class GraphActivity extends AppCompatActivity implements RadioGroup.OnChe
             xWeekVals.add("Week " + String.valueOf(i + 1));
             yMinVals.add(new BarEntry(i, totalMintues));
         }
-        makeBarChart(xWeekVals, yMinVals, "Month");
+        makeBarChart(xWeekVals, yMinVals);
         Log.d("test: ", "stuff");
     }
 
-    private void makeBarChart(ArrayList<String> xTimeVals, ArrayList<BarEntry> yMintueVals, String name)
+    private void makeBarChart(ArrayList<String> xTimeVals, ArrayList<BarEntry> yMintueVals)
     {
         float barWidth = 0.7f;
 
-        Description hello = new Description();
-        hello.setText(name);
-        hello.setTextSize(20);
-        hello.setXOffset(170);
-        hello.setYOffset(349);
-        chart.setDescription(hello);
+        chart.setDescription(null);
         chart.setPinchZoom(false);
         chart.setScaleEnabled(true);
         chart.setDrawBarShadow(false);

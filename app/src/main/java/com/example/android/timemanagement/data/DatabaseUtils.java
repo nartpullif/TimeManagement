@@ -9,6 +9,7 @@ import android.util.Log;
 import com.example.android.timemanagement.data.Contract;
 
 import java.text.DateFormat;
+import java.text.DateFormatSymbols;
 import java.text.SimpleDateFormat;
 import java.util.ArrayList;
 import java.util.Calendar;
@@ -86,6 +87,13 @@ public class DatabaseUtils {
                 null,
                 null);
     }
+    public static String getDay(int dayOffset)
+    {
+        Calendar c = GregorianCalendar.getInstance();
+        c.add(Calendar.DATE, dayOffset);
+        SimpleDateFormat dbDateFormat = new SimpleDateFormat("MM/dd/yyyy");
+        return dbDateFormat.format(c.getTime());
+    }
 
     public static Cursor getThisWeeksTask(SQLiteDatabase db)
     {
@@ -114,6 +122,23 @@ public class DatabaseUtils {
                 null,
                 null,
                 Contract.TABLE_TASK.COLUMN_NAME_DATE);
+    }
+
+    public static String getWeek(int weekOffset)
+    {
+        Calendar c = GregorianCalendar.getInstance();
+        c.setFirstDayOfWeek(Calendar.MONDAY);
+
+        c.set(Calendar.DAY_OF_WEEK, Calendar.MONDAY);
+
+        DateFormat dbDateFormat = new SimpleDateFormat("MM/dd/yyyy", Locale.getDefault());
+
+        c.add(Calendar.DATE, 7 * weekOffset);
+        String startDate = dbDateFormat.format(c.getTime());
+        c.add(Calendar.DATE, 6);
+        String endDate = dbDateFormat.format(c.getTime());
+
+        return startDate + " - " + endDate;
     }
 
     public static ArrayList<Cursor> getThisMonthTask(SQLiteDatabase db)
@@ -203,6 +228,40 @@ public class DatabaseUtils {
         }
 
         return weeksCursor;
+    }
+
+    public static String getMonth(int monthOffset)
+    {
+        DateFormat dbDateFormat = new SimpleDateFormat("MM/dd/yyyy", Locale.getDefault());
+        Calendar c = Calendar.getInstance();
+
+        int month = c.get(Calendar.MONTH) + monthOffset;
+        int year = c.get(Calendar.YEAR);
+
+        while(month < 0)
+        {
+            month += 12;
+            year -= 1;
+        }
+
+        int dayOfMonth = 1;
+        c.set(year, month, dayOfMonth);
+        //*debug: corner case for this method, April 2017 [two day ahead in the next month]*/c.set(c.get(Calendar.YEAR), Calendar.APRIL, dayOfMonth);
+        int thisMonth = c.get(Calendar.MONTH);
+        String monthInString = getMonthForInt(thisMonth);
+        return year + " " + monthInString;
+    }
+
+    // copy this block of code from
+    // https://stackoverflow.com/questions/14832151/how-to-get-month-name-from-calendar
+    private static String getMonthForInt(int num) {
+        String month = "wrong";
+        DateFormatSymbols dfs = new DateFormatSymbols();
+        String[] months = dfs.getMonths();
+        if (num >= 0 && num <= 11 ) {
+            month = months[num];
+        }
+        return month;
     }
 
     public static Cursor getTask(SQLiteDatabase db, String start,String end) {

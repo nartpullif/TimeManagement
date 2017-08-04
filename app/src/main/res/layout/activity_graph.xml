@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
@@ -35,7 +35,7 @@
                 android:gravity="center"
                 android:button="@null"
                 android:textColor="@color/radio_colors"
-                android:text="Today"
+                android:text="Days"
                 android:textSize="20sp"
                 android:layout_weight="1"/>
 
@@ -46,7 +46,7 @@
                 android:gravity="center"
                 android:button="@null"
                 android:textColor="@color/radio_colors"
-                android:text="Week"
+                android:text="Weeks"
                 android:textSize="20sp"
                 android:layout_weight="1"/>
 
@@ -57,13 +57,23 @@
                 android:gravity="center"
                 android:button="@null"
                 android:textColor="@color/radio_colors"
-                android:text="Month"
+                android:text="Months"
                 android:textSize="20sp"
                 android:layout_weight="1"/>
 
         </com.example.android.timemanagement.activities.SegmentedRadioGroup>
 
     </android.support.v7.widget.Toolbar>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/local_date"
+        android:gravity="center"
+        android:text="Day"
+        android:textSize="20sp"
+        android:layout_marginTop="10dp"
+        />
 
     <com.github.mikephil.charting.charts.BarChart
         android:layout_width="match_parent"
@@ -108,4 +118,4 @@
 
     </LinearLayout>
 
-</FrameLayout>
+</LinearLayout>
