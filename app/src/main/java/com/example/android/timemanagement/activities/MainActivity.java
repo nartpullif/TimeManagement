@@ -201,6 +201,7 @@ public class MainActivity extends AppCompatActivity implements DatePickerFragmen
         calendar.set(year,month,day);
         currentDate = calendar.getTime();
         currentDateTextView.setText(dateFormat.format(currentDate));
+        refreshViewForNewDate(currentDate);
     }
 
 }

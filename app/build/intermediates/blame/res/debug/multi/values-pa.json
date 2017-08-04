@@ -1,6 +1,6 @@
 [
     {
-        "outputFile": "W:\\Android_stuff\\TimeManagement\\app\\build\\intermediates\\incremental\\mergeDebugResources\\merged.dir\\values-pa\\values-pa.xml",
+        "outputFile": "/Users/Vahedi/Documents/Android/TestProjects/TimeManagement-master/TimeManagement/app/build/intermediates/incremental/mergeDebugResources/merged.dir/values-pa/values-pa.xml",
         "map": [
             {
                 "to": {
@@ -11,7 +11,7 @@
                     "endOffset": 355
                 },
                 "from": {
-                    "file": "C:\\Users\\icyfillup\\.android\\build-cache\\3db6bc736bdb59c9e1aebb1de303f269d321b889\\output\\res\\values-pa\\values.xml",
+                    "file": "/Users/Vahedi/.android/build-cache/ccaf212b6ad2696baeaf9057ec309991267b2bac/output/res/values-pa/values.xml",
                     "position": {
                         "startLine": 4,
                         "startColumn": 4,
