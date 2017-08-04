@@ -66,17 +66,45 @@ public class DatabaseUtils {
         return cursor;
     }
 
-    public static Cursor getTodaysTask(SQLiteDatabase db) {
+
+
+    public static Cursor getDaysTask(SQLiteDatabase db, int dayOffset) {
+        Calendar c = GregorianCalendar.getInstance();
+        c.add(Calendar.DATE, dayOffset);
         SimpleDateFormat dbDateFormat = new SimpleDateFormat("MM/dd/yyyy");
+        String startDate = dbDateFormat.format(c.getTime());
 
         return db.query(
                 Contract.TABLE_TASK.TABLE_NAME,
                 null,
                 Contract.TABLE_TASK.COLUMN_NAME_DATE + " = ?",
-                new String[]{dbDateFormat.format(new Date())},
+                new String[]{startDate},
                 null,
                 null,
                 null);
+    }
+
+    public static Cursor getThisWeeksTask(SQLiteDatabase db) {
+
+        Calendar c = GregorianCalendar.getInstance();
+        c.setFirstDayOfWeek(Calendar.MONDAY);
+
+        c.set(Calendar.DAY_OF_WEEK, Calendar.MONDAY);
+
+        DateFormat dbDateFormat = new SimpleDateFormat("MM/dd/yyyy", Locale.getDefault());
+
+        String startDate = dbDateFormat.format(c.getTime());
+        c.add(Calendar.DATE, 6);
+        String endDate = dbDateFormat.format(c.getTime());
+
+        return db.query(
+                Contract.TABLE_TASK.TABLE_NAME,
+                null,
+                Contract.TABLE_TASK.COLUMN_NAME_DATE + " BETWEEN ? AND ?",
+                new String[]{startDate, endDate},
+                null,
+                null,
+                Contract.TABLE_TASK.COLUMN_NAME_DATE);
     }
 
     public static ArrayList<Cursor> getThisMonthTask(SQLiteDatabase db)
@@ -152,29 +180,6 @@ public class DatabaseUtils {
         }
 
         return weeksCursor;
-    }
-
-    public static Cursor getThisWeeksTask(SQLiteDatabase db) {
-
-        Calendar c = GregorianCalendar.getInstance();
-        c.setFirstDayOfWeek(Calendar.MONDAY);
-
-        c.set(Calendar.DAY_OF_WEEK, Calendar.MONDAY);
-
-        DateFormat dbDateFormat = new SimpleDateFormat("MM/dd/yyyy", Locale.getDefault());
-
-        String startDate = dbDateFormat.format(c.getTime());
-        c.add(Calendar.DATE, 6);
-        String endDate = dbDateFormat.format(c.getTime());
-
-        return db.query(
-                Contract.TABLE_TASK.TABLE_NAME,
-                null,
-                Contract.TABLE_TASK.COLUMN_NAME_DATE + " BETWEEN ? AND ?",
-                new String[]{startDate, endDate},
-                null,
-                null,
-                Contract.TABLE_TASK.COLUMN_NAME_DATE);
     }
 
     public static Cursor getTask(SQLiteDatabase db, String start,String end) {

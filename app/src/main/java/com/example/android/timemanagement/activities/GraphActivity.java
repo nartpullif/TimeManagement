@@ -41,12 +41,19 @@ import java.util.HashMap;
 import java.util.List;
 
 public class GraphActivity extends AppCompatActivity implements RadioGroup.OnCheckedChangeListener{
+    private static final String TAG = "GraphActivity";
+
     private Toolbar toolbar;
 
     private SQLiteDatabase database;
     private BarChart chart;
 
     private SegmentedRadioGroup DayRadioButton;
+
+    private int currentDayButton;
+    private int moveDayBackTask = 0;
+    private int moveWeekBackTask = 0;
+    private int moveMonthBackTask = 0;
 
     @Override
     protected void onCreate(Bundle savedInstanceState){
@@ -58,6 +65,7 @@ public class GraphActivity extends AppCompatActivity implements RadioGroup.OnChe
         // top of the layout
         DayRadioButton = (SegmentedRadioGroup) findViewById(R.id.day_button);
         DayRadioButton.setOnCheckedChangeListener(this);
+        currentDayButton = DayRadioButton.getCheckedRadioButtonId();
 
         // middle of the layout
         chart = (BarChart) findViewById(R.id.bar_chart);
@@ -65,17 +73,23 @@ public class GraphActivity extends AppCompatActivity implements RadioGroup.OnChe
         // bottom of the layout
         toolbar = (Toolbar) findViewById(R.id.graph_toolbar);
 
-        Log.d("GraphActivity: ", "onCreate");
+        Log.d(TAG, ": onCreate");
     }
 
     @Override
     public void onCheckedChanged(RadioGroup group, int checkedId) {
         if (group == DayRadioButton) {
-            if (checkedId == R.id.today_button) {
-                todaysBarChart();
-            } else if (checkedId == R.id.week_button) {
+            if (checkedId == R.id.today_button)
+            {
+                currentDayButton = R.id.today_button;
+                daysBarChart(moveDayBackTask);
+            } else if (checkedId == R.id.week_button)
+            {
+                currentDayButton = R.id.week_button;
                 weekBarChart();
-            } else if (checkedId == R.id.month_button) {
+            } else if (checkedId == R.id.month_button)
+            {
+                currentDayButton = R.id.month_button;
                 monthBarChart();
             }
         }
@@ -85,7 +99,7 @@ public class GraphActivity extends AppCompatActivity implements RadioGroup.OnChe
     protected void onStart()
     {
         super.onStart();
-        todaysBarChart();
+        daysBarChart(moveDayBackTask);
 
         Log.d("GraphActivity: ", "onStart");
     }
@@ -128,20 +142,72 @@ public class GraphActivity extends AppCompatActivity implements RadioGroup.OnChe
 
     public void onPreviousButton(View view)
     {
+        if(currentDayButton == R.id.today_button)
+        {
+            moveDayBackTask -= 1;
+            daysBarChart(moveDayBackTask);
+        }
+        else if(currentDayButton == R.id.week_button)
+        {
+            moveWeekBackTask -= 1;
+        }
+        else if(currentDayButton == R.id.month_button)
+        {
+            moveMonthBackTask -= 1;
+        }
+        Log.d(TAG, "- moveDayBackTask: " + moveDayBackTask);
+        Log.d(TAG, "- moveWeekBackTask: " + moveWeekBackTask);
+        Log.d(TAG, "- moveMonthBackTask: " + moveMonthBackTask);
         Toast.makeText(this, "Clicked on previous Button", Toast.LENGTH_LONG).show();
     }
 
     public void onNextButton(View view)
     {
-        Toast.makeText(this, "Clicked on next Button", Toast.LENGTH_LONG).show();
+        if(currentDayButton == R.id.today_button)
+        {
+            if(moveDayBackTask <= 0)
+            {
+                moveDayBackTask = 0;
+            }
+            else
+            {
+                moveDayBackTask += 1;
+            }
+        }
+        else if(currentDayButton == R.id.week_button)
+        {
+            if(moveWeekBackTask <= 0)
+            {
+                moveWeekBackTask = 0;
+            }
+            else
+            {
+                moveWeekBackTask += 1;
+            }
+        }
+        else if(currentDayButton == R.id.month_button)
+        {
+            if(moveMonthBackTask >= 0)
+            {
+                moveMonthBackTask = 0;
+            }
+            else
+            {
+                moveMonthBackTask += 1;
+            }
+        }
+        Log.d(TAG, "- moveDayBackTask: " + moveDayBackTask);
+        Log.d(TAG, "- moveWeekBackTask: " + moveWeekBackTask);
+        Log.d(TAG, "- moveMonthBackTask: " + moveMonthBackTask);
+        Toast.makeText(this, "Clicked on NEXT Button", Toast.LENGTH_LONG).show();
     }
 
-    public void todaysBarChart()
+    public void daysBarChart(int dayOffset)
     {
         DBHelper dbHelper = new DBHelper(this);
         database = dbHelper.getReadableDatabase();
 
-        Cursor cursor = DatabaseUtils.getTodaysTask(database);
+        Cursor cursor = DatabaseUtils.getDaysTask(database, dayOffset);
 
         SimpleDateFormat parseFormat = new SimpleDateFormat("hh:mma");
 
