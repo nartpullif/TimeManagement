@@ -379,6 +379,7 @@ public class DatabaseUtils {
         dbAdd.delete(Contract.TABLE_SUBJECT.TABLE_NAME, null, null);
         dbAdd.delete(Contract.TABLE_PROJECT.TABLE_NAME, null, null);
 
+
         DatabaseUtils.addTask(dbAdd, "07/01/2017", "math hw", "school",
                 6, 30, "PM", 7, 30, "PM",
                 ((7 - 6) * 60) + (30 - 30));

@@ -1,58 +1,58 @@
 [
     {
-        "merged": "W:\\Android_stuff\\TimeManagement\\app\\build\\intermediates\\res\\merged\\debug\\anim\\abc_fade_in.xml",
-        "source": "C:\\Users\\icyfillup\\.android\\build-cache\\a027631cee244203f572e361e51dfe97f71ecc5d\\output\\res\\anim\\abc_fade_in.xml"
+        "merged": "/Users/Vahedi/Documents/Android/Git_Projects/New TimeManagement/TimeManagement/app/build/intermediates/res/merged/debug/anim/abc_popup_exit.xml",
+        "source": "/Users/Vahedi/.android/build-cache/f5e158f2f9c539b29f7741e3d52200622287f7e2/output/res/anim/abc_popup_exit.xml"
     },
     {
-        "merged": "W:\\Android_stuff\\TimeManagement\\app\\build\\intermediates\\res\\merged\\debug\\anim\\abc_slide_in_bottom.xml",
-        "source": "C:\\Users\\icyfillup\\.android\\build-cache\\a027631cee244203f572e361e51dfe97f71ecc5d\\output\\res\\anim\\abc_slide_in_bottom.xml"
+        "merged": "/Users/Vahedi/Documents/Android/Git_Projects/New TimeManagement/TimeManagement/app/build/intermediates/res/merged/debug/anim/abc_shrink_fade_out_from_bottom.xml",
+        "source": "/Users/Vahedi/.android/build-cache/f5e158f2f9c539b29f7741e3d52200622287f7e2/output/res/anim/abc_shrink_fade_out_from_bottom.xml"
     },
     {
-        "merged": "W:\\Android_stuff\\TimeManagement\\app\\build\\intermediates\\res\\merged\\debug\\anim\\design_fab_in.xml",
-        "source": "C:\\Users\\icyfillup\\.android\\build-cache\\891dce40efe3296fe3d04c57b5a5505246e6ea86\\output\\res\\anim\\design_fab_in.xml"
+        "merged": "/Users/Vahedi/Documents/Android/Git_Projects/New TimeManagement/TimeManagement/app/build/intermediates/res/merged/debug/anim/design_snackbar_in.xml",
+        "source": "/Users/Vahedi/.android/build-cache/e7c43c2efac03d6347806792b3f409745fc85c37/output/res/anim/design_snackbar_in.xml"
     },
     {
-        "merged": "W:\\Android_stuff\\TimeManagement\\app\\build\\intermediates\\res\\merged\\debug\\anim\\abc_popup_enter.xml",
-        "source": "C:\\Users\\icyfillup\\.android\\build-cache\\a027631cee244203f572e361e51dfe97f71ecc5d\\output\\res\\anim\\abc_popup_enter.xml"
+        "merged": "/Users/Vahedi/Documents/Android/Git_Projects/New TimeManagement/TimeManagement/app/build/intermediates/res/merged/debug/anim/abc_slide_in_top.xml",
+        "source": "/Users/Vahedi/.android/build-cache/f5e158f2f9c539b29f7741e3d52200622287f7e2/output/res/anim/abc_slide_in_top.xml"
     },
     {
-        "merged": "W:\\Android_stuff\\TimeManagement\\app\\build\\intermediates\\res\\merged\\debug\\anim\\abc_grow_fade_in_from_bottom.xml",
-        "source": "C:\\Users\\icyfillup\\.android\\build-cache\\a027631cee244203f572e361e51dfe97f71ecc5d\\output\\res\\anim\\abc_grow_fade_in_from_bottom.xml"
+        "merged": "/Users/Vahedi/Documents/Android/Git_Projects/New TimeManagement/TimeManagement/app/build/intermediates/res/merged/debug/anim/design_snackbar_out.xml",
+        "source": "/Users/Vahedi/.android/build-cache/e7c43c2efac03d6347806792b3f409745fc85c37/output/res/anim/design_snackbar_out.xml"
     },
     {
-        "merged": "W:\\Android_stuff\\TimeManagement\\app\\build\\intermediates\\res\\merged\\debug\\anim\\design_snackbar_out.xml",
-        "source": "C:\\Users\\icyfillup\\.android\\build-cache\\891dce40efe3296fe3d04c57b5a5505246e6ea86\\output\\res\\anim\\design_snackbar_out.xml"
+        "merged": "/Users/Vahedi/Documents/Android/Git_Projects/New TimeManagement/TimeManagement/app/build/intermediates/res/merged/debug/anim/abc_fade_out.xml",
+        "source": "/Users/Vahedi/.android/build-cache/f5e158f2f9c539b29f7741e3d52200622287f7e2/output/res/anim/abc_fade_out.xml"
     },
     {
-        "merged": "W:\\Android_stuff\\TimeManagement\\app\\build\\intermediates\\res\\merged\\debug\\anim\\abc_slide_out_bottom.xml",
-        "source": "C:\\Users\\icyfillup\\.android\\build-cache\\a027631cee244203f572e361e51dfe97f71ecc5d\\output\\res\\anim\\abc_slide_out_bottom.xml"
+        "merged": "/Users/Vahedi/Documents/Android/Git_Projects/New TimeManagement/TimeManagement/app/build/intermediates/res/merged/debug/anim/design_fab_out.xml",
+        "source": "/Users/Vahedi/.android/build-cache/e7c43c2efac03d6347806792b3f409745fc85c37/output/res/anim/design_fab_out.xml"
     },
     {
-        "merged": "W:\\Android_stuff\\TimeManagement\\app\\build\\intermediates\\res\\merged\\debug\\anim\\abc_slide_out_top.xml",
-        "source": "C:\\Users\\icyfillup\\.android\\build-cache\\a027631cee244203f572e361e51dfe97f71ecc5d\\output\\res\\anim\\abc_slide_out_top.xml"
+        "merged": "/Users/Vahedi/Documents/Android/Git_Projects/New TimeManagement/TimeManagement/app/build/intermediates/res/merged/debug/anim/abc_slide_out_top.xml",
+        "source": "/Users/Vahedi/.android/build-cache/f5e158f2f9c539b29f7741e3d52200622287f7e2/output/res/anim/abc_slide_out_top.xml"
     },
     {
-        "merged": "W:\\Android_stuff\\TimeManagement\\app\\build\\intermediates\\res\\merged\\debug\\anim\\design_fab_out.xml",
-        "source": "C:\\Users\\icyfillup\\.android\\build-cache\\891dce40efe3296fe3d04c57b5a5505246e6ea86\\output\\res\\anim\\design_fab_out.xml"
+        "merged": "/Users/Vahedi/Documents/Android/Git_Projects/New TimeManagement/TimeManagement/app/build/intermediates/res/merged/debug/anim/abc_slide_out_bottom.xml",
+        "source": "/Users/Vahedi/.android/build-cache/f5e158f2f9c539b29f7741e3d52200622287f7e2/output/res/anim/abc_slide_out_bottom.xml"
     },
     {
-        "merged": "W:\\Android_stuff\\TimeManagement\\app\\build\\intermediates\\res\\merged\\debug\\anim\\abc_shrink_fade_out_from_bottom.xml",
-        "source": "C:\\Users\\icyfillup\\.android\\build-cache\\a027631cee244203f572e361e51dfe97f71ecc5d\\output\\res\\anim\\abc_shrink_fade_out_from_bottom.xml"
+        "merged": "/Users/Vahedi/Documents/Android/Git_Projects/New TimeManagement/TimeManagement/app/build/intermediates/res/merged/debug/anim/abc_fade_in.xml",
+        "source": "/Users/Vahedi/.android/build-cache/f5e158f2f9c539b29f7741e3d52200622287f7e2/output/res/anim/abc_fade_in.xml"
     },
     {
-        "merged": "W:\\Android_stuff\\TimeManagement\\app\\build\\intermediates\\res\\merged\\debug\\anim\\abc_slide_in_top.xml",
-        "source": "C:\\Users\\icyfillup\\.android\\build-cache\\a027631cee244203f572e361e51dfe97f71ecc5d\\output\\res\\anim\\abc_slide_in_top.xml"
+        "merged": "/Users/Vahedi/Documents/Android/Git_Projects/New TimeManagement/TimeManagement/app/build/intermediates/res/merged/debug/anim/abc_grow_fade_in_from_bottom.xml",
+        "source": "/Users/Vahedi/.android/build-cache/f5e158f2f9c539b29f7741e3d52200622287f7e2/output/res/anim/abc_grow_fade_in_from_bottom.xml"
     },
     {
-        "merged": "W:\\Android_stuff\\TimeManagement\\app\\build\\intermediates\\res\\merged\\debug\\anim\\abc_fade_out.xml",
-        "source": "C:\\Users\\icyfillup\\.android\\build-cache\\a027631cee244203f572e361e51dfe97f71ecc5d\\output\\res\\anim\\abc_fade_out.xml"
+        "merged": "/Users/Vahedi/Documents/Android/Git_Projects/New TimeManagement/TimeManagement/app/build/intermediates/res/merged/debug/anim/abc_popup_enter.xml",
+        "source": "/Users/Vahedi/.android/build-cache/f5e158f2f9c539b29f7741e3d52200622287f7e2/output/res/anim/abc_popup_enter.xml"
     },
     {
-        "merged": "W:\\Android_stuff\\TimeManagement\\app\\build\\intermediates\\res\\merged\\debug\\anim\\abc_popup_exit.xml",
-        "source": "C:\\Users\\icyfillup\\.android\\build-cache\\a027631cee244203f572e361e51dfe97f71ecc5d\\output\\res\\anim\\abc_popup_exit.xml"
+        "merged": "/Users/Vahedi/Documents/Android/Git_Projects/New TimeManagement/TimeManagement/app/build/intermediates/res/merged/debug/anim/abc_slide_in_bottom.xml",
+        "source": "/Users/Vahedi/.android/build-cache/f5e158f2f9c539b29f7741e3d52200622287f7e2/output/res/anim/abc_slide_in_bottom.xml"
     },
     {
-        "merged": "W:\\Android_stuff\\TimeManagement\\app\\build\\intermediates\\res\\merged\\debug\\anim\\design_snackbar_in.xml",
-        "source": "C:\\Users\\icyfillup\\.android\\build-cache\\891dce40efe3296fe3d04c57b5a5505246e6ea86\\output\\res\\anim\\design_snackbar_in.xml"
+        "merged": "/Users/Vahedi/Documents/Android/Git_Projects/New TimeManagement/TimeManagement/app/build/intermediates/res/merged/debug/anim/design_fab_in.xml",
+        "source": "/Users/Vahedi/.android/build-cache/e7c43c2efac03d6347806792b3f409745fc85c37/output/res/anim/design_fab_in.xml"
     }
 ]

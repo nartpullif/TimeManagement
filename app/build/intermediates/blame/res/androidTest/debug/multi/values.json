@@ -1,6 +1,6 @@
 [
     {
-        "outputFile": "W:\\Android_stuff\\TimeManagement\\app\\build\\intermediates\\incremental\\mergeDebugAndroidTestResources\\merged.dir\\values\\values.xml",
+        "outputFile": "/Users/Vahedi/Documents/Android/Git_Projects/New TimeManagement/TimeManagement/app/build/intermediates/incremental/mergeDebugAndroidTestResources/merged.dir/values/values.xml",
         "map": [
             {
                 "to": {
@@ -11,7 +11,7 @@
                     "endOffset": 96
                 },
                 "from": {
-                    "file": "C:\\Users\\icyfillup\\.android\\build-cache\\dfd9d6546da2dfd81292c4451e250a29f18724d5\\output\\res\\values\\values.xml",
+                    "file": "/Users/Vahedi/.android/build-cache/c3ab8896da17f58aa8a48ad614300ad4d5af7df8/output/res/values/values.xml",
                     "position": {
                         "startLine": 4,
                         "startColumn": 4,
