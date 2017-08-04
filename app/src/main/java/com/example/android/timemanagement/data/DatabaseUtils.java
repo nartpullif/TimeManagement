@@ -66,7 +66,10 @@ public class DatabaseUtils {
         return cursor;
     }
 
-
+    public static Cursor getTodaysTask(SQLiteDatabase db)
+    {
+        return getDaysTask(db, 0);
+    }
 
     public static Cursor getDaysTask(SQLiteDatabase db, int dayOffset) {
         Calendar c = GregorianCalendar.getInstance();
@@ -84,7 +87,12 @@ public class DatabaseUtils {
                 null);
     }
 
-    public static Cursor getThisWeeksTask(SQLiteDatabase db) {
+    public static Cursor getThisWeeksTask(SQLiteDatabase db)
+    {
+        return getWeeksTask(db, 0);
+    }
+
+    public static Cursor getWeeksTask(SQLiteDatabase db, int weekOffset) {
 
         Calendar c = GregorianCalendar.getInstance();
         c.setFirstDayOfWeek(Calendar.MONDAY);
@@ -93,6 +101,7 @@ public class DatabaseUtils {
 
         DateFormat dbDateFormat = new SimpleDateFormat("MM/dd/yyyy", Locale.getDefault());
 
+        c.add(Calendar.DATE, 7 * weekOffset);
         String startDate = dbDateFormat.format(c.getTime());
         c.add(Calendar.DATE, 6);
         String endDate = dbDateFormat.format(c.getTime());
@@ -109,13 +118,27 @@ public class DatabaseUtils {
 
     public static ArrayList<Cursor> getThisMonthTask(SQLiteDatabase db)
     {
+        return getMonthTask(db, 0);
+    }
+
+    public static ArrayList<Cursor> getMonthTask(SQLiteDatabase db, int monthOffset)
+    {
         ArrayList<Cursor> weeksCursor = new ArrayList<>();
         ///*debug: tracks what is currently in the weeksCursor by date*/ ArrayList<String> weekTracker = new ArrayList<>();
         DateFormat dbDateFormat = new SimpleDateFormat("MM/dd/yyyy", Locale.getDefault());
         Calendar c = Calendar.getInstance();
 
+        int month = c.get(Calendar.MONTH) + monthOffset;
+        int year = c.get(Calendar.YEAR);
+
+        while(month < 0)
+        {
+            month += 12;
+            year -= 1;
+        }
+
         int dayOfMonth = 1;
-        c.set(c.get(Calendar.YEAR), c.get(Calendar.MONTH), dayOfMonth);
+        c.set(year, month, dayOfMonth);
         //*debug: corner case for this method, April 2017 [two day ahead in the next month]*/c.set(c.get(Calendar.YEAR), Calendar.APRIL, dayOfMonth);
         int thisMonth = c.get(Calendar.MONTH);
 

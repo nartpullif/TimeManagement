@@ -43,8 +43,6 @@ import java.util.List;
 public class GraphActivity extends AppCompatActivity implements RadioGroup.OnCheckedChangeListener{
     private static final String TAG = "GraphActivity";
 
-    private Toolbar toolbar;
-
     private SQLiteDatabase database;
     private BarChart chart;
 
@@ -70,9 +68,6 @@ public class GraphActivity extends AppCompatActivity implements RadioGroup.OnChe
         // middle of the layout
         chart = (BarChart) findViewById(R.id.bar_chart);
 
-        // bottom of the layout
-        toolbar = (Toolbar) findViewById(R.id.graph_toolbar);
-
         Log.d(TAG, ": onCreate");
     }
 
@@ -86,11 +81,11 @@ public class GraphActivity extends AppCompatActivity implements RadioGroup.OnChe
             } else if (checkedId == R.id.week_button)
             {
                 currentDayButton = R.id.week_button;
-                weekBarChart();
+                weekBarChart(moveWeekBackTask);
             } else if (checkedId == R.id.month_button)
             {
                 currentDayButton = R.id.month_button;
-                monthBarChart();
+                monthBarChart(moveMonthBackTask);
             }
         }
     }
@@ -150,10 +145,12 @@ public class GraphActivity extends AppCompatActivity implements RadioGroup.OnChe
         else if(currentDayButton == R.id.week_button)
         {
             moveWeekBackTask -= 1;
+            weekBarChart(moveWeekBackTask);
         }
         else if(currentDayButton == R.id.month_button)
         {
             moveMonthBackTask -= 1;
+            monthBarChart(moveMonthBackTask);
         }
         Log.d(TAG, "- moveDayBackTask: " + moveDayBackTask);
         Log.d(TAG, "- moveWeekBackTask: " + moveWeekBackTask);
@@ -165,24 +162,27 @@ public class GraphActivity extends AppCompatActivity implements RadioGroup.OnChe
     {
         if(currentDayButton == R.id.today_button)
         {
-            if(moveDayBackTask <= 0)
+            if(moveDayBackTask >= 0)
             {
                 moveDayBackTask = 0;
             }
             else
             {
                 moveDayBackTask += 1;
+                daysBarChart(moveDayBackTask);
             }
+
         }
         else if(currentDayButton == R.id.week_button)
         {
-            if(moveWeekBackTask <= 0)
+            if(moveWeekBackTask >= 0)
             {
                 moveWeekBackTask = 0;
             }
             else
             {
                 moveWeekBackTask += 1;
+                weekBarChart(moveWeekBackTask);
             }
         }
         else if(currentDayButton == R.id.month_button)
@@ -194,6 +194,7 @@ public class GraphActivity extends AppCompatActivity implements RadioGroup.OnChe
             else
             {
                 moveMonthBackTask += 1;
+                monthBarChart(moveMonthBackTask);
             }
         }
         Log.d(TAG, "- moveDayBackTask: " + moveDayBackTask);
@@ -278,12 +279,12 @@ public class GraphActivity extends AppCompatActivity implements RadioGroup.OnChe
         Log.d("testing ", "stuff");
     }
 
-    public void weekBarChart()
+    public void weekBarChart(int weekOffset)
     {
         DBHelper dbHelper = new DBHelper(this);
         database = dbHelper.getReadableDatabase();
 
-        Cursor cursor = DatabaseUtils.getThisWeeksTask(database);
+        Cursor cursor = DatabaseUtils.getWeeksTask(database, weekOffset);
 
         HashMap<String, Integer> weekTask = new HashMap<>();
 
@@ -334,12 +335,12 @@ public class GraphActivity extends AppCompatActivity implements RadioGroup.OnChe
         makeBarChart(xdayVals, yMinVals, "Week");
     }
 
-    public void monthBarChart()
+    public void monthBarChart(int monthOffset)
     {
         DBHelper dbHelper = new DBHelper(this);
         database = dbHelper.getReadableDatabase();
 
-        ArrayList<Cursor> thisMonthWeekCursor = DatabaseUtils.getThisMonthTask(database);
+        ArrayList<Cursor> thisMonthWeekCursor = DatabaseUtils.getMonthTask(database, monthOffset);
         //ArrayList<String> dates = new ArrayList<>();
 
         ArrayList<BarEntry> yMinVals = new ArrayList();
