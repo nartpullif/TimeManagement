@@ -61,7 +61,7 @@ public class AddTaskActivity extends AppCompatActivity {
         endSetTime = new SetTime((EditText) findViewById(R.id.et_end), this);
 
         helper = new DBHelper(context);
-        db = helper.getReadableDatabase();
+        db = helper.getWritableDatabase();
 
         //load subject title from db to autoText
         cursor = DatabaseUtils.getAllSubject(db);
@@ -124,8 +124,8 @@ public class AddTaskActivity extends AppCompatActivity {
                     endSetTime.clear();
 
                     //if add task success go to main activity
-//                    Intent intent = new Intent(context, MainActivity.class);
-//                    startActivity(intent);
+                    Intent intent = new Intent(context, HomeTabActivity.class);
+                    startActivity(intent);
                     finish();
                 }else{
                     Toast.makeText(context, "Add task failed", Toast.LENGTH_SHORT).show();

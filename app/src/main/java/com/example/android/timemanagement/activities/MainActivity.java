@@ -51,9 +51,7 @@ public class MainActivity extends AppCompatActivity implements DatePickerFragmen
 
     private FragmentManager fragmentManager;
 
-
     private final String TAG = "mainActivity";
-
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -108,6 +106,27 @@ public class MainActivity extends AppCompatActivity implements DatePickerFragmen
     }
 
     @Override
+    protected void onPause()
+    {
+        Log.d(TAG, ": onPause");
+        super.onPause();
+    }
+
+    @Override
+    protected void onRestart()
+    {
+        Log.d(TAG, ": onRestart");
+        super.onRestart();
+    }
+
+    @Override
+    protected void onDestroy()
+    {
+        Log.d(TAG, ": onDestroy");
+        super.onDestroy();
+    }
+
+    @Override
     protected void onResume() {
         updateShow();
         super.onResume();
@@ -116,13 +135,20 @@ public class MainActivity extends AppCompatActivity implements DatePickerFragmen
     public void updateShow(){
         if(db == null) db = helper.getWritableDatabase();
         cursor = getDailyTask(db, dbDateFormat.format(currentDate));
-        int durationTimeMinutes = 0;
-        while(cursor.moveToNext()){
-            durationTimeMinutes += cursor.getInt(cursor.getColumnIndex(Contract.TABLE_TASK.COLUMN_NAME_TASK_TOTAL_MINUTES));
 
+        int durationTimeMinutes = 0;
+        if(cursor.moveToFirst())
+        {
+            do{
+                durationTimeMinutes += cursor.getInt(cursor.getColumnIndex(Contract.TABLE_TASK.COLUMN_NAME_TASK_TOTAL_MINUTES));
+            }while(cursor.moveToNext());
         }
+
         String durationTime = String.format("%d:%02d", durationTimeMinutes/60, durationTimeMinutes%60);
         tv_day_all.setText(durationTime);
+
+        cursor = getDailyTask(db, dbDateFormat.format(currentDate));
+        adapter.swapCursor(cursor);
     }
 
     @Override
