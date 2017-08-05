@@ -2,6 +2,7 @@ package com.example.android.timemanagement.activities;
 import java.util.HashMap;
 import java.util.Set;
 import com.example.android.timemanagement.R;
+import com.example.android.timemanagement.data.DBHelper;
 import com.example.android.timemanagement.utilities.PreferenceUtils;
 
 import android.app.Activity;
@@ -30,6 +31,7 @@ import android.widget.TextView;
 
 
 public class HomeTabActivity extends TabActivity  {
+    private static final String TAG = "HomeTabActivity";
 
     private static final String TAB_1= "Days";
     private static final String TAB_2 = "Total";
@@ -46,6 +48,49 @@ public class HomeTabActivity extends TabActivity  {
         setContentView(R.layout.activity_home_tab_main);
         PreferenceUtils.initSharePreference(this);
         setupView();
+    }
+
+    @Override
+    protected void onStart()
+    {
+        super.onStart();
+        Log.d(TAG, ": onStart");
+    }
+
+    @Override
+    protected void onResume()
+    {
+        super.onResume();
+        Log.d(TAG, ": onResume");
+    }
+
+    @Override
+    protected void onPause()
+    {
+        super.onPause();
+        Log.d(TAG, ": onPause");
+    }
+
+    @Override
+    protected void onStop()
+    {
+        Log.d(TAG, ": onStop");
+        super.onStop();
+        this.finish();
+    }
+
+    @Override
+    protected void onRestart()
+    {
+        super.onRestart();
+        Log.d(TAG, ": onRestart");
+    }
+
+    @Override
+    protected void onDestroy()
+    {
+        super.onDestroy();
+        Log.d(TAG, ": onDestroy");
     }
 
     private void setupView() {
