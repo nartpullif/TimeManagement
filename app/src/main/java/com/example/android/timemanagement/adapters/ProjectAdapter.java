@@ -85,10 +85,20 @@ public class ProjectAdapter extends RecyclerView.Adapter<ProjectAdapter.ProjectV
             numberOfTask = cursor.getString(cursor.getColumnIndex(Contract.TABLE_PROJECT.COLUMN_NAME_NUMBER_OF_TASKS));
             projectId = cursor.getInt(cursor.getColumnIndex(Contract.TABLE_PROJECT._ID));
 
-            if (numberOfTask.equals("1") || numberOfTask.equals("0")){
-                itemProjectName.setText(projectName + " ( " + numberOfTask + " task )");
+            if(numberOfTask.equals("0")){
+                if (excelExportButton.getVisibility()==View.VISIBLE)
+                    excelExportButton.setVisibility(View.INVISIBLE);
+
             }else {
-                itemProjectName.setText(projectName + " ( " + numberOfTask + " tasks )");
+                if(numberOfTask.equals("1")){
+                    itemProjectName.setText(projectName + " ( " + numberOfTask + " task )");
+                }
+                else{
+                    itemProjectName.setText(projectName + " ( " + numberOfTask + " tasks )");
+                }
+
+                if (excelExportButton.getVisibility()==View.INVISIBLE)
+                    excelExportButton.setVisibility(View.VISIBLE);
             }
         }
 
