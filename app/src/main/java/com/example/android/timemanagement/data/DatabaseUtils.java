@@ -54,6 +54,52 @@ public class DatabaseUtils {
         return cursor;
     }
 
+    public static Cursor getAllProjectWithTaskCount(SQLiteDatabase db){
+
+        String query =
+                "select count( " +
+                        Contract.TABLE_TASK.TABLE_NAME + "." + Contract.TABLE_TASK.COLUMN_NAME_PROJECT_ID + ") as " +
+                        Contract.TABLE_PROJECT.COLUMN_NAME_NUMBER_OF_TASKS +
+                        ", " + Contract.TABLE_PROJECT.TABLE_NAME + "." + Contract.TABLE_PROJECT.COLUMN_NAME_TITLE +
+                        ", " + Contract.TABLE_PROJECT.TABLE_NAME + "." + Contract.TABLE_PROJECT._ID +
+                        " from " + Contract.TABLE_TASK.TABLE_NAME +
+                        " inner join " + Contract.TABLE_PROJECT.TABLE_NAME +
+                        " on (" + Contract.TABLE_TASK.TABLE_NAME + "." + Contract.TABLE_TASK.COLUMN_NAME_PROJECT_ID + " = " + Contract.TABLE_PROJECT.TABLE_NAME + "." + Contract.TABLE_SUBJECT._ID+  ")" +
+                        " group by " + Contract.TABLE_TASK.TABLE_NAME + "." + Contract.TABLE_TASK.COLUMN_NAME_PROJECT_ID + " , "  + Contract.TABLE_PROJECT.TABLE_NAME + "." + Contract.TABLE_PROJECT._ID +
+                        " order by " +  Contract.TABLE_PROJECT.TABLE_NAME + "." + Contract.TABLE_PROJECT.COLUMN_NAME_TITLE ;
+
+
+        Log.d(TAG, "Select table SQL: " + query);
+        Cursor cursor = db.rawQuery(query, null);
+        Log.v("Cursor Object", android.database.DatabaseUtils.dumpCursorToString(cursor));
+
+        return cursor;
+    }
+
+    public static Cursor getAllTasksOfProject(SQLiteDatabase db, int projectId){
+
+        String query =
+                "select " +
+                        Contract.TABLE_TASK.COLUMN_NAME_DATE +
+                        ", " + Contract.TABLE_TASK.COLUMN_NAME_START_HOUR +
+                        ", " + Contract.TABLE_TASK.COLUMN_NAME_START_MINUTE +
+                        ", " + Contract.TABLE_TASK.COLUMN_NAME_START_MID_DAY +
+                        ", " + Contract.TABLE_TASK.COLUMN_NAME_END_HOUR +
+                        ", " + Contract.TABLE_TASK.COLUMN_NAME_END_MINUTE +
+                        ", " + Contract.TABLE_TASK.COLUMN_NAME_END_MID_DAY +
+                        ", " + Contract.TABLE_TASK.COLUMN_NAME_TASK_TOTAL_MINUTES +
+                        " from " + Contract.TABLE_TASK.TABLE_NAME +
+                        " where "+ Contract.TABLE_TASK.TABLE_NAME + "." + Contract.TABLE_TASK.COLUMN_NAME_PROJECT_ID + " = "+ String.valueOf(projectId) +
+                        " order by " +  Contract.TABLE_TASK.TABLE_NAME + "." + Contract.TABLE_TASK.COLUMN_NAME_DATE ;
+
+
+        Log.d(TAG, "Select table SQL: " + query);
+        Cursor cursor = db.rawQuery(query, null);
+        Log.v("Cursor Object", android.database.DatabaseUtils.dumpCursorToString(cursor));
+
+        return cursor;
+    }
+
     public static Cursor getAllSubject(SQLiteDatabase db) {
         Cursor cursor = db.query(
                 Contract.TABLE_SUBJECT.TABLE_NAME,
@@ -277,6 +323,7 @@ public class DatabaseUtils {
         //INNER JOIN subjects S ON T.subjectId = S._id
         //INNER JOIN projects P ON T.projectId = P._id
         //WHERE T.date = ? ;
+        /*
         String query = "SELECT " + taskAlias + "." + Contract.TABLE_TASK._ID +
                 ", " + subjectAlias + "." + Contract.TABLE_SUBJECT.COLUMN_NAME_TITLE + " AS " + Contract.TABLE_TASK.COLUMN_NAME_SUBJECT_TITLE +
                 ", " + projectAlias + "." + Contract.TABLE_PROJECT.COLUMN_NAME_TITLE + " AS " + Contract.TABLE_TASK.COLUMN_NAME_PROJECT_TITLE +
@@ -295,6 +342,18 @@ public class DatabaseUtils {
                 taskAlias + "." + Contract.TABLE_TASK.COLUMN_NAME_SUBJECT_ID + " = " + projectAlias + "." + Contract.TABLE_PROJECT._ID +
                 " WHERE " + taskAlias + "." + Contract.TABLE_TASK.COLUMN_NAME_DATE + "  between '" + start + "'and  '" + end + "';";
         //" WHERE 0;";
+        */
+        String query =
+                "select *, " +
+                        Contract.TABLE_SUBJECT.TABLE_NAME + "." + Contract.TABLE_SUBJECT.COLUMN_NAME_TITLE + " as " + Contract.TABLE_TASK.COLUMN_NAME_SUBJECT_TITLE +
+                        ", " + Contract.TABLE_PROJECT.TABLE_NAME + "." + Contract.TABLE_PROJECT.COLUMN_NAME_TITLE + " as " + Contract.TABLE_TASK.COLUMN_NAME_PROJECT_TITLE +
+                        " from " + Contract.TABLE_TASK.TABLE_NAME +
+                        " inner join " + Contract.TABLE_SUBJECT.TABLE_NAME +
+                        " on (" + Contract.TABLE_TASK.TABLE_NAME + "." + Contract.TABLE_TASK.COLUMN_NAME_SUBJECT_ID + " = " + Contract.TABLE_SUBJECT.TABLE_NAME + "." + Contract.TABLE_SUBJECT._ID+  ")" +
+                        " inner join " + Contract.TABLE_PROJECT.TABLE_NAME +
+                        " on (" + Contract.TABLE_TASK.TABLE_NAME + "." + Contract.TABLE_TASK.COLUMN_NAME_PROJECT_ID + " = " + Contract.TABLE_PROJECT.TABLE_NAME + "." + Contract.TABLE_PROJECT._ID+  ")" +
+                        " where " + Contract.TABLE_TASK.TABLE_NAME + "." + Contract.TABLE_TASK.COLUMN_NAME_DATE + "  between '" + start + "'and  '" + end + "'";
+
 
         Log.d(TAG, "Select table SQL: " + query);
         Cursor cursor = db.rawQuery(query, null);
@@ -324,6 +383,7 @@ public class DatabaseUtils {
         //INNER JOIN subjects S ON T.subjectId = S._id
         //INNER JOIN projects P ON T.projectId = P._id
         //WHERE T.date = ? ;
+        /*
         String query = "SELECT " + taskAlias + "." + Contract.TABLE_TASK._ID +
                 ", " + subjectAlias + "." + Contract.TABLE_SUBJECT.COLUMN_NAME_TITLE + " AS " + Contract.TABLE_TASK.COLUMN_NAME_SUBJECT_TITLE +
                 ", " + projectAlias + "." + Contract.TABLE_PROJECT.COLUMN_NAME_TITLE + " AS " + Contract.TABLE_TASK.COLUMN_NAME_PROJECT_TITLE +
@@ -341,8 +401,18 @@ public class DatabaseUtils {
                 " INNER JOIN " + Contract.TABLE_PROJECT.TABLE_NAME + projectAlias + " ON " +
                 taskAlias + "." + Contract.TABLE_TASK.COLUMN_NAME_SUBJECT_ID + " = " + projectAlias + "." + Contract.TABLE_PROJECT._ID +
                 " WHERE " + taskAlias + "." + Contract.TABLE_TASK.COLUMN_NAME_DATE + " = '" + date + "';";
+        */
         //" WHERE 0;";
-
+        String query =
+                "select *, " +
+                Contract.TABLE_SUBJECT.TABLE_NAME + "." + Contract.TABLE_SUBJECT.COLUMN_NAME_TITLE + " as " + Contract.TABLE_TASK.COLUMN_NAME_SUBJECT_TITLE +
+                ", " + Contract.TABLE_PROJECT.TABLE_NAME + "." + Contract.TABLE_PROJECT.COLUMN_NAME_TITLE + " as " + Contract.TABLE_TASK.COLUMN_NAME_PROJECT_TITLE +
+                " from " + Contract.TABLE_TASK.TABLE_NAME +
+                " inner join " + Contract.TABLE_SUBJECT.TABLE_NAME +
+                " on (" + Contract.TABLE_TASK.TABLE_NAME + "." + Contract.TABLE_TASK.COLUMN_NAME_SUBJECT_ID + " = " + Contract.TABLE_SUBJECT.TABLE_NAME + "." + Contract.TABLE_SUBJECT._ID+  ")" +
+                " inner join " + Contract.TABLE_PROJECT.TABLE_NAME +
+                " on (" + Contract.TABLE_TASK.TABLE_NAME + "." + Contract.TABLE_TASK.COLUMN_NAME_PROJECT_ID + " = " + Contract.TABLE_PROJECT.TABLE_NAME + "." + Contract.TABLE_PROJECT._ID+  ")" +
+                " where " + Contract.TABLE_TASK.TABLE_NAME + "." + Contract.TABLE_TASK.COLUMN_NAME_DATE + " = '"  + date + "'";
         Log.d(TAG, "Select table SQL: " + query);
         Cursor cursor = db.rawQuery(query, null);
         Log.v("Cursor Object", android.database.DatabaseUtils.dumpCursorToString(cursor));
@@ -414,7 +484,11 @@ public class DatabaseUtils {
         Cursor cursor = db.query(tableName, columns, selection, selectionArgs, null, null, null, limit);
         Log.v("Cursor Object", android.database.DatabaseUtils.dumpCursorToString(cursor));
         if (cursor.moveToFirst()) {
-            id = cursor.getInt(cursor.getColumnIndex("_id"));
+            do
+            {
+                id = cursor.getInt(cursor.getColumnIndex("_id"));
+            }
+            while(cursor.moveToNext());
         }
         cursor.close();
         return id;

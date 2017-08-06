@@ -48,6 +48,8 @@ public class GraphActivity extends AppCompatActivity implements RadioGroup.OnChe
     private static final String TAG = "GraphActivity";
 
     private SQLiteDatabase database;
+    private DBHelper dbHelper;
+
     private BarChart chart;
     private TextView localDate;
     private SegmentedRadioGroup DayRadioButton;
@@ -108,8 +110,10 @@ public class GraphActivity extends AppCompatActivity implements RadioGroup.OnChe
     protected void onStart()
     {
         super.onStart();
-        daysBarChart(moveDayBackTask);
+        dbHelper = new DBHelper(this);
+        database = dbHelper.getReadableDatabase();
 
+        daysBarChart(moveDayBackTask);
         Log.d("GraphActivity: ", "onStart");
     }
 
@@ -117,21 +121,23 @@ public class GraphActivity extends AppCompatActivity implements RadioGroup.OnChe
     protected void onResume()
     {
         super.onResume();
-        Log.d("GraphActivity: ", "onResume");
+        Log.d(TAG, ": onResume");
     }
 
     @Override
     protected void onPause()
     {
         super.onPause();
-        Log.d("GraphActivity: ", "onPause");
+        Log.d(TAG, ": onPause");
     }
 
     @Override
     protected void onStop()
     {
         super.onStop();
-        Log.d("GraphActivity: ", "onStop");
+        if(dbHelper != null) dbHelper.close();
+        if(database != null) database.close();
+        Log.d(TAG, ": onStop");
         this.finish();
     }
 
@@ -139,14 +145,14 @@ public class GraphActivity extends AppCompatActivity implements RadioGroup.OnChe
     protected void onRestart()
     {
         super.onRestart();
-        Log.d("GraphActivity: ", "onRestart");
+        Log.d(TAG, ": onRestart");
     }
 
     @Override
     protected void onDestroy()
     {
         super.onDestroy();
-        Log.d("GraphActivity: ", "onDestroy");
+        Log.d(TAG, ": onDestroy");
     }
 
     public void onPreviousButton(View view)
@@ -219,9 +225,6 @@ public class GraphActivity extends AppCompatActivity implements RadioGroup.OnChe
 
     public void daysBarChart(int dayOffset)
     {
-        DBHelper dbHelper = new DBHelper(this);
-        database = dbHelper.getReadableDatabase();
-
         Cursor cursor = DatabaseUtils.getDaysTask(database, dayOffset);
         localDate.setText(DatabaseUtils.getDay(dayOffset));
 
@@ -292,9 +295,6 @@ public class GraphActivity extends AppCompatActivity implements RadioGroup.OnChe
 
     public void weekBarChart(int weekOffset)
     {
-        DBHelper dbHelper = new DBHelper(this);
-        database = dbHelper.getReadableDatabase();
-
         Cursor cursor = DatabaseUtils.getWeeksTask(database, weekOffset);
         localDate.setText(DatabaseUtils.getWeek(weekOffset));
 
@@ -399,9 +399,6 @@ public class GraphActivity extends AppCompatActivity implements RadioGroup.OnChe
 
     public void monthBarChart(int monthOffset)
     {
-        DBHelper dbHelper = new DBHelper(this);
-        database = dbHelper.getReadableDatabase();
-
         ArrayList<Cursor> thisMonthWeekCursor = DatabaseUtils.getMonthTask(database, monthOffset);
         localDate.setText(DatabaseUtils.getMonth(monthOffset));
         //ArrayList<String> dates = new ArrayList<>();

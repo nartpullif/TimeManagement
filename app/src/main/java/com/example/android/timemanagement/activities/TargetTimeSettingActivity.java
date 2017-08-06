@@ -1,5 +1,6 @@
 package com.example.android.timemanagement.activities;
 
+import android.content.Intent;
 import android.support.v4.app.FragmentManager;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
@@ -18,6 +19,7 @@ import java.util.HashMap;
 public class TargetTimeSettingActivity extends AppCompatActivity implements SetHourFragment.OnSetTargetTimeCloseListerner{
 
     private HashMap<Integer, TextView> dayTargetTime;
+    private TextView goToProjectsList;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -31,6 +33,8 @@ public class TargetTimeSettingActivity extends AppCompatActivity implements SetH
     }
     public void initTextViewTargetTime()
     {
+        goToProjectsList = (TextView) findViewById(R.id.go_to_project_list);
+
         TextView mondayTargetTime = (TextView) findViewById(R.id.date_monday_time);
         mondayTargetTime.setText(PreferenceUtils.getDayTargetTime(this, PreferenceUtils.MONDAY_TARGET_TIME));
         dayTargetTime.put(R.id.date_monday_time, mondayTargetTime);
@@ -150,5 +154,15 @@ public class TargetTimeSettingActivity extends AppCompatActivity implements SetH
         int rid = R.id.date_sunday_time;
         onFragmentPopUp(rid);
 //        Toast.makeText(this, "onClickSunday", Toast.LENGTH_LONG).show();
+    }
+
+    public void onClickGoToProjectsList(View view)
+    {
+        Intent intent = new Intent(TargetTimeSettingActivity.this, ProjectsList.class);
+        startActivity(intent);
+        //int rid = R.id.date_monday_time;
+        //onFragmentPopUp(rid);
+
+        //Toast.makeText(this, "go to projects list", Toast.LENGTH_SHORT).show();
     }
 }

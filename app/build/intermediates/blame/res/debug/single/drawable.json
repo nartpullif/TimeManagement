@@ -108,6 +108,10 @@
         "source": "/Users/Vahedi/.android/build-cache/f5e158f2f9c539b29f7741e3d52200622287f7e2/output/res/drawable/abc_spinner_textfield_background_material.xml"
     },
     {
+        "merged": "/Users/Vahedi/Documents/Android/TestProjects/TimeManagement-master/TimeManagement/app/build/intermediates/res/merged/debug/drawable/excelicon.png",
+        "source": "/Users/Vahedi/Documents/Android/TestProjects/TimeManagement-master/TimeManagement/app/src/main/res/drawable/excelicon.png"
+    },
+    {
         "merged": "/Users/Vahedi/Documents/Android/TestProjects/TimeManagement-master/TimeManagement/app/build/intermediates/res/merged/debug/drawable/activities_toolbar_line.xml",
         "source": "/Users/Vahedi/Documents/Android/TestProjects/TimeManagement-master/TimeManagement/app/src/main/res/drawable/activities_toolbar_line.xml"
     },

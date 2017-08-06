@@ -96,6 +96,10 @@
         "source": "/Users/Vahedi/.android/build-cache/f5e158f2f9c539b29f7741e3d52200622287f7e2/output/res/drawable-mdpi/abc_list_selector_disabled_holo_light.9.png"
     },
     {
+        "merged": "/Users/Vahedi/Documents/Android/TestProjects/TimeManagement-master/TimeManagement/app/build/intermediates/res/merged/debug/drawable-mdpi/excelicon.png",
+        "source": "/Users/Vahedi/Documents/Android/TestProjects/TimeManagement-master/TimeManagement/app/src/main/res/drawable-mdpi/excelicon.png"
+    },
+    {
         "merged": "/Users/Vahedi/Documents/Android/TestProjects/TimeManagement-master/TimeManagement/app/build/intermediates/res/merged/debug/drawable-mdpi/ic_setting.png",
         "source": "/Users/Vahedi/Documents/Android/TestProjects/TimeManagement-master/TimeManagement/app/src/main/res/drawable-mdpi/ic_setting.png"
     },

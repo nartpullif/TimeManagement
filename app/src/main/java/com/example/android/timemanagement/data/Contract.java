@@ -37,5 +37,6 @@ public class Contract {
         public static final String TABLE_NAME = "projects";
 
         public static final String COLUMN_NAME_TITLE = "title";
+        public static final String COLUMN_NAME_NUMBER_OF_TASKS = "numberOfTasks";
     }
 }

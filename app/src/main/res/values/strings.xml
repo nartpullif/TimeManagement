@@ -22,4 +22,13 @@
 
     <!--string for target time activity-->
     <string name="set_button">Set</string>
+
+    <!--string for ProjectsList activity-->
+    <string name="projects_string">Projects</string>
+    <string name="greater_than_string">  &gt;  </string>
+    <string name="projects_toast_string">Project Toast</string>
+    <string name="project_excel_file_name">myExcel.xls</string>
+
+
+
 </resources>

@@ -60,12 +60,12 @@
         "source": "/Users/Vahedi/.android/build-cache/f5e158f2f9c539b29f7741e3d52200622287f7e2/output/res/drawable-hdpi/abc_menu_hardkey_panel_mtrl_mult.9.png"
     },
     {
-        "merged": "/Users/Vahedi/Documents/Android/TestProjects/TimeManagement-master/TimeManagement/app/build/intermediates/res/merged/debug/drawable-hdpi/abc_tab_indicator_mtrl_alpha.9.png",
-        "source": "/Users/Vahedi/.android/build-cache/f5e158f2f9c539b29f7741e3d52200622287f7e2/output/res/drawable-hdpi/abc_tab_indicator_mtrl_alpha.9.png"
-    },
-    {
         "merged": "/Users/Vahedi/Documents/Android/TestProjects/TimeManagement-master/TimeManagement/app/build/intermediates/res/merged/debug/drawable-hdpi/segment_grey_press.9.png",
         "source": "/Users/Vahedi/Documents/Android/TestProjects/TimeManagement-master/TimeManagement/app/src/main/res/drawable-hdpi/segment_grey_press.9.png"
+    },
+    {
+        "merged": "/Users/Vahedi/Documents/Android/TestProjects/TimeManagement-master/TimeManagement/app/build/intermediates/res/merged/debug/drawable-hdpi/abc_tab_indicator_mtrl_alpha.9.png",
+        "source": "/Users/Vahedi/.android/build-cache/f5e158f2f9c539b29f7741e3d52200622287f7e2/output/res/drawable-hdpi/abc_tab_indicator_mtrl_alpha.9.png"
     },
     {
         "merged": "/Users/Vahedi/Documents/Android/TestProjects/TimeManagement-master/TimeManagement/app/build/intermediates/res/merged/debug/drawable-hdpi/segment_radio_white_right.9.png",
@@ -214,6 +214,10 @@
     {
         "merged": "/Users/Vahedi/Documents/Android/TestProjects/TimeManagement-master/TimeManagement/app/build/intermediates/res/merged/debug/drawable-hdpi/abc_ic_menu_moreoverflow_mtrl_alpha.png",
         "source": "/Users/Vahedi/.android/build-cache/f5e158f2f9c539b29f7741e3d52200622287f7e2/output/res/drawable-hdpi/abc_ic_menu_moreoverflow_mtrl_alpha.png"
+    },
+    {
+        "merged": "/Users/Vahedi/Documents/Android/TestProjects/TimeManagement-master/TimeManagement/app/build/intermediates/res/merged/debug/drawable-hdpi/excelicon.png",
+        "source": "/Users/Vahedi/Documents/Android/TestProjects/TimeManagement-master/TimeManagement/app/src/main/res/drawable-hdpi/excelicon.png"
     },
     {
         "merged": "/Users/Vahedi/Documents/Android/TestProjects/TimeManagement-master/TimeManagement/app/build/intermediates/res/merged/debug/drawable-hdpi/segment_radio_white_left_focus.9.png",

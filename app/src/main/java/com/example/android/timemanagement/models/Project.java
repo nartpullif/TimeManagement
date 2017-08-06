@@ -7,9 +7,20 @@ package com.example.android.timemanagement.models;
 public class Project {
 
     private String title;
+    private int numberOfTasks;
+
 
     public Project(String title) {
         this.title = title;
+    }
+
+
+    public int getNumberOfTasks() {
+        return numberOfTasks;
+    }
+
+    public void setNumberOfTasks(int numberOfTasks) {
+        this.numberOfTasks = numberOfTasks;
     }
 
     public String getTitle() {

@@ -72,6 +72,10 @@
         "source": "/Users/Vahedi/.android/build-cache/e7c43c2efac03d6347806792b3f409745fc85c37/output/res/layout/design_navigation_item_separator.xml"
     },
     {
+        "merged": "/Users/Vahedi/Documents/Android/TestProjects/TimeManagement-master/TimeManagement/app/build/intermediates/res/merged/debug/layout/activity_projects_list.xml",
+        "source": "/Users/Vahedi/Documents/Android/TestProjects/TimeManagement-master/TimeManagement/app/src/main/res/layout/activity_projects_list.xml"
+    },
+    {
         "merged": "/Users/Vahedi/Documents/Android/TestProjects/TimeManagement-master/TimeManagement/app/build/intermediates/res/merged/debug/layout/support_simple_spinner_dropdown_item.xml",
         "source": "/Users/Vahedi/.android/build-cache/f5e158f2f9c539b29f7741e3d52200622287f7e2/output/res/layout/support_simple_spinner_dropdown_item.xml"
     },
@@ -226,5 +230,9 @@
     {
         "merged": "/Users/Vahedi/Documents/Android/TestProjects/TimeManagement-master/TimeManagement/app/build/intermediates/res/merged/debug/layout/design_navigation_item_header.xml",
         "source": "/Users/Vahedi/.android/build-cache/e7c43c2efac03d6347806792b3f409745fc85c37/output/res/layout/design_navigation_item_header.xml"
+    },
+    {
+        "merged": "/Users/Vahedi/Documents/Android/TestProjects/TimeManagement-master/TimeManagement/app/build/intermediates/res/merged/debug/layout/project_list_item.xml",
+        "source": "/Users/Vahedi/Documents/Android/TestProjects/TimeManagement-master/TimeManagement/app/src/main/res/layout/project_list_item.xml"
     }
 ]

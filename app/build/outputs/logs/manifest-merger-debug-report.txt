@@ -1,6 +1,6 @@
 -- Merging decision tree log ---
 manifest
-ADDED from /Users/Vahedi/Documents/Android/TestProjects/TimeManagement-master/TimeManagement/app/src/main/AndroidManifest.xml:2:1-63:12
+ADDED from /Users/Vahedi/Documents/Android/TestProjects/TimeManagement-master/TimeManagement/app/src/main/AndroidManifest.xml:2:1-53:12
 	package
 		ADDED from /Users/Vahedi/Documents/Android/TestProjects/TimeManagement-master/TimeManagement/app/src/main/AndroidManifest.xml:3:5-49
 		INJECTED from /Users/Vahedi/Documents/Android/TestProjects/TimeManagement-master/TimeManagement/app/src/main/AndroidManifest.xml
@@ -14,7 +14,7 @@ ADDED from /Users/Vahedi/Documents/Android/TestProjects/TimeManagement-master/Ti
 		INJECTED from /Users/Vahedi/Documents/Android/TestProjects/TimeManagement-master/TimeManagement/app/src/main/AndroidManifest.xml
 		INJECTED from /Users/Vahedi/Documents/Android/TestProjects/TimeManagement-master/TimeManagement/app/src/main/AndroidManifest.xml
 application
-ADDED from /Users/Vahedi/Documents/Android/TestProjects/TimeManagement-master/TimeManagement/app/src/main/AndroidManifest.xml:5:5-61:19
+ADDED from /Users/Vahedi/Documents/Android/TestProjects/TimeManagement-master/TimeManagement/app/src/main/AndroidManifest.xml:5:5-51:19
 MERGED from [com.android.support:design:23.0.1] /Users/Vahedi/.android/build-cache/e7c43c2efac03d6347806792b3f409745fc85c37/output/AndroidManifest.xml:22:5-20
 MERGED from [com.android.support:appcompat-v7:23.0.1] /Users/Vahedi/.android/build-cache/f5e158f2f9c539b29f7741e3d52200622287f7e2/output/AndroidManifest.xml:22:5-20
 MERGED from [com.android.support.constraint:constraint-layout:1.0.2] /Users/Vahedi/.android/build-cache/1dcba599fb1cc3d34949cbeb95daa92281230e3c/output/AndroidManifest.xml:9:5-20
@@ -38,77 +38,81 @@ MERGED from [com.android.support:support-v4:23.0.1] /Users/Vahedi/.android/build
 	android:theme
 		ADDED from /Users/Vahedi/Documents/Android/TestProjects/TimeManagement-master/TimeManagement/app/src/main/AndroidManifest.xml:10:9-40
 activity#com.example.android.timemanagement.activities.HomeTabActivity
-ADDED from /Users/Vahedi/Documents/Android/TestProjects/TimeManagement-master/TimeManagement/app/src/main/AndroidManifest.xml:12:9-18:20
+ADDED from /Users/Vahedi/Documents/Android/TestProjects/TimeManagement-master/TimeManagement/app/src/main/AndroidManifest.xml:11:9-17:20
 	android:name
-		ADDED from /Users/Vahedi/Documents/Android/TestProjects/TimeManagement-master/TimeManagement/app/src/main/AndroidManifest.xml:12:19-61
+		ADDED from /Users/Vahedi/Documents/Android/TestProjects/TimeManagement-master/TimeManagement/app/src/main/AndroidManifest.xml:11:19-61
 intent-filter#android.intent.action.MAIN+android.intent.category.LAUNCHER
-ADDED from /Users/Vahedi/Documents/Android/TestProjects/TimeManagement-master/TimeManagement/app/src/main/AndroidManifest.xml:13:13-17:30
+ADDED from /Users/Vahedi/Documents/Android/TestProjects/TimeManagement-master/TimeManagement/app/src/main/AndroidManifest.xml:12:13-16:29
 action#android.intent.action.MAIN
-ADDED from /Users/Vahedi/Documents/Android/TestProjects/TimeManagement-master/TimeManagement/app/src/main/AndroidManifest.xml:14:17-69
+ADDED from /Users/Vahedi/Documents/Android/TestProjects/TimeManagement-master/TimeManagement/app/src/main/AndroidManifest.xml:13:17-69
 	android:name
-		ADDED from /Users/Vahedi/Documents/Android/TestProjects/TimeManagement-master/TimeManagement/app/src/main/AndroidManifest.xml:14:25-66
+		ADDED from /Users/Vahedi/Documents/Android/TestProjects/TimeManagement-master/TimeManagement/app/src/main/AndroidManifest.xml:13:25-66
 category#android.intent.category.LAUNCHER
-ADDED from /Users/Vahedi/Documents/Android/TestProjects/TimeManagement-master/TimeManagement/app/src/main/AndroidManifest.xml:16:14-74
+ADDED from /Users/Vahedi/Documents/Android/TestProjects/TimeManagement-master/TimeManagement/app/src/main/AndroidManifest.xml:15:17-77
 	android:name
-		ADDED from /Users/Vahedi/Documents/Android/TestProjects/TimeManagement-master/TimeManagement/app/src/main/AndroidManifest.xml:16:24-71
+		ADDED from /Users/Vahedi/Documents/Android/TestProjects/TimeManagement-master/TimeManagement/app/src/main/AndroidManifest.xml:15:27-74
 activity#com.example.android.timemanagement.activities.MainActivity
-ADDED from /Users/Vahedi/Documents/Android/TestProjects/TimeManagement-master/TimeManagement/app/src/main/AndroidManifest.xml:20:9-61
+ADDED from /Users/Vahedi/Documents/Android/TestProjects/TimeManagement-master/TimeManagement/app/src/main/AndroidManifest.xml:18:9-61
 	android:name
-		ADDED from /Users/Vahedi/Documents/Android/TestProjects/TimeManagement-master/TimeManagement/app/src/main/AndroidManifest.xml:20:19-58
+		ADDED from /Users/Vahedi/Documents/Android/TestProjects/TimeManagement-master/TimeManagement/app/src/main/AndroidManifest.xml:18:19-58
 activity#com.example.android.timemanagement.activities.AddTaskActivity
-ADDED from /Users/Vahedi/Documents/Android/TestProjects/TimeManagement-master/TimeManagement/app/src/main/AndroidManifest.xml:22:9-29:20
+ADDED from /Users/Vahedi/Documents/Android/TestProjects/TimeManagement-master/TimeManagement/app/src/main/AndroidManifest.xml:19:9-26:20
 	android:label
-		ADDED from /Users/Vahedi/Documents/Android/TestProjects/TimeManagement-master/TimeManagement/app/src/main/AndroidManifest.xml:24:13-51
+		ADDED from /Users/Vahedi/Documents/Android/TestProjects/TimeManagement-master/TimeManagement/app/src/main/AndroidManifest.xml:21:13-51
 	android:parentActivityName
-		ADDED from /Users/Vahedi/Documents/Android/TestProjects/TimeManagement-master/TimeManagement/app/src/main/AndroidManifest.xml:25:13-66
+		ADDED from /Users/Vahedi/Documents/Android/TestProjects/TimeManagement-master/TimeManagement/app/src/main/AndroidManifest.xml:22:13-66
 	android:name
-		ADDED from /Users/Vahedi/Documents/Android/TestProjects/TimeManagement-master/TimeManagement/app/src/main/AndroidManifest.xml:23:13-55
+		ADDED from /Users/Vahedi/Documents/Android/TestProjects/TimeManagement-master/TimeManagement/app/src/main/AndroidManifest.xml:20:13-55
 meta-data#android.support.PARENT_ACTIVITY
-ADDED from /Users/Vahedi/Documents/Android/TestProjects/TimeManagement-master/TimeManagement/app/src/main/AndroidManifest.xml:26:13-28:60
+ADDED from /Users/Vahedi/Documents/Android/TestProjects/TimeManagement-master/TimeManagement/app/src/main/AndroidManifest.xml:23:13-25:60
 	android:value
-		ADDED from /Users/Vahedi/Documents/Android/TestProjects/TimeManagement-master/TimeManagement/app/src/main/AndroidManifest.xml:28:17-57
+		ADDED from /Users/Vahedi/Documents/Android/TestProjects/TimeManagement-master/TimeManagement/app/src/main/AndroidManifest.xml:25:17-57
 	android:name
-		ADDED from /Users/Vahedi/Documents/Android/TestProjects/TimeManagement-master/TimeManagement/app/src/main/AndroidManifest.xml:27:17-63
+		ADDED from /Users/Vahedi/Documents/Android/TestProjects/TimeManagement-master/TimeManagement/app/src/main/AndroidManifest.xml:24:17-63
 activity#com.example.android.timemanagement.activities.UpdateTaskActivity
-ADDED from /Users/Vahedi/Documents/Android/TestProjects/TimeManagement-master/TimeManagement/app/src/main/AndroidManifest.xml:31:9-38:20
+ADDED from /Users/Vahedi/Documents/Android/TestProjects/TimeManagement-master/TimeManagement/app/src/main/AndroidManifest.xml:27:9-34:20
 	android:label
-		ADDED from /Users/Vahedi/Documents/Android/TestProjects/TimeManagement-master/TimeManagement/app/src/main/AndroidManifest.xml:33:13-54
+		ADDED from /Users/Vahedi/Documents/Android/TestProjects/TimeManagement-master/TimeManagement/app/src/main/AndroidManifest.xml:29:13-54
 	android:parentActivityName
-		ADDED from /Users/Vahedi/Documents/Android/TestProjects/TimeManagement-master/TimeManagement/app/src/main/AndroidManifest.xml:34:13-66
+		ADDED from /Users/Vahedi/Documents/Android/TestProjects/TimeManagement-master/TimeManagement/app/src/main/AndroidManifest.xml:30:13-66
 	android:name
-		ADDED from /Users/Vahedi/Documents/Android/TestProjects/TimeManagement-master/TimeManagement/app/src/main/AndroidManifest.xml:32:13-58
+		ADDED from /Users/Vahedi/Documents/Android/TestProjects/TimeManagement-master/TimeManagement/app/src/main/AndroidManifest.xml:28:13-58
 activity#com.example.android.timemanagement.activities.TotalActivity
-ADDED from /Users/Vahedi/Documents/Android/TestProjects/TimeManagement-master/TimeManagement/app/src/main/AndroidManifest.xml:40:9-62
+ADDED from /Users/Vahedi/Documents/Android/TestProjects/TimeManagement-master/TimeManagement/app/src/main/AndroidManifest.xml:35:9-62
 	android:name
-		ADDED from /Users/Vahedi/Documents/Android/TestProjects/TimeManagement-master/TimeManagement/app/src/main/AndroidManifest.xml:40:19-59
+		ADDED from /Users/Vahedi/Documents/Android/TestProjects/TimeManagement-master/TimeManagement/app/src/main/AndroidManifest.xml:35:19-59
 activity#com.example.android.timemanagement.activities.GraphActivity
-ADDED from /Users/Vahedi/Documents/Android/TestProjects/TimeManagement-master/TimeManagement/app/src/main/AndroidManifest.xml:42:9-62
+ADDED from /Users/Vahedi/Documents/Android/TestProjects/TimeManagement-master/TimeManagement/app/src/main/AndroidManifest.xml:36:9-62
 	android:name
-		ADDED from /Users/Vahedi/Documents/Android/TestProjects/TimeManagement-master/TimeManagement/app/src/main/AndroidManifest.xml:42:19-59
+		ADDED from /Users/Vahedi/Documents/Android/TestProjects/TimeManagement-master/TimeManagement/app/src/main/AndroidManifest.xml:36:19-59
 activity#com.example.android.timemanagement.activities.TargetTimeSettingActivity
-ADDED from /Users/Vahedi/Documents/Android/TestProjects/TimeManagement-master/TimeManagement/app/src/main/AndroidManifest.xml:44:9-74
+ADDED from /Users/Vahedi/Documents/Android/TestProjects/TimeManagement-master/TimeManagement/app/src/main/AndroidManifest.xml:37:9-74
 	android:name
-		ADDED from /Users/Vahedi/Documents/Android/TestProjects/TimeManagement-master/TimeManagement/app/src/main/AndroidManifest.xml:44:19-71
+		ADDED from /Users/Vahedi/Documents/Android/TestProjects/TimeManagement-master/TimeManagement/app/src/main/AndroidManifest.xml:37:19-71
 service#com.example.android.timemanagement.notification.MyFirebaseInstanceIdService
-ADDED from /Users/Vahedi/Documents/Android/TestProjects/TimeManagement-master/TimeManagement/app/src/main/AndroidManifest.xml:46:9-52:19
+ADDED from /Users/Vahedi/Documents/Android/TestProjects/TimeManagement-master/TimeManagement/app/src/main/AndroidManifest.xml:39:9-43:19
 	android:name
-		ADDED from /Users/Vahedi/Documents/Android/TestProjects/TimeManagement-master/TimeManagement/app/src/main/AndroidManifest.xml:46:18-74
+		ADDED from /Users/Vahedi/Documents/Android/TestProjects/TimeManagement-master/TimeManagement/app/src/main/AndroidManifest.xml:39:18-74
 intent-filter#com.google.firebase.INSTANCE_ID_EVENT
-ADDED from /Users/Vahedi/Documents/Android/TestProjects/TimeManagement-master/TimeManagement/app/src/main/AndroidManifest.xml:47:13-51:29
+ADDED from /Users/Vahedi/Documents/Android/TestProjects/TimeManagement-master/TimeManagement/app/src/main/AndroidManifest.xml:40:13-42:29
 action#com.google.firebase.INSTANCE_ID_EVENT
-ADDED from /Users/Vahedi/Documents/Android/TestProjects/TimeManagement-master/TimeManagement/app/src/main/AndroidManifest.xml:48:17-50:26
+ADDED from /Users/Vahedi/Documents/Android/TestProjects/TimeManagement-master/TimeManagement/app/src/main/AndroidManifest.xml:41:17-87
 	android:name
-		ADDED from /Users/Vahedi/Documents/Android/TestProjects/TimeManagement-master/TimeManagement/app/src/main/AndroidManifest.xml:48:25-77
+		ADDED from /Users/Vahedi/Documents/Android/TestProjects/TimeManagement-master/TimeManagement/app/src/main/AndroidManifest.xml:41:25-77
 service#com.example.android.timemanagement.notification.MyFirebaseMessagingService
-ADDED from /Users/Vahedi/Documents/Android/TestProjects/TimeManagement-master/TimeManagement/app/src/main/AndroidManifest.xml:54:9-60:19
+ADDED from /Users/Vahedi/Documents/Android/TestProjects/TimeManagement-master/TimeManagement/app/src/main/AndroidManifest.xml:44:9-48:19
 	android:name
-		ADDED from /Users/Vahedi/Documents/Android/TestProjects/TimeManagement-master/TimeManagement/app/src/main/AndroidManifest.xml:54:18-73
+		ADDED from /Users/Vahedi/Documents/Android/TestProjects/TimeManagement-master/TimeManagement/app/src/main/AndroidManifest.xml:44:18-73
 intent-filter#com.google.firebase.MESSAGING_EVENT
-ADDED from /Users/Vahedi/Documents/Android/TestProjects/TimeManagement-master/TimeManagement/app/src/main/AndroidManifest.xml:55:13-59:29
+ADDED from /Users/Vahedi/Documents/Android/TestProjects/TimeManagement-master/TimeManagement/app/src/main/AndroidManifest.xml:45:13-47:29
 action#com.google.firebase.MESSAGING_EVENT
-ADDED from /Users/Vahedi/Documents/Android/TestProjects/TimeManagement-master/TimeManagement/app/src/main/AndroidManifest.xml:56:17-58:26
+ADDED from /Users/Vahedi/Documents/Android/TestProjects/TimeManagement-master/TimeManagement/app/src/main/AndroidManifest.xml:46:17-85
 	android:name
-		ADDED from /Users/Vahedi/Documents/Android/TestProjects/TimeManagement-master/TimeManagement/app/src/main/AndroidManifest.xml:56:25-75
+		ADDED from /Users/Vahedi/Documents/Android/TestProjects/TimeManagement-master/TimeManagement/app/src/main/AndroidManifest.xml:46:25-75
+activity#com.example.android.timemanagement.activities.ProjectsList
+ADDED from /Users/Vahedi/Documents/Android/TestProjects/TimeManagement-master/TimeManagement/app/src/main/AndroidManifest.xml:50:9-70
+	android:name
+		ADDED from /Users/Vahedi/Documents/Android/TestProjects/TimeManagement-master/TimeManagement/app/src/main/AndroidManifest.xml:50:19-58
 uses-sdk
 INJECTED from /Users/Vahedi/Documents/Android/TestProjects/TimeManagement-master/TimeManagement/app/src/main/AndroidManifest.xml reason: use-sdk injection requested
 MERGED from [com.android.support:recyclerview-v7:23.0.1] /Users/Vahedi/.android/build-cache/3d3a9100f5f238a516db04c64dff56bb5acdc3f5/output/AndroidManifest.xml:20:5-43
