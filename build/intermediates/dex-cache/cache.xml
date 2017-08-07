@@ -3,30 +3,30 @@
 
     <item
         is-multidex="true"
-        jar="W:\Android_stuff\TimeManagement\app\libs\poi-3.7.jar"
+        jar="/Users/cy/Documents/GitHub/TimeManagement/app/libs/poi-3.7.jar"
         jumboMode="true"
         optimize="true"
         revision="25.0.0"
         sha1="581aca996554d760c02b281ac1f9efb785de54be">
-        <dex dex="W:\Android_stuff\TimeManagement\app\build\intermediates\transforms\dex\debug\folders\1000\2\poi-3.7_251bbd2f3213870d555d21e6bc91409addf833ea\classes.dex" />
+        <dex dex="/Users/cy/Documents/GitHub/TimeManagement/app/build/intermediates/transforms/dex/debug/folders/1000/2/poi-3.7_9fca276a25de2ef406503a8764a1417462c2f06f/classes.dex" />
     </item>
     <item
         is-multidex="true"
-        jar="W:\Android_stuff\TimeManagement\app\build\intermediates\incremental-classes\debug\instant-run-bootstrap.jar"
-        jumboMode="true"
-        optimize="true"
-        revision="25.0.0"
-        sha1="b486e22694aed8dac969b27748709dd7eb3a708e">
-        <dex dex="W:\Android_stuff\TimeManagement\app\build\intermediates\transforms\dex\debug\folders\1000\10000\instant-run-bootstrap_c2562ad5c7f1051ee275ebe12ba3c22f9c7f64fa\classes.dex" />
-    </item>
-    <item
-        is-multidex="true"
-        jar="W:\Android_stuff\TimeManagement\app\build\intermediates\incremental-runtime-classes\debug\instant-run.jar"
+        jar="/Users/cy/Documents/GitHub/TimeManagement/app/build/intermediates/incremental-runtime-classes/debug/instant-run.jar"
         jumboMode="true"
         optimize="true"
         revision="25.0.0"
         sha1="3be78ebc2706b2e1fe2f12d5726887a92d6c183b">
-        <dex dex="W:\Android_stuff\TimeManagement\app\build\intermediates\transforms\dex\debug\folders\1000\10000\instant-run_fc45e6f13a13f69aac3952860571fb6639b8c089\classes.dex" />
+        <dex dex="/Users/cy/Documents/GitHub/TimeManagement/app/build/intermediates/transforms/dex/debug/folders/1000/10000/instant-run_b4d3cb54b10554b36ebb0a57738ab0b61d64d581/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/Users/cy/Documents/GitHub/TimeManagement/app/build/intermediates/incremental-classes/debug/instant-run-bootstrap.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.0"
+        sha1="6ce593bec5d7b929b9c417e3b684175e4fe27ac1">
+        <dex dex="/Users/cy/Documents/GitHub/TimeManagement/app/build/intermediates/transforms/dex/debug/folders/1000/10000/instant-run-bootstrap_b63a6742cd294686ad0235ce9121d23160b372fc/classes.dex" />
     </item>
 
 </items>

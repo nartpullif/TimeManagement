@@ -1,10 +1,10 @@
 [
     {
-        "merged": "W:\\Android_stuff\\TimeManagement\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-hdpi\\ic_launcher.png",
-        "source": "W:\\Android_stuff\\TimeManagement\\app\\src\\main\\res\\mipmap-hdpi\\ic_launcher.png"
+        "merged": "/Users/cy/Documents/GitHub/TimeManagement/app/build/intermediates/res/merged/debug/mipmap-hdpi/ic_launcher.png",
+        "source": "/Users/cy/Documents/GitHub/TimeManagement/app/src/main/res/mipmap-hdpi/ic_launcher.png"
     },
     {
-        "merged": "W:\\Android_stuff\\TimeManagement\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-hdpi\\ic_launcher_round.png",
-        "source": "W:\\Android_stuff\\TimeManagement\\app\\src\\main\\res\\mipmap-hdpi\\ic_launcher_round.png"
+        "merged": "/Users/cy/Documents/GitHub/TimeManagement/app/build/intermediates/res/merged/debug/mipmap-hdpi/ic_launcher_round.png",
+        "source": "/Users/cy/Documents/GitHub/TimeManagement/app/src/main/res/mipmap-hdpi/ic_launcher_round.png"
     }
 ]

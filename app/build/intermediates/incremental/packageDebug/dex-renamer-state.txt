@@ -1,7 +1,7 @@
-#Sun Aug 06 23:36:42 PDT 2017
-base.0=W\:\\Android_stuff\\TimeManagement\\app\\build\\intermediates\\transforms\\dex\\debug\\folders\\1000\\10000\\instant-run_fc45e6f13a13f69aac3952860571fb6639b8c089
-renamed.1=classes2.dex
-renamed.0=classes.dex
-file.1=W\:\\Android_stuff\\TimeManagement\\app\\build\\intermediates\\transforms\\dex\\debug\\folders\\1000\\10000\\instant-run-bootstrap_c2562ad5c7f1051ee275ebe12ba3c22f9c7f64fa\\classes.dex
-base.1=W\:\\Android_stuff\\TimeManagement\\app\\build\\intermediates\\transforms\\dex\\debug\\folders\\1000\\10000\\instant-run-bootstrap_c2562ad5c7f1051ee275ebe12ba3c22f9c7f64fa
-file.0=W\:\\Android_stuff\\TimeManagement\\app\\build\\intermediates\\transforms\\dex\\debug\\folders\\1000\\10000\\instant-run_fc45e6f13a13f69aac3952860571fb6639b8c089\\classes.dex
+#Mon Aug 07 00:23:34 PDT 2017
+base.0=/Users/cy/Documents/GitHub/TimeManagement/app/build/intermediates/transforms/dex/debug/folders/1000/10000/instant-run-bootstrap_b63a6742cd294686ad0235ce9121d23160b372fc
+renamed.1=classes.dex
+renamed.0=classes2.dex
+file.1=/Users/cy/Documents/GitHub/TimeManagement/app/build/intermediates/transforms/dex/debug/folders/1000/10000/instant-run_b4d3cb54b10554b36ebb0a57738ab0b61d64d581/classes.dex
+base.1=/Users/cy/Documents/GitHub/TimeManagement/app/build/intermediates/transforms/dex/debug/folders/1000/10000/instant-run_b4d3cb54b10554b36ebb0a57738ab0b61d64d581
+file.0=/Users/cy/Documents/GitHub/TimeManagement/app/build/intermediates/transforms/dex/debug/folders/1000/10000/instant-run-bootstrap_b63a6742cd294686ad0235ce9121d23160b372fc/classes.dex

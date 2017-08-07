@@ -1,2 +1,2 @@
 <?xml version="1.0" encoding="utf-8"?>
-<merger version="3"><dataSet config="main"><source path="W:\Android_stuff\TimeManagement\app\src\main\jniLibs"/></dataSet><dataSet config="debug"><source path="W:\Android_stuff\TimeManagement\app\src\debug\jniLibs"/></dataSet></merger>
+<merger version="3"><dataSet config="main"><source path="/Users/cy/Documents/GitHub/TimeManagement/app/src/main/jniLibs"/></dataSet><dataSet config="debug"><source path="/Users/cy/Documents/GitHub/TimeManagement/app/src/debug/jniLibs"/></dataSet></merger>

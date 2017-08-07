@@ -24,7 +24,7 @@ public class DbOptDao {
 		// TODO Auto-generated constructor stub
 		helper = new DBHelper(context);
 	}
-//	while(cursor.moveToNext()){
+	//	while(cursor.moveToNext()){
 //		DataBean dataBean = new DataBean();
 //		Long id = cursor.getLong(cursor.getColumnIndex(Contract.TABLE_TASK._ID));
 //		String date = cursor.getString(cursor.getColumnIndex(Contract.TABLE_TASK.COLUMN_NAME_DATE));
@@ -61,47 +61,47 @@ public class DbOptDao {
 //	}rawQuery
 	public void dimSearchByDate( String startdate, String enddate,List<DataBean> diaries){
 //		try {
-			SQLiteDatabase db = helper.getReadableDatabase();
-		    Cursor cursor = getTask(db,startdate,enddate);
+		SQLiteDatabase db = helper.getReadableDatabase();
+		Cursor cursor = getTask(db,startdate,enddate);
 //			Cursor cursor = db.query("tasks", null, "date between '" + startdate + "'and  '" + enddate + "'", null, null, null, null);
-			diaries.clear();
-			while(cursor.moveToNext()) {
-				DataBean dataBean = new DataBean();
-				Long id = cursor.getLong(cursor.getColumnIndex(Contract.TABLE_TASK._ID));
-				String date = cursor.getString(cursor.getColumnIndex(Contract.TABLE_TASK.COLUMN_NAME_DATE));
-				Log.e("xxx", "date :"+ date);
-				String subjectTitle = cursor.getString(cursor.getColumnIndex(Contract.TABLE_TASK.COLUMN_NAME_SUBJECT_TITLE));
-				Log.e("xxx", "subject :"+ subjectTitle);
-				String projectTitle = cursor.getString(cursor.getColumnIndex(Contract.TABLE_TASK.COLUMN_NAME_PROJECT_TITLE));
+		diaries.clear();
+		while(cursor.moveToNext()) {
+			DataBean dataBean = new DataBean();
+			Long id = cursor.getLong(cursor.getColumnIndex(Contract.TABLE_TASK._ID));
+			String date = cursor.getString(cursor.getColumnIndex(Contract.TABLE_TASK.COLUMN_NAME_DATE));
+			Log.e("xxx", "date :"+ date);
+			String subjectTitle = cursor.getString(cursor.getColumnIndex(Contract.TABLE_TASK.COLUMN_NAME_SUBJECT_TITLE));
+			Log.e("xxx", "subject :"+ subjectTitle);
+			String projectTitle = cursor.getString(cursor.getColumnIndex(Contract.TABLE_TASK.COLUMN_NAME_PROJECT_TITLE));
 
-				int startTimeHour = cursor.getInt(cursor.getColumnIndex(Contract.TABLE_TASK.COLUMN_NAME_START_HOUR));
-				int startTimeMinute = cursor.getInt(cursor.getColumnIndex(Contract.TABLE_TASK.COLUMN_NAME_START_MINUTE));
-				String startTimeMidDay = cursor.getString(cursor.getColumnIndex(Contract.TABLE_TASK.COLUMN_NAME_START_MID_DAY));
+			int startTimeHour = cursor.getInt(cursor.getColumnIndex(Contract.TABLE_TASK.COLUMN_NAME_START_HOUR));
+			int startTimeMinute = cursor.getInt(cursor.getColumnIndex(Contract.TABLE_TASK.COLUMN_NAME_START_MINUTE));
+			String startTimeMidDay = cursor.getString(cursor.getColumnIndex(Contract.TABLE_TASK.COLUMN_NAME_START_MID_DAY));
 
-				int endTimeHour = cursor.getInt(cursor.getColumnIndex(Contract.TABLE_TASK.COLUMN_NAME_END_HOUR));
-				int endTimeMinute = cursor.getInt(cursor.getColumnIndex(Contract.TABLE_TASK.COLUMN_NAME_END_MINUTE));
-				String endTimeMidDay = cursor.getString(cursor.getColumnIndex(Contract.TABLE_TASK.COLUMN_NAME_END_MID_DAY));
+			int endTimeHour = cursor.getInt(cursor.getColumnIndex(Contract.TABLE_TASK.COLUMN_NAME_END_HOUR));
+			int endTimeMinute = cursor.getInt(cursor.getColumnIndex(Contract.TABLE_TASK.COLUMN_NAME_END_MINUTE));
+			String endTimeMidDay = cursor.getString(cursor.getColumnIndex(Contract.TABLE_TASK.COLUMN_NAME_END_MID_DAY));
 
-				int durationTimeMinutes = cursor.getInt(cursor.getColumnIndex(Contract.TABLE_TASK.COLUMN_NAME_TASK_TOTAL_MINUTES));
+			int durationTimeMinutes = cursor.getInt(cursor.getColumnIndex(Contract.TABLE_TASK.COLUMN_NAME_TASK_TOTAL_MINUTES));
 
-				dataBean.setDate(date);
-				dataBean.setId(id);
-				dataBean.setSubjectTitle(subjectTitle);
-				dataBean.setProjectTitle(projectTitle);
+			dataBean.setDate(date);
+			dataBean.setId(id);
+			dataBean.setSubjectTitle(subjectTitle);
+			dataBean.setProjectTitle(projectTitle);
 
-				dataBean.setStartTimeHour(startTimeHour);
-				dataBean.setStartTimeMinute(startTimeMinute);
-				dataBean.setStartTimeMidDay(startTimeMidDay);
+			dataBean.setStartTimeHour(startTimeHour);
+			dataBean.setStartTimeMinute(startTimeMinute);
+			dataBean.setStartTimeMidDay(startTimeMidDay);
 
-				dataBean.setEndTimeHour(endTimeHour);
-				dataBean.setEndTimeMinute(endTimeMinute);
-				dataBean.setEndTimeMidDay(endTimeMidDay);
+			dataBean.setEndTimeHour(endTimeHour);
+			dataBean.setEndTimeMinute(endTimeMinute);
+			dataBean.setEndTimeMidDay(endTimeMidDay);
 
-				dataBean.setDurationTimeMinutes(durationTimeMinutes);
-				diaries.add(dataBean);
-			}
-			cursor.close();
-			db.close();
+			dataBean.setDurationTimeMinutes(durationTimeMinutes);
+			diaries.add(dataBean);
+		}
+		cursor.close();
+		db.close();
 //		}catch(Exception e){
 //
 //		}
@@ -154,7 +154,7 @@ public class DbOptDao {
 		List<String> projectNames = getAllProjectNames();
 		for(int index = 0;index<projectNames.size(); index++){
 			List<DataBean> tmps = new ArrayList<DataBean>();
-            for(DataBean tmp:targets){
+			for(DataBean tmp:targets){
 				Log.e("xxx","-----tmp.getProjectTitle()-----"+tmp.getProjectTitle());
 				Log.e("xxx","-----projectNames.get(index)-----"+projectNames.get(index));
 				if(tmp.getProjectTitle().equals(projectNames.get(index))){
@@ -224,10 +224,31 @@ public class DbOptDao {
 		return sdf.format(c.getTime());
 	}
 
-    public void getWeeksAll(){
+	public void getWeeksAll(){
 		List<DataBean> diaries = new ArrayList<DataBean>();
-		String start = StringData();
-		String end = getSevendate();
+		SimpleDateFormat sdf = new SimpleDateFormat("MM/dd/yyyy");
+		String current =  sdf.format(new Date());
+		Calendar cal = Calendar.getInstance();
+		int dayWeek = cal.get(Calendar.DAY_OF_WEEK);//获得当前日期是一个星期的第几天
+		if(1 == dayWeek) {
+			cal.add(Calendar.DAY_OF_MONTH, -1);
+		}
+		cal.setFirstDayOfWeek(Calendar.MONDAY);//设置一个星期的第一天，按中国的习惯一个星期的第一天是星期一
+
+		int day = cal.get(Calendar.DAY_OF_WEEK);//获得当前日期是一个星期的第几天
+		cal.add(Calendar.DATE, cal.getFirstDayOfWeek()-day);//根据日历的规则，给当前日期减去星期几与一个星期第一天的差值
+//		System.out.println("所在周星期一的日期："+sdf.format(cal.getTime()));
+		String start =sdf.format(cal.getTime());
+//		System.out.println(cal.getFirstDayOfWeek()+"-"+day+"+6="+(cal.getFirstDayOfWeek()-day+6));
+
+		cal.add(Calendar.DATE, 6);
+		String end =sdf.format(cal.getTime());
+//		System.out.println("所在周星期日的日期："+sdf.format(cal.getTime()));
+
+
+
+//		String start = StringData();
+//		String end = getSevendate();
 		dimSearchByDate(start,end,diaries);
 	}
 
@@ -417,10 +438,30 @@ public class DbOptDao {
 	//*****************************************************************************************************************************//
 	public ShowBean getWeekAll(){
 		List<DataBean> diaries = new ArrayList<DataBean>();
-		String start = StringData();
-		Log.e("xxx","start="+start);
-		String end = getSevendate();
-		Log.e("xxx","end="+end);
+//		String start = StringData();
+//		Log.e("xxx","start="+start);
+//		String end = getSevendate();
+//		Log.e("xxx","end="+end);
+		SimpleDateFormat sdf = new SimpleDateFormat("MM/dd/yyyy");
+		String current =  sdf.format(new Date());
+		Calendar cal = Calendar.getInstance();
+		int dayWeek = cal.get(Calendar.DAY_OF_WEEK);//获得当前日期是一个星期的第几天
+		if(1 == dayWeek) {
+			cal.add(Calendar.DAY_OF_MONTH, -1);
+		}
+		cal.setFirstDayOfWeek(Calendar.MONDAY);//设置一个星期的第一天，按中国的习惯一个星期的第一天是星期一
+
+		int day = cal.get(Calendar.DAY_OF_WEEK);//获得当前日期是一个星期的第几天
+		cal.add(Calendar.DATE, cal.getFirstDayOfWeek()-day);//根据日历的规则，给当前日期减去星期几与一个星期第一天的差值
+//		System.out.println("所在周星期一的日期："+sdf.format(cal.getTime()));
+		String start =sdf.format(cal.getTime());
+//		System.out.println(cal.getFirstDayOfWeek()+"-"+day+"+6="+(cal.getFirstDayOfWeek()-day+6));
+
+		cal.add(Calendar.DATE, 6);
+		String end =sdf.format(cal.getTime());
+//		System.out.println("所在周星期日的日期："+sdf.format(cal.getTime()));
+
+
 		dimSearchByDate(start,end,diaries);
 
 		ShowBean sb = new ShowBean();
@@ -440,8 +481,28 @@ public class DbOptDao {
 
 	public ShowBean getWeekAllProjects(){
 		List<DataBean> diaries = new ArrayList<DataBean>();
-		String start = StringData();
-		String end = getSevendate();
+//		String start = StringData();
+//		String end = getSevendate();
+		SimpleDateFormat sdf = new SimpleDateFormat("MM/dd/yyyy");
+		String current =  sdf.format(new Date());
+		Calendar cal = Calendar.getInstance();
+		int dayWeek = cal.get(Calendar.DAY_OF_WEEK);//获得当前日期是一个星期的第几天
+		if(1 == dayWeek) {
+			cal.add(Calendar.DAY_OF_MONTH, -1);
+		}
+		cal.setFirstDayOfWeek(Calendar.MONDAY);//设置一个星期的第一天，按中国的习惯一个星期的第一天是星期一
+
+		int day = cal.get(Calendar.DAY_OF_WEEK);//获得当前日期是一个星期的第几天
+		cal.add(Calendar.DATE, cal.getFirstDayOfWeek()-day);//根据日历的规则，给当前日期减去星期几与一个星期第一天的差值
+//		System.out.println("所在周星期一的日期："+sdf.format(cal.getTime()));
+		String start =sdf.format(cal.getTime());
+//		System.out.println(cal.getFirstDayOfWeek()+"-"+day+"+6="+(cal.getFirstDayOfWeek()-day+6));
+
+		cal.add(Calendar.DATE, 6);
+		String end =sdf.format(cal.getTime());
+//		System.out.println("所在周星期日的日期："+sdf.format(cal.getTime()));
+
+
 		dimSearchByDate(start,end,diaries);
 
 		ShowBean sb = new ShowBean();
@@ -468,8 +529,28 @@ public class DbOptDao {
 
 	public ShowBean getWeekAllSubjects(){
 		List<DataBean> diaries = new ArrayList<DataBean>();
-		String start = StringData();
-		String end = getSevendate();
+//		String start = StringData();
+//		String end = getSevendate();
+		SimpleDateFormat sdf = new SimpleDateFormat("MM/dd/yyyy");
+		String current =  sdf.format(new Date());
+		Calendar cal = Calendar.getInstance();
+		int dayWeek = cal.get(Calendar.DAY_OF_WEEK);//获得当前日期是一个星期的第几天
+		if(1 == dayWeek) {
+			cal.add(Calendar.DAY_OF_MONTH, -1);
+		}
+		cal.setFirstDayOfWeek(Calendar.MONDAY);//设置一个星期的第一天，按中国的习惯一个星期的第一天是星期一
+
+		int day = cal.get(Calendar.DAY_OF_WEEK);//获得当前日期是一个星期的第几天
+		cal.add(Calendar.DATE, cal.getFirstDayOfWeek()-day);//根据日历的规则，给当前日期减去星期几与一个星期第一天的差值
+//		System.out.println("所在周星期一的日期："+sdf.format(cal.getTime()));
+		String start =sdf.format(cal.getTime());
+//		System.out.println(cal.getFirstDayOfWeek()+"-"+day+"+6="+(cal.getFirstDayOfWeek()-day+6));
+
+		cal.add(Calendar.DATE, 6);
+		String end =sdf.format(cal.getTime());
+//		System.out.println("所在周星期日的日期："+sdf.format(cal.getTime()));
+
+
 		dimSearchByDate(start,end,diaries);
 
 		ShowBean sb = new ShowBean();
@@ -503,7 +584,51 @@ public class DbOptDao {
 		dimSearchByDate(start,end,diaries);
 
 		ShowBean sb = new ShowBean();
-		sb.setTitle(start +"-"+ end);
+
+		final Calendar c = Calendar.getInstance();
+		int mYearValue = c.get(Calendar.YEAR); //获取当前年份
+		int  mMonth = c.get(Calendar.MONTH)+1;//获取当前月份
+		Log.e("xxx","--mMonth--"+mMonth);
+		String strMonth = "";
+		switch(mMonth){
+			case 1:
+				strMonth = "January";
+				break;
+			case 2:
+				strMonth = "February";
+				break;
+			case 3:
+				strMonth = "March";
+				break;
+			case 4:
+				strMonth = "April";
+				break;
+			case 5:
+				strMonth = "May";
+				break;
+			case 6:
+				strMonth = "June";
+				break;
+			case 7:
+				strMonth = "July";
+				break;
+			case 8:
+				strMonth = "Aguest";
+				break;
+			case 9:
+				strMonth = "September";
+				break;
+			case 10:
+				strMonth = "October";
+				break;
+			case 11:
+				strMonth = "November";
+				break;
+			case 12:
+				strMonth = "December";
+				break;
+		}
+		sb.setTitle(strMonth +" "+ mYearValue);
 		int finished = 0;
 		for(int i=0;i<diaries.size();i++){
 			finished = finished + diaries.get(i).getDurationTimeMinutes();
