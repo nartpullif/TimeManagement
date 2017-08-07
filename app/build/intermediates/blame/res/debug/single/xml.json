@@ -1,11 +1,6 @@
 [
     {
-<<<<<<< HEAD
-        "merged": "C:\\Users\\Mark\\Desktop\\TimeManagement\\app\\build\\intermediates\\res\\merged\\debug\\xml\\provider_paths.xml",
-        "source": "C:\\Users\\Mark\\Desktop\\TimeManagement\\app\\src\\main\\res\\xml\\provider_paths.xml"
-=======
         "merged": "W:\\Android_stuff\\TimeManagement\\app\\build\\intermediates\\res\\merged\\debug\\xml\\provider_paths.xml",
         "source": "W:\\Android_stuff\\TimeManagement\\app\\src\\main\\res\\xml\\provider_paths.xml"
->>>>>>> 116faa77e1b356e24d5b7849b9a0306bea5840cf
     }
 ]

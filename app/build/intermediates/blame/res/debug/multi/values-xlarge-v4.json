@@ -1,10 +1,6 @@
 [
     {
-<<<<<<< HEAD
-        "outputFile": "C:\\Users\\Mark\\Desktop\\TimeManagement\\app\\build\\intermediates\\incremental\\mergeDebugResources\\merged.dir\\values-xlarge-v4\\values-xlarge-v4.xml",
-=======
         "outputFile": "W:\\Android_stuff\\TimeManagement\\app\\build\\intermediates\\incremental\\mergeDebugResources\\merged.dir\\values-xlarge-v4\\values-xlarge-v4.xml",
->>>>>>> 116faa77e1b356e24d5b7849b9a0306bea5840cf
         "map": [
             {
                 "to": {
@@ -15,11 +11,7 @@
                     "endOffset": 127
                 },
                 "from": {
-<<<<<<< HEAD
-                    "file": "C:\\Users\\Mark\\.android\\build-cache\\67b6b4dea77d5f1d38753986b48236c449b6f326\\output\\res\\values-xlarge\\values-xlarge.xml",
-=======
                     "file": "C:\\Users\\icyfillup\\.android\\build-cache\\a027631cee244203f572e361e51dfe97f71ecc5d\\output\\res\\values-xlarge\\values-xlarge.xml",
->>>>>>> 116faa77e1b356e24d5b7849b9a0306bea5840cf
                     "position": {
                         "startLine": 4,
                         "startColumn": 4,
@@ -38,11 +30,7 @@
                     "endOffset": 191
                 },
                 "from": {
-<<<<<<< HEAD
-                    "file": "C:\\Users\\Mark\\.android\\build-cache\\67b6b4dea77d5f1d38753986b48236c449b6f326\\output\\res\\values-xlarge\\values-xlarge.xml",
-=======
                     "file": "C:\\Users\\icyfillup\\.android\\build-cache\\a027631cee244203f572e361e51dfe97f71ecc5d\\output\\res\\values-xlarge\\values-xlarge.xml",
->>>>>>> 116faa77e1b356e24d5b7849b9a0306bea5840cf
                     "position": {
                         "startLine": 7,
                         "startColumn": 4,
@@ -61,11 +49,7 @@
                     "endOffset": 258
                 },
                 "from": {
-<<<<<<< HEAD
-                    "file": "C:\\Users\\Mark\\.android\\build-cache\\67b6b4dea77d5f1d38753986b48236c449b6f326\\output\\res\\values-xlarge\\values-xlarge.xml",
-=======
                     "file": "C:\\Users\\icyfillup\\.android\\build-cache\\a027631cee244203f572e361e51dfe97f71ecc5d\\output\\res\\values-xlarge\\values-xlarge.xml",
->>>>>>> 116faa77e1b356e24d5b7849b9a0306bea5840cf
                     "position": {
                         "startLine": 8,
                         "startColumn": 4,
@@ -84,11 +68,7 @@
                     "endOffset": 325
                 },
                 "from": {
-<<<<<<< HEAD
-                    "file": "C:\\Users\\Mark\\.android\\build-cache\\67b6b4dea77d5f1d38753986b48236c449b6f326\\output\\res\\values-xlarge\\values-xlarge.xml",
-=======
                     "file": "C:\\Users\\icyfillup\\.android\\build-cache\\a027631cee244203f572e361e51dfe97f71ecc5d\\output\\res\\values-xlarge\\values-xlarge.xml",
->>>>>>> 116faa77e1b356e24d5b7849b9a0306bea5840cf
                     "position": {
                         "startLine": 9,
                         "startColumn": 4,
@@ -107,11 +87,7 @@
                     "endOffset": 391
                 },
                 "from": {
-<<<<<<< HEAD
-                    "file": "C:\\Users\\Mark\\.android\\build-cache\\67b6b4dea77d5f1d38753986b48236c449b6f326\\output\\res\\values-xlarge\\values-xlarge.xml",
-=======
                     "file": "C:\\Users\\icyfillup\\.android\\build-cache\\a027631cee244203f572e361e51dfe97f71ecc5d\\output\\res\\values-xlarge\\values-xlarge.xml",
->>>>>>> 116faa77e1b356e24d5b7849b9a0306bea5840cf
                     "position": {
                         "startLine": 10,
                         "startColumn": 4,
@@ -130,11 +106,7 @@
                     "endOffset": 457
                 },
                 "from": {
-<<<<<<< HEAD
-                    "file": "C:\\Users\\Mark\\.android\\build-cache\\67b6b4dea77d5f1d38753986b48236c449b6f326\\output\\res\\values-xlarge\\values-xlarge.xml",
-=======
                     "file": "C:\\Users\\icyfillup\\.android\\build-cache\\a027631cee244203f572e361e51dfe97f71ecc5d\\output\\res\\values-xlarge\\values-xlarge.xml",
->>>>>>> 116faa77e1b356e24d5b7849b9a0306bea5840cf
                     "position": {
                         "startLine": 11,
                         "startColumn": 4,
@@ -153,11 +125,7 @@
                     "endOffset": 512
                 },
                 "from": {
-<<<<<<< HEAD
-                    "file": "C:\\Users\\Mark\\.android\\build-cache\\67b6b4dea77d5f1d38753986b48236c449b6f326\\output\\res\\values-xlarge\\values-xlarge.xml",
-=======
                     "file": "C:\\Users\\icyfillup\\.android\\build-cache\\a027631cee244203f572e361e51dfe97f71ecc5d\\output\\res\\values-xlarge\\values-xlarge.xml",
->>>>>>> 116faa77e1b356e24d5b7849b9a0306bea5840cf
                     "position": {
                         "startLine": 12,
                         "startColumn": 4,

@@ -51,16 +51,11 @@
             </intent-filter>
         </service>
 
-<<<<<<< HEAD
         <activity android:name=".activities.ProjectsList"></activity>
         <receiver android:name=".notification.Notification_reciever"/>
 
-
-
-=======
         <activity android:name=".activities.ProjectsList" />
         <activity android:name=".activities.SubjectsList"></activity>
->>>>>>> 116faa77e1b356e24d5b7849b9a0306bea5840cf
     </application>
 
 </manifest>

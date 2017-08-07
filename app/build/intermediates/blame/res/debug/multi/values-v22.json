@@ -1,10 +1,6 @@
 [
     {
-<<<<<<< HEAD
-        "outputFile": "C:\\Users\\Mark\\Desktop\\TimeManagement\\app\\build\\intermediates\\incremental\\mergeDebugResources\\merged.dir\\values-v22\\values-v22.xml",
-=======
         "outputFile": "W:\\Android_stuff\\TimeManagement\\app\\build\\intermediates\\incremental\\mergeDebugResources\\merged.dir\\values-v22\\values-v22.xml",
->>>>>>> 116faa77e1b356e24d5b7849b9a0306bea5840cf
         "map": [
             {
                 "to": {
@@ -15,11 +11,7 @@
                     "endOffset": 125
                 },
                 "from": {
-<<<<<<< HEAD
-                    "file": "C:\\Users\\Mark\\.android\\build-cache\\67b6b4dea77d5f1d38753986b48236c449b6f326\\output\\res\\values-v22\\values-v22.xml",
-=======
                     "file": "C:\\Users\\icyfillup\\.android\\build-cache\\a027631cee244203f572e361e51dfe97f71ecc5d\\output\\res\\values-v22\\values-v22.xml",
->>>>>>> 116faa77e1b356e24d5b7849b9a0306bea5840cf
                     "position": {
                         "startLine": 4,
                         "startColumn": 4,
@@ -38,11 +30,7 @@
                     "endOffset": 212
                 },
                 "from": {
-<<<<<<< HEAD
-                    "file": "C:\\Users\\Mark\\.android\\build-cache\\67b6b4dea77d5f1d38753986b48236c449b6f326\\output\\res\\values-v22\\values-v22.xml",
-=======
                     "file": "C:\\Users\\icyfillup\\.android\\build-cache\\a027631cee244203f572e361e51dfe97f71ecc5d\\output\\res\\values-v22\\values-v22.xml",
->>>>>>> 116faa77e1b356e24d5b7849b9a0306bea5840cf
                     "position": {
                         "startLine": 5,
                         "startColumn": 4,
@@ -62,11 +50,7 @@
                     "endOffset": 393
                 },
                 "from": {
-<<<<<<< HEAD
-                    "file": "C:\\Users\\Mark\\.android\\build-cache\\67b6b4dea77d5f1d38753986b48236c449b6f326\\output\\res\\values-v22\\values-v22.xml",
-=======
                     "file": "C:\\Users\\icyfillup\\.android\\build-cache\\a027631cee244203f572e361e51dfe97f71ecc5d\\output\\res\\values-v22\\values-v22.xml",
->>>>>>> 116faa77e1b356e24d5b7849b9a0306bea5840cf
                     "position": {
                         "startLine": 6,
                         "startColumn": 4,
@@ -87,11 +71,7 @@
                     "endOffset": 586
                 },
                 "from": {
-<<<<<<< HEAD
-                    "file": "C:\\Users\\Mark\\.android\\build-cache\\67b6b4dea77d5f1d38753986b48236c449b6f326\\output\\res\\values-v22\\values-v22.xml",
-=======
                     "file": "C:\\Users\\icyfillup\\.android\\build-cache\\a027631cee244203f572e361e51dfe97f71ecc5d\\output\\res\\values-v22\\values-v22.xml",
->>>>>>> 116faa77e1b356e24d5b7849b9a0306bea5840cf
                     "position": {
                         "startLine": 9,
                         "startColumn": 4,

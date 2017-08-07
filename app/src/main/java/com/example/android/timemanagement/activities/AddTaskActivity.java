@@ -114,50 +114,13 @@ public class AddTaskActivity extends AppCompatActivity {
             addTaskButton.setEnabled(true);
         }
         */
-        addTaskButton.setOnClickListener(new View.OnClickListener() {
+        addTaskButton.setOnClickListener(new View.OnClickListener()
+        {
             @Override
-            public void onClick(View v) {
+            public void onClick(View v)
+            {
                 helper = new DBHelper(context);
                 db = helper.getWritableDatabase();
-
-                if(DatabaseUtils.addTask(db, dateSetDate.getDate()
-                        , subjectAutoText.getText().toString(), projectAutoText.getText().toString()
-                        , startSetTime.getHourOfDay(), startSetTime.getMinute(), startSetTime.getMidDay()
-                        , endSetTime.getHourOfDay(), endSetTime.getMinute(), endSetTime.getMidDay()
-                        , getTimeDiff(startSetTime.getTime(), endSetTime.getTime())) > 0){
-                    int hours = new Time(System.currentTimeMillis()).getHours();
-                    int minutes = new Time(System.currentTimeMillis()).getMinutes();
-                    if (hours>12)
-                        hours=hours-12;
-
-
-                    Calendar calender = Calendar.getInstance();
-                    calender.get(Calendar.DAY_OF_MONTH);
-                    String c = firstTwo(dateSetDate.getDate());
-
-                    int today = calender.get(Calendar.DAY_OF_MONTH);
-                    if(Integer.parseInt(c)> today) {
-                        setAlarm(Integer.parseInt(c)- today,startSetTime.getHourOfDay() - hours, startSetTime.getMinute() - minutes);
-
-                        Toast.makeText(context, "Add task success :", Toast.LENGTH_SHORT).show();
-                    }
-                    else if(Integer.parseInt(c)== today||startSetTime.getHourOfDay()>hours){
-                        setAlarm(Integer.parseInt(c)- today,startSetTime.getHourOfDay() - hours, startSetTime.getMinute() - minutes);
-                        Toast.makeText(context, "Add task success :", Toast.LENGTH_SHORT).show();
-                    }
-                    else if(Integer.parseInt(c)== today||startSetTime.getHourOfDay()==hours||startSetTime.getMinute() > minutes){
-                        setAlarm(Integer.parseInt(c)- today,startSetTime.getHourOfDay() - hours, startSetTime.getMinute() - minutes);
-                        Toast.makeText(context, "Add task success ", Toast.LENGTH_SHORT).show();
-                    }
-
-                    //Toast.makeText(context, "Add task success ", Toast.LENGTH_SHORT).show();
-                    dateSetDate.clear();
-                    subjectAutoText.getText().clear();
-                    projectAutoText.getText().clear();
-                    startSetTime.clear();
-                    endSetTime.clear();
-
-                    //if add task success go to main activity
 
                 if(dateSetDate.getText().length()==0 ||
                    subjectAutoText.getText().length()==0 ||
@@ -175,6 +138,30 @@ public class AddTaskActivity extends AppCompatActivity {
                             , endSetTime.getHourOfDay(), endSetTime.getMinute(), endSetTime.getMidDay()
                             , getTimeDiff(startSetTime.getTime(), endSetTime.getTime())) > 0){
 
+                        int hours = new Time(System.currentTimeMillis()).getHours();
+                        int minutes = new Time(System.currentTimeMillis()).getMinutes();
+                        if (hours>12)
+                            hours=hours-12;
+
+
+                        Calendar calender = Calendar.getInstance();
+                        calender.get(Calendar.DAY_OF_MONTH);
+                        String c = firstTwo(dateSetDate.getDate());
+
+                        int today = calender.get(Calendar.DAY_OF_MONTH);
+                        if(Integer.parseInt(c)> today) {
+                            setAlarm(Integer.parseInt(c)- today,startSetTime.getHourOfDay() - hours, startSetTime.getMinute() - minutes);
+
+                            Toast.makeText(context, "Add task success :", Toast.LENGTH_SHORT).show();
+                        }
+                        else if(Integer.parseInt(c)== today||startSetTime.getHourOfDay()>hours){
+                            setAlarm(Integer.parseInt(c)- today,startSetTime.getHourOfDay() - hours, startSetTime.getMinute() - minutes);
+                            Toast.makeText(context, "Add task success :", Toast.LENGTH_SHORT).show();
+                        }
+                        else if(Integer.parseInt(c)== today||startSetTime.getHourOfDay()==hours||startSetTime.getMinute() > minutes){
+                            setAlarm(Integer.parseInt(c)- today,startSetTime.getHourOfDay() - hours, startSetTime.getMinute() - minutes);
+                            Toast.makeText(context, "Add task success ", Toast.LENGTH_SHORT).show();
+                        }
 
                         Toast.makeText(context, "Add task success", Toast.LENGTH_SHORT).show();
                         dateSetDate.clear();
@@ -182,6 +169,7 @@ public class AddTaskActivity extends AppCompatActivity {
                         projectAutoText.getText().clear();
                         startSetTime.clear();
                         endSetTime.clear();
+
                     }else{
                         Toast.makeText(context, "Add task failed", Toast.LENGTH_SHORT).show();
                     }
@@ -196,12 +184,12 @@ public class AddTaskActivity extends AppCompatActivity {
         db.close();
     }
 
-
     private int getTimeDiff(Date start, Date end){
         long diff = end.getTime() - start.getTime();
         long minutes = TimeUnit.MILLISECONDS.toMinutes(diff);
         return (int) minutes;
     }
+
     public void setAlarm (int day,int hour,int minute){
 
 

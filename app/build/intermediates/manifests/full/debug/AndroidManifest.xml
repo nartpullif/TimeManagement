@@ -68,13 +68,11 @@
         </service>
 
         <activity android:name="com.example.android.timemanagement.activities.ProjectsList" />
-<<<<<<< HEAD
 
         <receiver android:name="com.example.android.timemanagement.notification.Notification_reciever" />
 
-=======
+        <activity android:name="com.example.android.timemanagement.activities.ProjectsList" />
         <activity android:name="com.example.android.timemanagement.activities.SubjectsList" />
->>>>>>> 116faa77e1b356e24d5b7849b9a0306bea5840cf
         <!--
          FirebaseMessagingService performs security checks at runtime,
              no need for explicit permissions despite exported="true"
