@@ -100,6 +100,7 @@
             android:layout_weight="1">
             <TextView
                 android:text="8"
+                android:id="@+id/target_time"
                 android:layout_gravity="right"
                 android:layout_width="wrap_content"
                 android:layout_height="20dp"

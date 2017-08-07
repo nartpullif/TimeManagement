@@ -1,6 +1,6 @@
 [
     {
-        "outputFile": "/Users/cy/Documents/GitHub/TimeManagement/app/build/intermediates/incremental/mergeDebugResources/merged.dir/values-bs/values-bs.xml",
+        "outputFile": "W:\\Android_stuff\\TimeManagement\\app\\build\\intermediates\\incremental\\mergeDebugResources\\merged.dir\\values-bs\\values-bs.xml",
         "map": [
             {
                 "to": {
@@ -11,7 +11,7 @@
                     "endOffset": 335
                 },
                 "from": {
-                    "file": "/Users/cy/.android/build-cache/eba82051d6946189b39b7073797a6fe2857a65b5/output/res/values-bs/values.xml",
+                    "file": "C:\\Users\\icyfillup\\.android\\build-cache\\3db6bc736bdb59c9e1aebb1de303f269d321b889\\output\\res\\values-bs\\values.xml",
                     "position": {
                         "startLine": 4,
                         "startColumn": 4,

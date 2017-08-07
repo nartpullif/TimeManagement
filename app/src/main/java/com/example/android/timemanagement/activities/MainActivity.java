@@ -22,10 +22,12 @@ import com.example.android.timemanagement.adapters.TaskAdapter;
 import com.example.android.timemanagement.data.Contract;
 import com.example.android.timemanagement.data.DBHelper;
 import com.example.android.timemanagement.fragment.DatePickerFragment;
+import com.example.android.timemanagement.utilities.PreferenceUtils;
 
 import java.text.SimpleDateFormat;
 import java.util.Calendar;
 import java.util.Date;
+import java.util.GregorianCalendar;
 
 import static com.example.android.timemanagement.data.DatabaseUtils.getDailyTask;
 import static com.example.android.timemanagement.data.DatabaseUtils.removeTask;
@@ -38,6 +40,7 @@ public class MainActivity extends AppCompatActivity implements DatePickerFragmen
     private Button addTaskButton;
     private RecyclerView taskRecyclerView;
     private TextView tv_day_all;
+    private TextView targetTime;
 
     private SimpleDateFormat dateFormat = new SimpleDateFormat("EEEE MMMM dd, yyyy");
     private SimpleDateFormat dbDateFormat = new SimpleDateFormat("MM/dd/yyyy");
@@ -58,6 +61,7 @@ public class MainActivity extends AppCompatActivity implements DatePickerFragmen
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
         tv_day_all = (TextView) findViewById(R.id.tv_day_all);
+        targetTime = (TextView) findViewById(R.id.target_time);
         currentDateTextView = (TextView) findViewById(R.id.tv_currentDate);
         previousDateButton = (Button) findViewById(R.id.btn_previousDate);
         nextDateButton = (Button) findViewById(R.id.btn_nextDate);
@@ -134,6 +138,7 @@ public class MainActivity extends AppCompatActivity implements DatePickerFragmen
 
     public void updateShow(){
         if(db == null) db = helper.getWritableDatabase();
+        setTargetTime(dbDateFormat.format(currentDate));
 
         cursor = getDailyTask(db, dbDateFormat.format(currentDate));
 
@@ -214,6 +219,49 @@ public class MainActivity extends AppCompatActivity implements DatePickerFragmen
         currentDateTextView.setText(dateFormat.format(date));
         cursor = getDailyTask(db, dbDateFormat.format(date));
         adapter.swapCursor(cursor);
+
+        setTargetTime(dbDateFormat.format(date));
+    }
+
+    private void setTargetTime(String date)
+    {
+        String[] monthDayYear = date.split("/");
+        Calendar c = GregorianCalendar.getInstance();
+        c.set(Integer.parseInt(monthDayYear[2]),
+                Integer.parseInt(monthDayYear[0]) - 1,
+                Integer.parseInt(monthDayYear[1]));
+
+        String currentTargetTime = null;
+        if(c.get(Calendar.DAY_OF_WEEK) == Calendar.MONDAY)
+        {
+            currentTargetTime = PreferenceUtils.getDayTargetTime(this, PreferenceUtils.MONDAY_TARGET_TIME);
+        }
+        else if(c.get(Calendar.DAY_OF_WEEK) == Calendar.TUESDAY)
+        {
+            currentTargetTime = PreferenceUtils.getDayTargetTime(this, PreferenceUtils.TUESDAY_TARGET_TIME);
+        }
+        else if(c.get(Calendar.DAY_OF_WEEK) == Calendar.WEDNESDAY)
+        {
+            currentTargetTime = PreferenceUtils.getDayTargetTime(this, PreferenceUtils.WEDNESDAY_TARGET_TIME);
+        }
+        else if(c.get(Calendar.DAY_OF_WEEK) == Calendar.THURSDAY)
+        {
+            currentTargetTime = PreferenceUtils.getDayTargetTime(this, PreferenceUtils.THURSDAY_TARGET_TIME);
+        }
+        else if(c.get(Calendar.DAY_OF_WEEK) == Calendar.FRIDAY)
+        {
+            currentTargetTime = PreferenceUtils.getDayTargetTime(this, PreferenceUtils.FRIDAY_TARGET_TIME);
+        }
+        else if(c.get(Calendar.DAY_OF_WEEK) == Calendar.SATURDAY)
+        {
+            currentTargetTime = PreferenceUtils.getDayTargetTime(this, PreferenceUtils.SATURDAY_TARGET_TIME);
+        }
+        else if(c.get(Calendar.DAY_OF_WEEK) == Calendar.SUNDAY)
+        {
+            currentTargetTime = PreferenceUtils.getDayTargetTime(this, PreferenceUtils.SUNDAY_TARGET_TIME);
+        }
+
+        targetTime.setText(currentTargetTime);
     }
 
     private Date changeDate(Date currentDate, int amount){
