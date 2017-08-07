@@ -1,4 +1,4 @@
-#Mon Aug 07 01:16:37 PDT 2017
+#Mon Aug 07 13:38:29 PDT 2017
 file.2=W\:\\Android_stuff\\TimeManagement\\app\\build\\intermediates\\transforms\\dex\\debug\\folders\\1000\\10\\classes_c8aa41b272e5c9c78283a60b89b1e1a386d07a7a\\classes.dex
 base.2=W\:\\Android_stuff\\TimeManagement\\app\\build\\intermediates\\transforms\\dex\\debug\\folders\\1000\\10\\classes_c8aa41b272e5c9c78283a60b89b1e1a386d07a7a
 file.1=W\:\\Android_stuff\\TimeManagement\\app\\build\\intermediates\\transforms\\dex\\debug\\folders\\1000\\10\\constraint-layout-solver-1.0.2_dbe172375164267edf6bf56f5fc8946040b46ce1\\classes.dex
