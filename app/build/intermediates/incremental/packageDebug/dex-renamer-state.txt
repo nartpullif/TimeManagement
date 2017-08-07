@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 #Sun Aug 06 18:29:54 PDT 2017
 base.0=C\:\\Users\\Mark\\Desktop\\TimeManagement\\app\\build\\intermediates\\transforms\\dex\\debug\\folders\\1000\\10000\\instant-run-bootstrap_6cb2954173e1a5774961ce219294876bbf15c952
 renamed.1=classes.dex
@@ -5,3 +6,12 @@ renamed.0=classes2.dex
 file.1=C\:\\Users\\Mark\\Desktop\\TimeManagement\\app\\build\\intermediates\\transforms\\dex\\debug\\folders\\1000\\10000\\instant-run_8d005ea536f6a8f7ca20059876b642915f5b8542\\classes.dex
 base.1=C\:\\Users\\Mark\\Desktop\\TimeManagement\\app\\build\\intermediates\\transforms\\dex\\debug\\folders\\1000\\10000\\instant-run_8d005ea536f6a8f7ca20059876b642915f5b8542
 file.0=C\:\\Users\\Mark\\Desktop\\TimeManagement\\app\\build\\intermediates\\transforms\\dex\\debug\\folders\\1000\\10000\\instant-run-bootstrap_6cb2954173e1a5774961ce219294876bbf15c952\\classes.dex
+=======
+#Sun Aug 06 22:11:47 PDT 2017
+base.0=W\:\\Android_stuff\\TimeManagement\\app\\build\\intermediates\\transforms\\dex\\debug\\folders\\1000\\10000\\instant-run_fc45e6f13a13f69aac3952860571fb6639b8c089
+renamed.1=classes2.dex
+renamed.0=classes.dex
+file.1=W\:\\Android_stuff\\TimeManagement\\app\\build\\intermediates\\transforms\\dex\\debug\\folders\\1000\\10000\\instant-run-bootstrap_c2562ad5c7f1051ee275ebe12ba3c22f9c7f64fa\\classes.dex
+base.1=W\:\\Android_stuff\\TimeManagement\\app\\build\\intermediates\\transforms\\dex\\debug\\folders\\1000\\10000\\instant-run-bootstrap_c2562ad5c7f1051ee275ebe12ba3c22f9c7f64fa
+file.0=W\:\\Android_stuff\\TimeManagement\\app\\build\\intermediates\\transforms\\dex\\debug\\folders\\1000\\10000\\instant-run_fc45e6f13a13f69aac3952860571fb6639b8c089\\classes.dex
+>>>>>>> 116faa77e1b356e24d5b7849b9a0306bea5840cf

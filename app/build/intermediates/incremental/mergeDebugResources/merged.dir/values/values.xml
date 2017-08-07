@@ -382,6 +382,12 @@
     <string name="start_string">Start</string>
     <string name="status_bar_notification_info_overflow">999+</string>
     <string name="subject_string">Subject</string>
+<<<<<<< HEAD
+=======
+    <string name="subjects_string">Subjects</string>
+    <string name="subjects_toast_string">Subject Toast</string>
+    <string name="subjectt_excel_file_name">myExcel.xls</string>
+>>>>>>> 116faa77e1b356e24d5b7849b9a0306bea5840cf
     <string name="time_string">Time</string>
     <string name="updateTask_string">Update Task</string>
     <style name="AlertDialog.AppCompat" parent="Base.AlertDialog.AppCompat"/>

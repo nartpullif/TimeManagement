@@ -31,6 +31,7 @@ public class Contract {
         public static final String TABLE_NAME = "subjects";
 
         public static final String COLUMN_NAME_TITLE = "title";
+        public static final String COLUMN_NAME_NUMBER_OF_TASKS = "numberOfTasks";
     }
 
     public static class TABLE_PROJECT implements BaseColumns{

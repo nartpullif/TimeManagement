@@ -1,6 +1,10 @@
 [
     {
+<<<<<<< HEAD
         "outputFile": "C:\\Users\\Mark\\Desktop\\TimeManagement\\app\\build\\intermediates\\incremental\\mergeDebugResources\\merged.dir\\values-az\\values-az.xml",
+=======
+        "outputFile": "W:\\Android_stuff\\TimeManagement\\app\\build\\intermediates\\incremental\\mergeDebugResources\\merged.dir\\values-az\\values-az.xml",
+>>>>>>> 116faa77e1b356e24d5b7849b9a0306bea5840cf
         "map": [
             {
                 "to": {
@@ -11,7 +15,11 @@
                     "endOffset": 355
                 },
                 "from": {
+<<<<<<< HEAD
                     "file": "C:\\Users\\Mark\\.android\\build-cache\\04aef0e5f347a34788cff347d3bdb6e8d802bdbd\\output\\res\\values-az\\values.xml",
+=======
+                    "file": "C:\\Users\\icyfillup\\.android\\build-cache\\3db6bc736bdb59c9e1aebb1de303f269d321b889\\output\\res\\values-az\\values.xml",
+>>>>>>> 116faa77e1b356e24d5b7849b9a0306bea5840cf
                     "position": {
                         "startLine": 4,
                         "startColumn": 4,

@@ -1,5 +1,6 @@
 -- Merging decision tree log ---
 manifest
+<<<<<<< HEAD
 ADDED from C:\Users\Mark\Desktop\TimeManagement\app\src\main\AndroidManifest.xml:2:1-61:12
 	package
 		ADDED from C:\Users\Mark\Desktop\TimeManagement\app\src\main\AndroidManifest.xml:3:5-49
@@ -252,3 +253,253 @@ ADDED from [com.google.android.gms:play-services-basement:9.2.1] C:\Users\Mark\.
 		ADDED from [com.google.android.gms:play-services-basement:9.2.1] C:\Users\Mark\.android\build-cache\04aef0e5f347a34788cff347d3bdb6e8d802bdbd\output\AndroidManifest.xml:23:13-66
 	android:name
 		ADDED from [com.google.android.gms:play-services-basement:9.2.1] C:\Users\Mark\.android\build-cache\04aef0e5f347a34788cff347d3bdb6e8d802bdbd\output\AndroidManifest.xml:22:13-58
+=======
+ADDED from W:\Android_stuff\TimeManagement\app\src\main\AndroidManifest.xml:2:1-54:12
+	package
+		ADDED from W:\Android_stuff\TimeManagement\app\src\main\AndroidManifest.xml:3:5-49
+		INJECTED from W:\Android_stuff\TimeManagement\app\src\main\AndroidManifest.xml
+		INJECTED from W:\Android_stuff\TimeManagement\app\src\main\AndroidManifest.xml
+	android:versionName
+		INJECTED from W:\Android_stuff\TimeManagement\app\src\main\AndroidManifest.xml
+		INJECTED from W:\Android_stuff\TimeManagement\app\src\main\AndroidManifest.xml
+	xmlns:android
+		ADDED from W:\Android_stuff\TimeManagement\app\src\main\AndroidManifest.xml:2:11-69
+	android:versionCode
+		INJECTED from W:\Android_stuff\TimeManagement\app\src\main\AndroidManifest.xml
+		INJECTED from W:\Android_stuff\TimeManagement\app\src\main\AndroidManifest.xml
+application
+ADDED from W:\Android_stuff\TimeManagement\app\src\main\AndroidManifest.xml:5:5-52:19
+MERGED from [com.android.support:design:23.0.1] C:\Users\icyfillup\.android\build-cache\891dce40efe3296fe3d04c57b5a5505246e6ea86\output\AndroidManifest.xml:22:5-20
+MERGED from [com.android.support:appcompat-v7:23.0.1] C:\Users\icyfillup\.android\build-cache\a027631cee244203f572e361e51dfe97f71ecc5d\output\AndroidManifest.xml:22:5-20
+MERGED from [com.android.support.constraint:constraint-layout:1.0.2] C:\Users\icyfillup\.android\build-cache\9b7e1fbd1021cd8bf21bb4dce65375cf90168b78\output\AndroidManifest.xml:9:5-20
+MERGED from [com.google.firebase:firebase-messaging:9.2.1] C:\Users\icyfillup\.android\build-cache\1b16ea55da2dded5595b8c46a932086bf915507a\output\AndroidManifest.xml:20:5-32:19
+MERGED from [com.google.firebase:firebase-core:9.2.1] C:\Users\icyfillup\.android\build-cache\9a69a53aeff23ab6d5703a115babba1671c50631\output\AndroidManifest.xml:5:5-20
+MERGED from [com.google.firebase:firebase-analytics:9.2.1] C:\Users\icyfillup\.android\build-cache\64b09c49d2c4e6a24e11822db3a5072b94729120\output\AndroidManifest.xml:26:5-41:19
+MERGED from [com.google.firebase:firebase-analytics-impl:9.2.1] C:\Users\icyfillup\.android\build-cache\bc2542dfaeb5606524c9a31894cc35a2f1f9a2e1\output\AndroidManifest.xml:26:5-41:19
+MERGED from [com.google.firebase:firebase-iid:9.2.1] C:\Users\icyfillup\.android\build-cache\e656277b52b4f683a9773d529b7e826d4849b05d\output\AndroidManifest.xml:30:5-59:19
+MERGED from [com.google.firebase:firebase-common:9.2.1] C:\Users\icyfillup\.android\build-cache\ee42f00cac0adc3920f432eed1eb4fd3eb102623\output\AndroidManifest.xml:5:5-12:19
+MERGED from [com.google.android.gms:play-services-tasks:9.2.1] C:\Users\icyfillup\.android\build-cache\727cde999d68d2106e1667ce17f0c4929e52f8d4\output\AndroidManifest.xml:5:5-20
+MERGED from [com.google.android.gms:play-services-basement:9.2.1] C:\Users\icyfillup\.android\build-cache\3db6bc736bdb59c9e1aebb1de303f269d321b889\output\AndroidManifest.xml:20:5-24:19
+MERGED from [com.android.support:support-v4:23.0.1] C:\Users\icyfillup\.android\build-cache\9c4d1c023c8d5919fd42646b28e607581511fe02\output\AndroidManifest.xml:22:5-20
+	android:label
+		ADDED from W:\Android_stuff\TimeManagement\app\src\main\AndroidManifest.xml:8:9-41
+	android:supportsRtl
+		ADDED from W:\Android_stuff\TimeManagement\app\src\main\AndroidManifest.xml:9:9-35
+	android:allowBackup
+		ADDED from W:\Android_stuff\TimeManagement\app\src\main\AndroidManifest.xml:6:9-35
+	android:icon
+		ADDED from W:\Android_stuff\TimeManagement\app\src\main\AndroidManifest.xml:7:9-43
+	android:theme
+		ADDED from W:\Android_stuff\TimeManagement\app\src\main\AndroidManifest.xml:10:9-40
+activity#com.example.android.timemanagement.activities.HomeTabActivity
+ADDED from W:\Android_stuff\TimeManagement\app\src\main\AndroidManifest.xml:11:9-17:20
+	android:name
+		ADDED from W:\Android_stuff\TimeManagement\app\src\main\AndroidManifest.xml:11:19-61
+intent-filter#android.intent.action.MAIN+android.intent.category.LAUNCHER
+ADDED from W:\Android_stuff\TimeManagement\app\src\main\AndroidManifest.xml:12:13-16:29
+action#android.intent.action.MAIN
+ADDED from W:\Android_stuff\TimeManagement\app\src\main\AndroidManifest.xml:13:17-69
+	android:name
+		ADDED from W:\Android_stuff\TimeManagement\app\src\main\AndroidManifest.xml:13:25-66
+category#android.intent.category.LAUNCHER
+ADDED from W:\Android_stuff\TimeManagement\app\src\main\AndroidManifest.xml:15:17-77
+	android:name
+		ADDED from W:\Android_stuff\TimeManagement\app\src\main\AndroidManifest.xml:15:27-74
+activity#com.example.android.timemanagement.activities.MainActivity
+ADDED from W:\Android_stuff\TimeManagement\app\src\main\AndroidManifest.xml:18:9-61
+	android:name
+		ADDED from W:\Android_stuff\TimeManagement\app\src\main\AndroidManifest.xml:18:19-58
+activity#com.example.android.timemanagement.activities.AddTaskActivity
+ADDED from W:\Android_stuff\TimeManagement\app\src\main\AndroidManifest.xml:19:9-26:20
+	android:label
+		ADDED from W:\Android_stuff\TimeManagement\app\src\main\AndroidManifest.xml:21:13-51
+	android:parentActivityName
+		ADDED from W:\Android_stuff\TimeManagement\app\src\main\AndroidManifest.xml:22:13-66
+	android:name
+		ADDED from W:\Android_stuff\TimeManagement\app\src\main\AndroidManifest.xml:20:13-55
+meta-data#android.support.PARENT_ACTIVITY
+ADDED from W:\Android_stuff\TimeManagement\app\src\main\AndroidManifest.xml:23:13-25:60
+	android:value
+		ADDED from W:\Android_stuff\TimeManagement\app\src\main\AndroidManifest.xml:25:17-57
+	android:name
+		ADDED from W:\Android_stuff\TimeManagement\app\src\main\AndroidManifest.xml:24:17-63
+activity#com.example.android.timemanagement.activities.UpdateTaskActivity
+ADDED from W:\Android_stuff\TimeManagement\app\src\main\AndroidManifest.xml:27:9-34:20
+	android:label
+		ADDED from W:\Android_stuff\TimeManagement\app\src\main\AndroidManifest.xml:29:13-54
+	android:parentActivityName
+		ADDED from W:\Android_stuff\TimeManagement\app\src\main\AndroidManifest.xml:30:13-66
+	android:name
+		ADDED from W:\Android_stuff\TimeManagement\app\src\main\AndroidManifest.xml:28:13-58
+activity#com.example.android.timemanagement.activities.TotalActivity
+ADDED from W:\Android_stuff\TimeManagement\app\src\main\AndroidManifest.xml:35:9-62
+	android:name
+		ADDED from W:\Android_stuff\TimeManagement\app\src\main\AndroidManifest.xml:35:19-59
+activity#com.example.android.timemanagement.activities.GraphActivity
+ADDED from W:\Android_stuff\TimeManagement\app\src\main\AndroidManifest.xml:36:9-62
+	android:name
+		ADDED from W:\Android_stuff\TimeManagement\app\src\main\AndroidManifest.xml:36:19-59
+activity#com.example.android.timemanagement.activities.TargetTimeSettingActivity
+ADDED from W:\Android_stuff\TimeManagement\app\src\main\AndroidManifest.xml:37:9-74
+	android:name
+		ADDED from W:\Android_stuff\TimeManagement\app\src\main\AndroidManifest.xml:37:19-71
+service#com.example.android.timemanagement.notification.MyFirebaseInstanceIdService
+ADDED from W:\Android_stuff\TimeManagement\app\src\main\AndroidManifest.xml:39:9-43:19
+	android:name
+		ADDED from W:\Android_stuff\TimeManagement\app\src\main\AndroidManifest.xml:39:18-74
+intent-filter#com.google.firebase.INSTANCE_ID_EVENT
+ADDED from W:\Android_stuff\TimeManagement\app\src\main\AndroidManifest.xml:40:13-42:29
+action#com.google.firebase.INSTANCE_ID_EVENT
+ADDED from W:\Android_stuff\TimeManagement\app\src\main\AndroidManifest.xml:41:17-80
+	android:name
+		ADDED from W:\Android_stuff\TimeManagement\app\src\main\AndroidManifest.xml:41:25-77
+service#com.example.android.timemanagement.notification.MyFirebaseMessagingService
+ADDED from W:\Android_stuff\TimeManagement\app\src\main\AndroidManifest.xml:44:9-48:19
+	android:name
+		ADDED from W:\Android_stuff\TimeManagement\app\src\main\AndroidManifest.xml:44:18-73
+intent-filter#com.google.firebase.MESSAGING_EVENT
+ADDED from W:\Android_stuff\TimeManagement\app\src\main\AndroidManifest.xml:45:13-47:29
+action#com.google.firebase.MESSAGING_EVENT
+ADDED from W:\Android_stuff\TimeManagement\app\src\main\AndroidManifest.xml:46:17-78
+	android:name
+		ADDED from W:\Android_stuff\TimeManagement\app\src\main\AndroidManifest.xml:46:25-75
+activity#com.example.android.timemanagement.activities.ProjectsList
+ADDED from W:\Android_stuff\TimeManagement\app\src\main\AndroidManifest.xml:50:9-61
+	android:name
+		ADDED from W:\Android_stuff\TimeManagement\app\src\main\AndroidManifest.xml:50:19-58
+activity#com.example.android.timemanagement.activities.SubjectsList
+ADDED from W:\Android_stuff\TimeManagement\app\src\main\AndroidManifest.xml:51:9-70
+	android:name
+		ADDED from W:\Android_stuff\TimeManagement\app\src\main\AndroidManifest.xml:51:19-58
+uses-sdk
+INJECTED from W:\Android_stuff\TimeManagement\app\src\main\AndroidManifest.xml reason: use-sdk injection requested
+MERGED from [com.android.support:recyclerview-v7:23.0.1] C:\Users\icyfillup\.android\build-cache\59ccd53687224dd355680030b1fdc9b36a82db11\output\AndroidManifest.xml:20:5-43
+MERGED from [com.android.support:design:23.0.1] C:\Users\icyfillup\.android\build-cache\891dce40efe3296fe3d04c57b5a5505246e6ea86\output\AndroidManifest.xml:20:5-43
+MERGED from [com.android.support:appcompat-v7:23.0.1] C:\Users\icyfillup\.android\build-cache\a027631cee244203f572e361e51dfe97f71ecc5d\output\AndroidManifest.xml:20:5-43
+MERGED from [com.android.support.constraint:constraint-layout:1.0.2] C:\Users\icyfillup\.android\build-cache\9b7e1fbd1021cd8bf21bb4dce65375cf90168b78\output\AndroidManifest.xml:5:5-7:41
+MERGED from [com.google.firebase:firebase-messaging:9.2.1] C:\Users\icyfillup\.android\build-cache\1b16ea55da2dded5595b8c46a932086bf915507a\output\AndroidManifest.xml:18:5-42
+MERGED from [com.google.firebase:firebase-core:9.2.1] C:\Users\icyfillup\.android\build-cache\9a69a53aeff23ab6d5703a115babba1671c50631\output\AndroidManifest.xml:4:5-42
+MERGED from [com.google.firebase:firebase-analytics:9.2.1] C:\Users\icyfillup\.android\build-cache\64b09c49d2c4e6a24e11822db3a5072b94729120\output\AndroidManifest.xml:18:5-42
+MERGED from [com.google.firebase:firebase-analytics-impl:9.2.1] C:\Users\icyfillup\.android\build-cache\bc2542dfaeb5606524c9a31894cc35a2f1f9a2e1\output\AndroidManifest.xml:18:5-42
+MERGED from [com.google.firebase:firebase-iid:9.2.1] C:\Users\icyfillup\.android\build-cache\e656277b52b4f683a9773d529b7e826d4849b05d\output\AndroidManifest.xml:18:5-42
+MERGED from [com.google.firebase:firebase-common:9.2.1] C:\Users\icyfillup\.android\build-cache\ee42f00cac0adc3920f432eed1eb4fd3eb102623\output\AndroidManifest.xml:4:5-43
+MERGED from [com.google.android.gms:play-services-tasks:9.2.1] C:\Users\icyfillup\.android\build-cache\727cde999d68d2106e1667ce17f0c4929e52f8d4\output\AndroidManifest.xml:4:5-43
+MERGED from [com.google.android.gms:play-services-basement:9.2.1] C:\Users\icyfillup\.android\build-cache\3db6bc736bdb59c9e1aebb1de303f269d321b889\output\AndroidManifest.xml:18:5-42
+MERGED from [com.android.support:support-v4:23.0.1] C:\Users\icyfillup\.android\build-cache\9c4d1c023c8d5919fd42646b28e607581511fe02\output\AndroidManifest.xml:20:5-43
+	android:targetSdkVersion
+		INJECTED from W:\Android_stuff\TimeManagement\app\src\main\AndroidManifest.xml
+		INJECTED from W:\Android_stuff\TimeManagement\app\src\main\AndroidManifest.xml
+	android:minSdkVersion
+		INJECTED from W:\Android_stuff\TimeManagement\app\src\main\AndroidManifest.xml
+		INJECTED from W:\Android_stuff\TimeManagement\app\src\main\AndroidManifest.xml
+service#com.google.firebase.messaging.FirebaseMessagingService
+ADDED from [com.google.firebase:firebase-messaging:9.2.1] C:\Users\icyfillup\.android\build-cache\1b16ea55da2dded5595b8c46a932086bf915507a\output\AndroidManifest.xml:24:9-30:19
+	android:exported
+		ADDED from [com.google.firebase:firebase-messaging:9.2.1] C:\Users\icyfillup\.android\build-cache\1b16ea55da2dded5595b8c46a932086bf915507a\output\AndroidManifest.xml:26:13-36
+	android:name
+		ADDED from [com.google.firebase:firebase-messaging:9.2.1] C:\Users\icyfillup\.android\build-cache\1b16ea55da2dded5595b8c46a932086bf915507a\output\AndroidManifest.xml:25:13-82
+uses-permission#android.permission.INTERNET
+ADDED from [com.google.firebase:firebase-analytics:9.2.1] C:\Users\icyfillup\.android\build-cache\64b09c49d2c4e6a24e11822db3a5072b94729120\output\AndroidManifest.xml:21:5-67
+MERGED from [com.google.firebase:firebase-analytics-impl:9.2.1] C:\Users\icyfillup\.android\build-cache\bc2542dfaeb5606524c9a31894cc35a2f1f9a2e1\output\AndroidManifest.xml:21:5-67
+MERGED from [com.google.firebase:firebase-iid:9.2.1] C:\Users\icyfillup\.android\build-cache\e656277b52b4f683a9773d529b7e826d4849b05d\output\AndroidManifest.xml:21:5-67
+	android:name
+		ADDED from [com.google.firebase:firebase-analytics:9.2.1] C:\Users\icyfillup\.android\build-cache\64b09c49d2c4e6a24e11822db3a5072b94729120\output\AndroidManifest.xml:21:22-64
+uses-permission#android.permission.ACCESS_NETWORK_STATE
+ADDED from [com.google.firebase:firebase-analytics:9.2.1] C:\Users\icyfillup\.android\build-cache\64b09c49d2c4e6a24e11822db3a5072b94729120\output\AndroidManifest.xml:22:5-79
+MERGED from [com.google.firebase:firebase-analytics-impl:9.2.1] C:\Users\icyfillup\.android\build-cache\bc2542dfaeb5606524c9a31894cc35a2f1f9a2e1\output\AndroidManifest.xml:22:5-79
+MERGED from [com.google.firebase:firebase-iid:9.2.1] C:\Users\icyfillup\.android\build-cache\e656277b52b4f683a9773d529b7e826d4849b05d\output\AndroidManifest.xml:20:5-79
+	android:name
+		ADDED from [com.google.firebase:firebase-analytics:9.2.1] C:\Users\icyfillup\.android\build-cache\64b09c49d2c4e6a24e11822db3a5072b94729120\output\AndroidManifest.xml:22:22-76
+uses-permission#android.permission.WAKE_LOCK
+ADDED from [com.google.firebase:firebase-analytics:9.2.1] C:\Users\icyfillup\.android\build-cache\64b09c49d2c4e6a24e11822db3a5072b94729120\output\AndroidManifest.xml:24:5-67
+MERGED from [com.google.firebase:firebase-analytics-impl:9.2.1] C:\Users\icyfillup\.android\build-cache\bc2542dfaeb5606524c9a31894cc35a2f1f9a2e1\output\AndroidManifest.xml:24:5-67
+MERGED from [com.google.firebase:firebase-iid:9.2.1] C:\Users\icyfillup\.android\build-cache\e656277b52b4f683a9773d529b7e826d4849b05d\output\AndroidManifest.xml:22:5-68
+	android:name
+		ADDED from [com.google.firebase:firebase-analytics:9.2.1] C:\Users\icyfillup\.android\build-cache\64b09c49d2c4e6a24e11822db3a5072b94729120\output\AndroidManifest.xml:24:22-65
+receiver#com.google.android.gms.measurement.AppMeasurementReceiver
+ADDED from [com.google.firebase:firebase-analytics:9.2.1] C:\Users\icyfillup\.android\build-cache\64b09c49d2c4e6a24e11822db3a5072b94729120\output\AndroidManifest.xml:28:7-34:18
+MERGED from [com.google.firebase:firebase-analytics-impl:9.2.1] C:\Users\icyfillup\.android\build-cache\bc2542dfaeb5606524c9a31894cc35a2f1f9a2e1\output\AndroidManifest.xml:28:7-34:18
+	android:enabled
+		ADDED from [com.google.firebase:firebase-analytics:9.2.1] C:\Users\icyfillup\.android\build-cache\64b09c49d2c4e6a24e11822db3a5072b94729120\output\AndroidManifest.xml:30:11-33
+	android:name
+		ADDED from [com.google.firebase:firebase-analytics:9.2.1] C:\Users\icyfillup\.android\build-cache\64b09c49d2c4e6a24e11822db3a5072b94729120\output\AndroidManifest.xml:29:11-83
+intent-filter#com.google.android.gms.measurement.UPLOAD
+ADDED from [com.google.firebase:firebase-analytics:9.2.1] C:\Users\icyfillup\.android\build-cache\64b09c49d2c4e6a24e11822db3a5072b94729120\output\AndroidManifest.xml:31:9-33:25
+action#com.google.android.gms.measurement.UPLOAD
+ADDED from [com.google.firebase:firebase-analytics:9.2.1] C:\Users\icyfillup\.android\build-cache\64b09c49d2c4e6a24e11822db3a5072b94729120\output\AndroidManifest.xml:32:11-77
+	android:name
+		ADDED from [com.google.firebase:firebase-analytics:9.2.1] C:\Users\icyfillup\.android\build-cache\64b09c49d2c4e6a24e11822db3a5072b94729120\output\AndroidManifest.xml:32:19-75
+service#com.google.android.gms.measurement.AppMeasurementService
+ADDED from [com.google.firebase:firebase-analytics:9.2.1] C:\Users\icyfillup\.android\build-cache\64b09c49d2c4e6a24e11822db3a5072b94729120\output\AndroidManifest.xml:36:7-39:37
+MERGED from [com.google.firebase:firebase-analytics-impl:9.2.1] C:\Users\icyfillup\.android\build-cache\bc2542dfaeb5606524c9a31894cc35a2f1f9a2e1\output\AndroidManifest.xml:36:7-39:37
+	android:enabled
+		ADDED from [com.google.firebase:firebase-analytics:9.2.1] C:\Users\icyfillup\.android\build-cache\64b09c49d2c4e6a24e11822db3a5072b94729120\output\AndroidManifest.xml:38:11-33
+	android:exported
+		ADDED from [com.google.firebase:firebase-analytics:9.2.1] C:\Users\icyfillup\.android\build-cache\64b09c49d2c4e6a24e11822db3a5072b94729120\output\AndroidManifest.xml:39:11-35
+	android:name
+		ADDED from [com.google.firebase:firebase-analytics:9.2.1] C:\Users\icyfillup\.android\build-cache\64b09c49d2c4e6a24e11822db3a5072b94729120\output\AndroidManifest.xml:37:11-82
+uses-permission#com.google.android.c2dm.permission.RECEIVE
+ADDED from [com.google.firebase:firebase-iid:9.2.1] C:\Users\icyfillup\.android\build-cache\e656277b52b4f683a9773d529b7e826d4849b05d\output\AndroidManifest.xml:23:5-82
+	android:name
+		ADDED from [com.google.firebase:firebase-iid:9.2.1] C:\Users\icyfillup\.android\build-cache\e656277b52b4f683a9773d529b7e826d4849b05d\output\AndroidManifest.xml:23:22-79
+permission#${applicationId}.permission.C2D_MESSAGE
+ADDED from [com.google.firebase:firebase-iid:9.2.1] C:\Users\icyfillup\.android\build-cache\e656277b52b4f683a9773d529b7e826d4849b05d\output\AndroidManifest.xml:25:5-26:47
+	android:protectionLevel
+		ADDED from [com.google.firebase:firebase-iid:9.2.1] C:\Users\icyfillup\.android\build-cache\e656277b52b4f683a9773d529b7e826d4849b05d\output\AndroidManifest.xml:26:9-44
+	android:name
+		ADDED from [com.google.firebase:firebase-iid:9.2.1] C:\Users\icyfillup\.android\build-cache\e656277b52b4f683a9773d529b7e826d4849b05d\output\AndroidManifest.xml:25:17-71
+uses-permission#${applicationId}.permission.C2D_MESSAGE
+ADDED from [com.google.firebase:firebase-iid:9.2.1] C:\Users\icyfillup\.android\build-cache\e656277b52b4f683a9773d529b7e826d4849b05d\output\AndroidManifest.xml:28:5-79
+	android:name
+		ADDED from [com.google.firebase:firebase-iid:9.2.1] C:\Users\icyfillup\.android\build-cache\e656277b52b4f683a9773d529b7e826d4849b05d\output\AndroidManifest.xml:28:22-76
+receiver#com.google.firebase.iid.FirebaseInstanceIdReceiver
+ADDED from [com.google.firebase:firebase-iid:9.2.1] C:\Users\icyfillup\.android\build-cache\e656277b52b4f683a9773d529b7e826d4849b05d\output\AndroidManifest.xml:32:9-41:20
+	android:exported
+		ADDED from [com.google.firebase:firebase-iid:9.2.1] C:\Users\icyfillup\.android\build-cache\e656277b52b4f683a9773d529b7e826d4849b05d\output\AndroidManifest.xml:34:13-36
+	android:permission
+		ADDED from [com.google.firebase:firebase-iid:9.2.1] C:\Users\icyfillup\.android\build-cache\e656277b52b4f683a9773d529b7e826d4849b05d\output\AndroidManifest.xml:35:13-73
+	android:name
+		ADDED from [com.google.firebase:firebase-iid:9.2.1] C:\Users\icyfillup\.android\build-cache\e656277b52b4f683a9773d529b7e826d4849b05d\output\AndroidManifest.xml:33:13-78
+intent-filter#${applicationId}+com.google.android.c2dm.intent.RECEIVE+com.google.android.c2dm.intent.REGISTRATION
+ADDED from [com.google.firebase:firebase-iid:9.2.1] C:\Users\icyfillup\.android\build-cache\e656277b52b4f683a9773d529b7e826d4849b05d\output\AndroidManifest.xml:36:13-40:29
+action#com.google.android.c2dm.intent.RECEIVE
+ADDED from [com.google.firebase:firebase-iid:9.2.1] C:\Users\icyfillup\.android\build-cache\e656277b52b4f683a9773d529b7e826d4849b05d\output\AndroidManifest.xml:37:17-81
+	android:name
+		ADDED from [com.google.firebase:firebase-iid:9.2.1] C:\Users\icyfillup\.android\build-cache\e656277b52b4f683a9773d529b7e826d4849b05d\output\AndroidManifest.xml:37:25-78
+action#com.google.android.c2dm.intent.REGISTRATION
+ADDED from [com.google.firebase:firebase-iid:9.2.1] C:\Users\icyfillup\.android\build-cache\e656277b52b4f683a9773d529b7e826d4849b05d\output\AndroidManifest.xml:38:17-86
+	android:name
+		ADDED from [com.google.firebase:firebase-iid:9.2.1] C:\Users\icyfillup\.android\build-cache\e656277b52b4f683a9773d529b7e826d4849b05d\output\AndroidManifest.xml:38:25-83
+category#${applicationId}
+ADDED from [com.google.firebase:firebase-iid:9.2.1] C:\Users\icyfillup\.android\build-cache\e656277b52b4f683a9773d529b7e826d4849b05d\output\AndroidManifest.xml:39:17-61
+	android:name
+		ADDED from [com.google.firebase:firebase-iid:9.2.1] C:\Users\icyfillup\.android\build-cache\e656277b52b4f683a9773d529b7e826d4849b05d\output\AndroidManifest.xml:39:27-58
+receiver#com.google.firebase.iid.FirebaseInstanceIdInternalReceiver
+ADDED from [com.google.firebase:firebase-iid:9.2.1] C:\Users\icyfillup\.android\build-cache\e656277b52b4f683a9773d529b7e826d4849b05d\output\AndroidManifest.xml:45:9-47:40
+	android:exported
+		ADDED from [com.google.firebase:firebase-iid:9.2.1] C:\Users\icyfillup\.android\build-cache\e656277b52b4f683a9773d529b7e826d4849b05d\output\AndroidManifest.xml:47:13-37
+	android:name
+		ADDED from [com.google.firebase:firebase-iid:9.2.1] C:\Users\icyfillup\.android\build-cache\e656277b52b4f683a9773d529b7e826d4849b05d\output\AndroidManifest.xml:46:13-86
+service#com.google.firebase.iid.FirebaseInstanceIdService
+ADDED from [com.google.firebase:firebase-iid:9.2.1] C:\Users\icyfillup\.android\build-cache\e656277b52b4f683a9773d529b7e826d4849b05d\output\AndroidManifest.xml:51:9-57:19
+	android:exported
+		ADDED from [com.google.firebase:firebase-iid:9.2.1] C:\Users\icyfillup\.android\build-cache\e656277b52b4f683a9773d529b7e826d4849b05d\output\AndroidManifest.xml:53:13-36
+	android:name
+		ADDED from [com.google.firebase:firebase-iid:9.2.1] C:\Users\icyfillup\.android\build-cache\e656277b52b4f683a9773d529b7e826d4849b05d\output\AndroidManifest.xml:52:13-77
+provider#com.google.firebase.provider.FirebaseInitProvider
+ADDED from [com.google.firebase:firebase-common:9.2.1] C:\Users\icyfillup\.android\build-cache\ee42f00cac0adc3920f432eed1eb4fd3eb102623\output\AndroidManifest.xml:7:9-11:39
+	android:authorities
+		ADDED from [com.google.firebase:firebase-common:9.2.1] C:\Users\icyfillup\.android\build-cache\ee42f00cac0adc3920f432eed1eb4fd3eb102623\output\AndroidManifest.xml:8:13-72
+	android:exported
+		ADDED from [com.google.firebase:firebase-common:9.2.1] C:\Users\icyfillup\.android\build-cache\ee42f00cac0adc3920f432eed1eb4fd3eb102623\output\AndroidManifest.xml:10:13-37
+	android:initOrder
+		ADDED from [com.google.firebase:firebase-common:9.2.1] C:\Users\icyfillup\.android\build-cache\ee42f00cac0adc3920f432eed1eb4fd3eb102623\output\AndroidManifest.xml:11:13-36
+	android:name
+		ADDED from [com.google.firebase:firebase-common:9.2.1] C:\Users\icyfillup\.android\build-cache\ee42f00cac0adc3920f432eed1eb4fd3eb102623\output\AndroidManifest.xml:9:13-58
+meta-data#com.google.android.gms.version
+ADDED from [com.google.android.gms:play-services-basement:9.2.1] C:\Users\icyfillup\.android\build-cache\3db6bc736bdb59c9e1aebb1de303f269d321b889\output\AndroidManifest.xml:21:9-23:69
+	android:value
+		ADDED from [com.google.android.gms:play-services-basement:9.2.1] C:\Users\icyfillup\.android\build-cache\3db6bc736bdb59c9e1aebb1de303f269d321b889\output\AndroidManifest.xml:23:13-66
+	android:name
+		ADDED from [com.google.android.gms:play-services-basement:9.2.1] C:\Users\icyfillup\.android\build-cache\3db6bc736bdb59c9e1aebb1de303f269d321b889\output\AndroidManifest.xml:22:13-58
+>>>>>>> 116faa77e1b356e24d5b7849b9a0306bea5840cf

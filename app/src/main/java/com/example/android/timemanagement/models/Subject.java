@@ -6,6 +6,7 @@ package com.example.android.timemanagement.models;
 
 public class Subject {
     private String title;
+    private int numberOfTasks;
 
     public Subject(String title) {
         this.title = title;
@@ -17,5 +18,13 @@ public class Subject {
 
     public void setTitle(String title) {
         this.title = title;
+    }
+
+    public int getNumberOfTasks() {
+        return numberOfTasks;
+    }
+
+    public void setNumberOfTasks(int numberOfTasks) {
+        this.numberOfTasks = numberOfTasks;
     }
 }
