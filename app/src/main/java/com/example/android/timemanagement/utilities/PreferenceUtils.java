@@ -28,7 +28,7 @@ public class PreferenceUtils
         boolean isFirst = prefs.getBoolean(IS_FIRST, true);
         if(isFirst)
         {
-            DatabaseUtils.dummyTask(context);
+//            DatabaseUtils.dummyTask(context);
             SharedPreferences.Editor editor = prefs.edit();
             editor.putBoolean(IS_FIRST, false);
             editor.putString(MONDAY_TARGET_TIME, DEFAULT_TARGET_TIME);
