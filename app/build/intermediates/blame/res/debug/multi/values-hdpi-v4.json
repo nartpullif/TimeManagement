@@ -1,6 +1,6 @@
 [
     {
-        "outputFile": "/Users/Vahedi/Documents/Android/TestProjects/TimeManagement-master/TimeManagement/app/build/intermediates/incremental/mergeDebugResources/merged.dir/values-hdpi-v4/values-hdpi-v4.xml",
+        "outputFile": "C:\\Users\\Mark\\Desktop\\TimeManagement\\app\\build\\intermediates\\incremental\\mergeDebugResources\\merged.dir\\values-hdpi-v4\\values-hdpi-v4.xml",
         "map": [
             {
                 "to": {
@@ -12,7 +12,7 @@
                     "endOffset": 327
                 },
                 "from": {
-                    "file": "/Users/Vahedi/.android/build-cache/f5e158f2f9c539b29f7741e3d52200622287f7e2/output/res/values-hdpi/values-hdpi.xml",
+                    "file": "C:\\Users\\Mark\\.android\\build-cache\\67b6b4dea77d5f1d38753986b48236c449b6f326\\output\\res\\values-hdpi\\values-hdpi.xml",
                     "position": {
                         "startLine": 4,
                         "startColumn": 4,

@@ -1,130 +1,130 @@
 [
     {
-        "merged": "/Users/Vahedi/Documents/Android/TestProjects/TimeManagement-master/TimeManagement/app/build/intermediates/res/merged/debug/drawable/abc_dialog_material_background_dark.xml",
-        "source": "/Users/Vahedi/.android/build-cache/f5e158f2f9c539b29f7741e3d52200622287f7e2/output/res/drawable/abc_dialog_material_background_dark.xml"
+        "merged": "C:\\Users\\Mark\\Desktop\\TimeManagement\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\abc_cab_background_top_material.xml",
+        "source": "C:\\Users\\Mark\\.android\\build-cache\\67b6b4dea77d5f1d38753986b48236c449b6f326\\output\\res\\drawable\\abc_cab_background_top_material.xml"
     },
     {
-        "merged": "/Users/Vahedi/Documents/Android/TestProjects/TimeManagement-master/TimeManagement/app/build/intermediates/res/merged/debug/drawable/abc_cab_background_internal_bg.xml",
-        "source": "/Users/Vahedi/.android/build-cache/f5e158f2f9c539b29f7741e3d52200622287f7e2/output/res/drawable/abc_cab_background_internal_bg.xml"
+        "merged": "C:\\Users\\Mark\\Desktop\\TimeManagement\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\segment_radio_left.xml",
+        "source": "C:\\Users\\Mark\\Desktop\\TimeManagement\\app\\src\\main\\res\\drawable\\segment_radio_left.xml"
     },
     {
-        "merged": "/Users/Vahedi/Documents/Android/TestProjects/TimeManagement-master/TimeManagement/app/build/intermediates/res/merged/debug/drawable/abc_btn_radio_material.xml",
-        "source": "/Users/Vahedi/.android/build-cache/f5e158f2f9c539b29f7741e3d52200622287f7e2/output/res/drawable/abc_btn_radio_material.xml"
+        "merged": "C:\\Users\\Mark\\Desktop\\TimeManagement\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\abc_list_selector_background_transition_holo_dark.xml",
+        "source": "C:\\Users\\Mark\\.android\\build-cache\\67b6b4dea77d5f1d38753986b48236c449b6f326\\output\\res\\drawable\\abc_list_selector_background_transition_holo_dark.xml"
     },
     {
-        "merged": "/Users/Vahedi/Documents/Android/TestProjects/TimeManagement-master/TimeManagement/app/build/intermediates/res/merged/debug/drawable/segment_radio_middle.xml",
-        "source": "/Users/Vahedi/Documents/Android/TestProjects/TimeManagement-master/TimeManagement/app/src/main/res/drawable/segment_radio_middle.xml"
+        "merged": "C:\\Users\\Mark\\Desktop\\TimeManagement\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\activities_toolbar.xml",
+        "source": "C:\\Users\\Mark\\Desktop\\TimeManagement\\app\\src\\main\\res\\drawable\\activities_toolbar.xml"
     },
     {
-        "merged": "/Users/Vahedi/Documents/Android/TestProjects/TimeManagement-master/TimeManagement/app/build/intermediates/res/merged/debug/drawable/abc_edit_text_material.xml",
-        "source": "/Users/Vahedi/.android/build-cache/f5e158f2f9c539b29f7741e3d52200622287f7e2/output/res/drawable/abc_edit_text_material.xml"
+        "merged": "C:\\Users\\Mark\\Desktop\\TimeManagement\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\abc_list_selector_holo_light.xml",
+        "source": "C:\\Users\\Mark\\.android\\build-cache\\67b6b4dea77d5f1d38753986b48236c449b6f326\\output\\res\\drawable\\abc_list_selector_holo_light.xml"
     },
     {
-        "merged": "/Users/Vahedi/Documents/Android/TestProjects/TimeManagement-master/TimeManagement/app/build/intermediates/res/merged/debug/drawable/abc_cab_background_top_material.xml",
-        "source": "/Users/Vahedi/.android/build-cache/f5e158f2f9c539b29f7741e3d52200622287f7e2/output/res/drawable/abc_cab_background_top_material.xml"
+        "merged": "C:\\Users\\Mark\\Desktop\\TimeManagement\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\activities_toolbar_line.xml",
+        "source": "C:\\Users\\Mark\\Desktop\\TimeManagement\\app\\src\\main\\res\\drawable\\activities_toolbar_line.xml"
     },
     {
-        "merged": "/Users/Vahedi/Documents/Android/TestProjects/TimeManagement-master/TimeManagement/app/build/intermediates/res/merged/debug/drawable/abc_btn_check_material.xml",
-        "source": "/Users/Vahedi/.android/build-cache/f5e158f2f9c539b29f7741e3d52200622287f7e2/output/res/drawable/abc_btn_check_material.xml"
+        "merged": "C:\\Users\\Mark\\Desktop\\TimeManagement\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\abc_text_cursor_material.xml",
+        "source": "C:\\Users\\Mark\\.android\\build-cache\\67b6b4dea77d5f1d38753986b48236c449b6f326\\output\\res\\drawable\\abc_text_cursor_material.xml"
     },
     {
-        "merged": "/Users/Vahedi/Documents/Android/TestProjects/TimeManagement-master/TimeManagement/app/build/intermediates/res/merged/debug/drawable/design_fab_background.xml",
-        "source": "/Users/Vahedi/.android/build-cache/e7c43c2efac03d6347806792b3f409745fc85c37/output/res/drawable/design_fab_background.xml"
+        "merged": "C:\\Users\\Mark\\Desktop\\TimeManagement\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\abc_cab_background_internal_bg.xml",
+        "source": "C:\\Users\\Mark\\.android\\build-cache\\67b6b4dea77d5f1d38753986b48236c449b6f326\\output\\res\\drawable\\abc_cab_background_internal_bg.xml"
     },
     {
-        "merged": "/Users/Vahedi/Documents/Android/TestProjects/TimeManagement-master/TimeManagement/app/build/intermediates/res/merged/debug/drawable/abc_list_selector_holo_dark.xml",
-        "source": "/Users/Vahedi/.android/build-cache/f5e158f2f9c539b29f7741e3d52200622287f7e2/output/res/drawable/abc_list_selector_holo_dark.xml"
+        "merged": "C:\\Users\\Mark\\Desktop\\TimeManagement\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\segment_radio_right.xml",
+        "source": "C:\\Users\\Mark\\Desktop\\TimeManagement\\app\\src\\main\\res\\drawable\\segment_radio_right.xml"
     },
     {
-        "merged": "/Users/Vahedi/Documents/Android/TestProjects/TimeManagement-master/TimeManagement/app/build/intermediates/res/merged/debug/drawable/abc_dialog_material_background_light.xml",
-        "source": "/Users/Vahedi/.android/build-cache/f5e158f2f9c539b29f7741e3d52200622287f7e2/output/res/drawable/abc_dialog_material_background_light.xml"
+        "merged": "C:\\Users\\Mark\\Desktop\\TimeManagement\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\design_fab_background.xml",
+        "source": "C:\\Users\\Mark\\.android\\build-cache\\4ce649d79c886050761d03a4590c107d465d24a8\\output\\res\\drawable\\design_fab_background.xml"
     },
     {
-        "merged": "/Users/Vahedi/Documents/Android/TestProjects/TimeManagement-master/TimeManagement/app/build/intermediates/res/merged/debug/drawable/border.xml",
-        "source": "/Users/Vahedi/Documents/Android/TestProjects/TimeManagement-master/TimeManagement/app/src/main/res/drawable/border.xml"
+        "merged": "C:\\Users\\Mark\\Desktop\\TimeManagement\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\abc_tab_indicator_material.xml",
+        "source": "C:\\Users\\Mark\\.android\\build-cache\\67b6b4dea77d5f1d38753986b48236c449b6f326\\output\\res\\drawable\\abc_tab_indicator_material.xml"
     },
     {
-        "merged": "/Users/Vahedi/Documents/Android/TestProjects/TimeManagement-master/TimeManagement/app/build/intermediates/res/merged/debug/drawable/abc_list_selector_background_transition_holo_dark.xml",
-        "source": "/Users/Vahedi/.android/build-cache/f5e158f2f9c539b29f7741e3d52200622287f7e2/output/res/drawable/abc_list_selector_background_transition_holo_dark.xml"
+        "merged": "C:\\Users\\Mark\\Desktop\\TimeManagement\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\border.xml",
+        "source": "C:\\Users\\Mark\\Desktop\\TimeManagement\\app\\src\\main\\res\\drawable\\border.xml"
     },
     {
-        "merged": "/Users/Vahedi/Documents/Android/TestProjects/TimeManagement-master/TimeManagement/app/build/intermediates/res/merged/debug/drawable/abc_btn_borderless_material.xml",
-        "source": "/Users/Vahedi/.android/build-cache/f5e158f2f9c539b29f7741e3d52200622287f7e2/output/res/drawable/abc_btn_borderless_material.xml"
+        "merged": "C:\\Users\\Mark\\Desktop\\TimeManagement\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\abc_ratingbar_full_material.xml",
+        "source": "C:\\Users\\Mark\\.android\\build-cache\\67b6b4dea77d5f1d38753986b48236c449b6f326\\output\\res\\drawable\\abc_ratingbar_full_material.xml"
     },
     {
-        "merged": "/Users/Vahedi/Documents/Android/TestProjects/TimeManagement-master/TimeManagement/app/build/intermediates/res/merged/debug/drawable/abc_textfield_search_material.xml",
-        "source": "/Users/Vahedi/.android/build-cache/f5e158f2f9c539b29f7741e3d52200622287f7e2/output/res/drawable/abc_textfield_search_material.xml"
+        "merged": "C:\\Users\\Mark\\Desktop\\TimeManagement\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\excelicon.png",
+        "source": "C:\\Users\\Mark\\Desktop\\TimeManagement\\app\\src\\main\\res\\drawable\\excelicon.png"
     },
     {
-        "merged": "/Users/Vahedi/Documents/Android/TestProjects/TimeManagement-master/TimeManagement/app/build/intermediates/res/merged/debug/drawable/abc_ratingbar_full_material.xml",
-        "source": "/Users/Vahedi/.android/build-cache/f5e158f2f9c539b29f7741e3d52200622287f7e2/output/res/drawable/abc_ratingbar_full_material.xml"
+        "merged": "C:\\Users\\Mark\\Desktop\\TimeManagement\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\abc_btn_borderless_material.xml",
+        "source": "C:\\Users\\Mark\\.android\\build-cache\\67b6b4dea77d5f1d38753986b48236c449b6f326\\output\\res\\drawable\\abc_btn_borderless_material.xml"
     },
     {
-        "merged": "/Users/Vahedi/Documents/Android/TestProjects/TimeManagement-master/TimeManagement/app/build/intermediates/res/merged/debug/drawable/abc_btn_default_mtrl_shape.xml",
-        "source": "/Users/Vahedi/.android/build-cache/f5e158f2f9c539b29f7741e3d52200622287f7e2/output/res/drawable/abc_btn_default_mtrl_shape.xml"
+        "merged": "C:\\Users\\Mark\\Desktop\\TimeManagement\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\abc_btn_colored_material.xml",
+        "source": "C:\\Users\\Mark\\.android\\build-cache\\67b6b4dea77d5f1d38753986b48236c449b6f326\\output\\res\\drawable\\abc_btn_colored_material.xml"
     },
     {
-        "merged": "/Users/Vahedi/Documents/Android/TestProjects/TimeManagement-master/TimeManagement/app/build/intermediates/res/merged/debug/drawable/abc_list_selector_background_transition_holo_light.xml",
-        "source": "/Users/Vahedi/.android/build-cache/f5e158f2f9c539b29f7741e3d52200622287f7e2/output/res/drawable/abc_list_selector_background_transition_holo_light.xml"
+        "merged": "C:\\Users\\Mark\\Desktop\\TimeManagement\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\abc_btn_radio_material.xml",
+        "source": "C:\\Users\\Mark\\.android\\build-cache\\67b6b4dea77d5f1d38753986b48236c449b6f326\\output\\res\\drawable\\abc_btn_radio_material.xml"
     },
     {
-        "merged": "/Users/Vahedi/Documents/Android/TestProjects/TimeManagement-master/TimeManagement/app/build/intermediates/res/merged/debug/drawable/abc_list_selector_holo_light.xml",
-        "source": "/Users/Vahedi/.android/build-cache/f5e158f2f9c539b29f7741e3d52200622287f7e2/output/res/drawable/abc_list_selector_holo_light.xml"
+        "merged": "C:\\Users\\Mark\\Desktop\\TimeManagement\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\abc_btn_check_material.xml",
+        "source": "C:\\Users\\Mark\\.android\\build-cache\\67b6b4dea77d5f1d38753986b48236c449b6f326\\output\\res\\drawable\\abc_btn_check_material.xml"
     },
     {
-        "merged": "/Users/Vahedi/Documents/Android/TestProjects/TimeManagement-master/TimeManagement/app/build/intermediates/res/merged/debug/drawable/segment_radio_left.xml",
-        "source": "/Users/Vahedi/Documents/Android/TestProjects/TimeManagement-master/TimeManagement/app/src/main/res/drawable/segment_radio_left.xml"
+        "merged": "C:\\Users\\Mark\\Desktop\\TimeManagement\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\segment_radio_middle.xml",
+        "source": "C:\\Users\\Mark\\Desktop\\TimeManagement\\app\\src\\main\\res\\drawable\\segment_radio_middle.xml"
     },
     {
-        "merged": "/Users/Vahedi/Documents/Android/TestProjects/TimeManagement-master/TimeManagement/app/build/intermediates/res/merged/debug/drawable/abc_btn_colored_material.xml",
-        "source": "/Users/Vahedi/.android/build-cache/f5e158f2f9c539b29f7741e3d52200622287f7e2/output/res/drawable/abc_btn_colored_material.xml"
+        "merged": "C:\\Users\\Mark\\Desktop\\TimeManagement\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\abc_switch_thumb_material.xml",
+        "source": "C:\\Users\\Mark\\.android\\build-cache\\67b6b4dea77d5f1d38753986b48236c449b6f326\\output\\res\\drawable\\abc_switch_thumb_material.xml"
     },
     {
-        "merged": "/Users/Vahedi/Documents/Android/TestProjects/TimeManagement-master/TimeManagement/app/build/intermediates/res/merged/debug/drawable/segment_radio_right.xml",
-        "source": "/Users/Vahedi/Documents/Android/TestProjects/TimeManagement-master/TimeManagement/app/src/main/res/drawable/segment_radio_right.xml"
+        "merged": "C:\\Users\\Mark\\Desktop\\TimeManagement\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\abc_btn_default_mtrl_shape.xml",
+        "source": "C:\\Users\\Mark\\.android\\build-cache\\67b6b4dea77d5f1d38753986b48236c449b6f326\\output\\res\\drawable\\abc_btn_default_mtrl_shape.xml"
     },
     {
-        "merged": "/Users/Vahedi/Documents/Android/TestProjects/TimeManagement-master/TimeManagement/app/build/intermediates/res/merged/debug/drawable/abc_switch_thumb_material.xml",
-        "source": "/Users/Vahedi/.android/build-cache/f5e158f2f9c539b29f7741e3d52200622287f7e2/output/res/drawable/abc_switch_thumb_material.xml"
+        "merged": "C:\\Users\\Mark\\Desktop\\TimeManagement\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\abc_item_background_holo_light.xml",
+        "source": "C:\\Users\\Mark\\.android\\build-cache\\67b6b4dea77d5f1d38753986b48236c449b6f326\\output\\res\\drawable\\abc_item_background_holo_light.xml"
     },
     {
-        "merged": "/Users/Vahedi/Documents/Android/TestProjects/TimeManagement-master/TimeManagement/app/build/intermediates/res/merged/debug/drawable/design_snackbar_background.xml",
-        "source": "/Users/Vahedi/.android/build-cache/e7c43c2efac03d6347806792b3f409745fc85c37/output/res/drawable/design_snackbar_background.xml"
+        "merged": "C:\\Users\\Mark\\Desktop\\TimeManagement\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\abc_list_selector_holo_dark.xml",
+        "source": "C:\\Users\\Mark\\.android\\build-cache\\67b6b4dea77d5f1d38753986b48236c449b6f326\\output\\res\\drawable\\abc_list_selector_holo_dark.xml"
     },
     {
-        "merged": "/Users/Vahedi/Documents/Android/TestProjects/TimeManagement-master/TimeManagement/app/build/intermediates/res/merged/debug/drawable/abc_item_background_holo_dark.xml",
-        "source": "/Users/Vahedi/.android/build-cache/f5e158f2f9c539b29f7741e3d52200622287f7e2/output/res/drawable/abc_item_background_holo_dark.xml"
+        "merged": "C:\\Users\\Mark\\Desktop\\TimeManagement\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\abc_spinner_textfield_background_material.xml",
+        "source": "C:\\Users\\Mark\\.android\\build-cache\\67b6b4dea77d5f1d38753986b48236c449b6f326\\output\\res\\drawable\\abc_spinner_textfield_background_material.xml"
     },
     {
-        "merged": "/Users/Vahedi/Documents/Android/TestProjects/TimeManagement-master/TimeManagement/app/build/intermediates/res/merged/debug/drawable/abc_text_cursor_material.xml",
-        "source": "/Users/Vahedi/.android/build-cache/f5e158f2f9c539b29f7741e3d52200622287f7e2/output/res/drawable/abc_text_cursor_material.xml"
+        "merged": "C:\\Users\\Mark\\Desktop\\TimeManagement\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\abc_textfield_search_material.xml",
+        "source": "C:\\Users\\Mark\\.android\\build-cache\\67b6b4dea77d5f1d38753986b48236c449b6f326\\output\\res\\drawable\\abc_textfield_search_material.xml"
     },
     {
-        "merged": "/Users/Vahedi/Documents/Android/TestProjects/TimeManagement-master/TimeManagement/app/build/intermediates/res/merged/debug/drawable/abc_item_background_holo_light.xml",
-        "source": "/Users/Vahedi/.android/build-cache/f5e158f2f9c539b29f7741e3d52200622287f7e2/output/res/drawable/abc_item_background_holo_light.xml"
+        "merged": "C:\\Users\\Mark\\Desktop\\TimeManagement\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\abc_edit_text_material.xml",
+        "source": "C:\\Users\\Mark\\.android\\build-cache\\67b6b4dea77d5f1d38753986b48236c449b6f326\\output\\res\\drawable\\abc_edit_text_material.xml"
     },
     {
-        "merged": "/Users/Vahedi/Documents/Android/TestProjects/TimeManagement-master/TimeManagement/app/build/intermediates/res/merged/debug/drawable/abc_spinner_textfield_background_material.xml",
-        "source": "/Users/Vahedi/.android/build-cache/f5e158f2f9c539b29f7741e3d52200622287f7e2/output/res/drawable/abc_spinner_textfield_background_material.xml"
+        "merged": "C:\\Users\\Mark\\Desktop\\TimeManagement\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\abc_item_background_holo_dark.xml",
+        "source": "C:\\Users\\Mark\\.android\\build-cache\\67b6b4dea77d5f1d38753986b48236c449b6f326\\output\\res\\drawable\\abc_item_background_holo_dark.xml"
     },
     {
-        "merged": "/Users/Vahedi/Documents/Android/TestProjects/TimeManagement-master/TimeManagement/app/build/intermediates/res/merged/debug/drawable/excelicon.png",
-        "source": "/Users/Vahedi/Documents/Android/TestProjects/TimeManagement-master/TimeManagement/app/src/main/res/drawable/excelicon.png"
+        "merged": "C:\\Users\\Mark\\Desktop\\TimeManagement\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\segment_button.xml",
+        "source": "C:\\Users\\Mark\\Desktop\\TimeManagement\\app\\src\\main\\res\\drawable\\segment_button.xml"
     },
     {
-        "merged": "/Users/Vahedi/Documents/Android/TestProjects/TimeManagement-master/TimeManagement/app/build/intermediates/res/merged/debug/drawable/activities_toolbar_line.xml",
-        "source": "/Users/Vahedi/Documents/Android/TestProjects/TimeManagement-master/TimeManagement/app/src/main/res/drawable/activities_toolbar_line.xml"
+        "merged": "C:\\Users\\Mark\\Desktop\\TimeManagement\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\design_snackbar_background.xml",
+        "source": "C:\\Users\\Mark\\.android\\build-cache\\4ce649d79c886050761d03a4590c107d465d24a8\\output\\res\\drawable\\design_snackbar_background.xml"
     },
     {
-        "merged": "/Users/Vahedi/Documents/Android/TestProjects/TimeManagement-master/TimeManagement/app/build/intermediates/res/merged/debug/drawable/abc_tab_indicator_material.xml",
-        "source": "/Users/Vahedi/.android/build-cache/f5e158f2f9c539b29f7741e3d52200622287f7e2/output/res/drawable/abc_tab_indicator_material.xml"
+        "merged": "C:\\Users\\Mark\\Desktop\\TimeManagement\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\abc_list_selector_background_transition_holo_light.xml",
+        "source": "C:\\Users\\Mark\\.android\\build-cache\\67b6b4dea77d5f1d38753986b48236c449b6f326\\output\\res\\drawable\\abc_list_selector_background_transition_holo_light.xml"
     },
     {
-        "merged": "/Users/Vahedi/Documents/Android/TestProjects/TimeManagement-master/TimeManagement/app/build/intermediates/res/merged/debug/drawable/activities_toolbar.xml",
-        "source": "/Users/Vahedi/Documents/Android/TestProjects/TimeManagement-master/TimeManagement/app/src/main/res/drawable/activities_toolbar.xml"
+        "merged": "C:\\Users\\Mark\\Desktop\\TimeManagement\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\abc_dialog_material_background_light.xml",
+        "source": "C:\\Users\\Mark\\.android\\build-cache\\67b6b4dea77d5f1d38753986b48236c449b6f326\\output\\res\\drawable\\abc_dialog_material_background_light.xml"
     },
     {
-        "merged": "/Users/Vahedi/Documents/Android/TestProjects/TimeManagement-master/TimeManagement/app/build/intermediates/res/merged/debug/drawable/segment_button.xml",
-        "source": "/Users/Vahedi/Documents/Android/TestProjects/TimeManagement-master/TimeManagement/app/src/main/res/drawable/segment_button.xml"
+        "merged": "C:\\Users\\Mark\\Desktop\\TimeManagement\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\abc_dialog_material_background_dark.xml",
+        "source": "C:\\Users\\Mark\\.android\\build-cache\\67b6b4dea77d5f1d38753986b48236c449b6f326\\output\\res\\drawable\\abc_dialog_material_background_dark.xml"
     }
 ]

@@ -1,10 +1,14 @@
 package com.example.android.timemanagement.activities;
 
+import android.app.AlarmManager;
+import android.app.NotificationManager;
+import android.app.PendingIntent;
 import android.content.Context;
 import android.content.Intent;
 import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
 import android.os.Bundle;
+import android.os.SystemClock;
 import android.support.annotation.Nullable;
 import android.support.v7.app.AppCompatActivity;
 import android.view.View;
@@ -18,11 +22,14 @@ import com.example.android.timemanagement.R;
 import com.example.android.timemanagement.data.Contract;
 import com.example.android.timemanagement.data.DBHelper;
 import com.example.android.timemanagement.data.DatabaseUtils;
+import com.example.android.timemanagement.notification.Notification_reciever;
 import com.example.android.timemanagement.utilities.SetDate;
 import com.example.android.timemanagement.utilities.SetTime;
 
+import java.sql.Time;
 import java.util.ArrayList;
 import java.util.Date;
+import java.util.GregorianCalendar;
 import java.util.List;
 import java.util.concurrent.TimeUnit;
 
@@ -31,6 +38,8 @@ import java.util.concurrent.TimeUnit;
  */
 
 public class AddTaskActivity extends AppCompatActivity {
+    NotificationManager notificationManager;
+    int notifID = 33;
 
     private SetDate dateSetDate;
     private AutoCompleteTextView subjectAutoText;
@@ -114,9 +123,11 @@ public class AddTaskActivity extends AppCompatActivity {
                         , startSetTime.getHourOfDay(), startSetTime.getMinute(), startSetTime.getMidDay()
                         , endSetTime.getHourOfDay(), endSetTime.getMinute(), endSetTime.getMidDay()
                         , getTimeDiff(startSetTime.getTime(), endSetTime.getTime())) > 0){
+                    int hours = new Time(System.currentTimeMillis()).getHours();
+                    int minutes = new Time(System.currentTimeMillis()).getMinutes();
+                    setAlarm(hours,minutes);
 
-
-                    Toast.makeText(context, "Add task success", Toast.LENGTH_SHORT).show();
+                    Toast.makeText(context, "Add task success min:"+(startSetTime.getMinute()-minutes) , Toast.LENGTH_SHORT).show();
                     dateSetDate.clear();
                     subjectAutoText.getText().clear();
                     projectAutoText.getText().clear();
@@ -141,6 +152,14 @@ public class AddTaskActivity extends AppCompatActivity {
         long diff = end.getTime() - start.getTime();
         long minutes = TimeUnit.MILLISECONDS.toMinutes(diff);
         return (int) minutes;
+    }
+    public void setAlarm (int hour,int minute){
+        Long alerTime = new GregorianCalendar().getTimeInMillis()+5*1000;
+        Intent intent = new Intent(getApplicationContext(),Notification_reciever.class);
+        PendingIntent pendingIntent = PendingIntent.getBroadcast(getApplicationContext(),100,intent,PendingIntent.FLAG_UPDATE_CURRENT);
+        AlarmManager alarmManager =(AlarmManager) getSystemService(ALARM_SERVICE);
+        alarmManager.set(AlarmManager.RTC_WAKEUP, alerTime,pendingIntent);
+        Toast.makeText(context, "alarm time: "+(alerTime) , Toast.LENGTH_SHORT).show();
     }
 
 

@@ -1,7 +1,7 @@
-#Sun Aug 06 12:39:04 PDT 2017
-base.0=/Users/Vahedi/Documents/Android/TestProjects/TimeManagement-master/TimeManagement/app/build/intermediates/transforms/dex/debug/folders/1000/10000/instant-run_abadb9388f81665f5e710a31fbd4a16288d1b3b1
-renamed.1=classes2.dex
-renamed.0=classes.dex
-file.1=/Users/Vahedi/Documents/Android/TestProjects/TimeManagement-master/TimeManagement/app/build/intermediates/transforms/dex/debug/folders/1000/10000/instant-run-bootstrap_c84b1bad4adacd6c1d6952cadff9552d78cd56cc/classes.dex
-base.1=/Users/Vahedi/Documents/Android/TestProjects/TimeManagement-master/TimeManagement/app/build/intermediates/transforms/dex/debug/folders/1000/10000/instant-run-bootstrap_c84b1bad4adacd6c1d6952cadff9552d78cd56cc
-file.0=/Users/Vahedi/Documents/Android/TestProjects/TimeManagement-master/TimeManagement/app/build/intermediates/transforms/dex/debug/folders/1000/10000/instant-run_abadb9388f81665f5e710a31fbd4a16288d1b3b1/classes.dex
+#Sun Aug 06 18:29:54 PDT 2017
+base.0=C\:\\Users\\Mark\\Desktop\\TimeManagement\\app\\build\\intermediates\\transforms\\dex\\debug\\folders\\1000\\10000\\instant-run-bootstrap_6cb2954173e1a5774961ce219294876bbf15c952
+renamed.1=classes.dex
+renamed.0=classes2.dex
+file.1=C\:\\Users\\Mark\\Desktop\\TimeManagement\\app\\build\\intermediates\\transforms\\dex\\debug\\folders\\1000\\10000\\instant-run_8d005ea536f6a8f7ca20059876b642915f5b8542\\classes.dex
+base.1=C\:\\Users\\Mark\\Desktop\\TimeManagement\\app\\build\\intermediates\\transforms\\dex\\debug\\folders\\1000\\10000\\instant-run_8d005ea536f6a8f7ca20059876b642915f5b8542
+file.0=C\:\\Users\\Mark\\Desktop\\TimeManagement\\app\\build\\intermediates\\transforms\\dex\\debug\\folders\\1000\\10000\\instant-run-bootstrap_6cb2954173e1a5774961ce219294876bbf15c952\\classes.dex
