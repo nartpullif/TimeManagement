@@ -40,7 +40,6 @@ import java.util.concurrent.TimeUnit;
 
 public class AddTaskActivity extends AppCompatActivity {
     NotificationManager notificationManager;
-    int notifID = 33;
 
     private SetDate dateSetDate;
     private AutoCompleteTextView subjectAutoText;
@@ -152,18 +151,18 @@ public class AddTaskActivity extends AppCompatActivity {
                         if(Integer.parseInt(c)> today) {
                             setAlarm(Integer.parseInt(c)- today,startSetTime.getHourOfDay() - hours, startSetTime.getMinute() - minutes);
 
-                            Toast.makeText(context, "Add task success :", Toast.LENGTH_SHORT).show();
+                            Toast.makeText(context, "Add task success ", Toast.LENGTH_SHORT).show();
                         }
                         else if(Integer.parseInt(c)== today||startSetTime.getHourOfDay()>hours){
                             setAlarm(Integer.parseInt(c)- today,startSetTime.getHourOfDay() - hours, startSetTime.getMinute() - minutes);
-                            Toast.makeText(context, "Add task success :", Toast.LENGTH_SHORT).show();
+                            Toast.makeText(context, "Add task success ", Toast.LENGTH_SHORT).show();
                         }
                         else if(Integer.parseInt(c)== today||startSetTime.getHourOfDay()==hours||startSetTime.getMinute() > minutes){
                             setAlarm(Integer.parseInt(c)- today,startSetTime.getHourOfDay() - hours, startSetTime.getMinute() - minutes);
                             Toast.makeText(context, "Add task success ", Toast.LENGTH_SHORT).show();
                         }
 
-                        Toast.makeText(context, "Add task success", Toast.LENGTH_SHORT).show();
+                       // Toast.makeText(context, "Add task success", Toast.LENGTH_SHORT).show();
                         dateSetDate.clear();
                         subjectAutoText.getText().clear();
                         projectAutoText.getText().clear();

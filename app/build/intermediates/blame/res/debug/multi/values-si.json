@@ -1,6 +1,6 @@
 [
     {
-        "outputFile": "W:\\Android_stuff\\TimeManagement\\app\\build\\intermediates\\incremental\\mergeDebugResources\\merged.dir\\values-si\\values-si.xml",
+        "outputFile": "C:\\Users\\Mark\\Desktop\\summer2017\\4540\\TimeManagement\\app\\build\\intermediates\\incremental\\mergeDebugResources\\merged.dir\\values-si\\values-si.xml",
         "map": [
             {
                 "to": {
@@ -11,7 +11,7 @@
                     "endOffset": 330
                 },
                 "from": {
-                    "file": "C:\\Users\\icyfillup\\.android\\build-cache\\3db6bc736bdb59c9e1aebb1de303f269d321b889\\output\\res\\values-si\\values.xml",
+                    "file": "C:\\Users\\Mark\\.android\\build-cache\\7a8a7a46bd137e758c88a43198060ab3a72ae69b\\output\\res\\values-si\\values.xml",
                     "position": {
                         "startLine": 4,
                         "startColumn": 4,
