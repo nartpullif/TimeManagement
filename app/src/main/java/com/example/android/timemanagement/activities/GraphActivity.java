@@ -428,6 +428,8 @@ public class GraphActivity extends AppCompatActivity implements RadioGroup.OnChe
         Log.d("test: ", "stuff");
     }
 
+    // Used this link to help with the UI option setting for the bar chart
+    // http://happytutorialcode.blogspot.my/2017/03/android-grouped-bar-chart-customized-x.html
     private void makeBarChart(ArrayList<String> xTimeVals, ArrayList<BarEntry> yMintueVals)
     {
         float barWidth = 0.7f;
