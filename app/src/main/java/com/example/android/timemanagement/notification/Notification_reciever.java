@@ -25,8 +25,8 @@ public class Notification_reciever extends BroadcastReceiver {
         NotificationCompat.Builder builder = new NotificationCompat.Builder(context)
                 .setContentIntent(pendingIntent)
                 .setSmallIcon(android.R.drawable.arrow_down_float)
-                .setContentTitle("Notification title")
-                .setContentText("Notification text")
+                .setContentTitle("Warning")
+                .setContentText("You have a task to start on")
                 .setAutoCancel(true);
         builder.setDefaults(NotificationCompat.DEFAULT_SOUND);
         notificationManager.notify(100,builder.build());

@@ -1,4 +1,4 @@
-#Sun Aug 06 17:48:57 PDT 2017
+#Sun Aug 06 22:38:42 PDT 2017
 base.0=C\:\\Users\\Mark\\Desktop\\TimeManagement\\app\\build\\intermediates\\transforms\\dex\\debug\\folders\\1000\\5\\slice_7
 renamed.0=classes.dex
 file.0=C\:\\Users\\Mark\\Desktop\\TimeManagement\\app\\build\\intermediates\\transforms\\dex\\debug\\folders\\1000\\5\\slice_7\\classes.dex

@@ -28,6 +28,7 @@ import com.example.android.timemanagement.utilities.SetTime;
 
 import java.sql.Time;
 import java.util.ArrayList;
+import java.util.Calendar;
 import java.util.Date;
 import java.util.GregorianCalendar;
 import java.util.List;
@@ -125,9 +126,30 @@ public class AddTaskActivity extends AppCompatActivity {
                         , getTimeDiff(startSetTime.getTime(), endSetTime.getTime())) > 0){
                     int hours = new Time(System.currentTimeMillis()).getHours();
                     int minutes = new Time(System.currentTimeMillis()).getMinutes();
-                    setAlarm(hours,minutes);
+                    if (hours>12)
+                        hours=hours-12;
 
-                    Toast.makeText(context, "Add task success min:"+(startSetTime.getMinute()-minutes) , Toast.LENGTH_SHORT).show();
+
+                    Calendar calender = Calendar.getInstance();
+                    calender.get(Calendar.DAY_OF_MONTH);
+                    String c = firstTwo(dateSetDate.getDate());
+
+                    int today = calender.get(Calendar.DAY_OF_MONTH);
+                    if(Integer.parseInt(c)> today) {
+                        setAlarm(Integer.parseInt(c)- today,startSetTime.getHourOfDay() - hours, startSetTime.getMinute() - minutes);
+
+                        Toast.makeText(context, "Add task success :", Toast.LENGTH_SHORT).show();
+                    }
+                    else if(Integer.parseInt(c)== today||startSetTime.getHourOfDay()>hours){
+                        setAlarm(Integer.parseInt(c)- today,startSetTime.getHourOfDay() - hours, startSetTime.getMinute() - minutes);
+                        Toast.makeText(context, "Add task success :", Toast.LENGTH_SHORT).show();
+                    }
+                    else if(Integer.parseInt(c)== today||startSetTime.getHourOfDay()==hours||startSetTime.getMinute() > minutes){
+                        setAlarm(Integer.parseInt(c)- today,startSetTime.getHourOfDay() - hours, startSetTime.getMinute() - minutes);
+                        Toast.makeText(context, "Add task success ", Toast.LENGTH_SHORT).show();
+                    }
+
+                    //Toast.makeText(context, "Add task success ", Toast.LENGTH_SHORT).show();
                     dateSetDate.clear();
                     subjectAutoText.getText().clear();
                     projectAutoText.getText().clear();
@@ -153,13 +175,24 @@ public class AddTaskActivity extends AppCompatActivity {
         long minutes = TimeUnit.MILLISECONDS.toMinutes(diff);
         return (int) minutes;
     }
-    public void setAlarm (int hour,int minute){
-        Long alerTime = new GregorianCalendar().getTimeInMillis()+5*1000;
+    public void setAlarm (int day,int hour,int minute){
+
+
+        int tempMinute = hour*60+minute+day*24*60;
+        int seconds = new Time(System.currentTimeMillis()).getSeconds();
+       // Toast.makeText(context, "Alarm will start on :"+ tempMinute, Toast.LENGTH_SHORT).show();
+        tempMinute=tempMinute*60 - seconds;
+       // Toast.makeText(context, "Alarm will start on :"+ tempMinute, Toast.LENGTH_SHORT).show();
+
+        Long alerTime = new GregorianCalendar().getTimeInMillis()+tempMinute*1000;
         Intent intent = new Intent(getApplicationContext(),Notification_reciever.class);
         PendingIntent pendingIntent = PendingIntent.getBroadcast(getApplicationContext(),100,intent,PendingIntent.FLAG_UPDATE_CURRENT);
         AlarmManager alarmManager =(AlarmManager) getSystemService(ALARM_SERVICE);
         alarmManager.set(AlarmManager.RTC_WAKEUP, alerTime,pendingIntent);
-        Toast.makeText(context, "alarm time: "+(alerTime) , Toast.LENGTH_SHORT).show();
+       // Toast.makeText(context, "alarm time: "+(alerTime) , Toast.LENGTH_SHORT).show();
+    }
+    public String firstTwo(String str) {
+        return str.length() < 2 ? str : str.substring(3, 5);
     }
 
 
