@@ -1,6 +1,6 @@
 -- Merging decision tree log ---
 manifest
-ADDED from W:\Android_stuff\TimeManagement\app\src\main\AndroidManifest.xml:2:1-53:12
+ADDED from W:\Android_stuff\TimeManagement\app\src\main\AndroidManifest.xml:2:1-54:12
 	package
 		ADDED from W:\Android_stuff\TimeManagement\app\src\main\AndroidManifest.xml:3:5-49
 		INJECTED from W:\Android_stuff\TimeManagement\app\src\main\AndroidManifest.xml
@@ -14,7 +14,7 @@ ADDED from W:\Android_stuff\TimeManagement\app\src\main\AndroidManifest.xml:2:1-
 		INJECTED from W:\Android_stuff\TimeManagement\app\src\main\AndroidManifest.xml
 		INJECTED from W:\Android_stuff\TimeManagement\app\src\main\AndroidManifest.xml
 application
-ADDED from W:\Android_stuff\TimeManagement\app\src\main\AndroidManifest.xml:5:5-51:19
+ADDED from W:\Android_stuff\TimeManagement\app\src\main\AndroidManifest.xml:5:5-52:19
 MERGED from [com.android.support:design:23.0.1] C:\Users\icyfillup\.android\build-cache\891dce40efe3296fe3d04c57b5a5505246e6ea86\output\AndroidManifest.xml:22:5-20
 MERGED from [com.android.support:appcompat-v7:23.0.1] C:\Users\icyfillup\.android\build-cache\a027631cee244203f572e361e51dfe97f71ecc5d\output\AndroidManifest.xml:22:5-20
 MERGED from [com.android.support.constraint:constraint-layout:1.0.2] C:\Users\icyfillup\.android\build-cache\9b7e1fbd1021cd8bf21bb4dce65375cf90168b78\output\AndroidManifest.xml:9:5-20
@@ -96,7 +96,7 @@ ADDED from W:\Android_stuff\TimeManagement\app\src\main\AndroidManifest.xml:39:9
 intent-filter#com.google.firebase.INSTANCE_ID_EVENT
 ADDED from W:\Android_stuff\TimeManagement\app\src\main\AndroidManifest.xml:40:13-42:29
 action#com.google.firebase.INSTANCE_ID_EVENT
-ADDED from W:\Android_stuff\TimeManagement\app\src\main\AndroidManifest.xml:41:17-87
+ADDED from W:\Android_stuff\TimeManagement\app\src\main\AndroidManifest.xml:41:17-80
 	android:name
 		ADDED from W:\Android_stuff\TimeManagement\app\src\main\AndroidManifest.xml:41:25-77
 service#com.example.android.timemanagement.notification.MyFirebaseMessagingService
@@ -106,13 +106,17 @@ ADDED from W:\Android_stuff\TimeManagement\app\src\main\AndroidManifest.xml:44:9
 intent-filter#com.google.firebase.MESSAGING_EVENT
 ADDED from W:\Android_stuff\TimeManagement\app\src\main\AndroidManifest.xml:45:13-47:29
 action#com.google.firebase.MESSAGING_EVENT
-ADDED from W:\Android_stuff\TimeManagement\app\src\main\AndroidManifest.xml:46:17-85
+ADDED from W:\Android_stuff\TimeManagement\app\src\main\AndroidManifest.xml:46:17-78
 	android:name
 		ADDED from W:\Android_stuff\TimeManagement\app\src\main\AndroidManifest.xml:46:25-75
 activity#com.example.android.timemanagement.activities.ProjectsList
-ADDED from W:\Android_stuff\TimeManagement\app\src\main\AndroidManifest.xml:50:9-70
+ADDED from W:\Android_stuff\TimeManagement\app\src\main\AndroidManifest.xml:50:9-61
 	android:name
 		ADDED from W:\Android_stuff\TimeManagement\app\src\main\AndroidManifest.xml:50:19-58
+activity#com.example.android.timemanagement.activities.SubjectsList
+ADDED from W:\Android_stuff\TimeManagement\app\src\main\AndroidManifest.xml:51:9-70
+	android:name
+		ADDED from W:\Android_stuff\TimeManagement\app\src\main\AndroidManifest.xml:51:19-58
 uses-sdk
 INJECTED from W:\Android_stuff\TimeManagement\app\src\main\AndroidManifest.xml reason: use-sdk injection requested
 MERGED from [com.android.support:recyclerview-v7:23.0.1] C:\Users\icyfillup\.android\build-cache\59ccd53687224dd355680030b1fdc9b36a82db11\output\AndroidManifest.xml:20:5-43

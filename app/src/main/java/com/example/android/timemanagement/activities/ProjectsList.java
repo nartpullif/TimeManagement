@@ -24,23 +24,8 @@ import com.example.android.timemanagement.data.DBHelper;
 import com.example.android.timemanagement.data.DatabaseUtils;
 import com.example.android.timemanagement.utilities.ExcelUtils;
 
-import org.apache.poi.hssf.usermodel.HSSFCell;
-import org.apache.poi.hssf.usermodel.HSSFCellStyle;
-import org.apache.poi.hssf.usermodel.HSSFRow;
-import org.apache.poi.hssf.usermodel.HSSFSheet;
-import org.apache.poi.hssf.usermodel.HSSFWorkbook;
-import org.apache.poi.hssf.util.HSSFColor;
-import org.apache.poi.poifs.filesystem.POIFSFileSystem;
-import org.apache.poi.ss.usermodel.Cell;
-import org.apache.poi.ss.usermodel.CellStyle;
-import org.apache.poi.ss.usermodel.Row;
-import org.apache.poi.ss.usermodel.Sheet;
-import org.apache.poi.ss.usermodel.Workbook;
 
 import java.io.File;
-import java.io.FileOutputStream;
-import java.io.IOException;
-import java.net.URL;
 
 public class ProjectsList extends AppCompatActivity implements LoaderManager.LoaderCallbacks<Void>{
 
@@ -124,7 +109,7 @@ public class ProjectsList extends AppCompatActivity implements LoaderManager.Loa
             @Override
             public Void loadInBackground() {
 
-                ExcelUtils.saveExcelFile(cursor , context, "myExcel.xls", selectedProjectName );
+                ExcelUtils.saveExcelFileForProjectTasks(cursor , context, "myExcel.xls", selectedProjectName );
                 return null;
             }
         };

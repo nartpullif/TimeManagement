@@ -100,6 +100,56 @@ public class DatabaseUtils {
         return cursor;
     }
 
+    public static Cursor getAllTasksOfSubject(SQLiteDatabase db, int subjectId){
+
+        String query =
+                "select " +
+                        Contract.TABLE_TASK.TABLE_NAME + "." + Contract.TABLE_TASK.COLUMN_NAME_DATE +
+                        ", " + Contract.TABLE_TASK.TABLE_NAME + "." + Contract.TABLE_TASK.COLUMN_NAME_START_HOUR +
+                        ", " + Contract.TABLE_TASK.TABLE_NAME + "." + Contract.TABLE_TASK.COLUMN_NAME_START_MINUTE +
+                        ", " + Contract.TABLE_TASK.TABLE_NAME + "." + Contract.TABLE_TASK.COLUMN_NAME_START_MID_DAY +
+                        ", " + Contract.TABLE_TASK.TABLE_NAME + "." + Contract.TABLE_TASK.COLUMN_NAME_END_HOUR +
+                        ", " + Contract.TABLE_TASK.TABLE_NAME + "." + Contract.TABLE_TASK.COLUMN_NAME_END_MINUTE +
+                        ", " + Contract.TABLE_TASK.TABLE_NAME + "." + Contract.TABLE_TASK.COLUMN_NAME_END_MID_DAY +
+                        ", " + Contract.TABLE_TASK.TABLE_NAME + "." + Contract.TABLE_TASK.COLUMN_NAME_TASK_TOTAL_MINUTES +
+                        ", " + Contract.TABLE_PROJECT.TABLE_NAME + "." + Contract.TABLE_PROJECT.COLUMN_NAME_TITLE + " as " + Contract.TABLE_TASK.COLUMN_NAME_PROJECT_TITLE +
+                        " from " + Contract.TABLE_TASK.TABLE_NAME +
+                        " inner join " + Contract.TABLE_PROJECT.TABLE_NAME +
+                        " on (" + Contract.TABLE_TASK.TABLE_NAME + "." + Contract.TABLE_TASK.COLUMN_NAME_PROJECT_ID + " = " + Contract.TABLE_PROJECT.TABLE_NAME + "." + Contract.TABLE_PROJECT._ID+  ")" +
+                        " where " + Contract.TABLE_TASK.TABLE_NAME + "." + Contract.TABLE_TASK.COLUMN_NAME_SUBJECT_ID + " = " + String.valueOf(subjectId) +
+                        " order by " +  Contract.TABLE_TASK.TABLE_NAME + "." + Contract.TABLE_TASK.COLUMN_NAME_DATE ;
+
+
+        Log.d(TAG, "Select table SQL: " + query);
+        Cursor cursor = db.rawQuery(query, null);
+        Log.v("Cursor Object", android.database.DatabaseUtils.dumpCursorToString(cursor));
+
+        return cursor;
+    }
+
+
+    public static Cursor getAllSubjectsWithTaskCount(SQLiteDatabase db){
+
+        String query =
+                "select count( " +
+                        Contract.TABLE_TASK.TABLE_NAME + "." + Contract.TABLE_TASK.COLUMN_NAME_SUBJECT_ID + ") as " +
+                        Contract.TABLE_SUBJECT.COLUMN_NAME_NUMBER_OF_TASKS +
+                        ", " + Contract.TABLE_SUBJECT.TABLE_NAME + "." + Contract.TABLE_SUBJECT.COLUMN_NAME_TITLE +
+                        ", " + Contract.TABLE_SUBJECT.TABLE_NAME + "." + Contract.TABLE_SUBJECT._ID +
+                        " from " + Contract.TABLE_TASK.TABLE_NAME +
+                        " inner join " + Contract.TABLE_SUBJECT.TABLE_NAME +
+                        " on (" + Contract.TABLE_TASK.TABLE_NAME + "." + Contract.TABLE_TASK.COLUMN_NAME_SUBJECT_ID + " = " + Contract.TABLE_SUBJECT.TABLE_NAME + "." + Contract.TABLE_SUBJECT._ID+  ")" +
+                        " group by " + Contract.TABLE_TASK.TABLE_NAME + "." + Contract.TABLE_TASK.COLUMN_NAME_SUBJECT_ID + " , "  + Contract.TABLE_SUBJECT.TABLE_NAME + "." + Contract.TABLE_SUBJECT._ID +
+                        " order by " +  Contract.TABLE_SUBJECT.TABLE_NAME + "." + Contract.TABLE_SUBJECT.COLUMN_NAME_TITLE ;
+
+
+        Log.d(TAG, "Select table SQL: " + query);
+        Cursor cursor = db.rawQuery(query, null);
+        Log.v("Cursor Object", android.database.DatabaseUtils.dumpCursorToString(cursor));
+
+        return cursor;
+    }
+
     public static Cursor getAllSubject(SQLiteDatabase db) {
         Cursor cursor = db.query(
                 Contract.TABLE_SUBJECT.TABLE_NAME,
@@ -558,7 +608,7 @@ public class DatabaseUtils {
         dbAdd.delete(Contract.TABLE_SUBJECT.TABLE_NAME, null, null);
         dbAdd.delete(Contract.TABLE_PROJECT.TABLE_NAME, null, null);
 
-
+/*
         DatabaseUtils.addTask(dbAdd, "07/01/2017", "math hw", "school",
                 6, 30, "PM", 7, 30, "PM",
                 ((7 - 6) * 60) + (30 - 30));
@@ -658,6 +708,211 @@ public class DatabaseUtils {
         DatabaseUtils.addTask(dbAdd, "08/01/2017", "walk for 30 min", "diet",
                 8, 30, "PM", 9, 00, "PM",
                 ((9 - 8) * 60) + (00 - 30));
+        */
+
+
+        /*
+        DatabaseUtils.addTask(dbAdd, "08/01/2017", "Homework 1: Connecting to the News Api", "CS5540 Course",
+                6, 30, "PM", 7, 30, "PM",
+                ((7 - 6) * 60) + (30 - 30));
+
+        DatabaseUtils.addTask(dbAdd, "08/06/2017", "Homework 1: Connecting to the News Api", "CS5540 Course",
+                10, 00, "AM", 10, 10, "AM",
+                ((10 - 10) * 60) + (10 - 00));
+
+        DatabaseUtils.addTask(dbAdd, "08/01/2017", "Homework 2: Adding a RecyclerView to News App", "CS5540 Course",
+                8, 30, "PM", 9, 00, "PM",
+                ((9 - 8) * 60) + (00 - 30));
+
+        DatabaseUtils.addTask(dbAdd, "08/03/2017", "Homework 2: Adding a RecyclerView to News App", "CS5540 Course",
+                7, 30, "PM", 8, 30, "PM",
+                ((8 - 7) * 60) + (30 - 30));
+
+        DatabaseUtils.addTask(dbAdd, "08/02/2017", "Homework 2: Adding a RecyclerView to News App", "CS5540 Course",
+                8, 30, "PM", 9, 00, "PM",
+                ((9 - 8) * 60) + (00 - 30));
+
+        DatabaseUtils.addTask(dbAdd, "08/05/2017", "Homework 1: Connecting to the News Api", "CS5540 Course",
+                12, 00, "AM", 1, 00, "AM",
+                ((1) * 60) + (00 - 00));
+
+        DatabaseUtils.addTask(dbAdd, "08/08/2017", "Data Analysis", "Company Website",
+                8, 30, "AM", 9, 00, "AM",
+                ((9 - 8) * 60) + (00 - 30));
+
+        DatabaseUtils.addTask(dbAdd, "08/03/2017", "Data Analysis", "Company Website",
+                10, 00, "AM", 10, 10, "AM",
+                ((10 - 10) * 60) + (10 - 00));
+
+        DatabaseUtils.addTask(dbAdd, "08/09/2017", "Designing UI", "Company Website",
+                2, 30, "PM", 6, 30, "PM",
+                ((6 - 2) * 60) + (30 - 30));
+
+        DatabaseUtils.addTask(dbAdd, "08/02/2017", "Designing UI", "Company Website",
+                6, 30, "PM", 7, 30, "PM",
+                ((7 - 6) * 60) + (30 - 30));
+
+        DatabaseUtils.addTask(dbAdd, "08/04/2017", "Designing UI", "Company Website",
+                8, 30, "PM", 11, 30, "PM",
+                ((11 - 8) * 60) + (30 - 30));
+
+        DatabaseUtils.addTask(dbAdd, "07/30/2017", "Programing", "Company Website",
+                11, 31, "PM", 11, 59, "PM",
+                ((11 - 11) * 60) + (59 - 31));
+
+        DatabaseUtils.addTask(dbAdd, "07/29/2017", "Programing", "Company Website",
+                2, 30, "PM", 6, 30, "PM",
+                ((6 - 2) * 60) + (30 - 30));
+
+        DatabaseUtils.addTask(dbAdd, "07/29/2017", "Debug & Test", "Company Website",
+                6, 30, "PM", 7, 30, "PM",
+                ((7 - 6) * 60) + (30 - 30));
+
+        DatabaseUtils.addTask(dbAdd, "07/28/2017", "Debug & Test", "Company Website",
+                7, 30, "PM", 8, 30, "PM",
+                ((8 - 7) * 60) + (30 - 30));
+
+        DatabaseUtils.addTask(dbAdd, "07/28/2017", "Designing UI", "Company Website",
+                8, 30, "PM", 11, 30, "PM",
+                ((11 - 8) * 60) + (30 - 30));
+
+        DatabaseUtils.addTask(dbAdd, "07/29/2017", "Designing UI", "Company Website",
+                12, 30, "AM", 3, 30, "AM",
+                ((3) * 60) + (30 - 30));
+
+        DatabaseUtils.addTask(dbAdd, "07/31/2017", "Finding curren project bottlnecks", "Redesign Project",
+                12, 00, "AM", 1, 30, "AM",
+                ((1) * 60) + (30 - 00));
+
+        DatabaseUtils.addTask(dbAdd, "07/31/2017", "Finding curren project bottlnecks", "Redesign Project",
+                1, 30, "AM", 2, 30, "AM",
+                ((2 - 1) * 60) + (30 - 30));
+
+        DatabaseUtils.addTask(dbAdd, "07/31/2017", "Finding curren project bottlnecks", "Redesign Project",
+                2, 30, "AM", 4, 30, "AM",
+                ((4 - 2) * 60) + (30 - 30));
+
+        DatabaseUtils.addTask(dbAdd, "08/02/2017", "Finding appropriate solution", "Redesign Project",
+                6, 30, "PM", 7, 30, "PM",
+                ((7 - 6) * 60) + (30 - 30));
+
+        DatabaseUtils.addTask(dbAdd, "08/02/2017", "Finding appropriate solution", "Redesign Project",
+                10, 00, "AM", 10, 10, "AM",
+                ((10 - 10) * 60) + (10 - 00));
+
+        DatabaseUtils.addTask(dbAdd, "08/02/2017", "Research and development", "Redesign Project",
+                8, 30, "PM", 9, 00, "PM",
+                ((9 - 8) * 60) + (00 - 30));
+
+        DatabaseUtils.addTask(dbAdd, "08/02/2017", "Research and development", "Redesign Project",
+                7, 30, "PM", 8, 30, "PM",
+                ((8 - 7) * 60) + (30 - 30));
+
+        DatabaseUtils.addTask(dbAdd, "08/01/2017", "Finding appropriate solution", "Redesign Project",
+                8, 30, "PM", 9, 00, "PM",
+                ((9 - 8) * 60) + (00 - 30));
+        */
+
+        DatabaseUtils.addTask(dbAdd, "08/01/2017", "CS5540 Course", "Homework 1: Connecting to the News Api",
+                6, 30, "PM", 7, 30, "PM",
+                ((7 - 6) * 60) + (30 - 30));
+
+        DatabaseUtils.addTask(dbAdd, "08/06/2017", "CS5540 Course", "Homework 1: Connecting to the News Api",
+                10, 00, "AM", 10, 10, "AM",
+                ((10 - 10) * 60) + (10 - 00));
+
+        DatabaseUtils.addTask(dbAdd, "08/01/2017", "CS5540 Course", "Homework 2: Adding a RecyclerView to News App",
+                8, 30, "PM", 9, 00, "PM",
+                ((9 - 8) * 60) + (00 - 30));
+
+        DatabaseUtils.addTask(dbAdd, "08/03/2017", "CS5540 Course", "Homework 2: Adding a RecyclerView to News App",
+                7, 30, "PM", 8, 30, "PM",
+                ((8 - 7) * 60) + (30 - 30));
+
+        DatabaseUtils.addTask(dbAdd, "08/02/2017", "CS5540 Course", "Homework 2: Adding a RecyclerView to News App",
+                8, 30, "PM", 9, 00, "PM",
+                ((9 - 8) * 60) + (00 - 30));
+
+        DatabaseUtils.addTask(dbAdd, "08/05/2017", "CS5540 Course", "Homework 1: Connecting to the News Api",
+                12, 00, "AM", 1, 00, "AM",
+                ((1) * 60) + (00 - 00));
+
+        DatabaseUtils.addTask(dbAdd, "08/08/2017", "Company Website", "Data Analysis",
+                8, 30, "AM", 9, 00, "AM",
+                ((9 - 8) * 60) + (00 - 30));
+
+        DatabaseUtils.addTask(dbAdd, "08/03/2017", "Company Website", "Data Analysis",
+                10, 00, "AM", 10, 10, "AM",
+                ((10 - 10) * 60) + (10 - 00));
+
+        DatabaseUtils.addTask(dbAdd, "08/09/2017", "Company Website", "Designing UI",
+                2, 30, "PM", 6, 30, "PM",
+                ((6 - 2) * 60) + (30 - 30));
+
+        DatabaseUtils.addTask(dbAdd, "08/02/2017", "Company Website", "Designing UI",
+                6, 30, "PM", 7, 30, "PM",
+                ((7 - 6) * 60) + (30 - 30));
+
+        DatabaseUtils.addTask(dbAdd, "08/04/2017", "Company Website", "Designing UI",
+                8, 30, "PM", 11, 30, "PM",
+                ((11 - 8) * 60) + (30 - 30));
+
+        DatabaseUtils.addTask(dbAdd, "07/30/2017", "Company Website", "Programing",
+                11, 31, "PM", 11, 59, "PM",
+                ((11 - 11) * 60) + (59 - 31));
+
+        DatabaseUtils.addTask(dbAdd, "07/29/2017", "Company Website", "Programing",
+                2, 30, "PM", 6, 30, "PM",
+                ((6 - 2) * 60) + (30 - 30));
+
+        DatabaseUtils.addTask(dbAdd, "07/29/2017", "Company Website", "Debug & Test",
+                6, 30, "PM", 7, 30, "PM",
+                ((7 - 6) * 60) + (30 - 30));
+
+        DatabaseUtils.addTask(dbAdd, "07/28/2017", "Company Website", "Debug & Test",
+                7, 30, "PM", 8, 30, "PM",
+                ((8 - 7) * 60) + (30 - 30));
+
+        DatabaseUtils.addTask(dbAdd, "07/28/2017", "Company Website", "Designing UI",
+                8, 30, "PM", 11, 30, "PM",
+                ((11 - 8) * 60) + (30 - 30));
+
+        DatabaseUtils.addTask(dbAdd, "07/29/2017", "Company Website", "Designing UI",
+                12, 30, "AM", 3, 30, "AM",
+                ((3) * 60) + (30 - 30));
+
+        DatabaseUtils.addTask(dbAdd, "07/31/2017", "Redesign Project", "Finding curren project bottlnecks",
+                12, 00, "AM", 1, 30, "AM",
+                ((1) * 60) + (30 - 00));
+
+        DatabaseUtils.addTask(dbAdd, "07/31/2017", "Redesign Project", "Finding curren project bottlnecks",
+                1, 30, "AM", 2, 30, "AM",
+                ((2 - 1) * 60) + (30 - 30));
+
+        DatabaseUtils.addTask(dbAdd, "07/31/2017", "Redesign Project", "Finding curren project bottlnecks",
+                2, 30, "AM", 4, 30, "AM",
+                ((4 - 2) * 60) + (30 - 30));
+
+        DatabaseUtils.addTask(dbAdd, "08/02/2017", "Redesign Project", "Finding appropriate solution",
+                6, 30, "PM", 7, 30, "PM",
+                ((7 - 6) * 60) + (30 - 30));
+
+        DatabaseUtils.addTask(dbAdd, "08/02/2017", "Redesign Project", "Finding appropriate solution",
+                10, 00, "AM", 10, 10, "AM",
+                ((10 - 10) * 60) + (10 - 00));
+
+        DatabaseUtils.addTask(dbAdd, "08/02/2017", "Redesign Project", "Research and development",
+                8, 30, "PM", 9, 00, "PM",
+                ((9 - 8) * 60) + (00 - 30));
+
+        DatabaseUtils.addTask(dbAdd, "08/02/2017", "Redesign Project", "Research and development",
+                7, 30, "PM", 8, 30, "PM",
+                ((8 - 7) * 60) + (30 - 30));
+
+        DatabaseUtils.addTask(dbAdd, "08/01/2017", "Redesign Project", "Finding appropriate solution",
+                8, 30, "PM", 9, 00, "PM",
+                ((9 - 8) * 60) + (00 - 30));
+
 
         dbHelper.close();
         dbAdd.close();

@@ -56,6 +56,10 @@
         "source": "W:\\Android_stuff\\TimeManagement\\app\\src\\main\\res\\layout\\fragment_target_time.xml"
     },
     {
+        "merged": "W:\\Android_stuff\\TimeManagement\\app\\build\\intermediates\\res\\merged\\debug\\layout\\subject_list_item.xml",
+        "source": "W:\\Android_stuff\\TimeManagement\\app\\src\\main\\res\\layout\\subject_list_item.xml"
+    },
+    {
         "merged": "W:\\Android_stuff\\TimeManagement\\app\\build\\intermediates\\res\\merged\\debug\\layout\\abc_list_menu_item_layout.xml",
         "source": "C:\\Users\\icyfillup\\.android\\build-cache\\a027631cee244203f572e361e51dfe97f71ecc5d\\output\\res\\layout\\abc_list_menu_item_layout.xml"
     },
@@ -198,6 +202,10 @@
     {
         "merged": "W:\\Android_stuff\\TimeManagement\\app\\build\\intermediates\\res\\merged\\debug\\layout\\abc_alert_dialog_material.xml",
         "source": "C:\\Users\\icyfillup\\.android\\build-cache\\a027631cee244203f572e361e51dfe97f71ecc5d\\output\\res\\layout\\abc_alert_dialog_material.xml"
+    },
+    {
+        "merged": "W:\\Android_stuff\\TimeManagement\\app\\build\\intermediates\\res\\merged\\debug\\layout\\activity_subjects_list.xml",
+        "source": "W:\\Android_stuff\\TimeManagement\\app\\src\\main\\res\\layout\\activity_subjects_list.xml"
     },
     {
         "merged": "W:\\Android_stuff\\TimeManagement\\app\\build\\intermediates\\res\\merged\\debug\\layout\\abc_list_menu_item_radio.xml",
