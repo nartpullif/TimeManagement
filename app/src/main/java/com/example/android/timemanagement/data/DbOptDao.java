@@ -613,7 +613,7 @@ public class DbOptDao {
 				strMonth = "July";
 				break;
 			case 8:
-				strMonth = "Aguest";
+				strMonth = "August";
 				break;
 			case 9:
 				strMonth = "September";
