@@ -3,30 +3,30 @@
 
     <item
         is-multidex="true"
-        jar="/Users/Vahedi/Documents/Android/TestProjects/TimeManagement-master/TimeManagement/app/build/intermediates/incremental-runtime-classes/debug/instant-run.jar"
-        jumboMode="true"
-        optimize="true"
-        revision="25.0.0"
-        sha1="3be78ebc2706b2e1fe2f12d5726887a92d6c183b">
-        <dex dex="/Users/Vahedi/Documents/Android/TestProjects/TimeManagement-master/TimeManagement/app/build/intermediates/transforms/dex/debug/folders/1000/10000/instant-run_abadb9388f81665f5e710a31fbd4a16288d1b3b1/classes.dex" />
-    </item>
-    <item
-        is-multidex="true"
-        jar="/Users/Vahedi/Documents/Android/TestProjects/TimeManagement-master/TimeManagement/app/libs/poi-3.7.jar"
+        jar="W:\Android_stuff\TimeManagement\app\libs\poi-3.7.jar"
         jumboMode="true"
         optimize="true"
         revision="25.0.0"
         sha1="581aca996554d760c02b281ac1f9efb785de54be">
-        <dex dex="/Users/Vahedi/Documents/Android/TestProjects/TimeManagement-master/TimeManagement/app/build/intermediates/transforms/dex/debug/folders/1000/2/poi-3.7_a64db59d3f274143adbe9cb2125217b2e4790b78/classes.dex" />
+        <dex dex="W:\Android_stuff\TimeManagement\app\build\intermediates\transforms\dex\debug\folders\1000\2\poi-3.7_251bbd2f3213870d555d21e6bc91409addf833ea\classes.dex" />
     </item>
     <item
         is-multidex="true"
-        jar="/Users/Vahedi/Documents/Android/TestProjects/TimeManagement-master/TimeManagement/app/build/intermediates/incremental-classes/debug/instant-run-bootstrap.jar"
+        jar="W:\Android_stuff\TimeManagement\app\build\intermediates\incremental-classes\debug\instant-run-bootstrap.jar"
         jumboMode="true"
         optimize="true"
         revision="25.0.0"
-        sha1="534736a4a3f487c382b83e42d4b2bcef018eac38">
-        <dex dex="/Users/Vahedi/Documents/Android/TestProjects/TimeManagement-master/TimeManagement/app/build/intermediates/transforms/dex/debug/folders/1000/10000/instant-run-bootstrap_c84b1bad4adacd6c1d6952cadff9552d78cd56cc/classes.dex" />
+        sha1="82022a2f7a96e7ce249b1121fff63f0d33dcd5cd">
+        <dex dex="W:\Android_stuff\TimeManagement\app\build\intermediates\transforms\dex\debug\folders\1000\10000\instant-run-bootstrap_c2562ad5c7f1051ee275ebe12ba3c22f9c7f64fa\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="W:\Android_stuff\TimeManagement\app\build\intermediates\incremental-runtime-classes\debug\instant-run.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.0"
+        sha1="3be78ebc2706b2e1fe2f12d5726887a92d6c183b">
+        <dex dex="W:\Android_stuff\TimeManagement\app\build\intermediates\transforms\dex\debug\folders\1000\10000\instant-run_fc45e6f13a13f69aac3952860571fb6639b8c089\classes.dex" />
     </item>
 
 </items>

@@ -61,7 +61,7 @@ public class AddTaskActivity extends AppCompatActivity {
         endSetTime = new SetTime((EditText) findViewById(R.id.et_end), this);
 
         helper = new DBHelper(context);
-        db = helper.getWritableDatabase();
+        db = helper.getReadableDatabase();
 
         //load subject title from db to autoText
         cursor = DatabaseUtils.getAllSubject(db);
@@ -109,28 +109,37 @@ public class AddTaskActivity extends AppCompatActivity {
             public void onClick(View v) {
                 helper = new DBHelper(context);
                 db = helper.getWritableDatabase();
-                if(DatabaseUtils.addTask(db, dateSetDate.getDate()
-                        , subjectAutoText.getText().toString(), projectAutoText.getText().toString()
-                        , startSetTime.getHourOfDay(), startSetTime.getMinute(), startSetTime.getMidDay()
-                        , endSetTime.getHourOfDay(), endSetTime.getMinute(), endSetTime.getMidDay()
-                        , getTimeDiff(startSetTime.getTime(), endSetTime.getTime())) > 0){
+                if(dateSetDate.getText().length()==0 ||
+                   subjectAutoText.getText().length()==0 ||
+                   projectAutoText.getText().length()==0 ||
+                   startSetTime.getText().length()==0 ||
+                   endSetTime.getText().length()==0 )
+                {
+                    Toast.makeText(context, "Fill in the blank", Toast.LENGTH_SHORT).show();
+                }
+                else
+                {
+                    if(DatabaseUtils.addTask(db, dateSetDate.getDate()
+                            , subjectAutoText.getText().toString(), projectAutoText.getText().toString()
+                            , startSetTime.getHourOfDay(), startSetTime.getMinute(), startSetTime.getMidDay()
+                            , endSetTime.getHourOfDay(), endSetTime.getMinute(), endSetTime.getMidDay()
+                            , getTimeDiff(startSetTime.getTime(), endSetTime.getTime())) > 0){
 
 
-                    Toast.makeText(context, "Add task success", Toast.LENGTH_SHORT).show();
-                    dateSetDate.clear();
-                    subjectAutoText.getText().clear();
-                    projectAutoText.getText().clear();
-                    startSetTime.clear();
-                    endSetTime.clear();
-
-                    //if add task success go to main activity
+                        Toast.makeText(context, "Add task success", Toast.LENGTH_SHORT).show();
+                        dateSetDate.clear();
+                        subjectAutoText.getText().clear();
+                        projectAutoText.getText().clear();
+                        startSetTime.clear();
+                        endSetTime.clear();
+                    }else{
+                        Toast.makeText(context, "Add task failed", Toast.LENGTH_SHORT).show();
+                    }
                     Intent intent = new Intent(context, HomeTabActivity.class);
                     startActivity(intent);
                     finish();
-                }else{
-                    Toast.makeText(context, "Add task failed", Toast.LENGTH_SHORT).show();
+                    db.close();
                 }
-                db.close();
             }
         });
         db.close();

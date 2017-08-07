@@ -344,15 +344,24 @@ public class DatabaseUtils {
         //" WHERE 0;";
         */
         String query =
-                "select *, " +
-                        Contract.TABLE_SUBJECT.TABLE_NAME + "." + Contract.TABLE_SUBJECT.COLUMN_NAME_TITLE + " as " + Contract.TABLE_TASK.COLUMN_NAME_SUBJECT_TITLE +
-                        ", " + Contract.TABLE_PROJECT.TABLE_NAME + "." + Contract.TABLE_PROJECT.COLUMN_NAME_TITLE + " as " + Contract.TABLE_TASK.COLUMN_NAME_PROJECT_TITLE +
-                        " from " + Contract.TABLE_TASK.TABLE_NAME +
-                        " inner join " + Contract.TABLE_SUBJECT.TABLE_NAME +
-                        " on (" + Contract.TABLE_TASK.TABLE_NAME + "." + Contract.TABLE_TASK.COLUMN_NAME_SUBJECT_ID + " = " + Contract.TABLE_SUBJECT.TABLE_NAME + "." + Contract.TABLE_SUBJECT._ID+  ")" +
-                        " inner join " + Contract.TABLE_PROJECT.TABLE_NAME +
-                        " on (" + Contract.TABLE_TASK.TABLE_NAME + "." + Contract.TABLE_TASK.COLUMN_NAME_PROJECT_ID + " = " + Contract.TABLE_PROJECT.TABLE_NAME + "." + Contract.TABLE_PROJECT._ID+  ")" +
-                        " where " + Contract.TABLE_TASK.TABLE_NAME + "." + Contract.TABLE_TASK.COLUMN_NAME_DATE + "  between '" + start + "'and  '" + end + "'";
+                "select " + Contract.TABLE_TASK._ID +
+                Contract.TABLE_SUBJECT.TABLE_NAME + "." + Contract.TABLE_SUBJECT.COLUMN_NAME_TITLE + " as " + Contract.TABLE_TASK.COLUMN_NAME_SUBJECT_TITLE +
+                ", " + Contract.TABLE_PROJECT.TABLE_NAME + "." + Contract.TABLE_PROJECT.COLUMN_NAME_TITLE + " as " + Contract.TABLE_TASK.COLUMN_NAME_PROJECT_TITLE +
+                ", " + Contract.TABLE_TASK.TABLE_NAME + "." + Contract.TABLE_TASK._ID +
+                ", " + Contract.TABLE_TASK.COLUMN_NAME_DATE +
+                ", " + Contract.TABLE_TASK.COLUMN_NAME_START_HOUR +
+                ", " + Contract.TABLE_TASK.COLUMN_NAME_START_MINUTE +
+                ", " + Contract.TABLE_TASK.COLUMN_NAME_START_MID_DAY +
+                ", " + Contract.TABLE_TASK.COLUMN_NAME_END_HOUR +
+                ", " + Contract.TABLE_TASK.COLUMN_NAME_END_MINUTE +
+                ", " + Contract.TABLE_TASK.COLUMN_NAME_END_MID_DAY +
+                ", " + Contract.TABLE_TASK.COLUMN_NAME_TASK_TOTAL_MINUTES +
+                " from " + Contract.TABLE_TASK.TABLE_NAME +
+                " inner join " + Contract.TABLE_SUBJECT.TABLE_NAME +
+                " on (" + Contract.TABLE_TASK.TABLE_NAME + "." + Contract.TABLE_TASK.COLUMN_NAME_SUBJECT_ID + " = " + Contract.TABLE_SUBJECT.TABLE_NAME + "." + Contract.TABLE_SUBJECT._ID+  ")" +
+                " inner join " + Contract.TABLE_PROJECT.TABLE_NAME +
+                " on (" + Contract.TABLE_TASK.TABLE_NAME + "." + Contract.TABLE_TASK.COLUMN_NAME_PROJECT_ID + " = " + Contract.TABLE_PROJECT.TABLE_NAME + "." + Contract.TABLE_PROJECT._ID+  ")" +
+                " where " + Contract.TABLE_TASK.TABLE_NAME + "." + Contract.TABLE_TASK.COLUMN_NAME_DATE + "  between '" + start + "'and  '" + end + "'";
 
 
         Log.d(TAG, "Select table SQL: " + query);
@@ -404,9 +413,18 @@ public class DatabaseUtils {
         */
         //" WHERE 0;";
         String query =
-                "select *, " +
+                "select " +
                 Contract.TABLE_SUBJECT.TABLE_NAME + "." + Contract.TABLE_SUBJECT.COLUMN_NAME_TITLE + " as " + Contract.TABLE_TASK.COLUMN_NAME_SUBJECT_TITLE +
                 ", " + Contract.TABLE_PROJECT.TABLE_NAME + "." + Contract.TABLE_PROJECT.COLUMN_NAME_TITLE + " as " + Contract.TABLE_TASK.COLUMN_NAME_PROJECT_TITLE +
+                ", " + Contract.TABLE_TASK.TABLE_NAME + "." + Contract.TABLE_TASK._ID +
+                ", " + Contract.TABLE_TASK.COLUMN_NAME_DATE +
+                ", " + Contract.TABLE_TASK.COLUMN_NAME_START_HOUR +
+                ", " + Contract.TABLE_TASK.COLUMN_NAME_START_MINUTE +
+                ", " + Contract.TABLE_TASK.COLUMN_NAME_START_MID_DAY +
+                ", " + Contract.TABLE_TASK.COLUMN_NAME_END_HOUR +
+                ", " + Contract.TABLE_TASK.COLUMN_NAME_END_MINUTE +
+                ", " + Contract.TABLE_TASK.COLUMN_NAME_END_MID_DAY +
+                ", " + Contract.TABLE_TASK.COLUMN_NAME_TASK_TOTAL_MINUTES +
                 " from " + Contract.TABLE_TASK.TABLE_NAME +
                 " inner join " + Contract.TABLE_SUBJECT.TABLE_NAME +
                 " on (" + Contract.TABLE_TASK.TABLE_NAME + "." + Contract.TABLE_TASK.COLUMN_NAME_SUBJECT_ID + " = " + Contract.TABLE_SUBJECT.TABLE_NAME + "." + Contract.TABLE_SUBJECT._ID+  ")" +
@@ -497,7 +515,7 @@ public class DatabaseUtils {
 
     public static boolean removeTask(SQLiteDatabase db, long id) {
         Log.d(TAG, "deleting id: " + id);
-        return db.delete(Contract.TABLE_TASK.TABLE_NAME, Contract.TABLE_TASK._ID + "=" + id, null) > 0;
+        return db.delete(Contract.TABLE_TASK.TABLE_NAME, Contract.TABLE_TASK._ID + "=?", new String[]{String.valueOf(id)}) > 0;
     }
 
     public static int updateTask(SQLiteDatabase db, String date, String subject, String project

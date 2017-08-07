@@ -112,28 +112,39 @@ public class UpdateTaskActivity extends AppCompatActivity {
             public void onClick(View v) {
                 helper = new DBHelper(context);
                 db = helper.getWritableDatabase();
-                if(DatabaseUtils.updateTask(db, dateSetDate.getDate()
-                        , subjectAutoText.getText().toString(), projectAutoText.getText().toString()
-                        , startSetTime.getHourOfDay(), startSetTime.getMinute(), startSetTime.getMidDay()
-                        , endSetTime.getHourOfDay(), endSetTime.getMinute(), endSetTime.getMidDay()
-                        , getTimeDiff(startSetTime.getTime(), endSetTime.getTime()), id) > 0){
-
-
-                    Toast.makeText(context, "Update task success", Toast.LENGTH_SHORT).show();
-                    dateSetDate.clear();
-                    subjectAutoText.getText().clear();
-                    projectAutoText.getText().clear();
-                    startSetTime.clear();
-                    endSetTime.clear();
-
-                    //if add task success go to main activity
-//                    Intent intent = new Intent(context, MainActivity.class);
-//                    startActivity(intent);
-                      finish();
-                }else{
-                    Toast.makeText(context, "Update task failed", Toast.LENGTH_SHORT).show();
+                if(dateSetDate.getText().length()==0 ||
+                        subjectAutoText.getText().length()==0 ||
+                        projectAutoText.getText().length()==0 ||
+                        startSetTime.getText().length()==0 ||
+                        endSetTime.getText().length()==0 )
+                {
+                    Toast.makeText(context, "Fill in the blank", Toast.LENGTH_SHORT).show();
                 }
-                db.close();
+                else
+                {
+                    if(DatabaseUtils.updateTask(db, dateSetDate.getDate()
+                            , subjectAutoText.getText().toString(), projectAutoText.getText().toString()
+                            , startSetTime.getHourOfDay(), startSetTime.getMinute(), startSetTime.getMidDay()
+                            , endSetTime.getHourOfDay(), endSetTime.getMinute(), endSetTime.getMidDay()
+                            , getTimeDiff(startSetTime.getTime(), endSetTime.getTime()), id) > 0){
+
+
+                        Toast.makeText(context, "Update task success", Toast.LENGTH_SHORT).show();
+                        dateSetDate.clear();
+                        subjectAutoText.getText().clear();
+                        projectAutoText.getText().clear();
+                        startSetTime.clear();
+                        endSetTime.clear();
+
+                        //if add task success go to main activity
+                    }else{
+                        Toast.makeText(context, "Update task failed", Toast.LENGTH_SHORT).show();
+                    }
+                    Intent intent = new Intent(context, HomeTabActivity.class);
+                    startActivity(intent);
+                    finish();
+                    db.close();
+                }
             }
         });
         db.close();
