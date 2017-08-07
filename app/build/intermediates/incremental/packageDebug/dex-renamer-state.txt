@@ -1,4 +1,4 @@
-#Sun Aug 06 12:39:04 PDT 2017
+#Sun Aug 06 20:09:28 PDT 2017
 base.0=/Users/Vahedi/Documents/Android/TestProjects/TimeManagement-master/TimeManagement/app/build/intermediates/transforms/dex/debug/folders/1000/10000/instant-run_abadb9388f81665f5e710a31fbd4a16288d1b3b1
 renamed.1=classes2.dex
 renamed.0=classes.dex

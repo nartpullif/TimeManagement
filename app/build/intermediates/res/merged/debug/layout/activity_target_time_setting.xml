@@ -14,15 +14,47 @@
 
         <View
             android:layout_width="match_parent"
-            android:layout_height="50dp"/>
+            android:layout_height="30dp"/>
 
         <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="50dp"
+            android:layout_height="45dp"
             android:layout_gravity="center"
             android:orientation="horizontal"
             android:background="#FFFFFF"
-            android:layout_marginBottom="20dp"
+            android:layout_marginBottom="3dp"
+            android:onClick="onClickGoToSubjectsList">
+
+            <TextView
+                android:layout_height="wrap_content"
+                android:layout_width="wrap_content"
+                android:layout_weight="1"
+                android:layout_gravity="center"
+                android:gravity="left"
+                android:paddingLeft="15dp"
+                android:text="@string/subjects_string"
+                android:textSize="20sp"/>
+
+            <TextView
+                android:id="@+id/go_to_subject_list"
+                android:layout_height="wrap_content"
+                android:layout_width="wrap_content"
+                android:layout_weight="1"
+                android:layout_gravity="center"
+                android:gravity="right"
+                android:paddingRight="15dp"
+                android:text="@string/greater_than_string"
+                android:textSize="20sp" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="45dp"
+            android:layout_gravity="center"
+            android:orientation="horizontal"
+            android:background="#FFFFFF"
+            android:layout_marginBottom="10dp"
             android:onClick="onClickGoToProjectsList">
 
             <TextView
@@ -50,7 +82,7 @@
 
         <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="50dp"
+            android:layout_height="45dp"
             android:layout_gravity="center"
             android:orientation="horizontal"
             android:background="#FFFFFF"
@@ -82,7 +114,7 @@
 
         <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="50dp"
+            android:layout_height="45dp"
             android:layout_gravity="center"
             android:orientation="horizontal"
             android:background="#FFFFFF"
@@ -114,7 +146,7 @@
 
         <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="50dp"
+            android:layout_height="45dp"
             android:layout_gravity="center"
             android:orientation="horizontal"
             android:background="#FFFFFF"
@@ -146,7 +178,7 @@
 
         <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="50dp"
+            android:layout_height="45dp"
             android:layout_gravity="center"
             android:orientation="horizontal"
             android:background="#FFFFFF"
@@ -178,7 +210,7 @@
 
         <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="50dp"
+            android:layout_height="45dp"
             android:layout_gravity="center"
             android:orientation="horizontal"
             android:background="#FFFFFF"
@@ -210,7 +242,7 @@
 
         <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="50dp"
+            android:layout_height="45dp"
             android:layout_gravity="center"
             android:orientation="horizontal"
             android:background="#FFFFFF"
@@ -242,7 +274,7 @@
 
         <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="50dp"
+            android:layout_height="45dp"
             android:layout_gravity="center"
             android:orientation="horizontal"
             android:background="#FFFFFF"

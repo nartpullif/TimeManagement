@@ -160,9 +160,13 @@ public class TargetTimeSettingActivity extends AppCompatActivity implements SetH
     {
         Intent intent = new Intent(TargetTimeSettingActivity.this, ProjectsList.class);
         startActivity(intent);
-        //int rid = R.id.date_monday_time;
-        //onFragmentPopUp(rid);
 
-        //Toast.makeText(this, "go to projects list", Toast.LENGTH_SHORT).show();
+    }
+
+    public void onClickGoToSubjectsList(View view)
+    {
+        Intent intent = new Intent(TargetTimeSettingActivity.this, SubjectsList.class);
+        startActivity(intent);
+
     }
 }

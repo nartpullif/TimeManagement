@@ -1,6 +1,6 @@
 -- Merging decision tree log ---
 manifest
-ADDED from /Users/Vahedi/Documents/Android/TestProjects/TimeManagement-master/TimeManagement/app/src/main/AndroidManifest.xml:2:1-53:12
+ADDED from /Users/Vahedi/Documents/Android/TestProjects/TimeManagement-master/TimeManagement/app/src/main/AndroidManifest.xml:2:1-54:12
 	package
 		ADDED from /Users/Vahedi/Documents/Android/TestProjects/TimeManagement-master/TimeManagement/app/src/main/AndroidManifest.xml:3:5-49
 		INJECTED from /Users/Vahedi/Documents/Android/TestProjects/TimeManagement-master/TimeManagement/app/src/main/AndroidManifest.xml
@@ -14,7 +14,7 @@ ADDED from /Users/Vahedi/Documents/Android/TestProjects/TimeManagement-master/Ti
 		INJECTED from /Users/Vahedi/Documents/Android/TestProjects/TimeManagement-master/TimeManagement/app/src/main/AndroidManifest.xml
 		INJECTED from /Users/Vahedi/Documents/Android/TestProjects/TimeManagement-master/TimeManagement/app/src/main/AndroidManifest.xml
 application
-ADDED from /Users/Vahedi/Documents/Android/TestProjects/TimeManagement-master/TimeManagement/app/src/main/AndroidManifest.xml:5:5-51:19
+ADDED from /Users/Vahedi/Documents/Android/TestProjects/TimeManagement-master/TimeManagement/app/src/main/AndroidManifest.xml:5:5-52:19
 MERGED from [com.android.support:design:23.0.1] /Users/Vahedi/.android/build-cache/e7c43c2efac03d6347806792b3f409745fc85c37/output/AndroidManifest.xml:22:5-20
 MERGED from [com.android.support:appcompat-v7:23.0.1] /Users/Vahedi/.android/build-cache/f5e158f2f9c539b29f7741e3d52200622287f7e2/output/AndroidManifest.xml:22:5-20
 MERGED from [com.android.support.constraint:constraint-layout:1.0.2] /Users/Vahedi/.android/build-cache/1dcba599fb1cc3d34949cbeb95daa92281230e3c/output/AndroidManifest.xml:9:5-20
@@ -96,7 +96,7 @@ ADDED from /Users/Vahedi/Documents/Android/TestProjects/TimeManagement-master/Ti
 intent-filter#com.google.firebase.INSTANCE_ID_EVENT
 ADDED from /Users/Vahedi/Documents/Android/TestProjects/TimeManagement-master/TimeManagement/app/src/main/AndroidManifest.xml:40:13-42:29
 action#com.google.firebase.INSTANCE_ID_EVENT
-ADDED from /Users/Vahedi/Documents/Android/TestProjects/TimeManagement-master/TimeManagement/app/src/main/AndroidManifest.xml:41:17-87
+ADDED from /Users/Vahedi/Documents/Android/TestProjects/TimeManagement-master/TimeManagement/app/src/main/AndroidManifest.xml:41:17-80
 	android:name
 		ADDED from /Users/Vahedi/Documents/Android/TestProjects/TimeManagement-master/TimeManagement/app/src/main/AndroidManifest.xml:41:25-77
 service#com.example.android.timemanagement.notification.MyFirebaseMessagingService
@@ -106,13 +106,17 @@ ADDED from /Users/Vahedi/Documents/Android/TestProjects/TimeManagement-master/Ti
 intent-filter#com.google.firebase.MESSAGING_EVENT
 ADDED from /Users/Vahedi/Documents/Android/TestProjects/TimeManagement-master/TimeManagement/app/src/main/AndroidManifest.xml:45:13-47:29
 action#com.google.firebase.MESSAGING_EVENT
-ADDED from /Users/Vahedi/Documents/Android/TestProjects/TimeManagement-master/TimeManagement/app/src/main/AndroidManifest.xml:46:17-85
+ADDED from /Users/Vahedi/Documents/Android/TestProjects/TimeManagement-master/TimeManagement/app/src/main/AndroidManifest.xml:46:17-78
 	android:name
 		ADDED from /Users/Vahedi/Documents/Android/TestProjects/TimeManagement-master/TimeManagement/app/src/main/AndroidManifest.xml:46:25-75
 activity#com.example.android.timemanagement.activities.ProjectsList
-ADDED from /Users/Vahedi/Documents/Android/TestProjects/TimeManagement-master/TimeManagement/app/src/main/AndroidManifest.xml:50:9-70
+ADDED from /Users/Vahedi/Documents/Android/TestProjects/TimeManagement-master/TimeManagement/app/src/main/AndroidManifest.xml:50:9-61
 	android:name
 		ADDED from /Users/Vahedi/Documents/Android/TestProjects/TimeManagement-master/TimeManagement/app/src/main/AndroidManifest.xml:50:19-58
+activity#com.example.android.timemanagement.activities.SubjectsList
+ADDED from /Users/Vahedi/Documents/Android/TestProjects/TimeManagement-master/TimeManagement/app/src/main/AndroidManifest.xml:51:9-70
+	android:name
+		ADDED from /Users/Vahedi/Documents/Android/TestProjects/TimeManagement-master/TimeManagement/app/src/main/AndroidManifest.xml:51:19-58
 uses-sdk
 INJECTED from /Users/Vahedi/Documents/Android/TestProjects/TimeManagement-master/TimeManagement/app/src/main/AndroidManifest.xml reason: use-sdk injection requested
 MERGED from [com.android.support:recyclerview-v7:23.0.1] /Users/Vahedi/.android/build-cache/3d3a9100f5f238a516db04c64dff56bb5acdc3f5/output/AndroidManifest.xml:20:5-43

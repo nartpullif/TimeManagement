@@ -6,37 +6,37 @@
     density="xxhdpi"
     format="10"
     plugin-version="2.3.3"
-    timestamp="1502049344210"
+    timestamp="1502075361633"
     token="-7337731201423301343"
     verifier="COLD_SWAP_REQUESTED" >
 
     <task
         name="javac"
-        duration="1116" />
+        duration="0" />
     <task
         name="instant-run-dex"
         duration="0" />
     <task
         name="instant-run-transform"
-        duration="216" />
+        duration="0" />
     <task
         name="verifier"
-        duration="1" />
+        duration="0" />
 
     <artifact
-        location="/Users/Vahedi/Documents/Android/TestProjects/TimeManagement-master/TimeManagement/app/build/intermediates/split-apk/debug/slices/slice_2.apk"
-        type="SPLIT" />
+        location="/Users/Vahedi/Documents/Android/TestProjects/TimeManagement-master/TimeManagement/app/build/outputs/apk/app-debug.apk"
+        type="SPLIT_MAIN" />
 
     <build
         build-mode="FULL"
-        timestamp="1502046401444"
+        timestamp="1502064257477"
         verifier="FULL_BUILD_REQUESTED" >
+        <artifact
+            location="/Users/Vahedi/Documents/Android/TestProjects/TimeManagement-master/TimeManagement/app/build/intermediates/split-apk/debug/slices/slice_5.apk"
+            type="SPLIT" />
         <artifact
             location="/Users/Vahedi/Documents/Android/TestProjects/TimeManagement-master/TimeManagement/app/build/intermediates/split-apk/debug/slices/slice_2.apk"
             type="SPLIT" />
-        <artifact
-            location="/Users/Vahedi/Documents/Android/TestProjects/TimeManagement-master/TimeManagement/app/build/outputs/apk/app-debug.apk"
-            type="SPLIT_MAIN" />
         <artifact
             location="/Users/Vahedi/Documents/Android/TestProjects/TimeManagement-master/TimeManagement/app/build/intermediates/split-apk/debug/dep/dependencies.apk"
             type="SPLIT" />
@@ -48,9 +48,6 @@
             type="SPLIT" />
         <artifact
             location="/Users/Vahedi/Documents/Android/TestProjects/TimeManagement-master/TimeManagement/app/build/intermediates/split-apk/debug/slices/slice_0.apk"
-            type="SPLIT" />
-        <artifact
-            location="/Users/Vahedi/Documents/Android/TestProjects/TimeManagement-master/TimeManagement/app/build/intermediates/split-apk/debug/slices/slice_5.apk"
             type="SPLIT" />
         <artifact
             location="/Users/Vahedi/Documents/Android/TestProjects/TimeManagement-master/TimeManagement/app/build/intermediates/split-apk/debug/slices/slice_4.apk"
@@ -67,25 +64,28 @@
         <artifact
             location="/Users/Vahedi/Documents/Android/TestProjects/TimeManagement-master/TimeManagement/app/build/intermediates/split-apk/debug/slices/slice_8.apk"
             type="SPLIT" />
-    </build>
-    <build
-        build-mode="COLD"
-        timestamp="1502048335776"
-        verifier="COLD_SWAP_REQUESTED" >
-        <artifact
-            location="/Users/Vahedi/Documents/Android/TestProjects/TimeManagement-master/TimeManagement/app/build/intermediates/split-apk/debug/slices/slice_1.apk"
-            type="SPLIT" />
         <artifact
             location="/Users/Vahedi/Documents/Android/TestProjects/TimeManagement-master/TimeManagement/app/build/outputs/apk/app-debug.apk"
             type="SPLIT_MAIN" />
     </build>
     <build
         build-mode="COLD"
-        timestamp="1502049344210"
+        timestamp="1502074932460"
         verifier="COLD_SWAP_REQUESTED" >
         <artifact
             location="/Users/Vahedi/Documents/Android/TestProjects/TimeManagement-master/TimeManagement/app/build/intermediates/split-apk/debug/slices/slice_2.apk"
             type="SPLIT" />
+        <artifact
+            location="/Users/Vahedi/Documents/Android/TestProjects/TimeManagement-master/TimeManagement/app/build/intermediates/split-apk/debug/slices/slice_5.apk"
+            type="SPLIT" />
+    </build>
+    <build
+        build-mode="COLD"
+        timestamp="1502075361633"
+        verifier="COLD_SWAP_REQUESTED" >
+        <artifact
+            location="/Users/Vahedi/Documents/Android/TestProjects/TimeManagement-master/TimeManagement/app/build/outputs/apk/app-debug.apk"
+            type="SPLIT_MAIN" />
     </build>
 
 </instant-run>

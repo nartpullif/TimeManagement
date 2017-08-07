@@ -1,4 +1,4 @@
-#Sun Aug 06 12:39:04 PDT 2017
+#Sun Aug 06 15:39:48 PDT 2017
 base.0=/Users/Vahedi/Documents/Android/TestProjects/TimeManagement-master/TimeManagement/app/build/intermediates/transforms/dex/debug/folders/1000/5/slice_1
 renamed.0=classes.dex
 file.0=/Users/Vahedi/Documents/Android/TestProjects/TimeManagement-master/TimeManagement/app/build/intermediates/transforms/dex/debug/folders/1000/5/slice_1/classes.dex

@@ -25,7 +25,7 @@
         jumboMode="true"
         optimize="true"
         revision="25.0.0"
-        sha1="534736a4a3f487c382b83e42d4b2bcef018eac38">
+        sha1="af801c0d24063c99f01d226d6cf43b822511a6a5">
         <dex dex="/Users/Vahedi/Documents/Android/TestProjects/TimeManagement-master/TimeManagement/app/build/intermediates/transforms/dex/debug/folders/1000/10000/instant-run-bootstrap_c84b1bad4adacd6c1d6952cadff9552d78cd56cc/classes.dex" />
     </item>
 

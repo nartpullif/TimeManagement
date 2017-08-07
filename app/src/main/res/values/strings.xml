@@ -29,6 +29,9 @@
     <string name="projects_toast_string">Project Toast</string>
     <string name="project_excel_file_name">myExcel.xls</string>
 
-
+    <!--string for ProjectsList activity-->
+    <string name="subjects_string">Subjects</string>
+    <string name="subjects_toast_string">Subject Toast</string>
+    <string name="subjectt_excel_file_name">myExcel.xls</string>
 
 </resources>
