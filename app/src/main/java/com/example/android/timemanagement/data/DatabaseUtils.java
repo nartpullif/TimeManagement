@@ -394,7 +394,7 @@ public class DatabaseUtils {
         //" WHERE 0;";
         */
         String query =
-                "select " + Contract.TABLE_TASK._ID +
+                "select " +
                 Contract.TABLE_SUBJECT.TABLE_NAME + "." + Contract.TABLE_SUBJECT.COLUMN_NAME_TITLE + " as " + Contract.TABLE_TASK.COLUMN_NAME_SUBJECT_TITLE +
                 ", " + Contract.TABLE_PROJECT.TABLE_NAME + "." + Contract.TABLE_PROJECT.COLUMN_NAME_TITLE + " as " + Contract.TABLE_TASK.COLUMN_NAME_PROJECT_TITLE +
                 ", " + Contract.TABLE_TASK.TABLE_NAME + "." + Contract.TABLE_TASK._ID +
