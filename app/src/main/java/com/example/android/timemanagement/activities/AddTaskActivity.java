@@ -119,7 +119,7 @@ public class AddTaskActivity extends AppCompatActivity {
             public void onClick(View v) {
                 helper = new DBHelper(context);
                 db = helper.getWritableDatabase();
-<<<<<<< HEAD
+
                 if(DatabaseUtils.addTask(db, dateSetDate.getDate()
                         , subjectAutoText.getText().toString(), projectAutoText.getText().toString()
                         , startSetTime.getHourOfDay(), startSetTime.getMinute(), startSetTime.getMidDay()
@@ -158,7 +158,7 @@ public class AddTaskActivity extends AppCompatActivity {
                     endSetTime.clear();
 
                     //if add task success go to main activity
-=======
+
                 if(dateSetDate.getText().length()==0 ||
                    subjectAutoText.getText().length()==0 ||
                    projectAutoText.getText().length()==0 ||
@@ -185,7 +185,7 @@ public class AddTaskActivity extends AppCompatActivity {
                     }else{
                         Toast.makeText(context, "Add task failed", Toast.LENGTH_SHORT).show();
                     }
->>>>>>> 116faa77e1b356e24d5b7849b9a0306bea5840cf
+
                     Intent intent = new Intent(context, HomeTabActivity.class);
                     startActivity(intent);
                     finish();
